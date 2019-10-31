@@ -1,0 +1,59 @@
+
+
+Combination of Hamann et al. (2017) and Kozłowski (2017).
+
+    Hamann et al. (2017) has     216188   objects
+    Kozłowski (2017))    has     297301	  objects. 
+
+
+"The_DF" in matchingHam17toKoz17.py then produces a joint catalog of 216188 objects.
+
+
+
+TOPCAP Legend Labels
+========================================================================================================
+Full \;\;\;\;\;\; BOSS \; DR12 \; (297,301)
+Ham17 \; BOSS \; DR12 \; (216,188)
+
+
+
+205,297 \;\;\; BOSS \;\; quasars
+
+
+
+TOPCAP subsamples
+========================================================================================================
+From the full 297301 objects you then have these subsamples::
+
+     L1350>0	     	     	      	   229248	77% 	
+     (L1350>0) && (Mi >-40)		   229180	77%
+     z >1.49999	      			   229193	77%
+
+
+Concentrating on the 216188 Ham17 objects::
+     L1350 > 40				   215842	100% 	
+
+
+
+
+So, ~94% of the Ham17 sample is in the Full sample with a z_min >1.50 cut.
+========================================================================================================
+In [1]: 216188./229193
+Out[1]: 0.9432574293281208
+
+
+                                                                                                                                                                                                                                                     
+The two samples together...
+========================================================================================================
+In [1]: 216188+297301                                                                                                                                   Out[1]: 513489
+
+
+
+
+For redshift vs. f1450, weighted by L1350
+    Aux shader:: Cubehelix
+    Scaling::    Square
+
+For redshift vs. MBH_CIV, weighted by LBol
+    Aux shader:: Rainbow2
+    Scaling::    Square

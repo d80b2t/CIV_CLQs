@@ -1,0 +1,102 @@
+
+Notes on the data for the quasars:
+
+SDSS J222818.76+220102.9  (J2228+2201)  and SDSS J163852.93+282707.7 (J1638+2827).
+
+
+
+
+J1638+2827
+===========================================================================================
+ Plate, FiberID,   MJD
+  2948,     614, 54553    (so in  DR7Q)
+  5201,     178, 55832	  (so in DR10Q) 
+
+
+
+
+
+On Aug 27, 2019, at 7:31 AM, Nicholas Ross <npross@roe.ac.uk> wrote:
+===========================================================================================
+
+Hi Matthew, 
+Can you send me the data files for the
+  J120544.7+342252.4  DBPS data (MJD 58538) 
+  J120544.7+342252.4  DBPS data (MJD 58693) 
+  J163852.9+282707.7 LRIS data (MJD 58583) and 
+  J222818.7+220102.9 DBPS data (MJD 56893) 
+
+Thanks!!
+Nic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DR14Q
+===========================================================================================
+Notes:  minmax.plate	  in DR14Q is::    266, 10000   (8874, if you exclude plate 10000)  
+	minmax.MJD (spec) in DR14Q is::	 51608, 57520
+
+526,356 objects in DR14Q
+/cos_pc19a_npr/data/SDSS/DR14Q > md5sum DR14Q_v4_4.fits 
+d03517b10ac150c651e65cd9c53cc5dd  DR14Q_v4_4.fits
+
+
+DR12Q
+===========================================================================================
+Notes:  minmax.plate	  in DR12Q is::   3586,  7517  
+	minmax.MJD (spec) in DR12Q is::	 55176, 56837
+
+297,301 objects in DR9Q
+/cos_pc19a_npr/data/BOSS/DR12Q > md5sum DR12Q.fits
+91fde3db877bddf3ec7c7ecc39c452ac  DR12Q.fits
+
+
+DR10Q
+===========================================================================================
+Notes:  minmax.plate	  in DR10Q is::   3586,  6064
+	minmax.MJD (spec) in DR10Q is::	 55176, 56107
+
+166,583 objects in DR10Q
+/cos_pc19a_npr/data/BOSS/DR10Q > md5sum DR10Q.fits
+d4d4026de1135fc45ea5a03764f3125f  DR10Q.fits
+
+
+DR9Q
+===========================================================================================
+Notes:  minmax.plate	  in DR9Q is::   3586,  5141
+	minmax.MJD (spec) in DR9Q is::	55176, 55752
+
+87,822 objects in DR9Q
+/cos_pc19a_npr/data/BOSS/DR9Q > md5sum DR9Q.fits 
+17b43db5022efded3754ee6ebe8b7f48  DR9Q.fits
+
+
+DR7Q
+===========================================================================================
+Notes:  minmax.plate	  in DR7Q is::    266,  2974
+	minmax.MJD (spec) in DR7Q is::	51608, 54653
+
+105,783 objects in DR5Q
+/cos_pc19a_npr/data/SDSS/DR7Q > md5sum dr7qso.fits
+1446b4d10af16b9ff682dbb798075a35  dr7qso.fits
+
+
+DR5Q
+===========================================================================================
+Notes:  minmax.plate	  in DR5Q is::    266,  2210
+	minmax.MJD (spec) in DR5Q is::	51608, 53535
+
+77,429 objects in DR5Q
+/cos_pc19a_npr/data/SDSS/DR5Q > md5sum dr5qso.fits
+36826e040d9b4b32d0c4ade9d9eef0f6  dr5qso.fits

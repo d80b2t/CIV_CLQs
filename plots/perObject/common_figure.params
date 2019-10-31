@@ -1,0 +1,9 @@
+## fig = plt.figure(figsize=(12, 4.3))
+figsize_x = 12.0
+figsize_y = 12.0
+
+LC_MJD_min = 53500.
+LC_MJD_min = 59000.
+
+wavelength_min =  910.
+wavelength_max = 3350.

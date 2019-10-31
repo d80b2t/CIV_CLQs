@@ -1,0 +1,5 @@
+LineName	Wavelength	IP	LagTime		errLagTimeHi	errLagTimeLo
+HeII		4687.02		54.42	3.9		2.8		0.7
+HeI		5876.75		24.59	10.7		7.0		6.0 
+Hbeta		4862.68		13.60	24.2		3.7		3.3
+Halpha		6564.61		13.6	32.3		4.3		4.9	

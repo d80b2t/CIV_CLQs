@@ -1,0 +1,60 @@
+
+
+
+
+Hamann et al. (2017) 
+"Here we present a new catalogue of C IV and N V emission-line data
+for 216 188 BOSS quasars to characterize the ERQ line properties
+further."
+
+
+Kozłowski (2017)
+Estimates of the Monochromatic and Bolometric Luminosities, Eddington Ratios, and BH Masses for DR12Q AGNs
+"This table [SDSS-DR12Q-BH.dat] is line-by-line match to the Quasar Data Release 12 from Paris et al. (2016)"
+
+
+BOSS_Ham17Koz17_DR12Q.fits 
+is a combination of both these tables. 
+
+
+
+
+
+TOPCAT logic
+====================================================================================
+
+/cos_pc19a_npr/data/ERQs/ark+=b6086=d1h59v_version_2 >
+C4N5REWs_DR12v11_MNRAS.fits
+
+## For Hamann et al. (2017)
+((plate == 2948) && (MJD == 54553) && (FiberID == 614))
+||
+((plate == 5201) && (MJD == 55832) && (FiberID == 178))
+||
+((plate == 6118) && (MJD == 56189) && (FiberID == 720))
+||
+((plate == 7582) && (MJD == 56960) && (FiberID == 790))
+||
+((plate == 2089) && (MJD == 53498) && (FiberID == 427))
+
+
+## For Shen et al. (2011)
+((plate == 2948) && (MJD == 54553) && (Fiber == 614))
+||
+((plate == 5201) && (MJD == 55832) && (Fiber == 178))
+||
+((plate == 6118) && (MJD == 56189) && (Fiber == 720))
+||
+((plate == 7582) && (MJD == 56960) && (Fiber == 790))
+||
+((plate == 2089) && (MJD == 53498) && (Fiber == 427))
+
+
+
+((RAdeg > 181.436) && (RAdeg < 181.437) && (DECLdeg > 34.381) && (DECLdeg < 34.382))
+||
+((RAdeg > 249.720) && (RAdeg < 249.721) && (DECLdeg > 28.452) && (DECLdeg < 28.453))
+||
+((RAdeg > 337.078) && (RAdeg < 337.079) && (DECLdeg > 22.017) && (DECLdeg < 22.018))
+
+

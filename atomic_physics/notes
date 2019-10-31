@@ -1,0 +1,63 @@
+
+
+
+
+ NIST Atomic Spectra Database Lines Form
+===================================================================
+https://physics.nist.gov/PhysRefData/ASD/lines_form.html
+
+https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=C+IV&limits_type=0&low_w=1540&upp_w=1555&unit=0&submit=Retrieve+Data&de=0&format=0&line_out=0&en_unit=0&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&max_low_enrg=&show_av=2&max_upp_enrg=&tsb_value=0&min_str=&A_out=0&intens_out=on&max_str=&allowed_out=1&forbid_out=1&min_accur=&min_intens=&conf_out=on&term_out=on&enrg_out=on&J_out=on
+
+Observed	Ritz		Rel.	Aki		Acc	Ei	Ek		Lower	Term	J	 Upper	 Term	J	TP	Line		
+Wavelength 	Wavelength	Int. 	s-1		cm-1	cm-1	cm-1		Level          		 Level	     	   	Ref.	Ref.
+Vac (Å) 	Vac (Å)									Config			 Config					 
+1 548.202 	1 548.187 	1000 	2.65e+08 	A	0.0 	64 591.7 	1s22s 	 2S 	1/2 	 1s22p 	 2P° 	3/2 	T5118LS	L1113
+1 550.774 	1 550.772 	900 	2.64e+08 	A	0.0 	64 484.0 	1s22s 	 2S 	1/2 	 1s22p 	 2P° 	1/2 	T5118LS	L1113
+
+
+
+ NIST Energy Levels and Wavelengths Bibliographic Reference # 7288
+===================================================================
+Tables of Spectra of Hydrogen, Carbon, Nitrogen, and Oxygen Atoms and Ions,
+C. E. Moore,
+in CRC Series in Evaluated Data in Atomic Physics, 339 pp. (Edited by J. W. Gallagher, CRC Press, Boca Raton, FL, 1993)
+Tables of Spectra of Hydrogen, Carbon, Nitrogen, and Oxygen Atoms and Ions
+
+https://books.google.co.uk/books?id=m3nq_innWVIC&printsec=frontcover&source=gbs_ViewAPI&redir_esc=y#v=onepage&q&f=false
+	Screen Shot 2019-09-17 at 6.51.36 PM.png
+	Screen Shot 2019-09-17 at 6.53.52 PM.png
+
+
+https://www.edinformatics.com/math_science/c_atom.htm
+===================================================================
+Two electrons are found in the 1s orbital close to the nucleus. The
+next two will go into the 2s orbital. The remaining ones will be in
+two separate 2p orbitals. This is because the p orbitals have the same
+energy and the electrons would rather be in separate orbitals.
+
+
+
+"Energy Conversion" websites
+===================================================================
+http://www.ilpi.com/msds/ref/energyunits.html
+http://halas.rice.edu/conversions
+
+
+
+ Carbon Energy Levels
+===================================================================
+http://hyperphysics.phy-astr.gsu.edu/hbase/Atomic/carbon.html
+https://www.webelements.com/carbon/atoms.html
+https://www.webelements.com/magnesium/atoms.html
+
+
+ SlideShare
+===================================================================
+https://www.slideshare.net/theabhifacter/atomic-and-molecular-spectroscopy-chm323
+https://www.slideshare.net/phayaohospital/atomic-structure-part-2-36340323
+
+
+https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Ionization_Energy
+https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Electronic_Structure_of_Atoms_and_Molecules/Electronic_Configurations/Electronic_Configurations_Intro
+https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/07._Periodic_Properties_of_the_Elements/7.4%3A_Ionization_Energy
+https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_A_Molecular_Approach_(Tro)/08%3A_Periodic_Properties_of_the_Elements/8.3%3A_Electron_Configurations%3A_How_Electrons_Occupy_Orbitals

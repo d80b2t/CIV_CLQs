@@ -1,0 +1,100 @@
+=================================================================
+== 
+==
+==   Hamann et al., 2017, MNRAS 464, 3431
+== 
+==   Extremely red quasars in BOSS
+==
+== 
+=================================================================
+
+
+
+"Here we present a new catalogue of C IV and N V emission-line data
+for 216 188 BOSS quasars to characterize the ERQ line properties
+further."
+
+https://dash.ucr.edu/stash/dataset/doi:10.6086/D1H59V
+Hamann, Frederick
+Publication date: September 20, 2016
+Publisher: UC Riverside
+https://doi.org/10.6086/D1H59V
+Citation
+Hamann, Frederick (2016), Supplemental BOSS Emission Line Catalog, UC Riverside Dash, Dataset, https://doi.org/10.6086/D1H59V
+
+
+
+
+  C I V     C L Q s 
+====================================================================================
+
+
+
+TOPCAT logic
+====================================================================================
+
+/cos_pc19a_npr/data/ERQs/ark+=b6086=d1h59v_version_2 >
+C4N5REWs_DR12v11_MNRAS.fits
+
+
+((plate == 2948) && (MJD == 54553) && (FiberID == 614))
+||
+((plate == 5201) && (MJD == 55832) && (FiberID == 178))
+||
+((plate == 6118) && (MJD == 56189) && (FiberID == 720))
+||
+((plate == 7582) && (MJD == 56960) && (FiberID == 790))
+||
+((plate == 2089) && (MJD == 53498) && (FiberID == 427))
+
+
+((plate == 2948) && (MJD == 54553) && (Fiber == 614))
+||
+((plate == 5201) && (MJD == 55832) && (Fiber == 178))
+||
+((plate == 6118) && (MJD == 56189) && (Fiber == 720))
+||
+((plate == 7582) && (MJD == 56960) && (Fiber == 790))
+||
+((plate == 2089) && (MJD == 53498) && (Fiber == 427))
+
+
+
+
+/cos_pc19a_npr/data/ERQs/ark+=b6086=d1h59v_version_2
+=================================================================
+C4N5REWs_DR12v11_MNRAS.fits
+216,188 quasars
+
+18,523 BALs  (bal_flag_vi !=0; 9%)
+
+
+
+f1450 = flux in the uncorrected BOSS spectrum at 1450 Ang̊ rest (10−17 ergs s−1 cm−2 Ang-1 ) used to anchor the power-law continuum fits beneath C IV and N V, e.g. f_lambda = f1450 (lambda/1450Ang)^(\alpha)
+
+
+rew = C IV REW (Å) from the line profile fit.
+
+
+(rew < 10) && (fwhm > 2000):				1694 objects 1%
+(rew <  5) && (fwhm > 1000):  				 511 onjects 0%
+(rew <  5) && (fwhm > 2000):  				 368 objects 0%
+   Saved to REWlt5_and_FWHMgt2000.dat
+(rew<5 ) && (fwhm >2000) && (bal_flag_vi == 0)		2 92
+   Saved to REWlt5_and_FWHMgt2000.dat
+
+
+(abs(rew-EW_CIV) > 100) && (bal_flag_vi == 0)
+
+(abs(fwhm-FWHM_CIV) > 5000) && (bal_flag_vi == 0)
+
+
+(abs(rew-EW_CIV) > 100) && (abs(fwhm-FWHM_CIV) > 2000) &&     (bal_flag_vi == 0)
+
+
+
+(abs( fwhm-FWHM_CIV)/FWHM_CIV > 3 ) && (bal_flag_vi == 0)
+(abs( fwhm-FWHM_CIV)/FWHM_CIV > 2. ) && (FWHM_CIV > 0) &&  (bal_flag_vi == 0)
+
+
+

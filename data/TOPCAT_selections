@@ -1,0 +1,22 @@
+
+
+For Hamann et al. (2017) CIV catalog::
+===========================================================
+
+/cos_pc19a_npr/data/ERQs/ark+=b6086=d1h59v_version_2/C4N5REWs_DR12v11_MNRAS.fits
+
+((Plate == 5201) & (MJD == 55832) & (FiberID == 178) 
+((Plate == 5201) & (MJD == 55832) & (FiberID == 178) || (Plate == 6118) & (MJD == 56189) & (FiberID == 720))
+
+
+
+
+For Richards et al. (2011) CIV catalog::
+===========================================================
+All:						98,715 objects
+
+zemHW > 1.56					47,782 objects
+(zemHW > 1.56) & (zemHW < 2.22)			31,309 objects
+
+
+(plate == 2948) & (mjd == 54553) & (fiber == 614) 

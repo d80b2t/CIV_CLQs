@@ -1,0 +1,502 @@
+====== GFIT REPORT (Process id:0) ======
+
+     Data type :  gauss
+
+    Components :  43
+     CONTINUUM :  qsfit_comp_sbpowerlaw            
+        GALAXY :  qsfit_comp_galaxytemplate        DISABLED
+        BALMER :  qsfit_comp_balmer                
+        IRONUV :  qsfit_comp_ironuv                
+       IRONOPT :  qsfit_comp_ironoptical           DISABLED
+        NA_LYA :  qsfit_comp_emline                
+        BR_LYA :  qsfit_comp_emline                
+    NA_NV_1241 :  qsfit_comp_emline                
+    BR_OI_1306 :  qsfit_comp_emline                
+   BR_CII_1335 :  qsfit_comp_emline                
+  BR_SIIV_1400 :  qsfit_comp_emline                
+   BR_CIV_1549 :  qsfit_comp_emline                
+  BR_CIII_1909 :  qsfit_comp_emline                
+        BR_CII :  qsfit_comp_emline                
+  BR_MGII_2798 :  qsfit_comp_emline                DISABLED
+  NA_NEVI_3426 :  qsfit_comp_emline                DISABLED
+   NA_OII_3727 :  qsfit_comp_emline                DISABLED
+ NA_NEIII_3869 :  qsfit_comp_emline                DISABLED
+         BR_HD :  qsfit_comp_emline                DISABLED
+         BR_HG :  qsfit_comp_emline                DISABLED
+         NA_HB :  qsfit_comp_emline                DISABLED
+         BR_HB :  qsfit_comp_emline                DISABLED
+  NA_OIII_4959 :  qsfit_comp_emline                DISABLED
+  NA_OIII_5007 :  qsfit_comp_emline                DISABLED
+   BR_HEI_5876 :  qsfit_comp_emline                DISABLED
+   NA_NII_6549 :  qsfit_comp_emline                DISABLED
+         NA_HA :  qsfit_comp_emline                DISABLED
+         BR_HA :  qsfit_comp_emline                DISABLED
+   NA_NII_6583 :  qsfit_comp_emline                DISABLED
+   NA_SII_6716 :  qsfit_comp_emline                DISABLED
+   NA_SII_6731 :  qsfit_comp_emline                DISABLED
+          UNK1 :  qsfit_comp_emline                
+          UNK2 :  qsfit_comp_emline                
+          UNK3 :  qsfit_comp_emline                
+          UNK4 :  qsfit_comp_emline                DISABLED
+          UNK5 :  qsfit_comp_emline                
+          UNK6 :  qsfit_comp_emline                
+          UNK7 :  qsfit_comp_emline                
+          UNK8 :  qsfit_comp_emline                DISABLED
+          UNK9 :  qsfit_comp_emline                
+         UNK10 :  qsfit_comp_emline                DISABLED
+  LINE_HA_BASE :  qsfit_comp_emline                DISABLED
+  LINE_OIII_BW :  qsfit_comp_emline                DISABLED
+
+  Observation: :  Expressions
+             0 :  cc.CONTINUUM + cc.GALAXY + cc.BALMER + cc.IRONUV + cc.IRONOPT + cc.NA_LYA + cc.BR_LYA + cc.NA_NV_1241 + cc.BR_OI_1306 + cc.BR_CII_1335 + cc.BR_SIIV_1400 + cc.BR_CIV_1549 + cc.BR_CIII_1909 + cc.BR_CII + cc.BR_MGII_2798 + cc.NA_NEVI_3426 + cc.NA_OII_3727 + cc.NA_NEIII_3869 + cc.BR_HD + cc.BR_HG + cc.NA_HB + cc.BR_HB + cc.NA_OIII_4959 + cc.NA_OIII_5007 + cc.BR_HEI_5876 + cc.NA_NII_6549 + cc.NA_HA + cc.BR_HA + cc.NA_NII_6583 + cc.NA_SII_6716 + cc.NA_SII_6731 + cc.UNK1 + cc.UNK2 + cc.UNK3 + cc.UNK4 + cc.UNK5 + cc.UNK6 + cc.UNK7 + cc.UNK8 + cc.UNK9 + cc.UNK10 + cc.LINE_HA_BASE + cc.LINE_OIII_BW
+EXPR_CONTINUUM :  cc.continuum
+   EXPR_GALAXY :  cc.galaxy
+EXPR_CONTGALAX :  cc.continuum + cc.galaxy
+   EXPR_BALMER :  cc.balmer
+     EXPR_IRON :  cc.ironuv + cc.ironopt
+EXPR_BROADLINE :  cc.line_Ha_base + cc.br_Lya + cc.br_OI_1306 + cc.br_CII_1335 + cc.br_SiIV_1400 + cc.br_CIV_1549 + cc.br_CIII_1909 + cc.br_CII + cc.br_MgII_2798 + cc.br_Hd + cc.br_Hg + cc.br_Hb + cc.br_HeI_5876 + cc.br_Ha
+EXPR_NARROWLIN :  cc.na_Lya + cc.na_NV_1241 + cc.na_NeVI_3426 + cc.na_OII_3727 + cc.na_NeIII_3869 + cc.na_Hb + cc.na_OIII_4959 + cc.na_OIII_5007 + cc.na_NII_6549 + cc.na_Ha + cc.na_NII_6583 + cc.na_SII_6716 + cc.na_SII_6731 + cc.line_OIII_bw
+ EXPR_ABSLINES :  0
+  EXPR_UNKNOWN :  cc.unk1 + cc.unk2 + cc.unk3 + cc.unk4 + cc.unk5 + cc.unk6 + cc.unk7 + cc.unk8 + cc.unk9 + cc.unk10
+
+List of ALL parameters:
+ #|COMP         |PARNAME  |     VAL|      ERR|                 LIMITS|EXPR                          |  ACTUAL|FIXED |STEP
+ 0|Continuum    |norm     |  1.1028| 0.039598| 1.0000e-10,           |                              |  1.1028|      |
+ 1|Continuum    |x0       |  1964.3|        0|     1413.8,     2514.8|                              |  1964.3|fixed |
+ 2|Continuum    |alpha1   | -1.4532| 0.091825|         -3,          1|                              | -1.4532|      |
+ 3|Continuum    |dalpha   |       0|        0|       -0.2,        0.2|                              |       0|fixed |
+ 4|Continuum    |curv     |     100|        0|          1,       1000|                              |     100|fixed |
+ 5|balmer       |norm     |     0.1|        0|          0,        0.5|                              |     0.1|fixed |
+ 6|balmer       |ratio    |     0.3|         |        0.3,          1|                              |     0.3|fixed |
+ 7|balmer       |logt     |  4.1761|        0|           ,           |                              |  4.1761|fixed |0.1
+ 8|balmer       |logne    |       9|        0|           ,           |                              |       9|fixed |
+ 9|balmer       |logtau   |       0|         |          0,          1|                              |       0|fixed |
+10|balmer       |fwhm     |  5040.8|        0|           ,           |                              |  5040.8|fixed |
+11|balmer       |cont3000 |       1|        0|           ,           |qsfit_comp_sbpowerlaw_l3000() | 0.54042|fixed |
+12|ironuv       |ew       |  188.24|   75.024|          1,        218|                              |  188.24|      |
+13|ironuv       |fwhm     |    3000|        0|       1000,      10000|                              |    3000|fixed |500
+14|ironuv       |cont2350 |       1|        0|           ,           |qsfit_comp_sbpowerlaw_l2350() | 0.77063|fixed |
+15|na_Lya       |norm     |  872.83|   18.525|          0,           |                              |  872.83|      |
+16|na_Lya       |center   |  1215.2|        0|           ,           |                              |  1215.2|fixed |
+17|na_Lya       |v_off    |   82.59|   4.4034|      -1000,       1000|                              |   82.59|      |1
+18|na_Lya       |fwhm     |  869.17|    12.55|        100,       1000|                              |  869.17|      |
+19|br_Lya       |norm     |  228.83|   23.341|          0,           |                              |  228.83|      |
+20|br_Lya       |center   |  1215.2|        0|           ,           |                              |  1215.2|fixed |
+21|br_Lya       |v_off    | -742.17|   82.536|      -3000,       3000|                              | -742.17|      |1
+22|br_Lya       |fwhm     |  2107.5|   109.73|        900,      15000|                              |  2107.5|      |
+23|na_NV_1241   |norm     |  100.06|   4.9801|          0,           |                              |  100.06|      |
+24|na_NV_1241   |center   |  1240.8|        0|           ,           |                              |  1240.8|fixed |
+25|na_NV_1241   |v_off    | -52.693|   37.626|      -1000,       1000|                              | -52.693|      |1
+26|na_NV_1241   |fwhm     |  1892.9|   89.477|        100,       2000|                              |  1892.9|      |
+27|br_OI_1306   |norm     |  59.146|   8.5885|          0,           |                              |  59.146|      |
+28|br_OI_1306   |center   |  1305.5|        0|           ,           |                              |  1305.5|fixed |
+29|br_OI_1306   |v_off    |    3000|         |      -3000,       3000|                              |    3000|      |1
+30|br_OI_1306   |fwhm     |   15000|         |        900,      15000|                              |   15000|      |
+31|br_CII_1335  |norm     |  12.814|   5.2777|          0,           |                              |  12.814|      |
+32|br_CII_1335  |center   |  1335.3|        0|           ,           |                              |  1335.3|fixed |
+33|br_CII_1335  |v_off    |   -3000|         |      -3000,       3000|                              |   -3000|      |1
+34|br_CII_1335  |fwhm     |  4852.8|   2205.8|        900,      15000|                              |  4852.8|      |
+35|br_SiIV_1400 |norm     |  16.068|   3.2664|          0,           |                              |  16.068|      |
+36|br_SiIV_1400 |center   |  1399.8|        0|           ,           |                              |  1399.8|fixed |
+37|br_SiIV_1400 |v_off    |  -915.9|    205.5|      -3000,       3000|                              |  -915.9|      |1
+38|br_SiIV_1400 |fwhm     |    2129|   480.61|        900,      15000|                              |    2129|      |
+39|br_CIV_1549  |norm     |  167.83|   3.6957|          0,           |                              |  167.83|      |
+40|br_CIV_1549  |center   |  1549.5|        0|           ,           |                              |  1549.5|fixed |
+41|br_CIV_1549  |v_off    |   215.1|   9.1589|      -3000,       3000|                              |   215.1|      |1
+42|br_CIV_1549  |fwhm     |  967.43|   21.508|        900,      15000|                              |  967.43|      |
+43|br_CIII_1909 |norm     |  15.766|   9.9997|          0,           |                              |  15.766|      |
+44|br_CIII_1909 |center   |  1908.7|        0|           ,           |                              |  1908.7|fixed |
+45|br_CIII_1909 |v_off    |    3000|         |      -3000,       3000|                              |    3000|      |1
+46|br_CIII_1909 |fwhm     |   15000|         |        900,      15000|                              |   15000|      |
+47|br_CII       |norm     |  5.4486|    2.833|          0,           |                              |  5.4486|      |
+48|br_CII       |center   |    2326|        0|           ,           |                              |    2326|fixed |
+49|br_CII       |v_off    |  519.07|   373.53|      -3000,       3000|                              |  519.07|      |1
+50|br_CII       |fwhm     |  1508.6|   873.13|        900,      15000|                              |  1508.6|      |
+51|unk1         |norm     |  28.318|   2.1877|          0,           |                              |  28.318|      |
+52|unk1         |center   |  1638.9|  0.14111|     1474.7,     1802.4|                              |  1638.9|      |
+53|unk1         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+54|unk1         |fwhm     |  671.73|   59.117|        600,      10000|                              |  671.73|      |
+55|unk2         |norm     |  144.57|   13.638|          0,           |                              |  144.57|      |
+56|unk2         |center   |  1212.4|   1.2039|     1093.7,     1336.7|                              |  1212.4|      |
+57|unk2         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+58|unk2         |fwhm     |  7700.4|   673.69|        600,      10000|                              |  7700.4|      |
+59|unk3         |norm     |  18.386|   3.1875|          0,           |                              |  18.386|      |
+60|unk3         |center   |  1906.6|  0.19957|     1715.5,     2096.8|                              |  1906.6|      |
+61|unk3         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+62|unk3         |fwhm     |  646.55|   88.355|        600,      10000|                              |  646.55|      |
+63|unk5         |norm     |   58.38|    9.581|          0,           |                              |   58.38|      |
+64|unk5         |center   |  1490.8|   3.1706|     1337.2,     1634.4|                              |  1490.8|      |
+65|unk5         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+66|unk5         |fwhm     |  9782.1|   1636.4|        600,      10000|                              |  9782.1|      |
+67|unk6         |norm     |  78.284|   8.0938|          0,           |                              |  78.284|      |
+68|unk6         |center   |  1555.7|   3.1576|     1398.9,     1709.8|                              |  1555.7|      |
+69|unk6         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+70|unk6         |fwhm     |   10000|         |        600,      10000|                              |   10000|      |
+71|unk7         |norm     |  26.866|    5.144|          0,           |                              |  26.866|      |
+72|unk7         |center   |  1905.3|   1.2571|       1714,     2094.8|                              |  1905.3|      |
+73|unk7         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+74|unk7         |fwhm     |  3038.8|   637.41|        600,      10000|                              |  3038.8|      |
+75|unk9         |norm     |   34.91|   7.0984|          0,           |                              |   34.91|      |
+76|unk9         |center   |  1759.5|   6.8641|     1516.7,     1853.7|                              |  1759.5|      |
+77|unk9         |v_off    |       0|        0|      -1000,       1000|                              |       0|fixed |1
+78|unk9         |fwhm     |   10000|         |        600,      10000|                              |   10000|      |
+
+     Fit stat. :  3.14e+03     red.: 0.87 
+        N data :  3601
+
+    Test stat. :  3.14e+03     red.: 0.88    Prob(worse fit): 1.00      
+           DOF :  3550      
+
+  MPFIT status :  2         
+  Elapsed time :  2.50      
+
+
+Parameter covariance matrix (sorted by absolute value of covariance, down to covariance=0.5)
+ #|COMP1        |PAR1   |COMP2        |PAR2   |   COVAR
+ 0|br_Lya       |v_off  |br_Lya       |norm   | 0.88459
+ 1|br_Lya       |fwhm   |br_Lya       |norm   | 0.80248
+ 2|na_Lya       |fwhm   |na_Lya       |norm   | 0.75936
+ 3|unk3         |fwhm   |unk3         |norm   | 0.75565
+ 4|unk5         |fwhm   |unk5         |norm   | 0.74695
+ 5|Continuum    |alpha1 |Continuum    |norm   |  0.7197
+ 6|br_CII       |fwhm   |br_CII       |norm   | 0.65482
+ 7|br_Lya       |fwhm   |br_Lya       |v_off  | 0.64583
+ 8|na_NV_1241   |fwhm   |na_NV_1241   |norm   |  0.6185
+ 9|unk7         |fwhm   |unk3         |norm   | 0.61564
+10|unk2         |center |unk2         |norm   | 0.59998
+11|br_CII_1335  |fwhm   |br_CII_1335  |norm   | 0.58018
+12|br_SiIV_1400 |fwhm   |br_SiIV_1400 |norm   | 0.57966
+13|unk6         |center |unk5         |fwhm   | 0.55192
+14|br_CIV_1549  |fwhm   |br_CIV_1549  |norm   | 0.54349
+15|unk6         |center |unk5         |norm   | 0.53458
+16|unk6         |center |unk5         |center | 0.50308
+
+
+====== QSFIT REPORT =======
+
+QSFIT, ver. 2.0.0
+  started: Wed Oct 16 18:08:22 2019
+
+ID: 
+Spectral resolution (min, max): 68.834, 69.163 km s^-1
+Fraction of "good" channels: 83.606%
+  z=2.519999980926514             
+ebv=0.180000007152557             
+
+E(B-V) : 0.18
+Dereddening factors @ 1450, 3000, 5100 AA: 4.0895, 2.5457, 1.767
+Cosmology: 
+#| H0|OMEGA_M|LAMBDA0
+0| 70|    0.3|    0.7
+Redshift: 2.52
+Lum. distance (Gpc): 20.594
+
+The line Lya has a coverage of      0.997500
+The line NV_1241 has a coverage of      0.910000
+The line OI_1306 has a coverage of      0.980000
+The line CII_1335 has a coverage of      0.962500
+The line SiIV_1400 has a coverage of      0.974167
+The line CIV_1549 has a coverage of      0.991667
+The line CIII_1909 has a coverage of      0.974167
+The line CII has a coverage of      0.770000
+The line MgII_2798 has a coverage of      0.460833
+   Ignoring data between 2743A and 2853A
+The line NeVI_3426 has a coverage of       0.00000
+The line OII_3727 has a coverage of       0.00000
+The line NeIII_3869 has a coverage of       0.00000
+The line Hd has a coverage of       0.00000
+The line Hg has a coverage of       0.00000
+The line Hb has a coverage of       0.00000
+The line OIII_4959 has a coverage of       0.00000
+The line OIII_5007 has a coverage of       0.00000
+The line HeI_5876 has a coverage of       0.00000
+The line NII_6549 has a coverage of       0.00000
+The line Ha has a coverage of       0.00000
+The line NII_6583 has a coverage of       0.00000
+The line SII_6716 has a coverage of       0.00000
+The line SII_6731 has a coverage of       0.00000
+
+Output file  : Outdata/20191016/000/spec-5889-56038-0662_QSFIT.dat
+Log file     : Outdata/20191016/000/spec-5889-56038-0662_QSFIT.log
+
+Galaxy component is disabled since Z=2.52 > 0.8
+Using galaxy template: SWIRE_ELL5
+  galaxy template flux density at 3650AA = 0.44222
+  galaxy template flux density at 4400AA = 0.78098
+  galaxy template flux density at 5100AA = 0.9311
+  galaxy template flux density at 5500AA = 1
+  galaxy template flux integrated in the range 3650AA +/- 340AA = 268.84
+  galaxy template flux integrated in the range 4400AA +/- 490AA = 780.31
+  galaxy template flux integrated in the range 5100AA +/- 50AA = 92.804
+  galaxy template flux integrated in the range 5500AA +/- 445AA = 849.11
+
+Continuum renormalization (to account for emission lines)
+Initial continuum norm. and fraction of negative residuals: 1.4265,  0.43655
+Final continuum norm. and fraction of negative residuals  : 0.37855,  0.90058
+
+Opt. iron component is disabled since MAX(lambda)=2881.8 < 4600AA
+The line MgII_2798 is disabled
+The line NeVI_3426 is disabled
+The line OII_3727 is disabled
+The line NeIII_3869 is disabled
+The line Hd is disabled
+The line Hg is disabled
+The line Hb is disabled
+The line OIII_4959 is disabled
+The line OIII_5007 is disabled
+The line HeI_5876 is disabled
+The line NII_6549 is disabled
+The line Ha is disabled
+The line NII_6583 is disabled
+The line SII_6716 is disabled
+The line SII_6731 is disabled
+Enabling "unknown" em. line 1/10 at 1638.5
+Enabling "unknown" em. line 2/10 at 1215.2
+Enabling "unknown" em. line 3/10 at 1906.2
+Enabling "unknown" em. line 4/10 at 1908.3
+Enabling "unknown" em. line 5/10 at 1485.8
+Enabling "unknown" em. line 6/10 at 1554.4
+Enabling "unknown" em. line 7/10 at 1904.4
+Enabling "unknown" em. line 8/10 at 2523.8
+Enabling "unknown" em. line 9/10 at 1685.2
+Enabling "unknown" em. line 10/10 at 2468.1
+Disabling line UNK4
+Disabling line UNK8
+Disabling line UNK10
+Host galaxy:
+  Bit 0: fit of galaxy template is not sensible at this redshift
+Continuum at 3000 AA
+  Bit 0: wavelength is outside the observed range
+Continuum at 4210 AA
+  Bit 0: wavelength is outside the observed range
+Continuum at 5100 AA
+  Bit 0: wavelength is outside the observed range
+Iron emission lines (Optical, broad):
+  Bit 0: fit of iron template is not sensible at this redshift
+Iron emission lines (Optical, narrow):
+  Bit 0: fit of iron template is not sensible at this redshift
+Line na_Lya (narrow, wl=1215.2)
+  Bit 3: FWHM value hits a limit in the fit
+Line br_Lya (wavelength=1215.2)  is modeled with 2 components:
+ #|COMP         |PARNAME|     VAL|     ERR|LIMITED|         LIMITS|FIXED|STEP|EXPR|  ACTUAL
+ 0|na_Lya       |norm   |       0|  18.525|   1, 0|      0,       |    0|   0|    |  872.83
+ 1|na_Lya       |center |  1215.2|       0|   0, 0|       ,       |    1|   0|    |  1215.2
+ 2|na_Lya       |v_off  |   82.59|  4.4034|   1, 1|  -1000,   1000|    0|   1|    |   82.59
+ 3|na_Lya       |fwhm   |  869.17|   12.55|   1, 1|    100,   1000|    0|   0|    |  869.17
+ 4|br_Lya       |norm   |  228.83|  23.341|   1, 0|      0,       |    0|   0|    |  228.83
+ 5|br_Lya       |center |  1215.2|       0|   0, 0|       ,       |    1|   0|    |  1215.2
+ 6|br_Lya       |v_off  | -742.17|  82.536|   1, 1|  -3000,   3000|    0|   1|    | -742.17
+ 7|br_Lya       |fwhm   |  2107.5|  109.73|   1, 1|    900,  15000|    0|   0|    |  2107.5
+ 8|na_NV_1241   |norm   |       0|  4.9801|   1, 0|      0,       |    0|   0|    |  100.06
+ 9|na_NV_1241   |center |  1240.8|       0|   0, 0|       ,       |    1|   0|    |  1240.8
+10|na_NV_1241   |v_off  | -52.693|  37.626|   1, 1|  -1000,   1000|    0|   1|    | -52.693
+11|na_NV_1241   |fwhm   |  1892.9|  89.477|   1, 1|    100,   2000|    0|   0|    |  1892.9
+12|br_OI_1306   |norm   |       0|  8.5885|   1, 0|      0,       |    0|   0|    |  59.146
+13|br_OI_1306   |center |  1305.5|       0|   0, 0|       ,       |    1|   0|    |  1305.5
+14|br_OI_1306   |v_off  |    3000|        |   1, 1|  -3000,   3000|    0|   1|    |    3000
+15|br_OI_1306   |fwhm   |   15000|        |   1, 1|    900,  15000|    0|   0|    |   15000
+16|br_CII_1335  |norm   |       0|  5.2777|   1, 0|      0,       |    0|   0|    |  12.814
+17|br_CII_1335  |center |  1335.3|       0|   0, 0|       ,       |    1|   0|    |  1335.3
+18|br_CII_1335  |v_off  |   -3000|        |   1, 1|  -3000,   3000|    0|   1|    |   -3000
+19|br_CII_1335  |fwhm   |  4852.8|  2205.8|   1, 1|    900,  15000|    0|   0|    |  4852.8
+20|br_SiIV_1400 |norm   |       0|  3.2664|   1, 0|      0,       |    0|   0|    |  16.068
+21|br_SiIV_1400 |center |  1399.8|       0|   0, 0|       ,       |    1|   0|    |  1399.8
+22|br_SiIV_1400 |v_off  |  -915.9|   205.5|   1, 1|  -3000,   3000|    0|   1|    |  -915.9
+23|br_SiIV_1400 |fwhm   |    2129|  480.61|   1, 1|    900,  15000|    0|   0|    |    2129
+24|br_CIV_1549  |norm   |       0|  3.6957|   1, 0|      0,       |    0|   0|    |  167.83
+25|br_CIV_1549  |center |  1549.5|       0|   0, 0|       ,       |    1|   0|    |  1549.5
+26|br_CIV_1549  |v_off  |   215.1|  9.1589|   1, 1|  -3000,   3000|    0|   1|    |   215.1
+27|br_CIV_1549  |fwhm   |  967.43|  21.508|   1, 1|    900,  15000|    0|   0|    |  967.43
+28|br_CIII_1909 |norm   |       0|  9.9997|   1, 0|      0,       |    0|   0|    |  15.766
+29|br_CIII_1909 |center |  1908.7|       0|   0, 0|       ,       |    1|   0|    |  1908.7
+30|br_CIII_1909 |v_off  |    3000|        |   1, 1|  -3000,   3000|    0|   1|    |    3000
+31|br_CIII_1909 |fwhm   |   15000|        |   1, 1|    900,  15000|    0|   0|    |   15000
+32|br_CII       |norm   |       0|   2.833|   1, 0|      0,       |    0|   0|    |  5.4486
+33|br_CII       |center |    2326|       0|   0, 0|       ,       |    1|   0|    |    2326
+34|br_CII       |v_off  |  519.07|  373.53|   1, 1|  -3000,   3000|    0|   1|    |  519.07
+35|br_CII       |fwhm   |  1508.6|  873.13|   1, 1|    900,  15000|    0|   0|    |  1508.6
+36|unk1         |norm   |       0|  2.1877|   1, 0|      0,       |    0|   0|    |  28.318
+37|unk1         |center |  1638.9| 0.14111|   1, 1| 1474.7, 1802.4|    0|   0|    |  1638.9
+38|unk1         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+39|unk1         |fwhm   |  671.73|  59.117|   1, 1|    600,  10000|    0|   0|    |  671.73
+40|unk2         |norm   |  144.57|  13.638|   1, 0|      0,       |    0|   0|    |  144.57
+41|unk2         |center |  1212.4|  1.2039|   1, 1| 1093.7, 1336.7|    0|   0|    |  1212.4
+42|unk2         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+43|unk2         |fwhm   |  7700.4|  673.69|   1, 1|    600,  10000|    0|   0|    |  7700.4
+44|unk3         |norm   |       0|  3.1875|   1, 0|      0,       |    0|   0|    |  18.386
+45|unk3         |center |  1906.6| 0.19957|   1, 1| 1715.5, 2096.8|    0|   0|    |  1906.6
+46|unk3         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+47|unk3         |fwhm   |  646.55|  88.355|   1, 1|    600,  10000|    0|   0|    |  646.55
+48|unk5         |norm   |       0|   9.581|   1, 0|      0,       |    0|   0|    |   58.38
+49|unk5         |center |  1490.8|  3.1706|   1, 1| 1337.2, 1634.4|    0|   0|    |  1490.8
+50|unk5         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+51|unk5         |fwhm   |  9782.1|  1636.4|   1, 1|    600,  10000|    0|   0|    |  9782.1
+52|unk6         |norm   |       0|  8.0938|   1, 0|      0,       |    0|   0|    |  78.284
+53|unk6         |center |  1555.7|  3.1576|   1, 1| 1398.9, 1709.8|    0|   0|    |  1555.7
+54|unk6         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+55|unk6         |fwhm   |   10000|        |   1, 1|    600,  10000|    0|   0|    |   10000
+56|unk7         |norm   |       0|   5.144|   1, 0|      0,       |    0|   0|    |  26.866
+57|unk7         |center |  1905.3|  1.2571|   1, 1|   1714, 2094.8|    0|   0|    |  1905.3
+58|unk7         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+59|unk7         |fwhm   |  3038.8|  637.41|   1, 1|    600,  10000|    0|   0|    |  3038.8
+60|unk9         |norm   |       0|  7.0984|   1, 0|      0,       |    0|   0|    |   34.91
+61|unk9         |center |  1759.5|  6.8641|   1, 1| 1516.7, 1853.7|    0|   0|    |  1759.5
+62|unk9         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+63|unk9         |fwhm   |   10000|        |   1, 1|    600,  10000|    0|   0|    |   10000
+
+Line na_NV_1241 (narrow, wl=1240.8)
+  Bit 3: FWHM value hits a limit in the fit
+Line br_OI_1306 (broad, wl=1305.5)
+  Bit 2: either the FWHM or its uncertainty are NaN
+  Bit 5: either the Voff or its uncertainty are NaN
+Line br_CII_1335 (broad, wl=1335.3)
+  Bit 5: either the Voff or its uncertainty are NaN
+Line br_CIV_1549 (wavelength=1549.5)  is modeled with 2 components:
+ #|COMP         |PARNAME|     VAL|     ERR|LIMITED|         LIMITS|FIXED|STEP|EXPR|  ACTUAL
+ 0|na_Lya       |norm   |       0|  18.525|   1, 0|      0,       |    0|   0|    |  872.83
+ 1|na_Lya       |center |  1215.2|       0|   0, 0|       ,       |    1|   0|    |  1215.2
+ 2|na_Lya       |v_off  |   82.59|  4.4034|   1, 1|  -1000,   1000|    0|   1|    |   82.59
+ 3|na_Lya       |fwhm   |  869.17|   12.55|   1, 1|    100,   1000|    0|   0|    |  869.17
+ 4|br_Lya       |norm   |       0|  23.341|   1, 0|      0,       |    0|   0|    |  228.83
+ 5|br_Lya       |center |  1215.2|       0|   0, 0|       ,       |    1|   0|    |  1215.2
+ 6|br_Lya       |v_off  | -742.17|  82.536|   1, 1|  -3000,   3000|    0|   1|    | -742.17
+ 7|br_Lya       |fwhm   |  2107.5|  109.73|   1, 1|    900,  15000|    0|   0|    |  2107.5
+ 8|na_NV_1241   |norm   |       0|  4.9801|   1, 0|      0,       |    0|   0|    |  100.06
+ 9|na_NV_1241   |center |  1240.8|       0|   0, 0|       ,       |    1|   0|    |  1240.8
+10|na_NV_1241   |v_off  | -52.693|  37.626|   1, 1|  -1000,   1000|    0|   1|    | -52.693
+11|na_NV_1241   |fwhm   |  1892.9|  89.477|   1, 1|    100,   2000|    0|   0|    |  1892.9
+12|br_OI_1306   |norm   |       0|  8.5885|   1, 0|      0,       |    0|   0|    |  59.146
+13|br_OI_1306   |center |  1305.5|       0|   0, 0|       ,       |    1|   0|    |  1305.5
+14|br_OI_1306   |v_off  |    3000|        |   1, 1|  -3000,   3000|    0|   1|    |    3000
+15|br_OI_1306   |fwhm   |   15000|        |   1, 1|    900,  15000|    0|   0|    |   15000
+16|br_CII_1335  |norm   |       0|  5.2777|   1, 0|      0,       |    0|   0|    |  12.814
+17|br_CII_1335  |center |  1335.3|       0|   0, 0|       ,       |    1|   0|    |  1335.3
+18|br_CII_1335  |v_off  |   -3000|        |   1, 1|  -3000,   3000|    0|   1|    |   -3000
+19|br_CII_1335  |fwhm   |  4852.8|  2205.8|   1, 1|    900,  15000|    0|   0|    |  4852.8
+20|br_SiIV_1400 |norm   |       0|  3.2664|   1, 0|      0,       |    0|   0|    |  16.068
+21|br_SiIV_1400 |center |  1399.8|       0|   0, 0|       ,       |    1|   0|    |  1399.8
+22|br_SiIV_1400 |v_off  |  -915.9|   205.5|   1, 1|  -3000,   3000|    0|   1|    |  -915.9
+23|br_SiIV_1400 |fwhm   |    2129|  480.61|   1, 1|    900,  15000|    0|   0|    |    2129
+24|br_CIV_1549  |norm   |  167.83|  3.6957|   1, 0|      0,       |    0|   0|    |  167.83
+25|br_CIV_1549  |center |  1549.5|       0|   0, 0|       ,       |    1|   0|    |  1549.5
+26|br_CIV_1549  |v_off  |   215.1|  9.1589|   1, 1|  -3000,   3000|    0|   1|    |   215.1
+27|br_CIV_1549  |fwhm   |  967.43|  21.508|   1, 1|    900,  15000|    0|   0|    |  967.43
+28|br_CIII_1909 |norm   |       0|  9.9997|   1, 0|      0,       |    0|   0|    |  15.766
+29|br_CIII_1909 |center |  1908.7|       0|   0, 0|       ,       |    1|   0|    |  1908.7
+30|br_CIII_1909 |v_off  |    3000|        |   1, 1|  -3000,   3000|    0|   1|    |    3000
+31|br_CIII_1909 |fwhm   |   15000|        |   1, 1|    900,  15000|    0|   0|    |   15000
+32|br_CII       |norm   |       0|   2.833|   1, 0|      0,       |    0|   0|    |  5.4486
+33|br_CII       |center |    2326|       0|   0, 0|       ,       |    1|   0|    |    2326
+34|br_CII       |v_off  |  519.07|  373.53|   1, 1|  -3000,   3000|    0|   1|    |  519.07
+35|br_CII       |fwhm   |  1508.6|  873.13|   1, 1|    900,  15000|    0|   0|    |  1508.6
+36|unk1         |norm   |       0|  2.1877|   1, 0|      0,       |    0|   0|    |  28.318
+37|unk1         |center |  1638.9| 0.14111|   1, 1| 1474.7, 1802.4|    0|   0|    |  1638.9
+38|unk1         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+39|unk1         |fwhm   |  671.73|  59.117|   1, 1|    600,  10000|    0|   0|    |  671.73
+40|unk2         |norm   |       0|  13.638|   1, 0|      0,       |    0|   0|    |  144.57
+41|unk2         |center |  1212.4|  1.2039|   1, 1| 1093.7, 1336.7|    0|   0|    |  1212.4
+42|unk2         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+43|unk2         |fwhm   |  7700.4|  673.69|   1, 1|    600,  10000|    0|   0|    |  7700.4
+44|unk3         |norm   |       0|  3.1875|   1, 0|      0,       |    0|   0|    |  18.386
+45|unk3         |center |  1906.6| 0.19957|   1, 1| 1715.5, 2096.8|    0|   0|    |  1906.6
+46|unk3         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+47|unk3         |fwhm   |  646.55|  88.355|   1, 1|    600,  10000|    0|   0|    |  646.55
+48|unk5         |norm   |       0|   9.581|   1, 0|      0,       |    0|   0|    |   58.38
+49|unk5         |center |  1490.8|  3.1706|   1, 1| 1337.2, 1634.4|    0|   0|    |  1490.8
+50|unk5         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+51|unk5         |fwhm   |  9782.1|  1636.4|   1, 1|    600,  10000|    0|   0|    |  9782.1
+52|unk6         |norm   |  78.284|  8.0938|   1, 0|      0,       |    0|   0|    |  78.284
+53|unk6         |center |  1555.7|  3.1576|   1, 1| 1398.9, 1709.8|    0|   0|    |  1555.7
+54|unk6         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+55|unk6         |fwhm   |   10000|        |   1, 1|    600,  10000|    0|   0|    |   10000
+56|unk7         |norm   |       0|   5.144|   1, 0|      0,       |    0|   0|    |  26.866
+57|unk7         |center |  1905.3|  1.2571|   1, 1|   1714, 2094.8|    0|   0|    |  1905.3
+58|unk7         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+59|unk7         |fwhm   |  3038.8|  637.41|   1, 1|    600,  10000|    0|   0|    |  3038.8
+60|unk9         |norm   |       0|  7.0984|   1, 0|      0,       |    0|   0|    |   34.91
+61|unk9         |center |  1759.5|  6.8641|   1, 1| 1516.7, 1853.7|    0|   0|    |  1759.5
+62|unk9         |v_off  |       0|       0|   1, 1|  -1000,   1000|    1|   1|    |       0
+63|unk9         |fwhm   |   10000|        |   1, 1|    600,  10000|    0|   0|    |   10000
+
+Line br_CIII_1909 (broad, wl=1908.7)
+  Bit 2: either the FWHM or its uncertainty are NaN
+  Bit 5: either the Voff or its uncertainty are NaN
+Balmer template:
+  Bit 1: either the luminosity or its uncertainty are NaN
+
+
+ Continuum 
+#|   WAVE|    LUM|LUM_ERR|   SLOPE|SLOPE_ERR|GALAXY|QUALITY
+0| 1138.5| 2773.5| 45.084| -1.4428| 0.091825|      |      0
+1| 1424.5| 2505.7| 56.407| -1.4394| 0.091825|      |      0
+2| 1782.3| 2263.7| 70.575| -1.4369| 0.091825|      |      0
+3| 2229.9| 2045.2| 88.301| -1.4678| 0.091825|      |      0
+4|   2790|   1849| 110.48| -1.4409| 0.091825|      |      0
+5|   1450| 2485.6| 57.417| -1.4661| 0.091825|      |      0
+6|   2245|   2039| 88.898| -1.4562| 0.091825|      |      0
+7|   3000|       |       |        |         |      |      1
+8|   4210|       |       |        |         |      |      1
+9|   5100|       |       |        |         |      |      1
+
+
+ Balmer template 
+#|NORM|    LUM|LUM_ERR|RATIO|RATIO_ERR|   LOGT|LOGT_ERR|LOGNE|LOGNE_ERR|LOGTAU|LOGTAU_ERR|   FWHM|FWHM_ERR|QUALITY
+0| 0.1| 162.13|      0|  0.3|         | 4.1761|       0|    9|        0|     0|          | 5040.8|       0|      2
+
+
+ Host galaxy 
+#|LUM|LUM_ERR|QUALITY
+0|   |       |      1
+
+
+ Iron emission lines (UV)
+UV:
+#|     EW| EW_ERR| FWHM|FWHM_ERR|QUALITY
+0| 188.24| 75.024| 3000|       0|      0
+
+ Iron emission lines (optical, broad components)
+#|LUM|LUM_ERR|FWHM|FWHM_ERR|UNK_COUNT|UNK_LUM|UNK_LUM_ERR|EW|EW_ERR|QUALITY
+0|   |       |    |        |        0|      0|          0|  |      |      1
+
+ Iron emission lines (optical, broad narrow)
+#|LUM|LUM_ERR|FWHM|FWHM_ERR|EW|EW_ERR|QUALITY
+0|   |       |    |        |  |      |      1
+
+
+ Emission lines 
+ #|LINE          |NCOMP|    LUM|LUM_ERR|   FWHM|FWHM_ERR|    VOFF|VOFF_ERR|     EW| EW_ERR|QUALITY
+ 0|na_Lya        |    1| 872.83| 18.525| 869.17|   12.55|   82.59|  4.4034| 134.82| 2.8614|      8
+ 1|br_Lya        |    2| 373.39| 19.584| 2346.6|  154.36| -742.21|  82.536| 57.674|  3.025|      0
+ 2|na_NV_1241    |    1| 100.06| 4.9801| 1892.9|  89.477| -52.693|  37.626| 38.533| 1.9178|      8
+ 3|br_OI_1306    |    1| 59.146| 8.5885|  15000|        |    3000|        | 29.438| 4.2746|     36
+ 4|br_CII_1335   |    1| 12.814| 5.2777| 4852.8|  2205.8|   -3000|        | 6.5877| 2.7134|     32
+ 5|br_SiIV_1400  |    1| 16.068| 3.2664|   2129|  480.61|  -915.9|   205.5| 8.7622| 1.7813|      0
+ 6|br_CIV_1549   |    2| 246.11| 5.0947| 1007.1|   22.39|  226.94|  9.1589| 83.134| 1.7209|      0
+ 7|br_CIII_1909  |    1| 15.766| 9.9997|  15000|        |    3000|        | 3.5522|  2.253|     36
+ 8|br_CII        |    1| 5.4486|  2.833| 1508.6|  873.13|  519.07|  373.53| 5.2888| 2.7499|      0
+ 9|br_MgII_2798  |    0|       |       |       |        |        |        |       |       |      0
+10|na_NeVI_3426  |    0|       |       |       |        |        |        |       |       |      0
+11|na_OII_3727   |    0|       |       |       |        |        |        |       |       |      0
+12|na_NeIII_3869 |    0|       |       |       |        |        |        |       |       |      0
+13|br_Hd         |    0|       |       |       |        |        |        |       |       |      0
+14|br_Hg         |    0|       |       |       |        |        |        |       |       |      0
+15|na_Hb         |    0|       |       |       |        |        |        |       |       |      0
+16|br_Hb         |    0|       |       |       |        |        |        |       |       |      0
+17|na_OIII_4959  |    0|       |       |       |        |        |        |       |       |      0
+18|na_OIII_5007  |    0|       |       |       |        |        |        |       |       |      0
+19|br_HeI_5876   |    0|       |       |       |        |        |        |       |       |      0
+20|na_NII_6549   |    0|       |       |       |        |        |        |       |       |      0
+21|na_Ha         |    0|       |       |       |        |        |        |       |       |      0
+22|br_Ha         |    0|       |       |       |        |        |        |       |       |      0
+23|na_NII_6583   |    0|       |       |       |        |        |        |       |       |      0
+24|na_SII_6716   |    0|       |       |       |        |        |        |       |       |      0
+25|na_SII_6731   |    0|       |       |       |        |        |        |       |       |      0
+26|line_ha_base  |    0|       |       |       |        |        |        |       |       |      0
+27|line_oiii_bw  |    0|       |       |       |        |        |        |       |       |      0
+
+
+ Fit results 
+#|FIT_STAT|TEST_STAT|TEST_DOF|TEST_PROB|MPFIT_STATUS|ELAPSED_TIME
+0|    3136|     3136|    3550|        1|           2|      9.2868
+Total elapsed time: 9.2868 seconds.
+

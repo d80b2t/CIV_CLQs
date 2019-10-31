@@ -1,0 +1,21 @@
+
+Plate: 5201, MJD: 55832, Fiber: 178
+https://dr12.sdss.org/spectrumDetail?mjd=55832&fiber=178&plateid=5201
+
+Line		Rest		        Line	        Line		        Line			   Continuum
+Name		Wavelength	z	        sigma 		Flux	
+                       [Å]			               [km s-1]  	[10-17erg/cm2/s] 	   [10-17erg/cm2/s/Å]
+Ly_alpha	1215.7		2.186	1769		633.9		   5.376
+N_V		1240.8		2.185	1012		107.1		   4.645
+C_IV		1549.5		2.185	2287		125.1		   1.256
+He_II		1640.4		2.185	2287		 10.68		   1.001
+C_III]		1908.7		2.185	2287	 	 29.53		   0.6008
+Mg_II		2800.3		2.185	2287 	 	 34.66		   0.3461
+
+So, ratios, MJD 54553 / MJD 55832::
+$Ly_alpha	1215.7		—	0.770		0.805			1.344			
+N_V		1240.8		—	0.844		1.143			1.194
+C_IV		1549.5		—	0.843		3.698			2.167			
+He_II		1640.4		—	0.843		0.755			2.445			
+C_III]		1908.7		—	0.843		5.574			3.27			
+Mg_II		2800.3		—	0.843		5.407			4.37

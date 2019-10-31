@@ -1,0 +1,30 @@
+
+
+
+SDSS data from::
+https://dr15.sdss.org/optical/spectrum/view?plateid=2089&mjd=53498&fiberid=427&run2d=26
+and download:
+spec-2089-53498-0427.fits
+
+
+Plate		2089
+MJD		53498
+FiberID		427
+RA		12:05:44.68
+DEC		+34:22:52.42
+Version		26
+bestobj_id	1237665024366936089
+specobj_id	2352122336947234816
+z		2.06796
+zerr		0.000269155
+Class		QSO
+Subclass	BROADLINE
+
+
+
+
+https://skyserver.sdss.org/dr12/en/tools/explore/Summary.aspx?sid=2352122336947234816
+          https://skyserver.sdss.org/dr12/en/get/SpecById.ashx?id=2352122336947234816
+
+R.A.		181.436164265
+Decl.		+34.381229278	

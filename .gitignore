@@ -1,0 +1,19 @@
+
+## Just some files that are 'interim' and don't need (and I don't want!)
+## to be put on the GitHub. 
+
+tex/things_still_todo
+tex/SurfaceDensity.tex
+tex/older_tex/
+tex/older_tex/*.tex
+tex/older_pdfs/
+tex/older_tex/*.pdf
+
+## These catalogs are too large for GitHub (I tihnk)
+data/QSO_CIV_catalogs/Hamann2017_and_QSFit124_combined_3645object.fits
+data/QSO_CIV_catalogs/SDSS-DR12Q-BH.tar.gz
+data/QSO_CIV_catalogs/SDSS-DR12Q-BH.dat
+data/QSO_CIV_catalogs/SDSS-DR12Q-BH_extra.fits
+data/QSO_CIV_catalogs/qsfit_1.2.4.fits
+data/QSO_CIV_catalogs/Shen_dr7_bh_May_2010.fits
+data/QSO_CIV_catalogs/BOSS_Ham17Koz17_DR12Q.fits

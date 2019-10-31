@@ -1,0 +1,41 @@
+
+
+
+
+
+
+J2228p2201_56960_QSFIT.log
+================================================================================
+from::	   spec-7582-56960-0790.fits (type: fits) - 218880 bytes (v1.3.0)
+Redshift: 2.222
+E(B-V):   0.000
+
+
+
+
+
+
+
+
+J111346.10+185451.9
+========================================
+J111346.10+185451.9 is a "Core ERQ" from Hamann et al. (2017).
+It also has the smallest FWHM of the core ERQs at 986±26 kms^-1.
+
+
+plate = 5889
+MJD = 56038
+FiberID =662
+
+(plate == 5889) && (MJD == 56038) && (FiberID == 662)
+
+From Hamann et al. (2017; Table 2)::
+redshift    i  	   i-W3	  REW	errREW	REWC	REWW	FWHM	errFWHM	  FWHMC	FWHMW	E(B-V) errE(B-V)	
+2.52 	    21.7   4.6	  127 	3	83.87	42.74	986	26	   935	5947. 	0.18   0.02
+
+
+From QSFit 1.3.0
+ #|LINE          |NCOMP|    LUM|LUM_ERR|   FWHM|FWHM_ERR|    VOFF|VOFF_ERR|     EW| EW_ERR|QUALITY
+ 6|br_CIV_1549   |    2| 246.11| 5.0947| 1007.1|   22.39|  226.94|  9.1589| 83.134| 1.7209|      0
+
+

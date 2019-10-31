@@ -1,0 +1,32 @@
+Title: Virial Black Hole Mass Estimates for 280,000 AGNs from the SDSS 
+       Broad-Band Photometry and Single Epoch Spectra
+Author: Kozlowski Szymon
+Table: Estimates of the Monochromatic and Bolometric Luminosities, Eddington 
+       Ratios, and Black Hole Masses for DR12Q AGNs. 
+================================================================================
+Byte-by-byte Description of file: SDSS-DRQ12-BH.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units Label      Explanations
+--------------------------------------------------------------------------------
+   1- 10 F10.6  deg   RAdeg      Right Ascension in decimal degrees (J2000)
+  12- 21 F10.6  deg   DEdeg      Declination in decimal degrees (J2000)
+  24- 28 F5.3   ---   z          Redshift (visual from Paris et al. (2016))
+  30- 36 F7.3   mag   Mi         Absolute Magnitude i-band from Paris et al. 
+  38- 44 F7.3   ---   L5100      log10(L at 5100A in erg s^-1)  (1)
+  46- 51 F6.3   ---   eL5100     error in log10(L at 5100A in erg s^-1)  (1)
+  53- 59 F7.3   ---   L3000      log10(L at 3000A in erg s^-1)  (1)
+  61- 65 F6.3   ---   eL3000     error in log10(L at 3000A in erg s^-1)  (1)
+  68- 74 F7.3   ---   L1350      log10(L at 1350A in erg s^-1)  (1)
+  76- 81 F6.3   ---   eL1350     error in log10(L at 1350A in erg s^-1)  (1)
+  83- 88 F6.3   ---   MBH_MgII   log10(M_BH in units on M_SUN from MgII)  (1)
+  90- 95 F6.3   ---   MBH_CIV    log10(M_BH in units on M_SUN from CIV)  (1)  
+  97-102 F6.3   ---   Lbol       log10(bolometric L in erg s^-1)  (1)
+ 104-109 F6.3   ---   eLbol      error in log10(bolometric L in erg s^-1)  (1)
+ 111-116 F6.3   ---   nEdd       log10(Eddington ratio)  (1)
+--------------------------------------------------------------------------------
+Note (1): 
+    -99.999 = no measurement.
+    -9.999  = no measurement or no uncertainty.
+This table is line-by-line match to the Quasar Data Release 12 
+from Paris et al. (2016)
+--------------------------------------------------------------------------------

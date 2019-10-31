@@ -1,0 +1,1 @@
+/eboss/spectro/redux/v5_10_0/spectra/5201/spec-5201-55832-0178.fits

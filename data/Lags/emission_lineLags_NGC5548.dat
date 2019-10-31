@@ -1,0 +1,8 @@
+LineName	Wavelength	IP	LagTime		errLagTimeHi	errLagTimeLo
+LyA		1215.67		13.6	10.5		2.1		1.9
+NV		1240.14		97.89	4.6		3.2		2.7		
+CIV		1549.06		64.49	9.8		1.9		1.5
+HeII		1640.42		54.42	3.8		1.7		1.8
+CIII]		1908.73		47.45	27.9		5.5		5.3
+HeII		4687.02		54.42	7.8		3.1
+Hbeta		4862.68		13.60	19.7		1.5		1.5

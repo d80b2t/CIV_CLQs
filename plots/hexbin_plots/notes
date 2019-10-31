@@ -1,0 +1,25 @@
+
+
+
+
+Baldwin_hexbin_v0.py
+========================================================================================================
+path      = '/cos_pc19a_npr/data/ERQs/Hamann2017_CIVcatalog/'
+filename  = 'C4N5REWs_DR12v11_MNRAS.fits'
+
+71M Dec  5  2017 /cos_pc19a_npr/data/ERQs/Hamann2017_CIVcatalog/C4N5REWs_DR12v11_MNRAS.fits
+
+    216,188 rows
+    46 	columns
+
+
+
+
+Baldwin_hexbin.py
+========================================================================================================
+path      = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/QSO_CIV_catalogs/'
+filename  = 'BOSS_Ham17Koz17_DR12Q.fits'
+
+
+
+
