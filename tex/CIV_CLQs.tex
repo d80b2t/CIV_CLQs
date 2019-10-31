@@ -5,19 +5,19 @@
 \title[High-redshift CLQs]{The first high-redshift Changing Look Quasars}
 
 \author[Bercow]
-{The RH John~S.~Bercow, MP, {\it et al.} 
-  % Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},
-  %Matthew Graham$^{2}$, K. E. Saavik Ford$^{3,4,5}$,    Barry McKernan$^{3,4,5}$,  
-%\newauthor Daniel Stern$^{6}$, 
+{%The RH John~S.~Bercow, MP, {\it et al.} 
+Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},
+ Matthew Graham$^{2}$, K. E. Saavik Ford$^{3,4,5}$,  Barry McKernan$^{3,4,5}$   
+\newauthor and Daniel Stern$^{6}$ 
 \\
 % List of institutions
-$^{1}$Speaker's Chair, The House of Commons, London, SW1A 0AA \\
-%$^{1}$Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom \\
-%$^{2}$Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA\\
-%$^{3}$Department of Science, BMCC, City University of New York, New York, NY 10007, USA \\
-%$^{4}$Department of Astrophysics, Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, NY 10024, USA \\
-%$^{5}$Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA\\
-%$^{6}$Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA \\
+%$^{1}$Speaker's Chair, The House of Commons, London, SW1A 0AA \\
+$^{1}$Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom \\
+$^{2}$Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA\\
+$^{3}$Department of Science, BMCC, City University of New York, New York, NY 10007, USA \\
+$^{4}$Department of Astrophysics, Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, NY 10024, USA \\
+$^{5}$Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA\\
+$^{6}$Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA \\
 }
 
 \date{Accepted XXX. Received YYY; in original form ZZZ}
@@ -137,7 +137,7 @@ indeed \ciii) have not to this point been seen.
     \hline  
                                          &                                         &                        &                &                            &                    &                              &                              & \\
     J120544.7+342252.4   & 2.068$\pm$0.0003         &   18.27             &  53498   &  2005-May-08   & SDSS             &  8057                  & 2089-427             & \\
-    181.436164                  & 2.071                              & {\bf 17.99?}     &  58538   &  2019-Feb-24    & DBSP            &  1800                  &  ---                      &  Average conditions \\
+    181.436164                  & 2.071                              &                         &  58538   &  2019-Feb-24    & DBSP            &  1800                  &  ---                      &  Average conditions \\
     +34.381229                 &                                        &                          &  58693   &  2019-Jul-29     & DBSP            &  2400                   &  ---                      &   \\
                                          &                                       &                          &                &                          &                    &                               &                              & \\
     J163852.9+282707.7   & 2.185$\pm$0.0004       &   19.77              &  54553    & 2008-Mar-28     & SDSS           &   4801                    &  2948-614              & \\
@@ -183,7 +183,7 @@ transition, split by total angular momentum $J= 3/2$ and $1/2$,
 resulting in energies 64,591 cm$^{-1}$ and 64,484 cm$^{-1}$,
 respectively \citep[e.g.][]{Moore1993}. The transition probabilities
 of the the 1548 and 1550\AA\ lines are $A_{ki}= 2.65\times10^{8}$ and
-2.64$\times10^{8}$.
+2.64$\times10^{8}$ s$^{-1}$. 
 
 The ground state of carbon is 1$s^2$ 2$s^2$ 2$p^2$. Using the
 \href{https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html}{NIST
@@ -199,7 +199,7 @@ itself. This energy corresponds to a thermal temperature of $T
 X-ray photons ($k_{B}$ = 8.617$\times 10^{-5}$ eV /K).  \ciii is the
 1$s2$2$s$2$p$ $^{3}$P$^{\circ}$ to 1$s^{2}$2$s^{2}$ $^{1}$S transition
 (with $J=1\rightarrow0$) resulting in an energy of 52,390.75 cm$^{-1}$ and
-a transition probability of $A_{ki} = 1.14\times^{2}$.
+a transition probability of $A_{ki} = 1.14\times10^{2}$ s$^{-1}$ \citep{Wiese1996}. 
 
 %%   B a c k g r o u n d     L i t e r a t u r e    
 \civ\ variability has been long studied, e.g., \citet[][]{Baldwin1977,
@@ -543,47 +543,39 @@ H$^{+}$).
   \begin{tabu}{l ll  lccc c r }
     \hline 
     \hline 
-    Object                               &   MJD      & line      & Line  Lumin.       &  FWHM                       &  $V_{\rm off}$         & E.W.                          & $\alpha_{\lambda}$   &   Catalogue \\                                   
+    Object                               &   MJD      & line      & Line  Lumin.       &  FWHM                       &  $V_{\rm off}$         & E.W.                          & $\alpha_{\lambda}$  &   Catalogue \\                                   
     \hline                                     
-    \rowfont{\color{blue}}       & 53498    & \civ      &  511$\pm$13    &   9593$\pm$287        &  1172$\pm$74      & 15.9$\pm$0.4      & $-1.64\pm0.01$      &     QSFit \\
-    \rowfont{\color{blue}}       & 53498    & \civ      &  787                   &   5230$\pm$219        &  1118$\pm$133    & 30.1$\pm$1.21    & $-1.47\pm0.08$     &     Shen2011 \\
-    \rowfont{\color{blue}}       & 53498    & \civ      &   403                  &   5119$^{(a)}$             &    ---                     &  ---                        &  ---                        &     DR12 SAS   \\
-                                             & 53498     & \ciii      &  441$\pm$10   & 14959$\pm352^{(b)}$ &  2616$\pm$147    & 25.10$\pm$0.59    & $-1.65\pm0.01$     &     QSFit   \\
-                                             & 53498    & \ciii       &   144                 &   5119$^{(a)}$             &  ---                       &   ---                       &  ---                         &       DR12 SAS  \\
-  \rowfont{\color{teal}}         & 53498     & \mgii     &  327$\pm$20   &   4907$\pm$387       &  $-274\pm419$     & 26.66$\pm$1.65    &   $-1.65\pm0.01$    &  $^{(d)}$QSFit  \\
-  \rowfont{\color{teal}}         & 53498     & \mgii     &  284                  &   4730$\pm$314       &  $-179\pm188$     & 32$\pm$3.88         &  $-1.87\pm0.06$    &       Shen2011 \\
+    \rowfont{\color{blue}}       & 53498    & \civ      &  511$\pm$13    &   9593$\pm$287        &  1172$\pm$74      & 15.9$\pm$0.4      & $-1.64\pm0.01$       &  QSFit         \\    %% (NPR) 
+    \rowfont{\color{blue}}       & 53498    & \civ      &  787                   &   5230$\pm$219        &  1118$\pm$133    & 30.1$\pm$1.21    & $-1.47\pm0.08$       &  Shen2011 \\
+    \rowfont{\color{blue}}       & 53498    & \civ      &   403                  &   5119$^{(a)}$             &    ---                     &  ---                        &  ---                         &  DR12 SAS   \\
+                                             & 53498     & \ciii      &  441$\pm$10   & 14959$\pm352^{(b)}$ &  2616$\pm$147    & 25.10$\pm$0.59    & $-1.65\pm0.01$      &  QSFit          \\  %% (NPR) 
+                                             & 53498    & \ciii       &   144                 &   5119$^{(a)}$             &  ---                       &   ---                       &  ---                          &  DR12 SAS  \\
+  \rowfont{\color{teal}}         & 53498     & \mgii     &  327$\pm$20   &   4907$\pm$387       &  $-274\pm419$     & 26.66$\pm$1.65    &   $-1.65\pm0.01$    &  $^{(d)}$QSFit  \\  %% (NPR) 
+  \rowfont{\color{teal}}         & 53498     & \mgii     &  284                  &   4730$\pm$314       &  $-179\pm188$     & 32$\pm$3.88         &  $-1.87\pm0.06$     &  Shen2011 \\
  \multirow{2}{*}{{\bf J1205+3422}}  
                 &     \textcolor{teal}{53948}     & \textcolor{teal}{\mgii}   & \textcolor{teal}{130} & \textcolor{teal}{5119$^{(a)}$}   &  \textcolor{teal}{---}   & \textcolor{teal}{---}        & \textcolor{teal}{---}    & \textcolor{teal}{DR12 SAS}    \\
                                  \cdashline{2-9}
-                                            & 58538     & \lya      & 1393$\pm$11   & $>$15000            &  $-796\pm57$          &  ---                        &  ---                       &   QSFit (NPR) \\
-                                            & 58538     & \lya      & 952$\pm$1.1    & 12242$\pm$15    &  $-1679\pm6$          &  165$\pm$0.2        &  ---                       &   QSFit (MJG) \\
-   \rowfont{\color{blue}}       & 58538     & \civ      & 1037$\pm$5    & $>$15000             &  983$\pm$40            &  ---                        &  ---                       &   QSFit (NPR)   \\
-    \rowfont{\color{blue}}      & 58538     & \civ      &       0$\pm$-    & 14995$\pm$0       & $>$3000$\pm$         &  ---                       &  ---                       &   QSFit (MJG)    \\  
-                                            & 58538      & \ciii     &  677$\pm$4     & $>$15000             & $>$3000                    &  5770$\pm$34       &  ---                       &  QSFit (NPR) \\  
-                                            & 58538      & \ciii     &  167$\pm$0.9  & $>$15000            &  2734$\pm$46            &     45$\pm$0.2       &  ---                       &  QSFit (MJG)  \\
-    \rowfont{\color{teal}}      & 58538     & \mgii    &  755$\pm$4     & $>$15000            & 350$\pm$39               &  7571$\pm$37       &  ---                       &   QSFit (NPR) \\
-    \rowfont{\color{teal}}      & 58538     & \mgii    &  216$\pm$1.4  & 13940$\pm$94    & $-465.2\pm38$         &  88$\pm$0.6	    &  ---                       &   QSFit (MJG) \\
+                                            & 58538     & \lya      & 952$\pm$1.1    & 12242$\pm$15    &  $-1679\pm6$          &  165$\pm$0.2        &  ---                       &   QSFit  \\    %% (MJG)
+   \rowfont{\color{blue}}       & 58538     & \civ      & 1037$\pm$5    & $>$15000             &  983$\pm$40            &  ---                        &  ---                       &   QSFit  \\   %% (NPR) 
+                                            & 58538      & \ciii     &  167$\pm$0.9  & $>$15000            &  2734$\pm$46            &     45$\pm$0.2       &  ---                       &  QSFit  \\    %% (MJG)
+    \rowfont{\color{teal}}      & 58538     & \mgii    &  216$\pm$1.4  & 13940$\pm$94    & $-465.2\pm38$         &  88$\pm$0.6	    &  ---                       &   QSFit  \\    %% (MJG)
                                           \cdashline{2-9}
-                                           & 58693     & \lya     &  290$\pm$3       & 8803$\pm$52     &  $-1096\pm35$        &  ---                           & $<$-3                   &   QSFit (NPR)\\
-                                           & 58693     & \lya     &  271$\pm$0.9    & 9637$\pm$52     &  $-447\pm13$          &  85.1$\pm$0.3          & ---                        &   QSFit (MJG) \\ 
-    \rowfont{\color{blue}}    & 58693     & \civ      &   68$\pm$0.9    & 3743$\pm$26     &   591$\pm$17           &   ---                           & $<$-3                   &  QSFit (NPR)\\  
-    \rowfont{\color{blue}}    & 58693     & \civ      &   52$\pm$0.9    & 5046$\pm$26     &   1053$\pm$17         &   24.0$\pm$0.2          & ---                        &  QSFit (MJG)  \\  
-                                           & 58693     & \ciii     &   19$\pm$0.4    & 5625$\pm$          &   $>$3000                 &  988$\pm$20             & $<$-3                   &  QSFit (NPR) \\  
-                                           & 58693     & \ciii     &   59$\pm$0.9    & 10751$\pm$        &  1097$\pm$77         &   36$\pm$0.6             & ---                        &  QSFit (MJG)  \\  
-   \rowfont{\color{teal}}      & 58693     & \mgii    &  19$\pm$0.4    & 1530$\pm$22      &  $>$3000                  &    499$\pm$9             &$<$-3                    &  QSFit (NPR)  \\
-   \rowfont{\color{teal}}      & 58693     & \mgii    &  69$\pm$1.5    & 14983$\pm$346   &  $-190\pm134$       &    72$\pm$1.6           & ---                        &  QSFit (MJG)  \\  
+                                           & 58693     & \lya     &  271$\pm$0.9    & 9637$\pm$52     &  $-447\pm13$          &  85.1$\pm$0.3          & ---                        &   QSFit  \\    %% (MJG)
+    \rowfont{\color{blue}}    & 58693     & \civ      &   52$\pm$0.9    & 5046$\pm$26     &   1053$\pm$17         &   24.0$\pm$0.2          & ---                        &  QSFit \\     %% (MJG)
+                                           & 58693     & \ciii     &   59$\pm$0.9    & 10751$\pm$        &  1097$\pm$77         &   36$\pm$0.6             & ---                        &  QSFit   \\    %% (MJG)
+   \rowfont{\color{teal}}      & 58693     & \mgii    &  69$\pm$1.5    & 14983$\pm$346   &  $-190\pm134$       &    72$\pm$1.6           & ---                        &  QSFit   \\    %% (MJG)
 \hline
                                                 & 54553     & \lya      & 188                 &  3207                     &    ---                        &   ---                         & ---                    &   DR12 SAS  \\
-   \rowfont{\color{blue}}          & 54553     & \civ      & 257$\pm$13   &  4550$\pm$371     &   55$\pm$450         &   31.8$\pm$1.5     &                                &  $^{(d)}$QSFit  \\
-   \rowfont{\color{blue}}          & 54553     & \civ      & 281                  &    4181$\pm$736   &    680$\pm$133       & 100.5$\pm$12  & $-0.14\pm0.68$    &  Shen2011   \\
-   \rowfont{\color{blue}}          & 54553     & \civ      & 170                  &   4537$^{(a)}$        &    ---                       &   ---                         & ---                         &  DR12 SAS  \\
+   \rowfont{\color{blue}}          & 54553     & \civ      & 257$\pm$13   &  4550$\pm$371     &   55$\pm$450         &   31.8$\pm$1.5     &                                &  $^{(d)}$QSFit  \\   %% (NPR) 
+   \rowfont{\color{blue}}          & 54553     & \civ      & 281                  &    4181$\pm$736   &    680$\pm$133       & 100.5$\pm$12  & $-0.14\pm0.68$        &  Shen2011   \\
+   \rowfont{\color{blue}}          & 54553     & \civ      & 170                  &   4537$^{(a)}$        &    ---                       &   ---                         & ---                         &  DR12 SAS  \\    %% (NPR) 
                                                 & 54553     & \ciii     &  130$\pm$10   &  3852$\pm$402    &  $-236\pm565$       &  36.7$\pm$2.8          &  $-1.47\pm0.20$    &  $^{(d)}$QSFit  \\
-                                                & 54553     & \ciii     &  61                    &  4537$^{(a)}$          &  ---                         &  ---                           & ---                         &  DR12 SAS \\
+                                                & 54553     & \ciii     &  61                    &  4537$^{(a)}$          &  ---                         &  ---                           & ---                         &  DR12 SAS \\    %% (NPR) 
     \rowfont{\color{teal}}          & 54553      & \mgii  &  139                  &  4757$\pm$2224   &  $-944\pm568$        &   119$\pm$40          &  $-1.49\pm0.54$    &  Shen2011   \\
-    \rowfont{\color{teal}}          & 54553      & \mgii  &  69                    &  4537$^{(a)}$           &    ---                        &  ---                          & ---                          &  DR12 SAS  \\
+    \rowfont{\color{teal}}          & 54553      & \mgii  &  69                    &  4537$^{(a)}$           &    ---                        &  ---                          & ---                          &  DR12 SAS  \\   %% (NPR) 
                                                 \cdashline{2-9}
                                                 & 55832     & \lya     & 288$\pm$11    &  4444$\pm$243       &  -463$\pm$68         &  103.69$\pm$3.99   &                               &   QSFit  \\
-                                                & 55832     & \lya     & 234                  &  4165.6$^{(a)}$         &    ---                       &   ---                         & ---                         &   DR12 SAS  \\ 
+                                                & 55832     & \lya     & 234                  &  4165.6$^{(a)}$         &    ---                       &   ---                         & ---                         &   DR12 SAS  \\    %% (NPR) 
 \multirow{2}{*}{\bf {J1638+2827}}
  & \textcolor{blue}{55832} & \textcolor{blue}{\civ}    & \textcolor{blue}{63$\pm$3}  &   \textcolor{blue}{6052$\pm$250}  &  \textcolor{blue}{-117$\pm$103}  &  \textcolor{blue}{43.2$\pm$1.7}  &  \textcolor{blue}{-2.25$\pm$0.05} & QSFit    \\
     \rowfont{\color{blue}}           &  55832   &  \civ     &  ---               &    5210$\pm$226     &    ---                       &   42.8$\pm$2.0         & $-3.35$                 &     Ham17  \\
@@ -592,14 +584,10 @@ H$^{+}$).
                                                  &  55832    &  \ciii    &  11                 &     5385$^{(a)}$         &  ---                          &    ---                         &  ---                       &   DR12 SAS \\  
     \rowfont{\color{teal}}           &  55832     & \mgii   &  13                &     5385$^{(a)}$         &  ---                           &   ---                          &  ---                       &   DR12 SAS\\  
                                                \cdashline{2-9}
-                                               & 58583       & \lya    &  1086$\pm$14  & $>$15000     	&   $-1047\pm88$        &  500$\pm$6   	  & $-0.443\pm0.01$   & QSFit (NPR)\\ 
-                                               & 58583       & \lya    &  785$\pm$1      & 4956$\pm$4    	&   $-641\pm2$            &   90$\pm$0.1   	  &  ---                          & QSFit (MJG) \\
-   \rowfont{\color{blue}}         & 58583      & \civ      &  659$\pm$5     & $>$15000                &  $-493\pm56$          &   333$\pm$3           & $-0.43\pm0.01$     &   QSFit (NPR)  \\
-   \rowfont{\color{blue}}         & 58583      & \civ      &  311$\pm$1     & 5739$\pm$14	 &  $-167\pm6$             &   58$\pm$0.1          & ---                          &   QSFit (MJG)  \\  
-                                               & 58583      & \ciii      &  239$\pm$4    &  $>$15000               &  1514$\pm$127        &  124$\pm$2            & $-0.43\pm0.01$     &   QSFit (NPR) \\   
-                                               & 58583      & \ciii      &  52$\pm$0.8   &  3917.4	68.837      &  1514$\pm$127        &  124$\pm$2             & ---                          &   QSFit (MJG) \\   
-   \rowfont{\color{teal}}           & 58583      & \mgii   &  129$\pm$3    &  10957$\pm$307    &  138$\pm$128          &   78$\pm$2              & $-0.43\pm0.01$     &   QSFit (NPR) \\
-   \rowfont{\color{teal}}           & 58583      & \mgii   &  157$\pm$2    &  10565$\pm$129    &  $-450\pm52$          &   92$\pm$1              & ---                          &   QSFit (MJG) \\  
+                                               & 58583       & \lya    &  785$\pm$1      & 4956$\pm$4    	&   $-641\pm2$            &   90$\pm$0.1   	  &  ---                          &  QSFit  \\ %% (MJG)
+   \rowfont{\color{blue}}         & 58583      & \civ      &  311$\pm$1     & 5739$\pm$14	 &  $-167\pm6$             &   58$\pm$0.1          & ---                          &   QSFit  \\  %% (MJG)
+                                               & 58583      & \ciii      &  52$\pm$0.8   &  3917.4	68.837      &  1514$\pm$127        &  124$\pm$2             & ---                          &   QSFit \\   %% (MJG)
+   \rowfont{\color{teal}}           & 58583      & \mgii   &  157$\pm$2    &  10565$\pm$129    &  $-450\pm52$          &   92$\pm$1              & ---                          &   QSFit  \\  %% (MJG)
 \hline
     \rowfont{\color{blue}}         &  56189     & \civ    &   ---                 &   2994$\pm$620       &     ---                       &   42.2$\pm$5.6      & -1.59                      &    Ham17  \\
     \rowfont{\color{blue}}         &  56189     & \civ    &   19                  &    5218$^{(a)}$            &    ---                       &   ---                       &  ---                        &   DR12 SAS  \\
@@ -614,14 +602,10 @@ H$^{+}$).
                                                & 56960    & \ciii      & 185$\pm$5        &        -                      &  2701$\pm$225      &   47.75$\pm$1.29     & ---                      &   QSFit    \\  
    \rowfont{\color{teal}}           & 56960    & \mgii   &   99$\pm$4        &  7312.6$\pm$340   &   188$\pm$137      &   50.75$\pm$2.21     & ---                      &   QSFit   \\
                                                \cdashline{2-9}
-                                               & 58693     & \lya      &  228$\pm$3       & 4279$\pm$32       &   $-1000\pm29$     &  91976$\pm$1311  &  ---                       &  QSFit (NPR)\\ 
-                                               & 58693     & \lya      &  447$\pm$5       & 8133$\pm$93       &   613$\pm$130       &        56$\pm$0.6     &  ---                    	 &   QSFit (MJG) \\
-     \rowfont{\color{blue}}        & 58693     & \civ      &  327$\pm$1      &  $>$15000             &   $-453\pm34$       &  20298$\pm$106    & ---                        &  QSFit (NPR)\\  
-     \rowfont{\color{blue}}        & 58693     & \civ      &  41$\pm$1        &  4914$\pm>$65    &   160$\pm$27         &   25$\pm$0.3          & ---                         & QSFit (MJG)  \\  
-                                               & 58693     & \ciii      & 269$\pm$1.5    &  $>$15000             &  2302$\pm$42.6     &   3776$\pm$21      & ---                          &  QSFit (NPR) \\
-                                               & 58693     & \ciii      & 107$\pm$1.2    &  $>$15000             &  2422$\pm$67        &   ---                       & ---                          &  QSFit (MJG)   \\  
-     \rowfont{\color{teal}}        & 58693     & \mgii    & 177$\pm$1.1    &  $>$15000             &  1000$\pm$2617    &   16$\pm$36         & ---                           &   QSFit (NPR) \\
-     \rowfont{\color{teal}}        & 58693     & \mgii    &  89$\pm$1.4     &  $>$15000             &  $>$1000                &   1230$\pm$1.9    & ---                            &   QSFit (MJG) \\  
+                                               & 58693     & \lya      &  447$\pm$5       & 8133$\pm$93       &   613$\pm$130       &        56$\pm$0.6     &  ---                    	 &   QSFit  \\%% (MJG)
+     \rowfont{\color{blue}}        & 58693     & \civ      &  41$\pm$1        &  4914$\pm>$65    &   160$\pm$27         &   25$\pm$0.3          & ---                         & QSFit   \\  %% (MJG)
+                                               & 58693     & \ciii      & 107$\pm$1.2    &  $>$15000             &  2422$\pm$67        &   ---                       & ---                          &  QSFit    \\  %% (MJG)
+     \rowfont{\color{teal}}        & 58693     & \mgii    & 177$\pm$1.1    &  $>$15000             &  1000$\pm$2617    &   16$\pm$36         & ---                           &   QSFit  \\  %% (NPR) 
 \hline
 \hline
      %    \end{tabular}
@@ -769,10 +753,10 @@ $R_{\rm Sch}= 2GM /c^{2}$ and $t_{\rm dyn} =\sqrt{ R^{3}/GM}$ means
 $t_{\rm dyn} \sim 6 G^{3} M^{3} / GM c^{2} \sim 6G^{2} M^{2} / c^{2}
 $.
 
-The X-ray Baldwin Effect \citet[e.g., ][]{Iwasawa_Taniguchi1993}
-\citet{Bachev2004} find a 10-fold decrease in EW C IV λ1549 with
-Eddington ratio (decreasing from ~1 to ~0.01), while N V λ1240 shows
-no change. These trends suggest a luminosity-independent ``Baldwin
+The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... 
+\citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington
+ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no
+change. These trends suggest a luminosity-independent ``Baldwin
 effect'' in which the physical driver may be the Eddington ratio.
 \citet{Ge2016} Broad emission lines is a prominent property of type I quasi-stellar objects (QSOs). 
 
@@ -868,13 +852,14 @@ ipsum vel ultrices. Nam rutrum nibh ac quam pulvinar molestie.
 
 \subsection*{Availability of Data and computer analysis codes} 
 All materials, databases, data tables and code are fully available at: 
-\href{https://github.com/d80b2t/VHzQ}{\tt https://github.com/d80b2t/}
+\href{https://github.com/d80b2t/CIV_CLQs}{\tt https://github.com/d80b2t/CIV\_CLQs}.
 
 
 \section*{Acknowledgements}
 NPR acknowledges support from the STFC and the Ernest Rutherford Fellowship scheme. 
 %% KESF \& BM are supported by NSF PAARE AST-1153335. 
 %% KESF \& BM thank CalTech/JPL for support during sabbatical.  
+\\
 
 \noindent
 We thank:
