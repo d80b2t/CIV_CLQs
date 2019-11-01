@@ -20,12 +20,13 @@ cosmo = FlatLambdaCDM(H0=71, Om0=0.27, Tcmb0=2.725)
 
 ## Reading in the data
 path      = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/CLQ_line_measurements/'
-filename  = 'REW_FWHM.dat'
+filename  = 'Baldwin_CIV.dat'
 CLQs      = ascii.read(path+filename)
 
-CLQ_FWHM   = CLQs['FWHM']    / 1000.
-errFWHM    = CLQs['errFWHM'] / 1000.
-CLQ_logREW = np.log10(CLQs['REW'])
+
+CLQ_FWHM    = CLQs['FWHM']    / 1000.
+CLQ_errFWHM = CLQs['errFWHM'] / 1000.
+CLQ_logREW  = np.log10(CLQs['REW'])
 ## have to put the x-errors into log-space
 #log_REW_hi = np.log10(CLQs['REW'] np.log10(CLQs['errREW']))
 #log_REW_lo = np.log10(CLQs['REW']-CLQs['errREW'])
@@ -55,28 +56,50 @@ data = tdata[np.where( (tdata['rew'] > 0.     )     &
                        (tdata['Lbol']   > 0.0))]
 
 ## Setting up variable names
-f1450     = data['f1450']
-alpha_civ = data['alpha_civ']
-REW       = data['rew']        
-FWHM      = data['fwhm']
-redshift  = data['z_dr12']
-log_LBol  = data['LBol']
-log_L1350 = data['L1350']
+f1450_Ham17     = data['f1450']
+alpha_civ_Ham17 = data['alpha_civ']
+REW_Ham17       = data['rew']        
+FWHM_Ham17      = data['fwhm']
+z_dr12          = data['z_dr12']
+log_LBol_Koz17  = data['LBol']
+log_L1350_Koz17 = data['L1350']
+
+
+##    Q S F I T 
+## CONT*__LUM::  1450, 2245, 3000, 4210 or 5100:
+## AGN continuum (Section 2.2) νLν luminosities and their uncertainties, in units of 1042 erg s−1
+## 
+path        = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/QSO_CIV_catalogs/'
+filename    = 'qsfit_1.2.4.fits'
+infile      = path+filename
+sdata_full  = fits.open(infile)
+sdata       = sdata_full[1].data
+
+data_qsofit = sdata[np.where( (sdata['BR_CIV_1549__LUM'] > 0.   )     &
+                             (sdata['BR_CIV_1549__EW']   > 0.   ))    ] 
+
+log_L1450_QSFit = np.log10((data_qsofit['BR_CIV_1549__LUM']*1e42))
+log_LCont_QSFit = np.log10((data_qsofit['CONT1__LUM']*1e42))
+EW_QSFit        =           data_qsofit['BR_CIV_1549__EW']
+log_EW_QSFit    = np.log10( data_qsofit['BR_CIV_1549__EW'])
+
 
 
 ## Putting te Equiv. Widths into log and
 ## the FWHMs into '000s of kms^-1.
-log_REW = np.log10(REW)
-FWHM    = FWHM/1000.
+log_REW_Ham17   = np.log10(REW_Ham17)
+FWHM_kilo_Ham17 = FWHM_Ham17/1000.
 
-## f1450 = flux in the uncorrected BOSS spectrum at 1450 Å rest (10−17 ergs s−1 cm−2 Å−1 )
-f_lam   = f1450*((1450/1450)**alpha_civ)     
+## The f1450 values are fluxes in the uncorrected BOSS spectrum at 1450 Å rest (10−17 ergs s−1 cm−2 Å−1 )
+## and straigt from Hamannn, Zakamska, Ross et al. (2017; Appendix A) but I've never been able to reproduce
+## e.g. Figure 3 from that/our paper... (!!!) 
+f_lam   = f1450_Ham17*((1450/1450)**alpha_civ_Ham17)     
 
 ## L = 4 * pi * (D_L^2) * F
 ##   where L is in W and F is in W/m^2
 ##   3.086e+22 meters in a megaparsec
 ## Set-up the Luminosity Distance 
-DL      = cosmo.luminosity_distance(redshift)             
+DL      = cosmo.luminosity_distance(z_dr12)             
 DL_inM  = DL.value * 3.08567758128e22
 DL_incm = DL.value * 3.08567758128e24
 
@@ -118,23 +141,36 @@ mincnt    = 3.
 gridsize  = 200
 color_map = plt.cm.Spectral_r
 
-
+##
 ## Setting things all up... :-)
+##
+##  x - a x i s
+##
 ## L_1450 values taking f1450 from Hamann et al.
-## L_1350 from Kozłowski (2017)
-## L_Bol from Kozłowski (2017)
-x = log_LBol
-#x = log_L1350
+## L_1350          from Kozłowski (2017)
+## L_Bol           from Kozłowski (2017)
+## log_L1450_QSFit from QSFit (v1.2.4; Calderone et al. 2017) 
+#
+#x = log_LBol_Koz17
+#x = log_L1350_Koz17
 #x = log_Lum1450
+#x = log_L1450_QSFit
+x = log_LCont_QSFit
+
+##
+##  y  - a x i s 
+##
+#y = log_REW
+y = log_EW_QSFit
+
 
 
 ##
 ##  P L O T T I N G    T H E    D A T A
 ##
-ax.scatter(     x, log_REW, s=s, alpha=alpha)
-hb = plt.hexbin(x, log_REW, bins='log', gridsize=gridsize, cmap=color_map, mincnt=mincnt)
+ax.scatter(     x, y, s=s, alpha=alpha)
+hb = plt.hexbin(x, y, bins='log', gridsize=gridsize, cmap=color_map, mincnt=mincnt)
 
-y = log_REW
 
 ## docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
 ## Calculate a linear least-squares regression for two sets of measurements.
@@ -157,10 +193,10 @@ R_sq          = str(np.around((r_value**2), decimals=3))
         
 
 ## AXES LIMITS 
-xmin =  44.8              ##  - ( log_LBol.max()-log_L1350.max())
-xmax =  log_LBol.max()    ## can be e.g. 48.4 for log_LBol
+xmin =  44.8   ##                   - ( log_LBol.max()-log_L1350.max())
+xmax =  log_LCont_QSFit.max() ## log_LBol.max()   ## can be e.g. 48.4 for log_LBol
 ymin =  0.5
-ymax =  2.8  ## when in '000 km s^-1
+ymax =  2.8    ## when in '000 km s^-1
 ax.axis([xmin, xmax, ymin, ymax])
 
 ## AXES LABELS
@@ -169,15 +205,92 @@ ax.axis([xmin, xmax, ymin, ymax])
 ax.set_xlabel(r"log$_{10}$(L$_{\rm Bol}$) [ergs/s] ",  fontsize=fontsize)
 ax.set_ylabel(r"log$_{10}$(REW CIV / {\rm \AA })",     fontsize=fontsize)
 
-
 ## AXES TICK FORMAT
 ax.tick_params(axis='both', which='major', labelsize=labelsize)
 ax.tick_params(axis='both', which='minor', labelsize=labelsize)
 
+
+
+
 ##
-##  L E G E N D S
+##
+##
+##
+for ii in range(len(CLQs)):
+    ms      =  12.
+    ms_back =   7.
+    l_back  = 2
+    alpha  =  1.0
+    
+    if str(CLQs['name'][ii]) == 'J1205+3422':
+        if (CLQs['mjd'][ii] ==  53498):
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='fuchsia', xerr=CLQ_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='o', linewidth=lw)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='k',       alpha=alpha, marker='o', s=ms*ms_back)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='fuchsia', alpha=alpha, marker='o', s=ms)
+            #ax.scatter(CLQ_logREW[ii],  CLQ_FWHM[ii], color='k',       alpha=alpha, marker='o', s=s*2.2)
+            #ax.scatter(CLQ_logREW[ii],  CLQ_FWHM[ii], color='fuchsia', alpha=alpha, marker='o', s=s)
+            #ax.errorbar(CLQ_logREW[ii], CLQ_FWHM[ii], color='fuchsia', xerr=log_errREW[ii], yerr=errFWHM[ii], fmt='o', linewidth=lw)
+            J12_53498  = mlines.Line2D([], [], label='J1205+3422 (53498)', color='fuchsia',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs['mjd'][ii] ==  58693):
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='k',       xerr=CLQ_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='s', linewidth=lw*l_back)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='fuchsia', xerr=CLQ_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='s', linewidth=lw)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='k',       alpha=alpha, marker='s', s=ms*ms_back)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='fuchsia', alpha=alpha, marker='s', s=ms)
+            J12_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
+                       marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+            
+    if str(CLQs['name'][ii]) == 'J1638+2827':
+        if (CLQs['mjd'][ii] ==  54553):
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='lime', xerr=CLQ_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='o', linewidth=lw)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='k',    alpha=alpha, marker='o', s=ms*ms_back)
+            ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='lime', alpha=alpha, marker='o', s=ms)
+
+            J16_54553 = mlines.Line2D([], [], label='J1638+2827 (54553)', color='lime',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs['mjd'][ii] ==  55832): 
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='k',    alpha=alpha, marker='s', s=ms*ms_back)
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='lime', alpha=alpha, marker='s', s=ms)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='lime', xerr=log_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='s', linewidth=lw)
+            J16_55832 = mlines.Line2D([], [], label='J1638+2827 (55832)', color='lime',
+                       marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs['mjd'][ii] ==  58583): 
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='k',    alpha=alpha, marker='D', s=ms*ms_back)
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='lime', alpha=alpha, marker='D', s=ms)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='lime', xerr=log_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='D', linewidth=lw)
+            J16_58583 = mlines.Line2D([], [], label='J1638+2827 (58583)', color='lime',
+                       marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+            
+    if str(CLQs['name'][ii]) == 'J2228+2201':
+        if (CLQs['mjd'][ii] ==  56189):
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='k',    alpha=alpha, marker='o', s=ms*ms_back)
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='cyan', alpha=alpha, marker='o', s=ms)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='cyan', xerr=log_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='o', linewidth=lw)
+            J22_56189  = mlines.Line2D([], [], label='J2228+2201 (56189)', color='cyan',
+                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs['mjd'][ii] ==  56960):
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='k',    alpha=alpha, marker='s', s=ms*ms_back)
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='cyan', alpha=alpha, marker='s', s=ms)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='cyan', xerr=log_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='s', linewidth=lw)
+            J22_56960  = mlines.Line2D([], [], label='J2228+2201 (56960)', color='cyan',
+                       marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs['mjd'][ii] ==  58693):
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='k',    alpha=alpha, marker='D', s=ms*ms_back) 
+            ax.scatter(CLQ_REW[ii],  CLQ_FWHM[ii], color='cyan', alpha=alpha, marker='D', s=ms)
+            ax.errorbar(CLQ_REW[ii], CLQ_FWHM[ii], color='cyan', xerr=log_errREW[ii], yerr=CLQ_errFWHM[ii], fmt='D', linewidth=lw)
+            J22_58693  = mlines.Line2D([], [], label='J2228+2201 (58693)', color='cyan',
+                        marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+
+
+
+
+
+##
+##    L E G E N D S
+##  
 #boss  = mlines.Line2D([], [], label='163,450 BOSS quasars', color='skyblue',
-boss  = mlines.Line2D([], [], label='163,437 BOSS quasars', color='skyblue',
+#boss  = mlines.Line2D([], [], label='163,437 BOSS quasars', color='skyblue',
+boss  = mlines.Line2D([], [], label=' 20,374 \sc{qsfit} quasars', color='skyblue',
                        marker=".", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
 
 J12  = mlines.Line2D([], [], label='J1205+3422', color='fuchsia',

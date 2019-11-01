@@ -508,7 +508,7 @@ multiple epochs by the SDSS. J1638+2827 is a substantial outlier
 in this parameter space.}
   \label{fig:Wilhite2006_comparison}
 \end{figure}
-\subsection{Overall Spectral Evolution}
+\subsection{Emission line evolution}
 Emission line measurements from the catalogues of  \citet{Shen2011}.
 \citet{Hamann2017}, \citet{Kozlowski2017} or the QSFit routine of \citet{Calderone2017}
 are presented in Table~\ref{tab:LineMeasurement}.
@@ -686,6 +686,19 @@ virial BH mass.}
 \label{tab:Eddington_ratios} 
 \end{table*}
 
+\subsection{The \civ\ Baldwin Effect}
+The Baldwin Effect (Baldwin 1977) is an empirical %inverse
+relation between emission-line REWs and continuum luminosity in
+quasars \citep[][]{Shields2007, Hamann2017, Calderone2017}
+%%
+There is an anti-correlation between the emission-line REWs and e.g. 1450\AA\ rest continuum luminosity,
+so that as the underlying UV continuum luminosity increases, the EW decreses,
+see Figure~\ref{fig:CIV_Baldwin}
+The slope $\beta$ is $-0.1997$. 
+Checking with \citet{Kozlowski2017}, using their bolometric luminosity gives a slope of $\beta=-0.251$,
+in line with that from \citet{Hamann2017} ($\beta=-0.23$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -748,10 +761,10 @@ large number of AGN, first noted in \citet{Baldwin1977}.  More
 recently, the intrinsic Baldwin effect, the same anti-correlation but
 in an individual, variable AGN.  The variable properties of high-$z$
 quasars, however, has been less well studied. Reasons for this include
-more massive systems will tend to have longer timescales e.g. with
-$R_{\rm Sch}= 2GM /c^{2}$ and $t_{\rm dyn} =\sqrt{ R^{3}/GM}$ means
-$t_{\rm dyn} \sim 6 G^{3} M^{3} / GM c^{2} \sim 6G^{2} M^{2} / c^{2}
-$.
+more massive systems will tend to have longer timescales with e.g.
+$t_{\rm dyn} = \sqrt{ R^{3}/GM} \rightarrow  t_{\rm dyn}  \sim M^{2}$
+if e.g. $R_{\rm Sch}= 2GM /c^{2}$.
+%and $t_{\rm dyn} =\sqrt{ R^{3}/GM}$ means e.g $t_{\rm dyn} \sim 6 G^{3} M^{3} / GM c^{2} \sim 6G^{2} M^{2} / c^{2}.
 
 The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... 
 \citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington
@@ -759,7 +772,6 @@ ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no
 change. These trends suggest a luminosity-independent ``Baldwin
 effect'' in which the physical driver may be the Eddington ratio.
 \citet{Ge2016} Broad emission lines is a prominent property of type I quasi-stellar objects (QSOs). 
-
 
 
 
@@ -805,10 +817,44 @@ quasars in Table~\ref{tab:Eddington_ratios}.
    \vspace{-12pt}
    \caption[]{The Baldwin Plot. The bolometric luminosities are from \citet{Kozlowski2017},
      while the REW measurements are from \citet{Hamann2017}.}
-  \label{fig:REWvsFWHM}
+  \label{fig:CIV_Baldwin}
 \end{figure}
 
 
+
+\subsection{Variability around billion solar mass black holes} 
+The Event Horizon Telescope (EHT) mapped the central compact radio
+source of the elliptical galaxy M87 at 1.3 mm \citep{EHT2019_PaperI, EHT2019_PaperII, EHT2019_PaperIII, EHT2019_PaperIV, EHT2019_PaperV, EHT2019_PaperVI} .
+
+The EHT observsations confirm the observed 1.3mm asymmetric ring
+emission is consistent with predictions of strong
+gravitational lensing of synchrotron emission from a hot plasma
+orbiting near the black hole event horizon \citep{EHT2019_PaperV}. 
+
+EHT2017 data includes tracks from four separate
+days of observing,;each day is 2.8$r_{g}$ $c^{-1}$ \citep{(EHT_PaperIV} timescale is short
+compared to the decorrelation timescale of simulated images, which is
+$\sim$50 $r_{g}$ $c^{-1}$, and smaller than the light-crossing time of the source
+plasma.
+
+From \citet{EHT_PaperI}, $M_{M87^{*}} = (6.5\pm0.7) \; \times \; 10^{9}$ $M_{\odot}$, 
+\begin{equation}
+R_{s} = 2 r_{g} =  2 GM/c^{2}  = 9.598 \times10^{12} {\rm m}.
+\end{equation}
+giving a {\it light crossing timescale} of $t_{\rm lt} = R_{s} / c = 32 015 {\rm secs}$ (0.37 days).
+%\begin{equation}
+%t_{\rm lt} = R_{s} / c = 32015 {\rm secs}$
+%\end{equation}
+%and a {\it dynamical timescale}, $t_{\rm dyn}$
+%\begin{equation}
+%$t_{\rm dyn}  =  sqrt{ R_{s}^{3}/G M}
+% \end{equation}
+%also (!!!!!) of $t_{\rm dyn}  =  \sqrt{ R_{s}^{3}/G M}$ = 32015 seconds. 
+
+$\log_{10} (M_{M87^{*}} / M_{\odot} ) = 9.813$. 
+which is only about double that of J1205+3422 and J2228+2201,
+and a factor of $\sim$6 that of J1638+2827.
+However, M87 
 
 \section{Conclusions}
 In this paper we have reported on three redshift $z>2$ quasars with
