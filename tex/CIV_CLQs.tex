@@ -540,10 +540,10 @@ H$^{+}$).
 \begin{table*}
   \centering
   % \begin{tabular}{lll  cccc r }
-  \begin{tabu}{l ll  lccc c r }
+  \begin{tabu}{l ll  ll cc c r }
     \hline 
     \hline 
-    Object                               &   MJD      & line      & Line  Lumin.       &  FWHM                       &  $V_{\rm off}$         & E.W.                          & $\alpha_{\lambda}$  &   Catalogue \\                                   
+    Object                               &   MJD      & line      & Line  Lumin.     &   FWHM                       &  $V_{\rm off}$         & E.W.                          & $\alpha_{\lambda}$  &   Catalogue \\                                   
     \hline                                     
     \rowfont{\color{blue}}       & 53498    & \civ      &  511$\pm$13    &   9593$\pm$287        &  1172$\pm$74      & 15.9$\pm$0.4      & $-1.64\pm0.01$       &  QSFit         \\    %% (NPR) 
     \rowfont{\color{blue}}       & 53498    & \civ      &  787                   &   5230$\pm$219        &  1118$\pm$133    & 30.1$\pm$1.21    & $-1.47\pm0.08$       &  Shen2011 \\
@@ -633,6 +633,36 @@ H$^{+}$).
  \label{tab:LineMeasurement}
 \end{table*}
 
+
+\begin{table}
+  \begin{centering}
+    \begin{tabular}{c c l l}
+      \hline
+      \hline
+      Object             & MJD      & Cont. Lumin        &  Cont. slope \\
+      \hline
+                             & 53498   &  40040$\pm$34  & -1.656$\pm$ 0.006 \\
+      J1205+3422    & 58538   &   ---                   &  ---     \\
+                             & 58693   &   ---                    &  ---     \\
+                             &              &                             & \\
+                             & 54553   &  3774$\pm$111   &  -1.472$\pm$0.197   \\
+      J1638+2827    & 55832  &  2433$\pm$14     &  -2.316$\pm$0.051  \\  
+                             & 58583   &  3292$\pm$9       &    -0.541$\pm$0.010 \\
+                             &              &                             &\\
+                            & 56189    &  ---                      &  ---     \\
+    J2228+2201     & 56960   &  7889$\pm$14      &  -1.729$\pm$0.015     \\
+                            & 58693   &  ---                       &  ---     \\
+    \hline
+    \hline
+  \end{tabular}
+  \caption{Quasar continuum $\nu L_{\nu}$ luminosities and slopes, at
+the fixed rest-frame wavelengths 1450\AA\ from QSFIT.  The
+luminosities are in units of 10$^{42}$~erg~s$^{-1}$.}
+  \label{tab:Baldwin}
+  \end{centering}
+\end{table}
+
+
 %%
 %% %% \eta_{\rm Edd} = log10((10**LBol)/((1.26e38)*(10**MBH)))
 %%
@@ -711,12 +741,13 @@ in line with that from \citet{Hamann2017} ($\beta=-0.23$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[width=8.7cm, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]
+  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
   {figures/CIV_CLQs_REWvsFWHM_20191029.png}
    \vspace{-12pt}
   \caption[]{The Rest Equivalent Width (REW) vs. Full Width Half Maximum (FWHM) 
 of the \civ\ emission line in the BOSS DR12 quasar sample using the catalogue 
-of \citet{Hamann2017}. Note the REW logarithmic scaling.}
+of \citet{Hamann2017}. %Note the REW logarithmic scaling.
+}
   \label{fig:REWvsFWHM}
 \end{figure}
 
@@ -762,9 +793,7 @@ recently, the intrinsic Baldwin effect, the same anti-correlation but
 in an individual, variable AGN.  The variable properties of high-$z$
 quasars, however, has been less well studied. Reasons for this include
 more massive systems will tend to have longer timescales with e.g.
-$t_{\rm dyn} = \sqrt{ R^{3}/GM} \rightarrow  t_{\rm dyn}  \sim M^{2}$
-if e.g. $R_{\rm Sch}= 2GM /c^{2}$.
-%and $t_{\rm dyn} =\sqrt{ R^{3}/GM}$ means e.g $t_{\rm dyn} \sim 6 G^{3} M^{3} / GM c^{2} \sim 6G^{2} M^{2} / c^{2}.
+$t_{\rm dyn}  \sim M^{2}$ if $t_{\rm dyn} = \sqrt{ R^{3}/GM}$ and $R_{\rm Sch}= 2GM /c^{2}$.
 
 The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... 
 \citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington
@@ -812,11 +841,13 @@ quasars in Table~\ref{tab:Eddington_ratios}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=8.7cm, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]
-  {figures/CIV_CLQs_Baldwin_LBol_20191015.png}
+  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
+  {figures/CIV_CLQs_Baldwin_20191104v3.png}
    \vspace{-12pt}
-   \caption[]{The Baldwin Plot. The bolometric luminosities are from \citet{Kozlowski2017},
-     while the REW measurements are from \citet{Hamann2017}.}
+   \caption[]{The \civ\ Equivalent width and the underlying continuum luminosity,
+     commonly referred to as The Baldwin Plot. The continuum luminosities are
+     from \citet{Kozlowski2017},
+     the REW measurements are Table~\ref{tab:Baldwin}.}
   \label{fig:CIV_Baldwin}
 \end{figure}
 
@@ -832,12 +863,12 @@ gravitational lensing of synchrotron emission from a hot plasma
 orbiting near the black hole event horizon \citep{EHT2019_PaperV}. 
 
 EHT2017 data includes tracks from four separate
-days of observing,;each day is 2.8$r_{g}$ $c^{-1}$ \citep{(EHT_PaperIV} timescale is short
+days of observing,;each day is 2.8$r_{g}$ $c^{-1}$ \citep{EHT2019_PaperIV} timescale is short
 compared to the decorrelation timescale of simulated images, which is
 $\sim$50 $r_{g}$ $c^{-1}$, and smaller than the light-crossing time of the source
 plasma.
 
-From \citet{EHT_PaperI}, $M_{M87^{*}} = (6.5\pm0.7) \; \times \; 10^{9}$ $M_{\odot}$, 
+From \citet{EHT2019_PaperI}, $M_{M87^{*}} = (6.5\pm0.7) \; \times \; 10^{9}$ $M_{\odot}$, 
 \begin{equation}
 R_{s} = 2 r_{g} =  2 GM/c^{2}  = 9.598 \times10^{12} {\rm m}.
 \end{equation}
