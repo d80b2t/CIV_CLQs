@@ -3,12 +3,10 @@
 
 BOSS_DR12_Nofz.png
 ===============================================================================================
-The N(z) of the BOSS DR12 Quasars.
-The full sample can be found in Pâris et al. (2017) and/or Kozłowski (2017).
-
-This basically shows when you cut to 1.53<z<5.00, you essentially, and
-unsuprisinngly, reproduce the Hamann et al. (2017) supersample.
-
+The N(z) of the BOSS DR12 Quasars.  The full sample can be found in
+Pâris et al. (2017) and/or Kozłowski (2017).  This basically shows
+when you cut to 1.53<z<5.00, you essentially, and unsuprisinngly,
+reproduce the Hamann et al. (2017) supersample.
 
 
 
@@ -19,18 +17,59 @@ luminosity for 205,297 BOSS quasars. *Assuming* this was from the
 Kozłowski (2017) catalog.
 
 
+
 BOSS_redshift_vs_f1450_L1350wgtd.png
 ===============================================================================================
+Redshift vs. log10(f1450) color-weighted by L1350 for 215,842 quasars.
+f1450 I'm pretty sure is from Hamann et al. (2017), with L1350 being
+from Kozłowski (2017) and this plot being from the big joint catalog,
+BOSS_Ham17Koz17_DR12Q.fits
 
 
 
 Ham17_EWs_vs_QSFit_EWs.png
 ===============================================================================================
+A quick, ~first order check to what e.g. QSFit reports for EWs and for REWs.
+
+Ham17 reports:
+      rew   = C IV REW (Å) from the line profile fit.
+      rewe  = 1σ uncertainty in above.
+      rewc  = C IV REW (Å) for the core Gaussian component.
+      reww  = C IV REW (Å) for the wing Gaussian component.
+
+BR_CIV_1549_EW is reported from Calderone et al. 2017, MNRAS, 472, 4051
+
 
 
 Kozlowski2017_LBols_vs_Lmono.png
 ===============================================================================================
+Pretty straight-forward, but checking the Lbols vs. mono-chromotatic luminosities.
+
 
 
 Kozlowski2017_MBHMgII_vs_MBHCIV.png
 ===============================================================================================
+
+
+
+
+
+General notes::
+===============================================================================================
+71,261 objects from qsfit_1.2.4.fits (Calderone et al. 2017; 386 columns) matched to
+the big 'joint' catalog of 216,188 from Kozlowski2017+Hamann2017 (with 78 columns).
+"Only" 3,643 objects match between these catalogs since Calderone et al. is generally z<2
+and BOSS_Ham17Koz17_DR12Q.fits is z>1.5.
+
+
+
+f1450  			       from Hamann et al. MNRAS 464, 3431–3463 (2017)
+================================================================================================
+flux in the uncorrected BOSS spectrum at 1450 Å rest (10−17 ergs s−1
+cm−2 Å−1 ) used to anchor the power-law continuum fits beneath C IV
+and N V, e.g. fλ = f1450 (λ/1450 Å) α
+
+
+
+L1350
+================================================================================================
