@@ -62,3 +62,11 @@ print('   thus Mdot / Mdot_Edd                 is :: ',          (Mdot_solperyer
 print('   eta where eta = log(Mdot / Mdot_Edd) is :: ', np.log10((Mdot_solperyer/  Mdot_Edd)))
 
 print()
+
+
+
+''' 
+ E [Joules] = M [kg]  . c^2   [m^2 s^-2]
+ L [Watts]  = eta  .    Mdot   . c^2
+ L          = 0.1   * ((2.7e-3*2e30)/(24*3600*365.25 ))*(9e16)       
+'''
