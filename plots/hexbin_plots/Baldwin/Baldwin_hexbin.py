@@ -14,7 +14,9 @@ from astropy.cosmology import FlatLambdaCDM
 
 import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.mlab   as mlab
 import matplotlib.lines  as mlines
+
 
 ## Setting up the cosmology
 cosmo = FlatLambdaCDM(H0=71, Om0=0.27, Tcmb0=2.725)                                                                                                                         
@@ -75,8 +77,9 @@ sdata       = sdata_full[1].data
 data_qsofit = sdata[np.where( (sdata['BR_CIV_1549__LUM'] > 0.   )     &
                              (sdata['BR_CIV_1549__EW']   > 0.   ))    ] 
 
-log_L1450_QSFit = np.log10((data_qsofit['BR_CIV_1549__LUM']*1e42))
-log_LCont_QSFit = np.log10((data_qsofit['CONT1__LUM']*1e42))
+log_L1450_QSFit = np.log10((data_qsofit['BR_CIV_1549__LUM'] * 1e42))
+log_LCont_QSFit = np.log10((data_qsofit['CONT1__LUM']       * 1e42))
+Cont1__WAVE     =           data_qsofit['CONT1__WAVE']
 EW_QSFit        =           data_qsofit['BR_CIV_1549__EW']
 log_EW_QSFit    = np.log10( data_qsofit['BR_CIV_1549__EW'])
 
@@ -283,4 +286,60 @@ ax.text(0.31, 0.91, r'$\beta=%.4f$' % (slope, ), fontsize=14, color='r',
 
 ## SAVING THE FIGURE
 plt.savefig('CIV_CLQs_Baldwin_temp.png', format='png')
+plt.close()
+
+
+
+
+##
+## Just keen to see what the distribution of CONT1__WAVE -- from QSFit
+## and Calderone et al. (2017) -- is.  This is the value of where the
+## continuum luminosities and slopes havw been computed. There are
+## five such quantities whose values are equally spaced in the
+## logarithmic wavelength range [λmin , λmax ];
+## 
+##   S E T T I N G   U P   T H E    P L O T
+##
+matplotlib.rc('text', usetex=True)
+fig, ax = plt.subplots(figsize=(5, 5), dpi=80, facecolor='w', edgecolor='k')  
+
+## Adjusting the Whitespace for the plots
+left   = 0.16   # the left side of the subplots of the figure
+right  = 0.96   # the right side of the subplots of the figure
+bottom = 0.14   # the bottom of the subplots of the figure
+top    = 0.96   # the top of the subplots of the figure
+wspace = 0.26   # the amount of width reserved for blank space between subplots
+hspace = 0.06   # the amount of height reserved for white space between subplots
+plt.subplots_adjust(left=left, bottom=bottom, right=right, top=top, wspace=wspace, hspace=hspace)
+ 
+## Some NPR defaults
+s               = 0.5
+lw              = 1.0
+alpha           = 0.4
+fontsize        = 16
+labelsize       = fontsize
+tickwidth       = 2.0
+linewidth       = 2.4
+tickwidth       = 2.0
+ticklength      = 6.0
+ticklabelsize   = labelsize
+majorticklength = 12
+minorticklength = 6
+
+## Furthe defaults and  hexbin params
+mincnt    = 3.
+gridsize  = 200
+color_map = plt.cm.Spectral_r
+
+# the histogram of the data
+n, bins, patches = plt.hist(Cont1__WAVE, 100, facecolor='green', alpha=0.75)
+l = plt.plot(bins)
+
+plt.xlabel('CONT1\_\_WAVELENGTH')
+plt.ylabel('No. of QSFit Quasars')
+#plt.title(r'$\mathrm{Histogram\ of\ IQ:}\ \mu=100,\ \sigma=15$')
+plt.axis([bins.min()-10, bins.max()+10, 0,  n.max()*1.1])
+plt.grid(True, linestyle='--', zorder=0)
+
+plt.savefig('CIV_CLQs_Baldwin_WAVE_temp.png', format='png')
 plt.close()
