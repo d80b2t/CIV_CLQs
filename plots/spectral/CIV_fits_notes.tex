@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{../../tex/format}
+
+\newcommand{\qsfit}{{\sc QSFit}}
+
+\begin{document}
+
+\noindent
+So, for br\_CIV\_1549 (NCOMP=1) I start with something like::
+  \begin{center}
+    \begin{tabular}{l   r    r   r  r  r  r  r  r    }
+      \hline
+                   & & & & & & &    \\
+   LUM        & LUM\_ERR &  FWHM   & FWHM\_ERR   &   VOFF  & VOFF\_ERR  &    EW         &  EW\_ERR  \\
+   510.57   &  13.16       & 9592.9  &  287.34         &   1171.7 &  73.785      &     15.898  & 0.40976    \\
+                   & & & & & & &    \\
+      \hline
+\end{tabular}
+\end{center}
+from the \qsfit{} output log, e.g. from {\tt
+spec-2089-53498-0427\_QSFIT\_z2p068.log}.
+
+
+\begin{equation}
+  \mu  = 1548 \; \AA
+\end{equation}
+Assuming $c$ has units of km s$^{-1}$, $\mu$ is the nominal working wavelength (1548 \AA\ for \civ\ )
+\begin{equation}
+    {\rm FWHM}_{\lambda}  = ( 9592.9  /3 \times 10^{5}) * \mu 
+  \end{equation}
+  $\Rightarrow$
+\begin{equation}
+  {\sigma}     =   {\rm FWHM}_{\lambda}  / 2. (\sqrt(2 * \ln(2)))
+\end{equation}
+and I now just have $\mu$ and $\sigma$ to plug into the Gaussian PDF: 
+\begin{equation}
+  f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}
+\end{equation}
+and where $x$ is in Angstroms.
+I'm assuming $x$ will be $x' = x - V_{\rm Off}$ at some point, but I'm not there yet(!).
+% \begin{lstlisting}
+ % mu = 1549.
+ % ##  $c$ in km/s; nominal wavelength in Ang
+%linefit_x =  np.linspace(mu - 3*qsfit_sigma[ii], mu + 3*qsfit_sigma[ii], 100)
+%linefit_y  = stats.norm.pdf(linefit_x, mu, qsfit_sigma[ii])
+%\end{lstlisting}
+
+\vspace{16pt}
+\noindent
+Now, for the line luminosites, I have: 
+\begin{eqnarray}
+     f &  = &   L / (4 \; \pi   \;  D_{L}^{2})  \\
+  &  = &   (5.1057 \times 10^{44} [{\rm erg  \;  s^{-1}}] ) /   (4 \; \pi \; ((5.094 \times 10^{28})^{2} [{\rm cm}])) \\
+         & = & 1.56 \times 10^{-14}  [{\rm erg  \;  s^{-1} cm^{-2}} ]
+\end{eqnarray}
+where $L$ is (line) luminosity, $D_{L}$ is Luminosity Distance
+($z=2.071$), $f$ is flux.  So I think I'm still missing 'something'
+here as the e.g. SDSS data are in $10^{-17} {\rm erg \; s^{-1}
+cm^{-2}}$, where the peak \civ\ luminosity for J1205+3422 (MJD 53498)
+is around 45 in these units.
+
+\vspace{34pt}
+\noindent
+Python code (pseudo or actual!)::  
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy.stats as stats
+import math
+
+mu        = 0
+variance = 1
+sigma      = math.sqrt(variance)
+x         = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+plt.show()
+  \end{lstlisting}  
+
+
+\end{document}
