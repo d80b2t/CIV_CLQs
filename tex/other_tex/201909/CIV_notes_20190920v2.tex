@@ -1,0 +1,651 @@
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+\input{format}
+
+
+
+\title[High-redshift CLQs]{The first high-redshift Changing Look Quasars}
+
+\author[Bercow]
+{The RH John~S.~Bercow, MP, {\it et al.} 
+%Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},    
+%K. E. Saavik Ford$^{2,3,4}$,  Matthew Graham$^{5}$,  Barry McKernan$^{2,3,4}$,  
+%\newauthor Daniel Stern$^{6}$, 
+%Aaron M. Meisner$^{7,8}$, Roberto J. Assef$^{9}$, Arjun Dey$^{10}$, Andrew J. Drake$^{11}$, \newauthor Hyunsung D. Jun$^{12}$, Dustin Lang$^{13,14,15}
+\\
+% List of institutions
+$^{1}$Speaker's Chair, The House of Commons, London, SW1A 0AA \\
+%$^{1}$Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom \\
+%$^{2}$Department of Science, BMCC, City University of New York, New York, NY 10007, USA \\
+%$^{3}$Department of Astrophysics, Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, NY 10024, USA \\
+%$^{4}$Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA\\
+%$^{5}$Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA\\
+%$^{6}$Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA \\
+}
+
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+\pubyear{2018}
+
+%\hypersetup{draft}
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+
+\begin{abstract}
+This is two hundred words, the suggested maximum for a MNRAS
+Letter. Lorem ipsum dolor sit amet, autem semper eam ei. Eros
+maluisset posidonium eu mea, atqui aperiam nostrum cum ad. Te vocent
+volutpat petentium vix, pro senserit convenire vituperatoribus ex, ad
+his mucius tamquam appetere. An mea omnium voluptaria scribentur, te
+verear iisque vulputate sit. Vim malis omittam probatus cu, vide
+tempor ius ex, vim eu case magna rebum. Vis id clita eruditi, in sea
+evertitur dissentiunt, per eu deseruisse mnesarchum deterruisset. Eu
+tale tempor sea, te mundi congue detracto est. Has ipsum animal timeam
+no. Atqui novum nobis et his, pericula interesset mel ut. Ea pro eros
+everti legendos. Vel iusto legere euismod id, ea erat debitis
+democritum usu. Ut paulo aliquid vix, disputationi delicatissimi
+signiferumque ut eam. Utroque impedit ad his. Ei mea sale tritani, ex
+eum duis epicuri, at per nonumy delectus electram. Dolorem patrioque
+prodesset vis at, sint tritani mel te. Ut nulla solet nonumes has, mel
+diam scripta delectus in, ne duo laudem appetere assueverit. An vim
+reque munere, labores apeirian his cu. Ei clita placerat praesent nam,
+in affert sapientem est. Qui te regione deterruisset. Nam at quodsi
+placerat. Pri no quando placerat.
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+accretion, accretion discs -- surveys -- quasars: general -- quasars: individual: J1100-0053 
+\end{keywords}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Luminous AGN, i.e. quasars, are now seen to significantly vary their
+energy output on timescales of weeks to months.  This observation, and
+the subsequent mismatch in the expected ``viscous'' timescale, which
+for a $\approx$10$^{7}$ M$_{\odot}$ is $\sim$hundreds of years, was
+noted over 30 years ago \citep[e.g.][]{Alloin1985}. However, with new
+photometric light-curve and repeat spectroscopic data, the desire for
+a deeper understanding of AGN accretion disk physics has been recently
+re-invigorated the field \citep[e.g.][]{Lawrence2018, Antonucci2018}.
+
+Samples of over 100 ``Changing Look'' quasars (CLQs) or ``Changing
+State'' quasars (CSQs) have now been assembled
+\citep[e.g.][]{MacLeod2019, Graham2019}. The community uses both these
+terms as a cover for the underlying physics. For sake of argument,
+``Changing Look'' quasars can be thought of as the extension of
+``regular'' quasar variability \citep[e.g.][]{MacLeod2012} whereas the
+``Changing State'' quasars (CSQs) have a `state-transition' similar to
+that in Galactic X-ray binaries \citep[e.g][]{NodaDone2018, Ruan2019}.
+These CLQs have primarily been defined according to the
+(recombination) Balmer emission line properties with particular
+attention paid to the H$\beta$ emission line, usually observed from
+optical spectroscopy.  As such, current CLQ studies have been at
+redshifts $z<1$.
+
+While there have been a slew of studies on triply ionized carbon, i.e
+\civ, these have tended to focus on broad absorption line quasars
+\citep[BAL QSOs; see e.g. Table 1][]{Hemler2019} or the Baldwin Effect
+\citep[BEff; e.g. ][]{Baldwin1977, Bian2012, Jensen2016,
+Hamann2017}\footnote{As noted in \citet{Rakic2017}, two different
+types of Baldwin effect are present in the literature: the {\it
+global} (or {\it ensemble}) Baldwin Effect, which is an
+anti-correlation between the EW of the emission line and the
+underlying continuum luminosity of {\it single-epoch} observations of
+a {\it large number} of AGN and second, the {\it intrinsic} Baldwin
+effect, the same anti-correlation but in an {\it individual, variable}
+AGN \citep{PoggePeterson1992}.}.  Dramatic changes in the
+collisionally excited broad {\it emission} line (BEL) of \civ (and
+indeed \ciii) have not to this point been seen.
+
+Here, we report on three quasars  
+%SDSS J120544.7+342252.4  (hereafter J1205+3422), 
+%SDSS J163852.93+282707.7 (hereafter J1638+2827) and
+%SDSS J222818.76+220102.9 (hereafter J2228+2201)  
+which show dramatic changes in their \civ\ and \ciii broad emission
+line properties as well as in the underlying continuum. We claim these
+are the first examples of ``Changing Look Quasars'' at high ($z>1$)
+redshift. Moreover, these are the first cases for substantial changes
+of ions with high ionization potentials (I.P.'s $>$2 Rydberg), thus
+linking the ionizing photons to the energetic inner accretion disk,
+potentially by inverse Compton scattering lower energy photons to
+higher energies.  Furthermore, the measured rest-wavelengths of
+emission lines in quasar spectra, are known to vary from their nominal
+laboratory especially for the high-ionization broad lines,
+wavelengths, \citep[e.g.][]{VandenBerk2001}.
+
+In this paper we use the wavelengths of 1548.202 and 1550.774 \AA\ for the \civ doublet \citep{Kramida2018}. The ground state of carbon is 1$s^2$ 2$s^2$ 2$p^2$.  Using the \href{https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html}{NIST Atomic Spectra Database Ionization Energies Form} for ionisation energies, we see 11.3 eV is the energy needed for C I to dislodge one electron and become singly-ionised C II; 24.4 eV is energy needed for singly-ionised C II to dislodge an additional electron, and become doubly-ionised C III, and 47.89 eV (3.519 Ry) is required for doubly-ionised C III become triply--ionised \civ.  64.49 eV (4.74 Ry) is the energy needed to ionize \civ itself. The 1548.202 and 1550.774 \AA\ emission doublet is created by the 2$p$ $^{2}P_{0}$ $-$ 2$s$ $^{2}S$ transition with energies 64,484 cm$^{-1}$ and 64,591 cm$^{-1}$ \citep[e.g.][]{Moore1993}.
+ 
+%%\subsection{Literature Search}
+\civ\ variability has been long studied, \citep[e.g., ][]{Baldwin1977,
+Gaskell1982, Gregory1982, Wilkes1986, Espey1989, Espey1990Erratum,
+ZhengSulentic1990, Corbin1990, Corbin1991, Weymann1991,
+Dimitrijevic1992, TytlerFan1992, Wills1993, Brotherton1994, Osmer1994,
+Laor1995, McIntosh1999, Nazarova2003}.
+%%
+\citet{Wilhite2006} examine the variability of a C~\textsc{iv} sample
+of 105 quasars observed at multiple epochs by the SDSS.  They find a
+strong correlation between the change in the C~\textsc{iv} line flux
+and the change in the line width, but no correlations between the
+change in flux and changes in line center and skewness.  These authors
+find that the relation between line flux change and line width change
+is consistent with a model in which a broad line base varies with
+greater amplitude than the line core. The C~\textsc{iv} lines in these
+high-luminosity quasars appear to be less responsive to continuum
+variations than those in lower luminosity AGN.  \citet{Wilhite2006}
+find no evidence for variability of the well known blueshift of the
+C~\textsc{iv} line with respect to the low-ionization
+Mg~\textsc{ii}$\lambda$2798 line in the highest flux objects. 
+
+\citet{Richards2011} explored the BELR in over 30,000 $z > 1.54$ SDSS
+quasars, concentrating on the properties of the \civ\ emission
+line. We consider two well-known effects involving the \civ\ emission
+line: the anti-correlation between the \civ\ EQW and luminosity (i.e.,
+the BEff) and the blueshifting of the peak of \civ\ emission with
+respect to the systemic redshift. These authors conclude that these
+two \civ\ parameters (EQW and blueshift) are capturing an important
+trade-off between ``disk'' and ``wind'' components in the disk-wind
+model of accretion disks \citep[e.g.,][]{Murray1995, Elvis2000,
+Proga2000}.  with one dominating over the other depending on the shape
+of the SED \citep[][strong \civ EQW indicates a
+more ionizing SED and large \civ blueshift indicating a less ionizing
+SED]{Leighly2004b}.
+
+The Sloan Digital Sky Survey Reverberation Mapping Project
+\cite[(SDSS-RM)][]{Shen2015} has a monitored $\sim$350 quasars with
+\civ Noting the biases associated with \civ Emission Line Properties
+\citep[e.g. increasing systematic offsets with decreasing
+signal-to-noise][]{Denney2016}, \citet{Grier2019} report report
+significant time delays between the continuum and the CIV 1549
+emission line in 52 quasars, and investigate the \civ
+radius-luminosity relationship.
+
+%% \citet{Coatman2017} 
+%The \civ $\lambda \lambda$1498,1501 broad emission line is visible in optical spectra to redshifts exceeding $z\sim5$. 
+\civ has long been known to exhibit significant displacements to the blue and these `blueshifts' almost certainly signal the presence of strong outflows. As a consequence, single-epoch virial black hole (BH) mass estimates derived from \civ velocity widths are known to be systematically biased compared to masses from the hydrogen Balmer lines. 
+\citet{Coatman2017} use a large sample of 230 high-luminosity (LBol = 1045.5-1048 erg s-1), redshift $1.5 < z < 4.0$ quasars with both \civ and Balmer line spectra, we have quantified the bias in \civ BH masses as a function of the \civ blueshift. \civ BH masses are shown to be a factor of 5 larger than the corresponding Balmer-line masses at C IV blueshifts of 3000 km s$^{-1}1$ and are overestimated by almost an order of magnitude at the most extreme blueshifts, $\gtrsim$5000 km s$^{-1}$. 
+
+\citet{Sun2018} use the multi-epoch spectra of 362 quasars from the Sloan Digital Sky Survey Reverberation Mapping project to investigate the dependence of the blueshift of \civ relative to \mgii on quasar properties. We confirm that high-blueshift sources tend to have low \civ equivalent widths (EWs), and that the low-EW sources span a range of blueshift. Other high-ionization lines, such as He II, also show similar blueshift properties. The ratio of the line width (measured as both the full width at half maximum and the velocity dispersion) of \civ to that of \mgii increases with blueshift. Quasar variability enhances the connection between the \civ blueshift and quasar properties (e.g., EW). The variability of the \mgii line center (i.e., the wavelength that bisects the cumulative line flux) increases with blueshift. In contrast, the C IV line center shows weaker variability at the extreme blueshifts. Quasars with the high-blueshift \civ lines tend to have less variable continuum emission, when controlling for EW, luminosity, and redshift. Our results support the scenario that high-blueshift sources tend to have large Eddington ratios.
+%%
+Therefore, the \civ\ or \heii\ EW is not an accurate indicator of the Eddington ratio or quasar SED.
+%%
+Recent investigations also include \citet{Meyer2019}. 
+
+This paper is organised as follows. In Section 2, we describe our
+sample selection, catalogs and observationa data sets.  In Section 3,
+we present various theoretical models and discuss if and how each
+describes and explains the data.  We conclude in Section 4.  We report
+all magnitudes on the AB zero-point system \citep{Oke_Gunn1983,
+Fukugita1996} unless otherwise stated explicitly. For the WISE bands,
+$m_{\rm AB} = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for WISE W1
+at 3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively
+\citep{Cutri2011}. We choose the cosmological parameters
+$\Omega_{\Lambda} = 0.7$, $\Omega_{\rm M} = 0.3$, and $h = 0.7$ in
+order to be consistent with \citet{Shen2011}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+%\subsection{Selection/Identification}
+\subsection{Spectra}
+An overview of our spectroscopic observations is given in Table~\ref{tab:obs_notes}. 
+The spectra are from the SDSS \citep{Stoughton2002, DR7, Schneider2010},  
+the SDSS-III Baryon Oscillation Spectroscopic Survey \citep[BOSS][]{Eisenstein2011, Dawson2013, Smee2013, Alam2015, Paris2017} 
+and the SDSS-IV  Extended Baryon Oscillation Spectroscopic Survey \citep[eBOSS; ][]{Dawson2016, Abolfathi2018}. 
+These quasars were targetted via a range of techniques and algorithms \citep[][]{Richards2002, Ross2012, 
+Myers2015}.  
+These data are supplemented by spectra from 
+the Low Resolution Imaging Spectrometer (LRIS) on the 10m Keck {\sc I} telescope \citep{Oke1995}. 
+%% The Keck Low Resolution Imaging Spectrometer", Oke, J.B., et al.. 1995, PASP, 107, 375
+and the Double Spectrograph (DBSP) instrument on the Palomar {\it Hale} 5m telescope. 
+
+
+\subsection{Line Properties}. 
+We use the measured quasar emission line properties from \citet{Shen2011} and \citet{Hamann2017}. \citet{Hamann2017} in particular investigate in robust detail the UV continuum and the \civ (and \nv $\lambda$ $\lambda$1238, 1242) emission lines in over 200,000 quasars in BOSS DR12Q \citep{Paris2017}\footnote{This emission-line catalog can be downloaded from \href{https://datadryad.org/stash/dataset/doi:10.6086/D1H59V}{here}.} The quasar redshift are limited to the range 1.53 ≤ ze ≤ 5.0 so that C IV and the adjacent continuum are covered by BOSS. These measurements provide line profile information and N V/C IV flux ratios... 
+
+\begin{table}
+ \centering
+ \begin{tabular}{l l l l}
+  \hline \hline 
+% &&\\
+   Quantity \ Object                           & J2228+2201     &  J1638+2827 \\
+% &&\\
+ \hline 
+    &&\\
+    R.A. / deg                                        &    337.078194      &  249.720559\\
+    Declination / deg                            &    +22.017478      &  +28.452159 \\
+    redshift, $z$                                    &   2.222$\pm$0.00038   &  2.185$\pm$0.00043          \\
+    &&\\ 
+    \multirow{2}{*}{Plate, Fiber, MJD}   & 6118, 720, 56189	     &  2948, 614, 54553	  \\
+                                         & 7582, 790, 56960	     & 5201, 178, 55832 \\    
+ %   &&\\ 
+    %$M_{i}(z=2)$  / mag                          &   ?                       & ?                \\
+    %log $(L_{\rm bol} / {\rm erg s}^{-1}) $      &   ?             & 45.56$\pm$0.004      & 45.07$\pm$0.004 \\
+    %log $(M_{\rm BH} / M_{\odot})  $           &  ?                  & 8.43$\pm$0.03           & 8.46$\pm$0.02 \\
+    %Eddington ratio  (\%)                        &  ?                               &  10.7                           &  3.2     \\ 
+    &&\\
+    \hline \hline 
+  \end{tabular}
+  \caption{Physical properties of J1100-0053, J2317+0005 and J1052+1519 using the
+    methods from \citet{Shen2011}. *This spectrum was used to estimate
+    the quantities reported.  We use the regular definition of $L_{\rm
+      Edd} = 4 \pi G M m_{\rm p} c /\sigma_{T} =
+    1.26\times10^{38}\left (M/M_{\odot} \right )$ erg s$^{-1}$.} 
+ \label{tab:Shen_props}
+\end{table}
+
+
+
+\begin{table*}
+ \centering
+ \begin{tabular}{r  r  r r r   r r r r}
+  \hline \hline 
+% &&\\
+   Object                         & \multirow{3}{*}{Redshift} & \multirow{3}{*}{Mag}      & \multirow{3}{*}{MJD} & \multirow{3}{*}{Date}  & \multirow{3}{*}{Instrument}   & Exposure    & \multirow{3}{*}{Spectrum} & \multirow{3}{*}{Notes} \\
+   R.A. / deg                   &               &               &            &                                &                                                                       &  Time         & & \\
+   Decl. / deg                 &               &               &            &                                &                                                                       &  / seconds         & & \\
+
+% &&\\
+ \hline 
+                                       &                &               &            &                              &                   &                             &  & \\
+   J120544.7+342252.4   & 2.071     &   17.99   & 53498 & 2005-May-08   & SDSS             & ?                          & 53498-2089-427  & \\
+          181.436164           &                &               & 58538 & 2019-Feb-24     & DBSP            &  2$\times$900    &                               &  Conditions? \\
+         +34.381229           &                &               & 58693 & 2019-Jul-29      & DBSP            &  2$\times$1200   &                                &   \\
+                                       &                &               &              &                           &                   &                             &  & \\
+   J163852.9+282707.7   & 2.182     &   19.77    & 54553 & 2008-Mar-28    & SDSS             & ?                          & 54553-2948-614  & \\
+      249.720558407	       &               &              & 55832  & 2011-Sep-28     & BOSS            &   3603                  & 55832-5201-178  & \\
+       +28.452158884        &               &              & 58583 & 2019-Apr-10        & LRIS              &  2$\times$900    &   & \\
+                                       &                &               &              &                           &                   &                             &  & \\
+    J222818.7+220102.9   & 2.222     & 19.97    & 56189 & 2012-Sep-19     & BOSS             &  2702               & 56189-6118-720   & \\
+        337.078194              &              &              & 56960 & 2014-Oct-30    & BOSS             & ?                         & 56960-7582-790     & QSO1-REOBS \\ 
+        +22.017478                                &               &             & 58693 & 2019-Jul-29      & DBSP              & 2$\times$1200  &       &    \\
+                                       &                &               &            &                             &                   &                              &  & \\
+%   J232446.7+140029.5   &  0.916     &  18.83   &  56209 & 2012-Oct-09   & BOSS             & ?                             & 56209-6148-743   & \\
+ %                                      &                &               &   58662 & 2019-Jun-28  &   (??)DBSP       & ?                            &  & \\
+  %                                     &                &               &              &                           &                   &                              &  & \\
+   \hline \hline   
+  \end{tabular}
+  \caption{Spectrum is SDSS/BOSS MJD-Plate-FiberID combination. 
+Exposure times are from the {\tt plate.fits} file. 
+DBSP on the Palomar 200-inch telescope is the } 
+ \label{tab:obs_notes}
+\end{table*}
+
+
+
+\subsection{Multi-wavelength properties}
+MIR \\
+Radio \\
+{\bf FROM ROSS ET AL 2018!!!!} 
+While previous efforts have used the 1-year baseline of the WISE mission to identify
+changing-look quasars \citep[e.g.,][]{Assef2018, Stern2018}, our
+investigation is the first to extend this selection to the infrared
+using NEOWISE-R mission data. We have identified a sample of Sloan
+Digital Sky Survey (SDSS) quasars that show significant changes in
+their IR flux over the course of a few years. Importantly, our IR
+light curves enable us to set limits on SED changes due to
+obscuration.
+
+We use data from the
+beginning of the WISE mission \citep[2010 January; ][]{Wright2010}
+through the thrid-year of NEOWISE-R operations \citep[2016 December;
+][]{Mainzer2011}. The WISE scan pattern leads to coverage of the
+full-sky approximately once every six months (a ``sky pass''), but the
+satellite was placed in hibernation in 2011 February and then
+reactivated in 2013 October. Hence, our light curves have a cadence of
+6 months with a 32 month sampling gap.
+
+The W1/W2 light curves for $\sim$200,000 SDSS and BOSS spectroscopic
+quasars were obtained by performing forced photometry at the locations
+of DECam-detected optical sources \citep{Lang2014, Meisner2017a,
+Meisner2017b}. This forced photometry was performed on time-resolved
+coadds \citep{Lang2014}, each of which represents a stack of $\sim$12
+exposures. The coaddition removes the possibility of probing
+variability on $\lesssim$1 day time scales, but pushes $\approx$1.4
+magnitudes deeper than individual exposures while removing virtually
+all single-exposure artifacts (e.g. cosmic rays and satellites).
+
+Approximately $\sim$30,000 of the SDSS/BOSS quasars with W1/W2
+light-curves available are `IR-bright', in that they are above both
+the W1 and W2 single exposure thresholds and therefore detected at
+very high significance in the coadds. For this ensemble of objects,
+the typical variation in each quasar's measured (W1-W2) color is 0.06
+magnitudes.  This includes statistical and systematic errors which are
+expected to contribute variations at the few hundredths of a magnitude
+level. The typical measured single-band scatter is 0.07 magnitudes in
+each of W1 and W2.
+
+
+
+%%\newpage
+%% For the MNRAS Letter, not sure this can take up a full page...
+\begin{figure}
+  \centering
+  \includegraphics[width=8.7cm, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]
+  {../plots/spectral/The_3_CIV_CLQs_20190917.pdf}
+% {figures/The_3_CIV_CLQs_20190917.pdf}
+   \vspace{-12pt}
+  \caption[]{The threes high-$z$ CLQ quasars; 
+SDSS J1205+3422 (top), 
+SDSS J1638+2827 (middle), 
+SDSS J2228+2201 (bottom). 
+%A quasar at $z = 2.2$ with the two spectra showing CIV and CIII] fading.
+}
+  \label{fig:civ_clqs}
+\end{figure}
+
+\begin{figure*}
+  \centering
+  %% trim=l b r t
+  \includegraphics[width=16.7cm, trim=0.0cm 0.1cm 0.2cm 0.1cm, clip]
+  % {../plots/spectral/The_3_CIV_CLQs_20190917.pdf}
+  {../plots/perObject/J1205+3422_landscape_20190920.png}
+  \includegraphics[width=16.7cm, trim=0.0cm 0.1cm 0.2cm 0.1cm, clip]
+  {../plots/perObject/J1638+2827_landscape_20190920.png}
+  \includegraphics[width=16.7cm, trim=0.0cm 0.1cm 0.2cm 0.1cm, clip]
+  {../plots/perObject/J2228+2201_landscape_20190920.png}
+  \vspace{-12pt}
+  \caption[]{The threes high-$z$ CLQ quasars; 
+    SDSS J1205+3422 (top), 
+    SDSS J1638+2827 (middle), 
+    SDSS J2228+2201 (bottom). 
+    % A quasar at $z = 2.2$ with the two spectra showing CIV and CIII] fading.
+  }
+  \label{fig:civ_clqs2}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+Figure~\ref{fig:civ_clqs} presents the threes high-$z$ CLQ quasars. 
+%%
+%%
+For J1638+2827, over the course of 1279 days observed, 400 days in the rest-frame, the  broad \civ and \ciii BEL start to fade.  
+For J2228+2201, over the course of 771 days observed, 240 days in the rest-frame, broad \civ and \ciii BELs both emerge and the 
+standard UV/blue continuum slope increases in flux. 
+the UV/blue continuum diminishes and the shape of \lya changes. 
+
+Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu
+at orci egestas convallis. Aenean quam velit, aliquam vitae viverra
+in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras
+nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies
+nulla. Nullam eu augue id purus mollis dignissim sed et
+libero. Phasellus eget justo sed neque pellentesque egestas nec id
+arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse
+vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor
+imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel
+neque id mi ultrices tristique. Integer quam libero, ornare vel
+gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
+cursus, dui nisl egestas augue, non fermentum nisl est nec
+nisi. Vestibulum nec mi justo, eget dapibus velit.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8.7cm, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]
+  {../plots/Wilhite/Wilhite_2006_Fig2_redux_20190830.png}
+% {figures/The_3_CIV_CLQs_20190917.pdf}
+   \vspace{-12pt}
+  \caption[]{
+The Change in \civ line width vs. line flux change. 
+Data from \citet{Wilhite2006} with a sample of 105 quasars observed at
+multiple epochs by the Sloan Digital Sky Survey. We find a strong
+correlation between the change in the C iv line flux and the change in
+the line width, but no correlations between the change in flux and
+changes in line center and skewness.}
+  \label{fig:Wilhite2006_comparison}
+\end{figure}
+From Figure~\ref{fig:Wilhite2006_comparison} there appears to be a
+strong correlation between the change in the line flux and the change
+in the line width.  Figure~\ref{fig:Wilhite2006_comparison} shows the
+epoch-to-epoch flux ratio versus the ratio of line widths.
+
+In the context of CLQs at lower-$z$...  Sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus. Duis tempus,
+lectus nec ultricies mollis, mi orci feugiat nulla, a bibendum velit
+orci nec lacus. Duis a odio in nisi egestas dictum. Nullam vel quam
+mauris, eget consectetur orci. Morbi ac mi sit amet neque consectetur
+tempus ac eget est. Curabitur malesuada arcu sit amet metus dictum at
+dapibus arcu accumsan. Fusce sollicitudin luctus rutrum.  Balmer CLQs
+vs. \civ CLQs...
+
+
+\subsection{J1205+3422 }
+SDSS J120544.67+342252.4, observed by SDSS, first reported in \citet{Schneider2007}. 
+Redshift of $z=$2.068$\pm$0.00027. 
+%% targeting_flags	SERENDIP_BLUE QSO_CAP
+plate	2089 
+mjd	53498
+fiberid	427
+
+
+\subsection{J1638+2827}
+SDSS J163852.93+282707.7       16h38m52.9s +28d27m08s  \\
+First reported in \citet{Schneider2010}. 
+Selected by {\tt SERENDIP\_BLUE} and {\tt QSO\_MAG\_OUTLIER} in SDSS \citep{Richards2002}, meaning...
+Selected as a $z>2$ known quasar and passed BOSS quasar target selections \citep{Ross2012}. 
+
+
+R.A. (J2000) = 249.72058 degs. \\
+Decl. (J2000) = 28.45217 degs. \\
+\href{skyserver.sdss.org/dr15/en/tools/explore/Summary.aspx?id=1237662301375824232}{SDSS SkyServer} 
+All Spectra of this Object:: \\
+specObjId	plate	MJD	fiber	ra	dec	redshift \\
+5855854441601671168	5201	55832	178	2.186$\pm$0.00073\\
+3319321776793610240	2948	54553	614	2.185$\pm$0.00043\\
+
+
+\subsection{J2228+2201}
+SDSS J222818.76+220102.9 (R.A. 337.078194926, Decl. 22.017477924) was first reported in 
+\citet{Paris2017}. 
+
+%%\href{https://skyserver.sdss.org/dr12/en/tools/chart/navi.aspx?ra=337.077916666667&dec=22.0173888888889&scale=0.2&width=120&height=120&opt=
+\href{skyserver.sdss.org/dr15/en/tools/explore/summary.aspx?id=1237678579819479655}{SDSS SkyServer}
+All Spectra of this Object:: \\
+specObjId	plate	MJD	fiber	ra	dec	redshift \\
+8536790363997708288	7582	56960	790	2.222$\pm$0.00038\\
+6888453645991387136	6118	56189	720	2.217$\pm$0.00208\\
+
+
+
+%Plate: 2948, MJD: 54553, Fiber: 0614
+%https://dr12.sdss.org/spectrumDetail?mjd=54553&fiber=614&plateid=2948
+
+\begin{table*}
+  \centering
+  \begin{tabular}{l  l  l    lll}
+    \hline \hline 
+    Line 	    &   Rest	      & Line       & Line	       &	Line			                 &   Continuum \\ 
+    Name	    &   Wavelength  &  $z$       & $\sigma$ 	&	Flux			                 & \\
+                    &    $\AA $        &              & /  km s$-1$	&     10$^{-17}$ erg/cm$2$/s &  10$^{-17}$ erg/cm$^2$/s/\AA  \\
+Ly$\alpha$  &	 1215.7	&	2.186      &	1362	&	510.5		                &	7.224 \\
+\nv		    &   1240.8	&	2.184     &	 854.6	&	122.4	                    	&	5.546 \\ 
+\civ		    &  1549.5	&	2.184    &	1927	&	462.6		                &	2.722 \\ 
+\heii	    &	 1640.4	&	2.184    &	1927	&    	  8.067	                   	&	2.447 \\  
+\ciii 	    &	 1908.7	&	2.184    &	1927	&	164.6	                   	&	1.966  \\ 
+\mgii	    &	 2800.3	&	2.184   & 	1927	&	187.4	                   	&	1.513  \\
+   \hline \hline   
+  \end{tabular}
+  \caption{Line Measurement Information}
+ \label{tab:line_values}
+\end{table*}
+
+
+
+\begin{table*}
+  \centering
+  \begin{tabular}{l  lll lll  }
+    \hline \hline 
+                                    &                               &                                           &                                                      &                                  &                         & \\  
+                                  \multicolumn{7}{c}{J1638+2827}  \\
+                                    &                               &                                           &                                                      &                                  &                         & \\  
+   \hline                       
+%                                   &                               &                                           &                                                      &                                  &                         & \\  
+    Line      	             & Line  $\sigma$     & Line  Flux                           &   Continuum                                 & Line  $\sigma$          & Line  Flux        &   Continuum                                    \\
+%    Wavelength	             & /  km s$^{-1}$         &   10$^{-17}$ erg/cm$2$/s  & 10$^{-17}$ erg/cm$^2$/s/\AA      &  /  km s$-1$             & / 10$^{-17}$ erg/cm$2$/s   & /10$^{-17}$ erg/cm$^2$/s/\AA       \\
+                                     & \multicolumn{3}{l}{MJD 54553}                                                                                   & \multicolumn{3}{l}{MJD 55832}                                                                                                          \\
+    Ly$\alpha$1215.7    &  1362	            &	510.5		                  &	7.224                                           &  1769	                &   633.9	              &  5.376     \\
+    \nv1240.8	            &   854.6	            &	122.4	                    	  &	5.546                                           & 1012	                &  107.1		      &  4.645\\ 
+    \civ1549.5         	    &	 1927	            &	462.6		                  &	2.722                                           & 2287	                &  125.1		      &  1.256      \\  
+    \heii1640.4	            &	 1927    	            &      8.067	                   	  &	2.447                                           & 2287	                &    10.68	      &  1.001\\  
+    \ciii1908.7        	    &	 1927	            &	164.6	                   	  &	1.966                                          & 2287	 	                &     29.53	      &  0.6008\\ 
+    \mgii2800.3	    &   1927	            &	187.4	                   	  &	1.513                                          & 2287 	 	         &    34.66	      &  0.3461  \\
+                                    &                               &                                           &                                                      &                                  &                           &                \\  
+   \hline \hline   
+  \end{tabular}
+  \caption{Line Measurement Information. 
+    Line $\sigma$ in units of   km s$-1$; 
+    Line flux          in units of  10$^{-17}$ erg/cm$^2$/s; 
+    Continuum      in units of  10$^{-17}$ erg/cm$^2$/s/ \AA; 
+}
+ \label{tab:line_values}
+\end{table*}
+
+%Plate: 5201, MJD: 55832, Fiber: 178
+%https://dr12.sdss.org/spectrumDetail?mjd=55832&fiber=178&plateid=5201
+
+%Line		Rest		        Line	        Line		        Line			   Continuum
+%Name		Wavelength	z	        sigma 		Flux	
+%                       [Å]			               [km s-1]  	[10-17erg/cm2/s] 	   [10-17erg/cm2/s/Å]
+%Ly_alpha	1215.7		2.186	1769		633.9		   5.376
+%N_V		1240.8		2.185	1012		107.1		   4.645
+%C_IV		1549.5		2.185	2287		125.1		   1.256
+%He_II		1640.4		2.185	2287		 10.68		   1.001
+%C_III]		1908.7		2.185	2287	 	 29.53		   0.6008
+%Mg_II		2800.3		2.185	2287 	 	 34.66		   0.3461
+
+%So, ratios, MJD 54553 / MJD 55832::
+%$Ly_alpha	1215.7		—	0.770		0.805			1.344			
+%N_V		1240.8		—	0.844		1.143			1.194
+%C_IV		1549.5		—	0.843		3.698			2.167			
+%He_II		1640.4		—	0.843		0.755			2.445			
+%C_III]		1908.7		—	0.843		5.574			3.27			
+%Mg_II		2800.3		—	0.843		5.407			4.37
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion and Conclusions}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
+sodales est, vel cursus risus porta non. Vivamus vel pretium
+velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
+ac. Fusce pellentesque condimentum dolor, quis vehicula tortor
+hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
+conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
+eu blandit. Donec in lacinia libero.
+
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id
+pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed
+id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus
+dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis
+euismod. Cras vel auctor neque. Nam quis diam risus.
+
+Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu
+at orci egestas convallis. Aenean quam velit, aliquam vitae viverra
+in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras
+nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies
+nulla. Nullam eu augue id purus mollis dignissim sed et
+libero. Phasellus eget justo sed neque pellentesque egestas nec id
+arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse
+vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor
+imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel
+neque id mi ultrices tristique. Integer quam libero, ornare vel
+gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
+cursus, dui nisl egestas augue, non fermentum nisl est nec
+nisi. Vestibulum nec mi justo, eget dapibus velit.
+
+Cras in laoreet mauris. Vivamus nec nulla a dui commodo
+adipiscing. Proin vulputate lectus nec arcu iaculis sit amet auctor
+ligula ultricies. Phasellus condimentum gravida tincidunt. Phasellus
+et mauris ac nibh vestibulum vehicula. Morbi et augue id purus gravida
+sagittis quis in sem. Phasellus quis risus bibendum eros luctus
+auctor.
+
+Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus
+tristique, nisl eu malesuada semper, libero tortor convallis elit, a
+scelerisque orci nisi lacinia turpis. In lacinia ultrices
+volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt
+id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet
+pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel
+erat gravida lacinia. Donec vehicula consectetur lectus vitae
+luctus. Praesent nisl justo, laoreet elementum facilisis vel,
+tristique ac enim. Etiam vel quam ut quam eleifend
+tincidunt. Suspendisse sit amet eros vel elit ullamcorper
+laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit
+nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed
+imperdiet lorem rhoncus sit amet.
+
+In this paper we have... 
+\begin{itemize}
+\item Pellentesque vel elit neque, in interdum lacus. Quisque sodales, nunc et luctus convallis, nisl dui luctus dui, at congue urna velit a; 
+\item At sit amet sapien a risus dapibus sagittis. Cras sed ultricies erat. Donec id metus sed urna lacinia convallis vel sed enim. 
+\item Nisi libero, ornare vel bibendum eu, sollicitudin sed leo. Cras tincidunt aliquet ultricies. Cras pretium velit leo, in malesuada. 
+\item Duis sagittis ultricies interdum. Proin sit amet sem nec metus feugiat pharetra.
+\end{itemize}
+
+Aliquam ac metus nec odio tempus pharetra sed nec diam. Sed eget arcu
+nulla. Etiam elementum ultrices ligula, at iaculis libero feugiat
+bibendum. Suspendisse potenti. Nam pharetra adipiscing
+euismod. Quisque imperdiet dignissim odio, sed volutpat justo
+tincidunt eu. Nunc vehicula pharetra suscipit. Integer aliquet pretium
+ipsum vel ultrices. Nam rutrum nibh ac quam pulvinar molestie.
+
+Sed sed ipsum diam. In risus tortor, sagittis eu auctor in, varius in
+dui. Mauris a nunc ut ligula ullamcorper tincidunt. Nunc aliquam eros
+ac risus pellentesque aliquam. Phasellus augue velit, varius at
+porttitor sit amet, pretium eget felis. Ut mollis tellus elementum
+magna porttitor rutrum. Etiam blandit leo eget est consectetur
+imperdiet. Quisque et diam nec orci vulputate varius vitae id sapien.
+
+
+\bibliographystyle{mnras}
+\bibliography{tester_mnras}
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+
+\end{document}

@@ -1,0 +1,58 @@
+\begin{table*}
+\begin{tabular}{ l rrrr rrrr rrrr rrrr rrrr rr|}
+\hline
+%  \multicolumn{1}{|c|}{sdss\_name} &
+ % \multicolumn{1}{c|}{f1450} &
+ % \multicolumn{1}{c|}{$alpha\_civ$} &
+ % \multicolumn{1}{c|}{$alpha\_nv$} &
+ % \multicolumn{1}{c|}{$alpha\_all$} &
+ % \multicolumn{1}{c|}{$alpha\_allc$} &
+ % \multicolumn{1}{c|}{rew} &
+ % \multicolumn{1}{c|}{rewc} &
+ % \multicolumn{1}{c|}{reww} &
+ % \multicolumn{1}{c|}{fwhm} &
+ % \multicolumn{1}{c|}{fwhme} &
+ % \multicolumn{1}{c|}{fwhmc} &
+ % \multicolumn{1}{c|}{fwhmw} &
+ % \multicolumn{1}{c|}{$\sigma$} &
+ % \multicolumn{1}{c|}{peak} &
+ % \multicolumn{1}{c|}{peaksnr} &
+ % \multicolumn{1}{c|}{rat} &
+ % \multicolumn{1}{c|}{asy} &
+ % \multicolumn{1}{c|}{kt75} &
+ % \multicolumn{1}{c|}{kt80} &
+ % \multicolumn{1}{c|}{rew\_di} &
+ % \multicolumn{1}{c|}{rewe\_di} &
+ % \multicolumn{1}{c|}{fwhm\_di} &
+\hline 
+  Plate-Fiber-MJD & $f$1450 & $\alpha_{\civ}$ & $\alpha_{\rm all}$      & $\alpha_{\rm allc}$     & rew                       & rewc   &  reww  & fwhm                 & fwhmc  &  fwhmw  & $\sigma$  & asy       & kt75  & kt80   & rew\_di               & fwhm\_di                     \\
+\hline 
+  5201-178-55832 & 1.4659    & -3.3547              & -4.95$\pm$0.46 & -4.026$\pm$0.452 & 42.76$\pm$1.96  & 26.72  & 16.03  & 5210$\pm$226 & 4651   & 13444    & 3702          &   0.059  & 0.415 & 0.325 & 41.41$\pm$1.6 & 5372  \\
+  6118-720-56189 & 0.5101    & -1.5931              & -1.47$\pm$0.04 & -0.657$\pm$0.004 & 42.18$\pm$5.59  &  6.42   & 35.76  & 2994$\pm$620 & 1458   &   7636    & 3002          & -0.150  & 0.183 & 0.138 & 44.15$\pm$4.2 & 3867  \\
+\hline
+\end{tabular}
+  \caption{
+Spectrum is SDSS/BOSS MJD-Plate-FiberID combination. 
+\noindent {\tt f1450} = flux in the uncorrected BOSS spectrum at 1450
+\AA\ rest (10$^{-17}$ ergs s$^{-1}$ cm$^{-2}$ \AA$^{-1}$) used to
+anchor the power law continuum fits beneath \civ\ and \nv , e.g.,
+$f_{\lambda} = f_{1450}\, (\lambda /1450{\rm \AA})^{\alpha}$.
+\noindent {\tt alpha\_civ} = power law continuum slope
+($f_{\lambda}\propto \lambda^{\alpha}$) measured from the BOSS
+spectrum on either side of \civ .
+\noindent {\tt alpha\_nv} = as above but for \nv .
+\noindent {\tt alpha\_all} = power law continuum slope ($f_{\lambda}\propto \lambda^{\alpha}$) between 1350 \AA\ and 2200 \AA\ in the uncorrected BOSS spectrum (with 1$\sigma$ uncertainty). 
+\noindent {\tt alpha\_allc} = power law continuum slope ($f_{\lambda}\propto \lambda^{\alpha}$) between 1350 \AA\ and 2200 \AA\ in the flux corrected BOSS spectrum, listed only for quasars with $z_{\rm e} \le 3.4$ (with 1$\sigma$ uncertainty). 
+\noindent {\tt rew} = \civ\ REW (\AA ) from the line profile fit (with 1$\sigma$ uncertainty). 
+\noindent {\tt rewc} = \civ\ REW (\AA ) for the core Gaussian component.
+\noindent {\tt reww} = \civ\ REW (\AA ) for the wing Gaussian component.
+\noindent {\tt fhwm} = \civ\ FWHM (km/s) from the line profile fit (with 1$\sigma$ uncertainty). 
+\noindent {\tt fwhmc} = \civ\ FWHM (km/s) for the core Gaussian only.
+\noindent {\tt fwhmw} = \civ\ FWHM (km/s) for the wing Gaussian only.
+\noindent {\tt sigma} = \civ\ velocity dispersion (km/s) measured from the profile fit \citep{Peterson2004}.
+\noindent {\tt asy} = \civ\ profile asymmetry index \citep{Marziani1996}.
+\noindent {\tt kt75} = \civ\ profile kurtosis 75 index \citep{Marziani1996}.
+} 
+ \label{tab:Ham17_lines}
+\end{table*}
+
