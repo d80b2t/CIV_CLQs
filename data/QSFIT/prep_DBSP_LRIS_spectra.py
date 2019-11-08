@@ -28,18 +28,18 @@ path = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/'
 #red    = ascii.read(path+object_name+infile)
 ##
 ##  J1638+2827
-#object_name = 'J1638+2827/'
-#infile = 'LRIS_J1638p2827_b_58583.dat'
-#blue   = ascii.read(path+object_name+infile)
-#infile = 'LRIS_J1638p2827_r_58583.dat'
-#red    = ascii.read(path+object_name+infile)
-##
-##  J2228+3422
-object_name = 'J2228+2201/'
-infile = 'DBSP_J2228p2201_b_58693.dat'
+object_name = 'J1638+2827/'
+infile = 'LRIS_J1638p2827_b_58583.dat'
 blue   = ascii.read(path+object_name+infile)
-infile = 'DBSP_J2228p2201_r_58693.dat'
+infile = 'LRIS_J1638p2827_r_58583.dat'
 red    = ascii.read(path+object_name+infile)
+
+##  J2228+3422
+#object_name = 'J2228+2201/'
+#infile = 'DBSP_J2228p2201_b_58693.dat'
+#blue   = ascii.read(path+object_name+infile)
+#infile = 'DBSP_J2228p2201_r_58693.dat'
+#red    = ascii.read(path+object_name+infile)
 
 
 print()
@@ -60,6 +60,10 @@ wavelength_red  =  red['wavelength']
 flux_blue = (2.99792458E+21 * (blue['flux_density'] / 1000.)) / (blue['wavelength']**2) / 1e-17
 flux_red  = (2.99792458E+21 * ( red['flux_density'] / 1000.)) / ( red['wavelength']**2) / 1e-17
 
+## Trying to 'join' up the Blue and Red arm data more smoothly. 
+#if object_name == 'J1638+2827/':
+#    boost_one = (flux_red[np.where((wavelength_red > 5600) & (wavelength_red < 5680))])*2.]
+    
 
 ## We don’t have flux uncertainties but the SNR
 ## is typically between 10 - 30.
