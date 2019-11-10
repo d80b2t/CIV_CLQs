@@ -101,7 +101,8 @@ alpha           = 1.0
 fontsize        = 16
 labelsize       = fontsize
 tickwidth       = 2.0
-linewidth       = 1.4
+linewidth       = 1.0 ## 1.4
+beefup          = 2.2
 tickwidth       = 2.0
 ticklength      = 6.0
 ticklabelsize   = labelsize
@@ -156,7 +157,7 @@ center     = 1549.48                         ## line center for CIV, Angstrom
 print()
 print("qsfit['FILENAME'][ii], '     ',  qsfit['LUM'][ii], qsfit['FWHM'][ii], qsfit['VOFF'][ii]")
 for ii in range(len(qsfit)):
-    print(qsfit['FILENAME'][ii], '       ', qsfit['NCOMP'][ii],  qsfit['LUM'][ii], qsfit['FWHM'][ii], qsfit['VOFF'][ii])
+    print(ii, qsfit['FILENAME'][ii], '       ', qsfit['NCOMP'][ii],  qsfit['LUM'][ii], qsfit['FWHM'][ii], qsfit['VOFF'][ii])
     if ii == 0:
         #j=0; k=0
         norm       = qsfit['LUM'][ii]                ## 10^42 erg s^-1
@@ -171,7 +172,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J12_first_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax1.plot(J12_first_wave,  J12_first_flux, '-b', lw=linewidth)
-        ax1.plot(J12_first_wave,  line_profile,   '-b', lw=linewidth)
+        ax1.plot(J12_first_wave,  line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -198,7 +199,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J12_second_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax2.plot(J12_second_wave, J12_second_flux, '-r', lw=linewidth)
-        ax2.plot(J12_second_wave, line_profile,    '-r', lw=linewidth)
+        ax2.plot(J12_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -225,7 +226,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J12_third_wave - x0) / sigma)**2 / 2.)))+cont_off
         
         ax3.plot(J12_third_wave, J12_third_flux, '-k', lw=linewidth)
-        ax3.plot(J12_third_wave, line_profile,   '-k', lw=linewidth)
+        ax3.plot(J12_third_wave, line_profile,   '-k', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -239,7 +240,7 @@ for ii in range(len(qsfit)):
         ax3.legend(loc='upper right', handles=handles,
         fontsize=fontsize/1.4, frameon=True, framealpha=1.0,
         fancybox=True)
-
+        print()
         
 ## ACTUALLY PLOTTING   J16
     if ii == 3:
@@ -254,7 +255,7 @@ for ii in range(len(qsfit)):
     
         line_profile = (peak_value * (np.exp( -((J16_first_wave - x0) / sigma)**2 / 2.)))+cont_off
         ax4.plot(J16_first_wave, J16_first_flux, '-b', lw=linewidth, label='J1638+2827 (54553)')
-        ax4.plot(J16_first_wave, line_profile,   '-b', lw=linewidth)
+        ax4.plot(J16_first_wave, line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -281,7 +282,7 @@ for ii in range(len(qsfit)):
     
         line_profile = (peak_value * (np.exp( -((J16_second_wave - x0) / sigma)**2 / 2.)))+cont_off
         ax5.plot(J16_second_wave, J16_second_flux, '-r', lw=linewidth)
-        ax5.plot(J16_second_wave, line_profile,    '-r', lw=linewidth)
+        ax5.plot(J16_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -308,7 +309,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J16_third_wave - x0) / sigma)**2 / 2.)))+cont_off
             
         ax6.plot(J16_third_wave,  J16_third_flux, '-k', lw=linewidth)
-        ax6.plot(J16_third_wave,  line_profile,   '-k', lw=linewidth)
+        ax6.plot(J16_third_wave,  line_profile,   '-k', lw=beefup)
         
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -322,7 +323,7 @@ for ii in range(len(qsfit)):
         ax6.legend(loc='upper right', handles=handles,
         fontsize=fontsize/1.4, frameon=True, framealpha=1.0,
         fancybox=True)
-
+        print()
          
 ## ACTUALLY PLOTTING   J22
     if ii == 6:
@@ -337,7 +338,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_first_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax7.plot(J22_first_wave,  J22_first_flux, '-b', lw=linewidth)
-        ax7.plot(J22_first_wave,  line_profile,   '-b', lw=linewidth)
+        ax7.plot(J22_first_wave,  line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -365,7 +366,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_second_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax8.plot(J22_second_wave, J22_second_flux, '-r', lw=linewidth)
-        ax8.plot(J22_second_wave, line_profile,    '-r', lw=linewidth)
+        ax8.plot(J22_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -385,7 +386,7 @@ for ii in range(len(qsfit)):
         norm       = qsfit['LUM'][ii]                ## 10^42 erg s^-1
         fwhm       = qsfit['FWHM'][ii]               ## km/s
         v_off      = qsfit['VOFF'][ii]               ## km/s
-        cont_off   = 1.0                              ## a sophisticated guess at the continnuum level.
+        cont_off   = 1.5                              ## a sophisticated guess at the continnuum level.
         
         x0           = center - (v_off / c) * center   ##  Angstrom (actual center of the line profile)
         sigma        = (fwhm  / c) * center / conve    ##;  Angstrom (width of the line profile)
@@ -393,7 +394,7 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_third_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax9.plot(J22_third_wave,  J22_third_flux, '-k', lw=linewidth)
-        ax9.plot(J22_third_wave,  line_profile,   '-k', lw=linewidth)
+        ax9.plot(J22_third_wave,  line_profile,   '-k', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))

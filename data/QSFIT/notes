@@ -17,7 +17,7 @@ E(B-V):   0.000
 
 
 J111346.10+185451.9
-========================================
+================================================================================
 J111346.10+185451.9 is a "Core ERQ" from Hamann et al. (2017).
 It also has the smallest FWHM of the core ERQs at 986±26 kms^-1.
 
@@ -39,4 +39,11 @@ From QSFit 1.3.0
  #|LINE          |NCOMP|    LUM|LUM_ERR|   FWHM|FWHM_ERR|    VOFF|VOFF_ERR|     EW| EW_ERR|QUALITY
  6|br_CIV_1549   |    2| 246.11| 5.0947| 1007.1|   22.39|  226.94|  9.1589| 83.134| 1.7209|      0
 
+
+
+
+
+QSFit_1.3.0_params_MJG.dat
+================================================================================
+Email from Matthew Graham on Oct 25, 2019, at 11:21 AM
 
