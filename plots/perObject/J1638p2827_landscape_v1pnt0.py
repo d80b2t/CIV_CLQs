@@ -52,6 +52,25 @@ NEOWISER_aver_W2_AB = NEOWISER_aver['w2mpro_wgt'] + 3.313
 
 
 ##    S P E C T R A 
+##    SDSS
+sdssname        = 'spec-2948-54553-0614.fits'
+sdss_data       = fits.open(path+sdssname)
+sdss_spectrum   = sdss_data[1].data
+sdss_flux       = sdss_spectrum.flux
+sdss_loglam     = sdss_spectrum.loglam
+sdss_wavelength = 10**(sdss_loglam)
+sdss_mjd        = sdss_data[2].data['MJD'][0]
+
+bossname        = 'spec-5201-55832-0178.fits'
+#bossname        = 'spec-5201-55832-0178_v5_10_0.fits'
+boss_data       = fits.open(path+bossname)
+boss_spectrum   = boss_data[1].data
+boss_flux       = boss_spectrum.flux
+boss_loglam     = boss_spectrum.loglam
+boss_wavelength = 10**(boss_loglam)
+boss_mjd        = boss_data[2].data['MJD'][0]
+
+##  L R I S    data
 infile   = 'LRIS_J1638p2827_b_58583.dat'
 LRIS_b  = ascii.read(path+infile)
 infile   = 'LRIS_J1638p2827_r_58583.dat'
@@ -73,22 +92,6 @@ LRIS_r_wavelength = LRIS_r['wavelength']
 LRIS_b_flux   = (2.99792458E+21 * (LRIS_b['flux_density'] / 1000.)) / (LRIS_b['wavelength']**2)  / 1e-17
 LRIS_r_flux   = (2.99792458E+21 * (LRIS_r['flux_density'] / 1000.)) / (LRIS_r['wavelength']**2)  / 1e-17
 
-##    SDSS
-sdssname        = 'spec-2948-54553-0614.fits'
-sdss_data       = fits.open(path+sdssname)
-sdss_spectrum   = sdss_data[1].data
-sdss_flux       = sdss_spectrum.flux
-sdss_loglam     = sdss_spectrum.loglam
-sdss_wavelength = 10**(sdss_loglam)
-sdss_mjd        = sdss_data[2].data['MJD'][0]
-
-bossname        = 'spec-5201-55832-0178_v5_10_0.fits'
-boss_data       = fits.open(path+bossname)
-boss_spectrum   = boss_data[1].data
-boss_flux       = boss_spectrum.flux
-boss_loglam     = boss_spectrum.loglam
-boss_wavelength = 10**(boss_loglam)
-boss_mjd        = boss_data[2].data['MJD'][0]
     
 ## Get the redshift right!
 redshift = 2.182

@@ -52,6 +52,25 @@ NEOWISER_aver_W2_AB = NEOWISER_aver['w2mpro_wgt'] + 3.313
 
 
 ##    S P E C T R A 
+##  It's actaully a BOSS spectrum, but let's just call it SDSS for
+##  ease of variable...
+sdssname        = 'spec-6118-56189-0720.fits'
+sdss_data       = fits.open(path+sdssname)
+sdss_spectrum   = sdss_data[1].data
+sdss_flux       = sdss_spectrum.flux
+sdss_loglam     = sdss_spectrum.loglam
+sdss_wavelength = 10**(sdss_loglam)
+sdss_mjd        = sdss_data[2].data['MJD'][0]
+
+bossname        = 'spec-7582-56960-0790.fits'
+boss_data       = fits.open(path+bossname)
+boss_spectrum   = boss_data[1].data
+boss_flux       = boss_spectrum.flux
+boss_loglam     = boss_spectrum.loglam
+boss_wavelength = 10**(boss_loglam)
+boss_mjd        = boss_data[2].data['MJD'][0]
+
+##  DBSP spectrum
 infile   = 'DBSP_J2228p2201_b_58693.dat'
 DBSP_b  = ascii.read(path+infile)
 infile   = 'DBSP_J2228p2201_r_58693.dat'
@@ -73,23 +92,6 @@ DBSP_r_wavelength = DBSP_r['wavelength']
 DBSP_b_flux   = (2.99792458E+21 * (DBSP_b['flux_density'] / 1000.)) / (DBSP_b['wavelength']**2)  / 1e-17
 DBSP_r_flux   = (2.99792458E+21 * (DBSP_r['flux_density'] / 1000.)) / (DBSP_r['wavelength']**2)  / 1e-17
 
-##  It's actaully a BOSS spectrum, but let's just call it SDSS for
-##  ease of variable...
-sdssname        = 'spec-6118-56189-0720.fits'
-sdss_data       = fits.open(path+sdssname)
-sdss_spectrum   = sdss_data[1].data
-sdss_flux       = sdss_spectrum.flux
-sdss_loglam     = sdss_spectrum.loglam
-sdss_wavelength = 10**(sdss_loglam)
-sdss_mjd        = sdss_data[2].data['MJD'][0]
-
-bossname        = 'spec-7582-56960-0790.fits'
-boss_data       = fits.open(path+bossname)
-boss_spectrum   = boss_data[1].data
-boss_flux       = boss_spectrum.flux
-boss_loglam     = boss_spectrum.loglam
-boss_wavelength = 10**(boss_loglam)
-boss_mjd        = boss_data[2].data['MJD'][0]
 
 ## Get the redshift right!
 redshift = 2.222
@@ -198,7 +200,8 @@ ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W2_AB, color='c', alpha=al
 ##  P L O T T I N G    T H E      S P E C T R A  
 ## full, main spectral plot
 xmin_ax2 =  910; xmax_ax2 = 3350
-ymin_ax2 = -4.9; ymax_ax2 = 32.   
+ymin_ax2 = -4.9; ymax_ax2 = 32.
+#ymin_ax2 = -1.9; ymax_ax2 = 3.2   ## 32 is 
 ax2.set_xlim([xmin_ax2, xmax_ax2])
 ax2.set_ylim([ymin_ax2, ymax_ax2])
 
