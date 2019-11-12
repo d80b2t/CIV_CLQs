@@ -1,0 +1,33 @@
+========================================================
+== 
+==    J 1 6 3 8 + 2 8 2 7 
+==
+========================================================
+
+
+
+
+
+Plate 2948
+========================================================
+
+SELECT specObjID, ra,dec, plate, mjd, fiberID, 	
+       psfMag_u, psfMagErr_u,
+  psfMag_g, psfMagErr_g,
+  psfMag_r, psfMagErr_r,
+  psfMag_i, psfMagErr_i,
+  psfMag_z, psfMagErr_z 
+from SpecPhotoAll	
+WHERE plate=2948 and legacy_target2 = 0x00000020
+
+
+
+
+SELECT specObjID, ra,dec, plate, mjd, fiberID, 	
+       psfMag_u, psfMagErr_u,
+  psfMag_g, psfMagErr_g,
+  psfMag_r, psfMagErr_r,
+  psfMag_i, psfMagErr_i,
+  psfMag_z, psfMagErr_z
+FROM SpecPhotoAll	
+WHERE plate=5201 and boss_target1 = 0x0000000000100000

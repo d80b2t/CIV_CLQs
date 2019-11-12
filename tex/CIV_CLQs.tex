@@ -8,7 +8,7 @@
 {%The RH John~S.~Bercow, MP, {\it et al.} 
 Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},
  Matthew Graham$^{2}$, K. E. Saavik Ford$^{3,4,5}$,  Barry McKernan$^{3,4,5}$   
-\newauthor and Daniel Stern$^{6}$ 
+\newauthor Daniel Stern$^{6}$ and Giorgio Calderone$^{7}$
 \\
 % List of institutions
 %$^{1}$Speaker's Chair, The House of Commons, London, SW1A 0AA \\
@@ -18,6 +18,7 @@ $^{3}$Department of Science, BMCC, City University of New York, New York, NY 100
 $^{4}$Department of Astrophysics, Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, NY 10024, USA \\
 $^{5}$Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA\\
 $^{6}$Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA \\
+$^{7}$INAF -- Osservatorio Astronomico di Trieste, Via Tiepolo 11, I-34143 Trieste, Italy \\
 }
 
 \date{Accepted XXX. Received YYY; in original form ZZZ}
@@ -32,7 +33,7 @@ $^{6}$Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Gr
 
 \begin{abstract}
 We report on three redshift $z>2$ quasars with dramatic changes in
-their \civ\ emission lines, the first `Changing-Look'' quasars at high
+their \civ\ emission lines, the first ``Changing-Look'' quasars at high
 redshift.  This is also the first time the changing-look behaviour has
 been seen in a high-ionization emission line.
 %%
@@ -47,7 +48,7 @@ also changes, and there is tentative evidence for changes in the \mgii
 line.
 %%
 Although line measurements from the three quasars show large changes
-in the \civ\ line flux-line width plane, the quasars are not seen to
+in the \civ\ flux-line width plane, the quasars are not seen to
 be outliers when considered against the full $z\sim2$ quasar population
 in terms of (rest) Equivalent Width and FWHM properties.
 %%
@@ -79,14 +80,14 @@ accretion, accretion discs -- surveys -- quasars: general -- quasars: individual
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 Luminous AGN, i.e. quasars, are now seen to significantly vary their
-energy output on timescales of weeks to months.  This observation, and
-the subsequent mismatch in the expected ``viscous'' timescale, which
-for a 10$^{7}$ M$_{\odot}$ central supermassive black hole
-(SMBH) is $\sim$hundreds of years, was noted over 30 years ago
+energy output on timescales as short as weeks to months.  This
+observation, and the subsequent mismatch in the expected ``viscous''
+timescale, which for a 10$^{7}$ M$_{\odot}$ central supermassive black
+hole (SMBH) is $\sim$hundreds of years, was noted over 30 years ago
 \citep[e.g.][]{Alloin1985}. However, with new photometric light-curve
 and repeat spectroscopic data, the desire for a deeper understanding
-of AGN accretion disk physics has been recently re-invigorated the
-field \citep[e.g.][]{Lawrence2018, Antonucci2018}.
+of AGN accretion disk physics has recently re-invigorated the field
+\citep[e.g.][]{Antonucci2018, Lawrence2018, Ross2018, Stern2018}.
 
 The optical continuum variability of quasars has been recognized since
 their first optical identification
@@ -96,32 +97,34 @@ identified \citep[e.g., ][]{LaMassa2015}.  Samples of over 100
 ``Changing Look'' quasars (CLQs) or ``Changing State'' quasars (CSQs)
 have now been assembled \citep[e.g.][]{MacLeod2019,Graham2019}. The
 community uses both these terms as a cover for the underlying
-physics. For sake of argument, ``Changing Look'' quasars can
-potentially be thought of as the extension to the BELs of quasar
-continuum variability \citep[e.g., ][]{MacLeod2012} whereas the
-``Changing State'' quasars (CSQs) have a `state-transition' similar to
+physics. For sake of argument, CLQs can potentially be thought of as
+the extension to the BELs of quasar continuum variability \citep[e.g.,
+][]{MacLeod2012} whereas the CSQs have a `state-transition' similar to
 that in Galactic X-ray binaries \citep[][]{NodaDone2018, Ruan2019}. In
 this paper, we use the term `Changing Look', as we are currently
-agnostic, and somewhat ignorant, to the underlying physical processes.
+agnostic, and confessedly ignorant, to the underlying physical
+processes.
 
 \begin{table*}
   \begin{centering}
     \begin{tabular}{l r  r r   lll lll  r r}
       \hline  \hline 
-      Line                 & $\lambda$ &  Transition  & Ionization  &  \multicolumn{6}{c}{Transition Levels}                                                                                           & Wavenumber   & $A_{i,j}$                    \\
+      Line                 & $\lambda$ &  Transition  & Ionization   &  \multicolumn{6}{c}{Transition Levels}                                                                                           & Wavenumber   & $A_{i,j}$                    \\
 %                              &    / \AA\    &      / eV             &  / eV            &   Lower                  & Conf.      &  $J$       & Upper                      &  Conf.                       & $J$       & / cm$^{-1}$    &  / s$^{-1}$                \\      \hline
-                              &  / \AA\     &  energy  / eV &  energy  / eV   &    \multicolumn{3}{l}{Lower}    &  \multicolumn{3}{l}{Upper}                                                         & / cm$^{-1}$    &  / s$^{-1}$                \\      \hline
-      H LyLim           &   912.324   & 13.5984           & 13.5984      & 1$s$                      & $^2$S     & 1/2        & $\infty$                  &                                 &             & 109 678.7       & 1.23$\times10^{2}$  \\
-      H Ly$\alpha$  &  1215.670  & 10.1988          & 13.5984      & 1$s$                       & $^2$S      & 1/2        & 2                             &                                 &             &  82 259.2       &  4.67$\times10^{8}$  \\
-      \nv                  &  1238.821  & 10.0082          &  97.8901     &  1$s^{2}$2$s$        &  $^{2}$S   &  1/2       & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &   3/2    &  80 721.9        & 3.40$\times10^{8}$   \\
-      \nv                  &  1242.804  &  9.9762            &  97.8901     &  1$s^{2}$2$s$       &  $^{2}$S   &  1/2       &  1$s^{2}$2$p$         &  $^{2}$P$^{{\rm o}}$ &  1/2     &  80 463.2        & 3.37$\times10^{8}$  \\
-      \civ                 &  1548.187  &  8.0083            &  64.4935     &  1$s^{2}$2$s$       &   $^{2}$S  & 1/2        & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  3/2     &  64 591.7        & 2.65$\times10^{8}$  \\
-      \civ                 &  1550.772  &  7.9950          &  64.4935     & 1$s^{2}$2$s$          &  $^{2}$S   & 1/2        & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  1/2     &   64 484.0       & 2.64$\times10^{8}$  \\
-      \ciii                 &  1906.683  &  6.5026    & 47.8878      & 1$s^{2}$2$s^{2}$         &   $^{1}$S   & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &   2        &   52 447.1       & 5.19$\times10^{-3}$ \\
-      \ciii                 &  1908.734  &  6.4956    & 47.8878      & 1$s^{2}$2$s^{2}$         &  $^{1}$S    & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &  1         &  52 390.8        & 1.14$\times10^{2}$  \\
-       \mgii              &  2795.528  &  4.4338    & 15.0353       & 2$p^{6}$3$s$             &  $^{2}$S    & 1/2        & 2$p^{6}$3$p$          &  $^{2}$P$^{{\rm o}}$ &   3/2     &  35 760.9       & 2.60$\times10^{8}$  \\
-      \mgii               &  2802.705  &  4.4224    & 15.0353        & 2$p^{6}$3$s$            &  $^{2}$S    & 1/2        & 2$p^{6}$3$p$          &  $^{2}$P$^{{\rm o}}$ &   1/2     &  35 669.3       & 2.57 $\times10^{8}$ \\
-      H Ba $\beta$   &  4861.333  &  2.5497    & 13.5984       & 2                                 &                 &               & 4                             &                                 &              &  20 564.8       & 8.42$\times10^{6}$  \\
+                              &  / \AA\    & energy / eV &  energy / eV  &    \multicolumn{3}{l}{Lower}    &  \multicolumn{3}{l}{Upper}                                                         & / cm$^{-1}$    & ($\times10^{8}$  / s$^{-1}$)               \\      \hline
+      H LyLim           &   912.324   & 13.5984    & 13.5984        & 1$s$                    & $^2$S     & 1/2          & $\infty$                  &                                 &             & 109 678.7       & 1.23$\times10^{-6}$  \\
+      H Ly$\alpha$  &  1215.670  & 10.1988    & 13.5984       & 1$s$                     & $^2$S      & 1/2          & 2                             &                                 &             &  82 259.2       &  4.67  \\
+      \nv                  &  1238.821  & 10.0082    &  97.8901      &  1$s^{2}$2$s$      &  $^{2}$S   &  1/2         & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &   3/2    &  80 721.9        & 3.40   \\
+      \nv                  &  1242.804  &  9.9762     &  97.8901      &  1$s^{2}$2$s$       &  $^{2}$S   &  1/2        &  1$s^{2}$2$p$         &  $^{2}$P$^{{\rm o}}$ &  1/2     &  80 463.2        & 3.37 \\
+      \civ                 &  1548.187  &  8.0083     &  64.4935      &  1$s^{2}$2$s$       &   $^{2}$S  & 1/2         & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  3/2     &  64 591.7        & 2.65  \\
+      \civ                 &  1550.772  &  7.9950     &  64.4935      & 1$s^{2}$2$s$        &  $^{2}$S   & 1/2         & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  1/2     &   64 484.0       & 2.64  \\
+      \heii               &   1640.474  &  7.5578     & 54.4178       & 2$p$ 	      &  $^{2}$P$^{{\rm o}}$ &  3/2  &  3$d$ 	                 & $^2$D                  &  5/2        &  60 958.0       & 10.35 \\
+      \heii               &   1640.490  &  7.5578     & 54.4178       & 2$p$ 	      &  $^{2}$P$^{{\rm o}}$ &  3/2  &  3$d$ 	                 & $^2$D                  &  3/2        &  60 958.0       & 1.73 \\
+      \ciii                 &  1906.683  &  6.5026     & 47.8878       & 1$s^{2}$2$s^{2}$   &   $^{1}$S   & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &   2        &   52 447.1       & 5.19$\times10^{-11}$ \\
+      \ciii                 &  1908.734  &  6.4956     & 47.8878       & 1$s^{2}$2$s^{2}$   &  $^{1}$S    & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &  1         &  52 390.8        & 1.14$\times10^{-6}$  \\
+       \mgii              &  2795.528  &  4.4338     & 15.0353       & 2$p^{6}$3$s$        &  $^{2}$S    & 1/2        & 2$p^{6}$3$p$          &  $^{2}$P$^{{\rm o}}$ &   3/2     &  35 760.9       & 2.60  \\
+      \mgii               &  2802.705  &  4.4224     & 15.0353       & 2$p^{6}$3$s$        &  $^{2}$S    & 1/2        & 2$p^{6}$3$p$          &  $^{2}$P$^{{\rm o}}$ &   1/2     &  35 669.3       & 2.57 \\
+      H Ba $\beta$   &  4861.333  &  2.5497     & 13.5984       & 2                              &                 &               & 4                             &                                 &              &  20 564.8       & 0.0842  \\
       \hline   
       \hline
     \end{tabular}
@@ -142,27 +145,27 @@ agnostic, and somewhat ignorant, to the underlying physical processes.
   \end{centering}
 \end{table*}
 
-These CLQs have primarily been defined according to the
+CLQs to date have primarily been defined according to the
 (recombination) Balmer emission line properties with particular
 attention paid to the H$\beta$ emission line, observed from optical
-spectroscopy. Recent work \citep{Guo2019, Homan2019} report on discoveries
-of \mgii Changing-look AGN. However, current CLQ studies have been at
-redshifts $z<1$.
+spectroscopy. Recent work report on discoveries of \mgii Changing-look
+AGN \citep{Guo2019, Homan2019}. However, current CLQ studies have
+primarily been at redshifts $z<1$.
 
-While there have been a slew of studies on triply ionized carbon, i.e
+While there have been many studies on triply ionized carbon, i.e
 \civ, these have tended to focus on broad absorption line quasars
-\citep[BAL QSOs; see Table 1][]{Hemler2019} or the Baldwin Effect
+\citep[BAL QSOs; see Table 1 of][]{Hemler2019} or the Baldwin Effect
 \citep[BEff; ][]{Baldwin1977, Bian2012, Jensen2016,
 Hamann2017}\footnote{As noted in \citet{Rakic2017}, two different
 types of Baldwin effect are present in the literature: the {\it
 global} (or {\it ensemble}) Baldwin Effect, which is an
-anti-correlation between the EW of the emission line and the
+anti-correlation between the Equivalent Width (EW) of the emission line and the
 underlying continuum luminosity of {\it single-epoch} observations of
 a {\it large number} of AGN and second, the {\it intrinsic} Baldwin
 effect, the same anti-correlation but in an {\it individual, variable}
 AGN \citep{PoggePeterson1992}.}.  Dramatic changes in the
-collisionally excited broad {\it emission} line (BEL) of \civ\ (and
-indeed \ciii) have not to this point been seen.
+collisionally excited broad {\it emission} line (BEL) of \civ\ and
+indeed \ciii have not to this point been reported.
 
 \begin{table*}
   \centering
@@ -202,56 +205,38 @@ indeed \ciii) have not to this point been seen.
   \label{tab:obs_notes}
 \end{table*}
 
-Here, we report on three quasars  
-which show dramatic changes in their \civ\ and \ciii broad emission
-line properties as well as in the underlying continuum. We claim these
-are the first examples of ``Changing Look Quasars'' at high ($z>1$)
+Here, we present new results for three quasars which show dramatic
+changes in their \civ\ and \ciii broad emission line properties as
+well as in their underlying continuum. These are some of the first
+examples of ``Changing Look Quasars'' at high ($z>1$)
 redshift. Moreover, these are the first cases for substantial changes
 of ions with high ionization potentials (I.P.'s $>$2 Rydberg), thus
 linking the ionizing photons to the energetic inner accretion disk,
 potentially by inverse Compton scattering of lower energy photons to
-higher energies.  Furthermore, the measured rest-wavelengths of
-emission lines in quasar spectra, are known to vary from their nominal
-laboratory wavelengths especially for the high-ionization broad lines \citep[e.g.][]{VandenBerk2001}.
+higher energies.
 
 Details of the atomic transitions that produce strong rest-frame
-UV/optical lines in quasars are given in Table~\ref{tab:atomic_lines}.
-In this paper we use the wavelengths of 1548.202 and 1550.774~\AA\ for
-the \civ\ doublet \citep{Kramida2018}.
-%% The ground state of carbon is 1$s^2$ 2$s^2$ 2$p^2$. \
-%% Using the \href{https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html}{NIST Atomic Spectra Database Ionization Energies Form}
-For ionisation energies, 11.3 eV is the energy required for C~I to dislodge
-one electron and become singly-ionised C~II; 24.4 eV is then the
-(`additional') energy needed for singly-ionised C~II to dislodge an
-additional electron, and become doubly-ionised C~III, and 47.89 eV
-(3.519 Ry) is required for doubly-ionised C~III become triply-ionised
-\civ.  64.49 eV (4.74 Ry) is the energy needed to ionize \civ\
-itself. This energy corresponds to a thermal temperature of $T
-\gtrsim$ 4$\times10^{5}$, implying a heating energy source of (soft)
-X-ray photons ($k_{B}$ = 8.617$\times 10^{-5}$ eV /K).
+UV/optical lines in quasars are given in
+Table~\ref{tab:atomic_lines}. In this paper we use the wavelengths of
+1548.202 and 1550.774~\AA\ for the \civ\ doublet
+\citep{Kramida2018}. For ionisation energies, 47.89 eV (3.519 Ry) is
+required for doubly-ionised C~III to become triply-ionised \civ.
+64.49 eV (4.74 Ry) is the energy needed to ionize \civ\ itself. This
+energy corresponds to a thermal temperature of $T \gtrsim$
+4$\times10^{5}$, implying a heating energy source of (soft) X-ray
+photons ($k_{B}$ = 8.617$\times 10^{-5}$ eV /K).
 
-
-%%   B a c k g r o u n d     L i t e r a t u r e    
-\civ\ variability has been long studied, e.g., \citet[][]{Baldwin1977,
-Gaskell1982, Gregory1982, Wilkes1986, Espey1989, Espey1990Erratum,
-ZhengSulentic1990, Corbin1990, Corbin1991, Weymann1991,
-Dimitrijevic1992, TytlerFan1992, Wills1993, Brotherton1994, Osmer1994,
-Laor1995, McIntosh1999, Nazarova2003}.
-
-\citet{Wilhite2006} examine the variability of a C~\textsc{iv} sample
+\citet{Wilhite2006} examine \civ\ variability in a sample
 of 105 quasars observed at multiple epochs by the Sloan Digital Sky
 Survey \citep[SDSS;][]{York2000, Stoughton2002, Abazajian2009}.  They
-find a strong correlation between the change in the C~\textsc{iv} line
+find a strong correlation between the change in the \civ\ line
 flux and the change in the line width, but no correlations between the
 change in flux and changes in line center and skewness.  These authors
 find that the relation between line flux change and line width change
 is consistent with a model in which a broad line base varies with
-greater amplitude than the line core. The C~\textsc{iv} lines in these
+greater amplitude than the line core. The \civ\ lines in these
 high-luminosity quasars appear to be less responsive to continuum
-variations than those in lower luminosity AGN.  \citet{Wilhite2006}
-find no evidence for variability of the well known blueshift of the
-C~\textsc{iv} line with respect to the low-ionization
-Mg~\textsc{ii}$\lambda$2798 line in the highest flux objects.
+variations than those in lower luminosity AGN.
 
 \citet{Richards2011} explored the BEL region in over 30,000 $z > 1.54$
 SDSS quasars, concentrating on the properties of the \civ\ emission
@@ -259,76 +244,61 @@ line. These authors consider two well-known effects involving the
 \civ\ emission line: {\it (i)} the anti-correlation between the \civ\
 equivalent widths (EWs) and luminosity (i.e., the Baldwin Effect;
 BEff) and {\it (ii)} the blueshifting of the peak of \civ\ emission
-with respect to the systemic redshift. \citet{Richards2011} conclude
+with respect to the systemic redshift.  We denote the velocity offset
+of emission lines as $V_{\rm off}$ and use the convention that a
+positive $V_{\rm off}$ value means the line is blueshifted while a
+negative $V_{\rm off}$ value means the line is redshifted.
+\citet{Richards2011} find the blueshift of the \civ\ emission line, is
+found to be nearly ubiquitous, with a mean shift of $V_{\rm off}
+\sim$810 km s$^{-1}$ for radio-quiet (RQ) quasars and $V_{\rm off}
+\sim$360 km s$^{-1}$ for radio-loud (RL) objects. \citet{Richards2011}
+also find the BEff is present in both the RQ and RL studied samples.
+%%
+These author conclude
 that these two \civ\ parameters (EQW and blueshift) are capturing an
 important trade-off between ``disk'' and ``wind'' components in the
 disk-wind model of accretion disks \citep[e.g.,][]{Murray1995,
-Elvis2000, Proga2000}, with one dominating over the other depending on
-the shape of the SED \citep[][strong \civ\ EQW indicates a more
-ionizing SED and large \civ\ blueshift indicating a less ionizing SED
-]{Leighly2004b}.
+Elvis2000, Proga2000, Leighly2004b}, with one dominating over the other depending on
+the shape of the SED.
 
-The Sloan Digital Sky Survey Reverberation Mapping Project
-\cite[SDSS-RM; ][]{Shen2015} has a monitored $\sim$350 quasars with
-\civ. Noting the biases associated with \civ\ emission line properties
-\citep[such as increasing systematic offsets with decreasing
-signal-to-noise; ][]{Denney2016}, \citet{Grier2019} report report
-significant time delays between the continuum and the CIV 1549
-emission line in 52 quasars, and investigate the \civ\ 
-radius-luminosity relationship.
-
-\civ\ is also known to exhibit significant displacements to the blue
-and these `blueshifts' almost certainly signal the presence of strong
-outflows. As a consequence, single-epoch virial black hole (BH) mass
-estimates derived from \civ\ velocity widths are known to be
-systematically biased compared to masses from the hydrogen Balmer
-lines. \citet{Coatman2017} use a large sample of 230 high-luminosity
-($L_{\rm Bol} = 10^{45.5 - 48}$ erg s$^{-1}$), redshift $1.5 < z <
-4.0$ quasars with both \civ\ and Balmer line spectra, we have
-quantified the bias in \civ BH masses as a function of the \civ\
-blueshift. \civ\ BH masses are shown to be a factor of 5 larger than
-the corresponding Balmer-line masses at C IV blueshifts of 3000 km
-s$^{-1}1$ and are overestimated by almost an order of magnitude at the
-most extreme blueshifts, $\gtrsim$5000 km s$^{-1}$.
-
-\citet{Sun2018} use the multi-epoch spectra of 362 quasars from the
-Sloan Digital Sky Survey Reverberation Mapping project to investigate
-the dependence of the blueshift of \civ\ relative to \mgii on quasar
-properties. We confirm that high-blueshift sources tend to have low
-\civ\ EWs, and that the low-EW sources span a range
-of blueshift. Other high-ionization lines, such as He II, also show
-similar blueshift properties. The ratio of the line width (measured as
-both the full width at half maximum and the velocity dispersion) of
-\civ\ to that of \mgii increases with blueshift. Quasar variability
-enhances the connection between the \civ\ blueshift and quasar
-properties (e.g., EW). The variability of the \mgii line center (i.e.,
-the wavelength that bisects the cumulative line flux) increases with
-blueshift. In contrast, the C IV line center shows weaker variability
-at the extreme blueshifts. Quasars with the high-blueshift \civ\ lines
-tend to have less variable continuum emission, when controlling for
-EW, luminosity, and redshift. Our results support the scenario that
-high-blueshift sources tend to have large Eddington ratios.
-Therefore, according to this study, the \civ\ or \heii\ EW is not an
-accurate indicator of the Eddington ratio or quasar SED.
+Using the multi-epoch spectra of 362 quasars from the Sloan Digital
+Sky Survey Reverberation Mapping \citep[SDSS-RM; ][]{Shen2015,
+Shen2019} project, \citet{Sun2018} investigate the blueshift of \civ\
+emission relative to \mgii emission, and its dependence on quasar
+properties.  These authors confirm that high-blueshift sources tend to
+have low \civ\ EWs, and that the low-EW sources span a range of
+blueshift. Other high-ionization lines, such as \heii, also show
+similar blueshift properties. The ratio of the line width of \civ\ to
+that of \mgii increases with blueshift.  \citet{Sun2018} also find
+that quasar variability might slightly enhance the connection between
+the \civ\ blueshift and EW, though further investigation here is
+warranted.  There is also the finding that the objects with that
+largest blueshifts are less variable and tend to have higher Eddington
+ratios.  \citet{Sun2018} explain their results these by suggesting
+that quasar SEDs become {\it softer} with {\it increasing Eddington
+ratio} along with the presence of X-ray shielding by the inner
+accretion disk.  However, a high Eddington ratio alone might be an
+insufficient condition for the \civ\ blueshift.
+%%
 Recent investigations also include \citet{Meyer2019} and \citet{Doan2019}. 
 \citet{Dyer2019} provide a detailed analysis of 340 quasars at high-redshift
 ($1.62<z<3.30$) from the SDSS-RM project, which we will compare our
 results to.
 
-%%   P a p e r    O v e r v i e w
-The purpose of this paper is, for the first time, to access and 
-report on the Changing-Look quasar phenomenon at high, 
-$z>2$ redshift. By doing so, we move from the low-ionization 
+
+%%    P a p e r    O v e r v i e w
+The purpose of this paper is, for the first time, to systematically access and 
+report on the CLQ phenomenon at high ($z>2$) redshift. By doing so, we move from the low-ionization 
 energy Balmer emission line series to the high-ionization emission 
 lines, in particular \civ\ $\lambda$1549. 
 
 This paper is organised as follows. In Section 2, we describe our
-sample selection, catalogs and observational data sets.  In Section 3,
-we present the high-$z$ quasars and report the line properties for the
+sample selection, catalogues, and observational data sets.  In Section 3,
+we show the high-$z$ quasars and report the line properties for the
 quasars at the observed epochs.  We give a very brief theoretical
-discussion in Section 4. We present our Conclusions in Section 5.  We
+discussion in Section 4. We present our conclusions in Section 5.  We
 report all magnitudes on the AB zero-point system \citep{Oke_Gunn1983,
-Fukugita1996} unless otherwise stated explicitly. For the WISE bands,
+Fukugita1996} unless otherwise stated. For the WISE bands,
 $m_{\rm AB} = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for WISE W1
 at 3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively
 \citep{Cutri2011}.
