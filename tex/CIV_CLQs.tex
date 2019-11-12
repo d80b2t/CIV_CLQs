@@ -95,7 +95,7 @@ their first optical identification
 in the broad emission lines (BELs) of quasars has only recently been
 identified \citep[e.g., ][]{LaMassa2015}.  Samples of over 100
 ``Changing Look'' quasars (CLQs) or ``Changing State'' quasars (CSQs)
-have now been assembled \citep[e.g.][]{MacLeod2019,Graham2019}. The
+have now been assembled \citep[e.g.][]{MacLeod2019,Graham2019b}. The
 community uses both these terms as a cover for the underlying
 physics. For sake of argument, CLQs can potentially be thought of as
 the extension to the BELs of quasar continuum variability \citep[e.g.,
@@ -119,7 +119,7 @@ processes.
       \civ                 &  1548.187  &  8.0083     &  64.4935      &  1$s^{2}$2$s$       &   $^{2}$S  & 1/2         & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  3/2     &  64 591.7        & 2.65  \\
       \civ                 &  1550.772  &  7.9950     &  64.4935      & 1$s^{2}$2$s$        &  $^{2}$S   & 1/2         & 1$s^{2}$2$p$          &  $^{2}$P$^{{\rm o}}$ &  1/2     &   64 484.0       & 2.64  \\
       \heii               &   1640.474  &  7.5578     & 54.4178       & 2$p$ 	      &  $^{2}$P$^{{\rm o}}$ &  3/2  &  3$d$ 	                 & $^2$D                  &  5/2        &  60 958.0       & 10.35 \\
-      \heii               &   1640.490  &  7.5578     & 54.4178       & 2$p$ 	      &  $^{2}$P$^{{\rm o}}$ &  3/2  &  3$d$ 	                 & $^2$D                  &  3/2        &  60 958.0       & 1.73 \\
+      \heii               &   1640.490  &  7.5578     & 54.4178       & 2$p$ 	      &  $^{2}$P$^{{\rm o}}$ &  3/2  &  3$d$ 	                 & $^2$D                  &  3/2        &  60 957.4       & 1.73 \\
       \ciii                 &  1906.683  &  6.5026     & 47.8878       & 1$s^{2}$2$s^{2}$   &   $^{1}$S   & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &   2        &   52 447.1       & 5.19$\times10^{-11}$ \\
       \ciii                 &  1908.734  &  6.4956     & 47.8878       & 1$s^{2}$2$s^{2}$   &  $^{1}$S    & 0            & 1$s^{2}$2$s$2$p$  &  $^{3}$P$^{{\rm o}}$ &  1         &  52 390.8        & 1.14$\times10^{-6}$  \\
        \mgii              &  2795.528  &  4.4338     & 15.0353       & 2$p^{6}$3$s$        &  $^{2}$S    & 1/2        & 2$p^{6}$3$p$          &  $^{2}$P$^{{\rm o}}$ &   3/2     &  35 760.9       & 2.60  \\
@@ -169,31 +169,32 @@ indeed \ciii have not to this point been reported.
 
 \begin{table*}
   \centering
-  \begin{tabular}{r l   r ll   r r r r}
+  \begin{tabular}{l l   r ll   r r r l}
     \hline 
     \hline 
-    Object                           & \multirow{3}{*}{Redshift}  &                       & \multirow{3}{*}{MJD} & \multirow{3}{*}{Date} & \multirow{3}{*}{Instrument}  & Exposure      & SDSS                        & \multirow{3}{*}{Notes} \\
-    R.A. / deg                     &                                         &   {$g$-band}   &                                 &                                  &                                               &  Time           & Spectrum                 & \\
-    Decl. / deg                   &                                         &    magnitude   &                                &                                   &                                              &  / seconds    & Plate-FiberID  & \\
+    \multirow{3}{*}{Object} & \multirow{3}{*}{Redshift} &                        & \multirow{3}{*}{MJD} &  \multirow{3}{*}{Instrument}  & Exposure      &                   & \multirow{3}{*}{Notes} \\
+                            &                                                     &   {$g$-band}   &                                 &                                              &  Time           &    SDSS             & \\
+                                       &                                          &    (mag)           &                                 &                                              & (seconds)    & Plate-FiberID  & \\
     \hline  
-                                         &                                         &                        &                &                            &                    &                              &                              & \\
-    J120544.7+342252.4   & 2.068$\pm$0.0003         &   18.27             &  53498   &  2005-May-08   & SDSS             &  8057                  & 2089-427             & \\
-    181.436164                  & 2.071                              &                         &  58538   &  2019-Feb-24    & DBSP            &  1800                  &  ---                      &  Average conditions \\
-    +34.381229                 &                                        &                          &  58693   &  2019-Jul-29     & DBSP            &  2400                   &  ---                      &   \\
-                                         &                                       &                          &                &                          &                    &                               &                              & \\
-    J163852.9+282707.7   & 2.185$\pm$0.0004       &   19.77              &  54553    & 2008-Mar-28     & SDSS           &   4801                    &  2948-614              & \\
-    249.720558	                 &  2.186$\pm$0.0007     &                          &  55832    & 2011-Sep-28     & BOSS            &   3600                   &  5201-178            & \\
-    +28.452159                 &  2.182                           &                          &  58583    & 2019-Apr-10     & LRIS              &  1800                   &  ---                             & \\
-                                        &                                      &                          &                &                            &                    &                              &                                & \\
-    J222818.7+220102.9   & 2.217$\pm$0.0021      & 19.97                &  56189    & 2012-Sep-19     & BOSS             &  2700                 &   6118-720          & \\
-    337.078194                 & 2.222$\pm$0.0004      &                          &  56960    & 2014-Oct-30     & BOSS             &  4500                  &   7582-790          & eBOSS reobservation \\ 
-    +22.017478                &                                      &                          &  58693    & 2019-Jul-29       & DBSP             & 2400                   &    ---                        &    \\
-                                       &                                       &                          &               &                            &                   &                              &                            & \\
+%                                         &                                         &                        &                                &                    &                              &                              & \\
+    J120544.7+342252.4   & 2.068                               &   18.27             &  53498                   & SDSS             &  8057                  & 2089-427             & \\
+                                        & 2.071                                &                        &  58538                   & DBSP            &  1800                  &  ---                      &  Average conditions \\
+                                         & 2.071                               &                         &  58693                  & DBSP            &  2400                   &  ---                      &   \\
+                                         &                                       &                          &                                &                          &                     &                               &                              & \\
+    J163852.9+282707.7   & 2.185                            &   19.77               &  54553                   & SDSS           &   4801                    &  2948-614              & \\
+    	                                 &  2.186                            &                          &  55832                  & BOSS            &   3600                   &  5201-178            & \\
+                                         &  2.182                           &                          &  58583                     & LRIS              &  1800                   &  ---                             & \\
+                                        &                                      &                          &                                 &                            &                    &                              &                                & \\
+    J222818.7+220102.9   & 2.217                           & 19.97                &  56189                  &  BOSS             &  2700                 &   6118-720          & \\
+                                          & 2.222                         &                          &  56960                    & BOSS             &  4500                  &   7582-790          & eBOSS reobservation \\ 
+                                         &  2.222                         &                          &  58693                  &  DBSP             & 2400                   &    ---                        &    \\
+  %                                     &                                       &                          &               &                            &                   &                              &                            & \\
     \hline \hline   
   \end{tabular}
   \caption{
     Details of our spectroscopic observations.
-    Redshift and redshift errors from SDSS SkyServer for SDSS, BOSS and eBOSS spectra. 
+%    Redshift and redshift errors from SDSS SkyServer for SDSS, BOSS and eBOSS spectra.
+    Redshift errors are typically  $\pm$0.002. 
     Exposure times are from the {\tt plate.fits} file.  SDSS, BOSS and  eBOSS spectra have $\mathcal{R}\sim$2,000.
     DBSP: Double Spectrograph on the Palomar 200-inch telescope.
     LRIS:  Low Resolution Imaging Spectrometer on Keck I 10m telescope.
@@ -253,13 +254,11 @@ found to be nearly ubiquitous, with a mean shift of $V_{\rm off}
 \sim$810 km s$^{-1}$ for radio-quiet (RQ) quasars and $V_{\rm off}
 \sim$360 km s$^{-1}$ for radio-loud (RL) objects. \citet{Richards2011}
 also find the BEff is present in both the RQ and RL studied samples.
-%%
-These author conclude
-that these two \civ\ parameters (EQW and blueshift) are capturing an
-important trade-off between ``disk'' and ``wind'' components in the
-disk-wind model of accretion disks \citep[e.g.,][]{Murray1995,
-Elvis2000, Proga2000, Leighly2004b}, with one dominating over the other depending on
-the shape of the SED.
+These author conclude that these two \civ\ parameters (EQW and
+blueshift) are capturing an important trade-off between ``disk'' and
+``wind'' components in the disk-wind model of accretion disks
+\citep[e.g.,][]{Murray1995, Elvis2000, Proga2000, Leighly2004b}, with
+one dominating over the other depending on the shape of the SED.
 
 Using the multi-epoch spectra of 362 quasars from the Sloan Digital
 Sky Survey Reverberation Mapping \citep[SDSS-RM; ][]{Shen2015,
@@ -287,10 +286,12 @@ results to.
 
 
 %%    P a p e r    O v e r v i e w
-The purpose of this paper is, for the first time, to systematically access and 
-report on the CLQ phenomenon at high ($z>2$) redshift. By doing so, we move from the low-ionization 
-energy Balmer emission line series to the high-ionization emission 
-lines, in particular \civ\ $\lambda$1549. 
+The purpose of this paper is, for the first time, to systematically
+access and report on the CLQ phenomenon at high ($z>2$)
+redshift. While accessing this phenomenon at an earlier cosmic epoch
+is somewhat interesting, the main value of this study is we move from
+the low-ionization energy Balmer emission line series to the
+high-ionization emission lines, in particular \civ\ $\lambda$1549.
 
 This paper is organised as follows. In Section 2, we describe our
 sample selection, catalogues, and observational data sets.  In Section 3,
@@ -320,7 +321,50 @@ compared to 5179.0 Mpc from $\Omega_{\Lambda} = 0.70$, $\Omega_{\rm M}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data}
+\section{Data, CLQ Selection and Line measurements}
+In this section we present the photometric data used to select the CLQs, and then
+give details to the multiwavelength data where we have it, obtained spectroscopy and
+emission lines measurements. 
+
+\subsection{Photometry}
+\subsubsection{Optical Photometry}
+We use optical data from the Catalina Real-time Transient Survey
+\citep[CRTS;][]{Drake2009, Mahabal2011}, the Panoramic Survey
+Telescope and Rapid Response System \citep[PanSTARRS;][]{Kaiser2010,
+Stubbs2010, Tonry2012, Magnier2013} and the Zwicky Transient Facility
+\citep[ZTF;][]{Bellm2019_ZTFOverview}. 
+
+The CRTS archive\footnote{http://catalinadata.org} contains the
+Catalina Sky Survey data streams from three telescopes -- the 0.7 m
+Catalina Sky Survey (CSS) Schmidt and 1.5 m Mount Lemmon Survey (MLS)
+telescopes in Arizona and the 0.5 m Siding Springs Survey (SSS)
+Schmidt in Australia. 
+CRTS covers up to $\sim$2500 deg$^2$ per night, with 4 exposures per visit, separated
+by 10 min. The survey observes over 21 nights per lunation. The data
+are broadly calibrated to Johnson $V$ \citep[see ][for details]{Drake2013}
+and the current CRTS data set contains time series for
+approximately 400 million sources to $V \sim 20$ above Dec $> -30$
+from 2003 to 2016 May (observed with CSS and MLS) and 100 million
+sources to $V \sim 19$ in the southern sky from 2005 to 2013 (from
+SSS). CRTS has been used to study distant quasars previously
+\citep{Graham2014, Graham2015, Graham2015Nature, Graham2017, Graham2019b}.
+
+PanSTARRS data is obtained via the Pan-STARRS Catalog Search
+interface\footnote{https://catalogs.mast.stsci.edu/panstarrs/}.
+We query the PS1 DR2 Detection catalog.
+
+The ZTF is a new robotic time-domain sky survey capable of visiting
+the entire visible sky north of -30 deg. declination every night. ZTF
+observes the sky in the $g$, $r$, and $i$-bands at different cadences
+depending on the scientific program and sky region
+\citep{Bellm2019_ZTFSurveys, Graham2019_ZTF}. The ZTF 576 megapixel
+camera with a 47 deg$^{2}$ field of view, installed on the Samuel
+Oschin 48-inch Schmidt Telescope, can scan more than 3750 deg$^{2}$
+per hour, to a 5$\sigma$ detection limit of 20.7 mag in the $r$-band
+with a 30sec exposure during new moon \citep{Masci2019}.
+
+
+\subsection{CLQ Selection}
 Our high-$z$ CLQs were identified as follows.  We selected all 64,774
 SDSS DR15 sources with $z > 0.35$ classified as `QSO', having at least
 two spectra separated by at least 100 days, and with a corresponding
@@ -328,7 +372,7 @@ CRTS light curve. We fitted a damped random walk to the CRTS data via
 Gaussian process regression and the photometric magnitudes at the
 epochs of the SDSS spectra for a given source are predicted. Those
 where $|\Delta V| > 0.3$ are then selected for visual
-inspection. Three quasars SDSS J120544.7+342252.4 (hereafter
+inspection. Only three quasars SDSS J120544.7+342252.4 (hereafter
 J1205+3422), SDSS J163852.93+282707.7 (hereafter J1638+2827) and SDSS
 J222818.76+220102.9 (hereafter J2228+2201), satisfied these selection
 criteria and showed interesting or dramatic emission line behaviour.
@@ -338,11 +382,11 @@ criteria and showed interesting or dramatic emission line behaviour.
   \centering
   %% trim=l b r t
   \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.45cm 0.1cm, clip]
-  {figures/J1205+3422_landscape_20191024.png}
+  {figures/J1205+3422_landscape_20191112.png}
   \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.40cm 0.1cm, clip]
-  {figures/J1638+2827_landscape_20191024.png}
+  {figures/J1638+2827_landscape_20191112.png}
   \includegraphics[width=16.7cm, trim=0.3cm 0.0cm  0.35cm 0.1cm, clip]
-  {figures/J2228+2201_landscape_20191024.png}
+  {figures/J2228+2201_landscape_20191112.png}
   \vspace{-12pt}
   \caption[]{The threes high-$z$ CLQ quasars; 
     SDSS J1205+3422 (top), 
