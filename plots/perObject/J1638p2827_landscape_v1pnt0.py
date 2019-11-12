@@ -40,6 +40,15 @@ ZTF_g  = ascii.read(path+infile)
 infile = 'J163852.9+282708_ztf_r.dat'
 ZTF_r  = ascii.read(path+infile)
 
+## Pan-STARRS
+infile    = 'PanSTARRS_DR2_detections.dat'
+PanSTARRS = ascii.read(path+infile)
+##  g=1, r=2, i=3, z=4, y=5 
+PS_gband   = PanSTARRS[np.where(PanSTARRS['filterID'] ==1)]
+PS_rband   = PanSTARRS[np.where(PanSTARRS['filterID'] ==2)]
+PS_gPSFmag = -2.5*(np.log10(PS_gband['psfFlux']/3631.))
+PS_rPSFmag = -2.5*(np.log10(PS_rband['psfFlux']/3631.))
+
 ## NEOWISE-R
 infile = 'NEOWISER-L1b_J1638+2827.dat'
 NEOWISER = ascii.read(path+infile)
@@ -172,9 +181,9 @@ ax1.axvline(x=58583, linewidth=lw, linestyle='dashed', color='k')
 
 ## CRTS data
 lw = 1
-ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='k',       alpha=alpha, s=ms*1.8)
-ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='dimgray', alpha=alpha, s=ms, label='CRTS')
-ax1.errorbar(CRTS_MJD, CRTS['magnitude'], color='k', yerr=CRTS['magnitude_err'], fmt='o', linewidth=lw, ms=ms)
+ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='k',       alpha=alpha, s=ms*1.8, zorder=0)
+ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='dimgray', alpha=alpha, s=ms, label='CRTS', zorder=0)
+ax1.errorbar(CRTS_MJD, CRTS['magnitude'], color='k', yerr=CRTS['magnitude_err'], fmt='o', linewidth=lw, ms=ms, zorder=0)
 ## ZTF data
 ax1.scatter( ZTF_g['mjd'], ZTF_g['mag'], color='k',         alpha=alpha, s=ms*1.8)
 ax1.scatter( ZTF_g['mjd'], ZTF_g['mag'], color='olivedrab', alpha=alpha, s=ms, label='ZTF g-band')
@@ -182,6 +191,15 @@ ax1.errorbar(ZTF_g['mjd'], ZTF_g['mag'], color='olivedrab', yerr=ZTF_g['magerr']
 ax1.scatter( ZTF_r['mjd'], ZTF_r['mag'], color='k',         alpha=alpha, s=ms*1.8)
 ax1.scatter( ZTF_r['mjd'], ZTF_r['mag'], color='tomato',    alpha=alpha, s=ms, label='ZTF r-band')
 ax1.errorbar(ZTF_r['mjd'], ZTF_r['mag'], color='tomato',    yerr=ZTF_r['magerr'], fmt='o', linewidth=lw, ms=ms)
+
+## PanSTARRS data
+ms              = 8.
+ms_big          = 36.
+ax1.scatter(PS_gband['obsTime'], PS_gPSFmag, color='k',        alpha=alpha, s=ms_big)
+ax1.scatter(PS_gband['obsTime'], PS_gPSFmag, color='lime',     alpha=alpha, s=ms, label='Pan-STARRS g-band')
+ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='k',        alpha=alpha, s=ms_big)
+ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='deeppink', alpha=alpha, s=ms, label='Pan-STARRS r-band')
+
 
 ## NEOWISER W1/2 (AB)
 ms              = 10.
@@ -328,13 +346,19 @@ neo_w2 = mlines.Line2D([], [], label='NEOWISE W2', color='cyan',
                        marker="o", markeredgecolor='k', markeredgewidth=2.0, markersize=12, linestyle='None')
 crts   = mlines.Line2D([], [], label='CRTS',       color='k',
                        marker="o", markeredgecolor='k', markeredgewidth=2.0, markersize=5,  linestyle='None')
-ztf_g  = mlines.Line2D([], [], label='ZTF g-band', color='olivedrab',
+ps_g   = mlines.Line2D([], [], label=r'Pan-STARRS $g$-band', color='lime',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-ztg_r  = mlines.Line2D([], [], label='ZTF r-band', color='tomato',
+ps_r   = mlines.Line2D([], [], label=r'Pan-STARRS $r$-band', color='deeppink',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+ztf_g  = mlines.Line2D([], [], label=r'ZTF $g$-band', color='olivedrab',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+ztg_r  = mlines.Line2D([], [], label=r'ZTF $r$-band', color='tomato',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
 
-handles=[neo_w1, neo_w2, crts, ztf_g, ztg_r]
-leg = ax1.legend(loc='upper left', fontsize=fontsize/1.25, handles=handles,
+handles=[neo_w1, neo_w2, crts, ps_g, ps_r, ztf_g, ztg_r]
+leg = ax1.legend(loc='upper left',
+                     fontsize=fontsize/1.5,   ## used to be /1.25
+                     handles=handles,
                  frameon=True, framealpha=1.0, fancybox=True)
 
 ## SPECTRA legend

@@ -1,5 +1,8 @@
 '''
+      J 1 2 0 5 + 3 4 2 2  
+
 12h05m44.7s +34d22m52.4s
+181.436164  +34.381229
 '''
 
 import numpy as np
@@ -20,26 +23,34 @@ from astropy.convolution import convolve, Box1DKernel
 #import pylustrator
 #pylustrator.start()
 
-
 ##
 ## R E A D I N G   I N   T H E    D A T A 
 ##
 path = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/J1205+3422/'
 
-##    L I G H T    C U R V E
-## CRTS
+##     L I G H T    C U R V E
+##  CRTS
 infile = 'J120544.67+342252.4_CRTS.dat'
 CRTS   = ascii.read(path+infile)
-## CRTS MJD offset
+##  CRTS MJD offset
 CRTS_MJD_offset = 53500
 CRTS_MJD = CRTS['mjd'] + CRTS_MJD_offset
-
+##  ZTF
 infile = 'J120544.67+342252_ztf_g.dat'
 ZTF_g  = ascii.read(path+infile)
-
 infile = 'J120544.67+342252_ztf_r.dat'
 ZTF_r  = ascii.read(path+infile)
 
+## Pan-STARRS
+infile    = 'PanSTARRS_DR2_detections.dat'
+PanSTARRS = ascii.read(path+infile)
+##  g=1, r=2, i=3, z=4, y=5 
+PS_gband   = PanSTARRS[np.where(PanSTARRS['filterID'] == 1)]
+PS_rband   = PanSTARRS[np.where(PanSTARRS['filterID'] == 2)]
+PS_gPSFmag = -2.5*(np.log10(PS_gband['psfFlux']/3631.))
+PS_rPSFmag = -2.5*(np.log10(PS_rband['psfFlux']/3631.))
+
+##  NEOWISE
 infile = 'NEOWISER-L1b_J1205p3422.dat'
 NEOWISER = ascii.read(path+infile)
 NEOWISER_W1_AB = NEOWISER['w1mpro'] + 2.673
@@ -48,7 +59,6 @@ infile = 'NEOWISER-L1b_J1205p3422_averaged.dat'
 NEOWISER_aver = ascii.read(path+infile)
 NEOWISER_aver_W1_AB = NEOWISER_aver['w1mpro_wgt'] + 2.673
 NEOWISER_aver_W2_AB = NEOWISER_aver['w2mpro_wgt'] + 3.313
-
 
 ##    S P E C T R A 
 infile   = 'DBSP_J1205p3422_b_58538.dat'
@@ -171,9 +181,9 @@ ax1.axvline(x=58693, linewidth=lw, linestyle='dashed', color='k')
 
 ## CRTS data
 lw = 1
-ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='k',       alpha=alpha, s=ms*1.8)
-ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='dimgray', alpha=alpha, s=ms, label='CRTS')
-ax1.errorbar(CRTS_MJD, CRTS['magnitude'], color='k', yerr=CRTS['magnitude_err'], fmt='o', linewidth=lw, ms=ms)
+ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='k',       alpha=alpha, s=ms*1.8, zorder=0)
+ax1.scatter( CRTS_MJD, CRTS['magnitude'], color='dimgray', alpha=alpha, s=ms,     zorder=0, label='CRTS')
+ax1.errorbar(CRTS_MJD, CRTS['magnitude'], color='k', yerr=CRTS['magnitude_err'],  zorder=0, fmt='o', linewidth=lw, ms=ms)
 ## ZTF data
 ax1.scatter( ZTF_g['mjd'], ZTF_g['mag'], color='k',         alpha=alpha, s=ms*1.8)
 ax1.scatter( ZTF_g['mjd'], ZTF_g['mag'], color='olivedrab', alpha=alpha, s=ms, label='ZTF g-band')
@@ -181,6 +191,14 @@ ax1.errorbar(ZTF_g['mjd'], ZTF_g['mag'], color='olivedrab', yerr=ZTF_g['magerr']
 ax1.scatter( ZTF_r['mjd'], ZTF_r['mag'], color='k',         alpha=alpha, s=ms*1.8)
 ax1.scatter( ZTF_r['mjd'], ZTF_r['mag'], color='tomato',    alpha=alpha, s=ms, label='ZTF r-band')
 ax1.errorbar(ZTF_r['mjd'], ZTF_r['mag'], color='tomato',    yerr=ZTF_r['magerr'], fmt='o', linewidth=lw, ms=ms)
+
+## PanSTARRS data
+ms              = 8.
+ms_big          = 36.
+ax1.scatter(PS_gband['obsTime'], PS_gPSFmag, color='k',       alpha=alpha, s=ms_big)
+ax1.scatter(PS_gband['obsTime'], PS_gPSFmag, color='lime',    alpha=alpha, s=ms, label='Pan-STARRS g-band')
+ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='k',       alpha=alpha, s=ms_big)
+ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='deeppink', alpha=alpha, s=ms, label='Pan-STARRS r-band')
 
 ## NEOWISER W1/2 (AB)
 ## indigo and brown were used in Ross et al. (2018)
@@ -234,14 +252,14 @@ ax5.set_ylim([ymin_ax5, ymax_ax5])
 
 
 ## The Spectra curves on the RHS
-ax2.plot(   sdss_wavelength/(1+redshift), sdss_flux,           '-b', lw=linewidth/4.0, label='SDSS MJD 53498')
-ax2.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux,        '-r', lw=linewidth/4.0,     label='DBSP MJD 58538')
+ax2.plot(   sdss_wavelength/(1+redshift), sdss_flux,           '-b', lw=linewidth/4.0,  label='SDSS MJD 53498')
+ax2.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux,        '-r', lw=linewidth/4.0,  label='DBSP MJD 58538')
 ax2.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux,        '-r', lw=linewidth/4.0)
 ## Smoothing:: https://joseph-long.com/writing/AstroPy-boxcar/
 DBSP_b2_flux_smoothed = convolve(DBSP_b2_flux, Box1DKernel(5))
 DBSP_r2_flux_smoothed = convolve(DBSP_r2_flux, Box1DKernel(5))
 ax2.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux_smoothed, '-k', lw=linewidth/4.0)
-ax2.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux_smoothed, '-k', lw=linewidth/4.0,     label='DBSP MJD 58693')
+ax2.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux_smoothed, '-k', lw=linewidth/4.0, label='DBSP MJD 58693')
 for ll in range(len(linelist)):
     ax2.axvline(x=linelist['Wavelength'][ll], color='gray', linestyle='--', linewidth=linewidth/3.4)
     label = linelist['LineName'][ll]
@@ -335,13 +353,19 @@ neo_w2 = mlines.Line2D([], [], label='NEOWISE W2', color='cyan',
                        marker="o", markeredgecolor='k', markeredgewidth=2.0, markersize=12, linestyle='None')
 crts   = mlines.Line2D([], [], label='CRTS',       color='k',
                        marker="o", markeredgecolor='k', markeredgewidth=2.0, markersize=5,  linestyle='None')
-ztf_g  = mlines.Line2D([], [], label='ZTF g-band', color='olivedrab',
+ps_g   = mlines.Line2D([], [], label=r'Pan-STARRS $g$-band', color='lime',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-ztg_r  = mlines.Line2D([], [], label='ZTF r-band', color='tomato',
+ps_r   = mlines.Line2D([], [], label=r'Pan-STARRS $r$-band', color='deeppink',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+ztf_g  = mlines.Line2D([], [], label=r'ZTF $g$-band', color='olivedrab',
+                       marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+ztg_r  = mlines.Line2D([], [], label=r'ZTF $r$-band', color='tomato',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
 
-handles=[neo_w1, neo_w2, crts, ztf_g, ztg_r]
-leg = ax1.legend(loc='lower left', fontsize=fontsize/1.25, handles=handles,
+handles=[neo_w1, neo_w2, crts, ps_g, ps_r, ztf_g, ztg_r]
+leg = ax1.legend(loc='lower left',
+                     fontsize=fontsize/1.5,   ##used to be /1.25
+                     handles=handles,
                       frameon=True, framealpha=1.0, fancybox=True)
 
 ## Spectra legend
