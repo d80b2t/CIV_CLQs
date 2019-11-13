@@ -364,7 +364,21 @@ per hour, to a 5$\sigma$ detection limit of 20.7 mag in the $r$-band
 with a 30sec exposure during new moon \citep{Masci2019}.
 
 
+\subsubsection{Mid-infrared Photometry}
+Mid-infrared data (3.4 and 4.6$\mu$m) is available from the beginning
+of the Wide-field Infrared Survey Explorer (WISE) mission \citep[2010
+January; ][]{Wright2010} through the fifth-year of NEOWISE-R
+operations \citep[2018 December; ][]{Mainzer2011}. The WISE scan
+pattern leads to coverage of the full-sky approximately once every six
+months (a ``sky pass''), albeit with a gap from 2011 February to 2013
+October when the satellite was placed in hibernation.  Hence, our
+light curves have a cadence of 6 months with a 32 month sampling
+gap. \\
+{\bf DS to check for any X-ray, radio etc.} 
+
+
 \subsection{CLQ Selection}
+{\bf MJG to finalise this::} \\
 Our high-$z$ CLQs were identified as follows.  We selected all 64,774
 SDSS DR15 sources with $z > 0.35$ classified as `QSO', having at least
 two spectra separated by at least 100 days, and with a corresponding
@@ -377,7 +391,6 @@ J1205+3422), SDSS J163852.93+282707.7 (hereafter J1638+2827) and SDSS
 J222818.76+220102.9 (hereafter J2228+2201), satisfied these selection
 criteria and showed interesting or dramatic emission line behaviour.
 
-
 \begin{figure*}
   \centering
   %% trim=l b r t
@@ -388,107 +401,66 @@ criteria and showed interesting or dramatic emission line behaviour.
   \includegraphics[width=16.7cm, trim=0.3cm 0.0cm  0.35cm 0.1cm, clip]
   {figures/J2228+2201_landscape_20191112.png}
   \vspace{-12pt}
-  \caption[]{The threes high-$z$ CLQ quasars; 
-    SDSS J1205+3422 (top), 
-    SDSS J1638+2827 (middle), 
-    SDSS J2228+2201 (bottom). 
+  \caption[]{The three high-$z$ CLQ quasars; 
+    J1205+3422 (top), 
+    J1638+2827 (middle) and  
+    J2228+2201 (bottom). 
 The light curve data is present in the panels on the left hand side, with the 
-spectral epoch observational timings given by the vertical lines. 
+spectral epoch observational timings indicated by vertical lines. 
 The spectra are on the right hand side, with zoom-in's on the Ly$\alpha$-\nv 
-complex, the \civ\ line and the \mgii line. 
+complex, the \civ\ line, and the \mgii line. 
   }
   \label{fig:civ_clqs}
 \end{figure*}
-\subsection{Spectra}
+\subsection{Spectroscopy}
 An overview of our spectroscopic observations is given in
 Table~\ref{tab:obs_notes}.  The spectra are from the SDSS
 \citep{Stoughton2002, DR7, Schneider2010}, the SDSS-III Baryon
-Oscillation Spectroscopic Survey \citep[BOSS][]{Eisenstein2011,
+Oscillation Spectroscopic Survey \citep[BOSS; ][]{Eisenstein2011,
 Dawson2013, Smee2013, Alam2015, Paris2017} and the SDSS-IV Extended
 Baryon Oscillation Spectroscopic Survey \citep[eBOSS; ][]{Dawson2016,
 Abolfathi2018, Paris2018}.  These quasars were targetted via a range
 of techniques and algorithms \citep[see ][]{Richards2002, Ross2012,
-Myers2015}. The SDSS, BOSS and eBOSS data are supplemented by
-spectra from the Low Resolution Imaging Spectrometer (LRIS) on the 10m
-Keck {\sc I} telescope \citep{Oke1995}.  and the Double Spectrograph
-(DBSP) instrument on the Palomar {\it Hale} 5m telescope.
+Myers2015}. The SDSS, BOSS, and eBOSS data are supplemented by
+spectra from the Low Resolution Imaging Spectrometer \citep[LRIS; ][]{Oke1995} on the 10m
+Keck {\sc I} telescope.  and the Double Spectrograph
+(DBSP) instrument on the 200'' Palomar telescope.
+
+\subsubsection{Spectrophotometry}
+{\bf MJG to finish this::} \\
+We want all our spectra to have reliable flux calibrations.  SDSS
+spectra ae spectrophotometrically calibrated.  BOSS and eBOSS spectra
+have spectrophotometric corrections applied in the latest data release
+\citep{Hutchinson2016, Jensen2016, Margala2016}.  Due to the high-$z$
+of our objects, \oiii is not available to us to use as a calibrating
+flux line. Instead we use photometric data from the ZTF since all our
+non-SDSS/BOSS/eBOSS data are taken after MJD 57500.
 
 
-\subsection{Emission Line and Power-law slope measurements}
+\subsection{Emission Line and Power-law Slope Measurements}
 We use the measured quasar emission line properties from several catalogues: 
-\citet{Shen2011}, \citet{Hamann2017}, \citet{Kozlowski2017} and
+\citet{Shen2011}, \citet{Hamann2017}, \citet{Kozlowski2017}, and
 \citet{Calderone2017}.
 
-\citet{Shen2011} present a compilation of properties of the 105,783
-quasars in the SDSS Data Release 7 (DR7) quasar catalog \citep[DR7Q;
-][]{Schneider2007}. \citet{Shen2011} report non-zero \civ\ FWHM and
-EWs for approximately half (51,501) of the full DR7Q, and non-zero
-\mgii FWHM and EWs for 80\% (84,183) of the DR7Q quasars).
-%%
-Measured line values using the methods and catalogue from
-\citet{Shen2011}.  $M_{\rm I}(z=2)$ is the Absolute $i$-band magnitude
-$K$-corrected to $z = 2$; Bolometric luminosity computed from the
-monochromatic luminosity at 1350\AA\ using the spectral fits and
-bolometric corrections (BC = 3.81) in \citet{Richards2006b}; Line
-luminosity, FWHM, rest-frame equivalent width, and their errors for
-the whole \civ\ profile.  Power-law slope $\alpha_{\lambda}$ for the
-continuum fit for \civ; Virial BH masses using calibrations of
-\citet{VestergaardPeterson2006}.  Eddington ratio computed using the
-virial BH mass.
-
-
-\citet{Calderone2017} present the Quasar Spectral Fitting (QSFIT)
-software package which among other quantities provides luminosity
+In particular we use the Quasar Spectral Fitting (QSFIT) software
+package presented in \citet{Calderone2017}. This provides luminosity
 estimates as well as width, velocity offset and equivalent width of 20
-emission lines, including \civ, \ciii and \mgii.  We attempt to process and fit
+emission lines, including \civ, \ciii and \mgii.  We process and fit
 all nine spectra using the lastest version (v1.3.0) of the QSFIT
-\href{https://qsfit.inaf.it/cat_1.30/onlinefit.php}{online calculator}
-and setting $E(B-V)=0.00$.
+\href{https://qsfit.inaf.it/cat_1.30/onlinefit.php}{online
+calculator}.
+% and setting $E(B-V)=0.00$.
 %%
-The host galaxy and blended iron emission at rest-frame optical wavelengths components
-are automatically disabled when they can not be constrained by the available data,
-such as the case for all our objects (we do not have infrared spectral data).
+The host galaxy and blended iron emission at rest-frame optical
+wavelengths components are automatically disabled when they can not be
+constrained by the available data, such as the case for all our
+objects (we do not have infrared spectral data).
 %%
-
-
-\citet{Hamann2017} investigate in robust detail the UV continuum and
-the \civ\ (and \nv $\lambda$1238, 1242 \AA\ ) emission lines for over
-200,000 quasars in BOSS DR12Q \citep{Paris2017}.  The quasar redshift
-are limited to the range $1.53 \leq z \leq 5.0$ so that \civ\ and the
-adjacent continuum are covered by BOSS. These measurements provide
-line profile information and flux ratios\footnote{This emission-line
-catalog can be downloaded from
-\href{https://datadryad.org/stash/dataset/doi:10.6086/D1H59V}{here}.}
-\citet{Hamann2017} was focused on $z\geq2$ quasars and specifcally
-their \civ properties in order to understand the high-$z$ ``Extremely
-Red Quasar'' population \citet{Ross2015, Zakamska2016, Perrotta2019,
-  Zakamska2019}.  As such, we prefer the \citet{Hamann2017} emission line
-values where available, though this is only for two out of our nine spectra.
-
-When using the \citet{Shen2011} catalogue, we report line luminosity,
-FWHM, rest-frame equivalent width, and their errors for the whole
-\mgii profile (this catalogue also quotes values for just the broad
-\mgii component, but the differences for our objects is
-negligible). The line luminosities in \citet{Calderone2017} are given
-in units of $10^{42}$ erg s$^{-1}$, while the line luminosities in
-\citet{Shen2011} are in units of $\log(L)$.  We do not report the
-\citet{Shen2011} error on the line luminosity.
-
 Power-law continuum slopes, $\alpha$, where $f_{\lambda} \propto
 \lambda^{\alpha}$, are also reported in these catalogues and from
 QSFit.  We quote the most appropriate value given the emission line
 wavelength.
 
-\subsection{Multi-wavelength properties}
-Mid-infrared data (3.4 and 4.6$\mu$m) is available from the beginning of the
-Wide-field Infrared Survey Explorer (WISE) mission \citep[2010
-January; ][]{Wright2010} through the fifth-year of NEOWISE-R
-operations \citep[2018 December; ][]{Mainzer2011}. The WISE scan
-pattern leads to coverage of the full-sky approximately once every six
-months (a ``sky pass''), but the satellite was placed in hibernation
-in 2011 February and then reactivated in 2013 October. Hence, our
-light curves have a cadence of 6 months with a 32 month sampling gap.
-%Radio ??
 
 
 
@@ -502,8 +474,8 @@ light curves have a cadence of 6 months with a 32 month sampling gap.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
-\subsection{Overall Spectral Evolution}
-Figure~\ref{fig:civ_clqs} presents the optical and infrared light
+\subsection{Photometric and Spectral Evolution}
+Figure~\ref{fig:civ_clqs} presents the optical and mid-IR light
 curves for three high-$z$ CLQ quasars.  Figure~\ref{fig:civ_clqs} also
 shows the spectra for each epoch, with the MJD of observation given by
 the dashed vertical lines in the light curves.
