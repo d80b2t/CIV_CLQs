@@ -13,6 +13,9 @@ tex/older_pdfs/
 tex/older_tex/*.pdf
 tex/CIV_CLQs_DS20191110.tex
 
+## Just another place to keep the datafiles
+correspondence/
+
 
 ## These catalogs are too large for GitHub (I tihnk)
 data/QSO_CIV_catalogs/Hamann2017_and_QSFit124_combined_3645object.fits
