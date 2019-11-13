@@ -85,3 +85,8 @@ output = Table( [wavelength,flux,err_flux], names=['wavelength', 'flux', 'err_fl
 
 ascii.write(output, 'spec_output_temp.dat',  overwrite=True) # names=['wavelength', 'flux', 'err_flux'])
 
+
+print()
+print('You probably want to see:: ')
+pritn('https://stackoverflow.com/questions/58411437/simple-formatting-of-astropy-tables-ascii-output/58419100#58419100')
+print()
