@@ -78,7 +78,8 @@ J22_third_flux  = J22_third['flux']
 ##  R E A D I N G    I N    T H E   L I N E   F I T S    F R O M    Q S F I T
 infile = 'QSFIT_CIV_line_params.dat'
 qsfit = ascii.read(path+infile)
-
+ncomp = input("Number of CIV line components?")  # Python 3
+ncomp = np.int64(ncomp)
 
 ##  S E T T I N G   U P   T H E   P L O T
 ##
@@ -160,6 +161,8 @@ for ii in range(len(qsfit)):
     print(ii, qsfit['FILENAME'][ii], '       ', qsfit['NCOMP'][ii],  qsfit['LUM'][ii], qsfit['FWHM'][ii], qsfit['VOFF'][ii])
     if ii == 0:
         #j=0; k=0
+        ax1.plot(J12_first_wave,  J12_first_flux, '-b', lw=linewidth)
+        
         norm       = qsfit['LUM'][ii]                ## 10^42 erg s^-1
         fwhm       = qsfit['FWHM'][ii]               ## km/s
         v_off      = qsfit['VOFF'][ii]               ## km/s
@@ -171,8 +174,8 @@ for ii in range(len(qsfit)):
     
         line_profile = (peak_value * (np.exp( -((J12_first_wave - x0) / sigma)**2 / 2.)))+cont_off
 
-        ax1.plot(J12_first_wave,  J12_first_flux, '-b', lw=linewidth)
-        ax1.plot(J12_first_wave,  line_profile,   '-b', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax1.plot(J12_first_wave,  line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -199,7 +202,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J12_second_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax2.plot(J12_second_wave, J12_second_flux, '-r', lw=linewidth)
-        ax2.plot(J12_second_wave, line_profile,    '-r', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax2.plot(J12_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -226,7 +230,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J12_third_wave - x0) / sigma)**2 / 2.)))+cont_off
         
         ax3.plot(J12_third_wave, J12_third_flux, '-k', lw=linewidth)
-        ax3.plot(J12_third_wave, line_profile,   '-k', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax3.plot(J12_third_wave, line_profile,   '-k', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -255,7 +260,8 @@ for ii in range(len(qsfit)):
     
         line_profile = (peak_value * (np.exp( -((J16_first_wave - x0) / sigma)**2 / 2.)))+cont_off
         ax4.plot(J16_first_wave, J16_first_flux, '-b', lw=linewidth, label='J1638+2827 (54553)')
-        ax4.plot(J16_first_wave, line_profile,   '-b', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax4.plot(J16_first_wave, line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -282,7 +288,8 @@ for ii in range(len(qsfit)):
     
         line_profile = (peak_value * (np.exp( -((J16_second_wave - x0) / sigma)**2 / 2.)))+cont_off
         ax5.plot(J16_second_wave, J16_second_flux, '-r', lw=linewidth)
-        ax5.plot(J16_second_wave, line_profile,    '-r', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax5.plot(J16_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -309,7 +316,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J16_third_wave - x0) / sigma)**2 / 2.)))+cont_off
             
         ax6.plot(J16_third_wave,  J16_third_flux, '-k', lw=linewidth)
-        ax6.plot(J16_third_wave,  line_profile,   '-k', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax6.plot(J16_third_wave,  line_profile,   '-k', lw=beefup)
         
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -338,7 +346,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_first_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax7.plot(J22_first_wave,  J22_first_flux, '-b', lw=linewidth)
-        ax7.plot(J22_first_wave,  line_profile,   '-b', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax7.plot(J22_first_wave,  line_profile,   '-b', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -366,7 +375,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_second_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax8.plot(J22_second_wave, J22_second_flux, '-r', lw=linewidth)
-        ax8.plot(J22_second_wave, line_profile,    '-r', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax8.plot(J22_second_wave, line_profile,    '-r', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
@@ -394,7 +404,8 @@ for ii in range(len(qsfit)):
         line_profile = (peak_value * (np.exp( -((J22_third_wave - x0) / sigma)**2 / 2.)))+cont_off
 
         ax9.plot(J22_third_wave,  J22_third_flux, '-k', lw=linewidth)
-        ax9.plot(J22_third_wave,  line_profile,   '-k', lw=beefup)
+        if qsfit['NCOMP'][ii] == ncomp:
+            ax9.plot(J22_third_wave,  line_profile,   '-k', lw=beefup)
 
         norm_str = str(np.around(norm, decimals=3))
         fwhm_str = str(np.around(fwhm, decimals=3))
