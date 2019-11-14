@@ -15,7 +15,6 @@ from matplotlib          import colors as mcolors
 from matplotlib.gridspec import GridSpec
 from matplotlib.patches  import Rectangle
 
-
 from astropy.io          import ascii
 from astropy.io          import fits
 from astropy.convolution import convolve, Box1DKernel
@@ -34,7 +33,7 @@ infile = 'J120544.67+342252.4_CRTS.dat'
 CRTS   = ascii.read(path+infile)
 ##  CRTS MJD offset
 CRTS_MJD_offset = 53500
-CRTS_MJD = CRTS['mjd'] + CRTS_MJD_offset
+CRTS_MJD        = CRTS['mjd'] + CRTS_MJD_offset
 ##  ZTF
 infile = 'J120544.67+342252_ztf_g.dat'
 ZTF_g  = ascii.read(path+infile)
@@ -49,6 +48,12 @@ PS_gband   = PanSTARRS[np.where(PanSTARRS['filterID'] == 1)]
 PS_rband   = PanSTARRS[np.where(PanSTARRS['filterID'] == 2)]
 PS_gPSFmag = -2.5*(np.log10(PS_gband['psfFlux']/3631.))
 PS_rPSFmag = -2.5*(np.log10(PS_rband['psfFlux']/3631.))
+
+##  ALLWISE
+infile  = 'ALLWISE_catalog.dat'
+ALLWISE = ascii.read(path+infile)
+ALLWISE_W1_AB = ALLWISE['w1mpro'] + 2.673
+ALLWISE_W2_AB = ALLWISE['w2mpro'] + 3.313
 
 ##  NEOWISE
 infile = 'NEOWISER-L1b_J1205p3422.dat'
@@ -169,7 +174,7 @@ minorticklength = 6
 ##  T H E    L I G H T     C U R V E S
 xmin = 53400; xmax = 59000
 #ymin = 20.49; ymax = 16.501
-ymin = 21.20; ymax = 16.70   
+ymin = 21.20; ymax = 16.20   
 ax1.set_xlim([xmin,xmax])
 ax1.set_ylim([ymin, ymax])
 
@@ -204,19 +209,23 @@ ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='deeppink', alpha=alpha, s=ms
 ## indigo and brown were used in Ross et al. (2018)
 ms              = 10.
 ms_big          = ms*6.
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W1_AB, color='k', alpha=alpha, s=ms*1.8)
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W1_AB, color='r', alpha=alpha, s=ms, label='NEOWISE W1')
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W2_AB, color='k', alpha=alpha, s=ms*1.8)
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W2_AB, color='c', alpha=alpha, s=ms, label='NEOWISE W2')
+ax1.scatter(ALLWISE['w1mjdmean'], ALLWISE_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(ALLWISE['w1mjdmean'], ALLWISE_W1_AB, color='r', alpha=alpha, s=ms_big, label='ALLWISE W1')
+ax1.scatter(ALLWISE['w2mjdmean'], ALLWISE_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(ALLWISE['w2mjdmean'], ALLWISE_W2_AB, color='c', alpha=alpha, s=ms_big, label='ALLWISE W2')
 
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W1_AB, color='r', alpha=alpha, s=ms_big)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W2_AB, color='c', alpha=alpha, s=ms_big)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W1_AB,      color='k', alpha=alpha, s=ms*1.8)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W1_AB,      color='r', alpha=alpha, s=ms, label='NEOWISE W1')
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W2_AB,      color='k', alpha=alpha, s=ms*1.8)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W2_AB,      color='c', alpha=alpha, s=ms, label='NEOWISE W2')
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W1_AB, color='r', alpha=alpha, s=ms_big)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W2_AB, color='c', alpha=alpha, s=ms_big)
 
 
 ##
-## THE SPECTRA 
+##  P L O T T I N G    T H E    S P E C T R A 
 ##
 ## full, main spectral plot
 xmin = 910;  xmax = 3590
@@ -364,7 +373,7 @@ ztg_r  = mlines.Line2D([], [], label=r'ZTF $r$-band', color='tomato',
 
 handles=[neo_w1, neo_w2, crts, ps_g, ps_r, ztf_g, ztg_r]
 leg = ax1.legend(loc='lower left',
-                     fontsize=fontsize/1.5,   ##used to be /1.25
+                     fontsize=fontsize/1.6,   ##used to be /1.25
                      handles=handles,
                       frameon=True, framealpha=1.0, fancybox=True)
 

@@ -49,6 +49,12 @@ PS_rband   = PanSTARRS[np.where(PanSTARRS['filterID'] ==2)]
 PS_gPSFmag = -2.5*(np.log10(PS_gband['psfFlux']/3631.))
 PS_rPSFmag = -2.5*(np.log10(PS_rband['psfFlux']/3631.))
 
+##  ALLWISE
+infile  = 'ALLWISE_catalog.dat'
+ALLWISE = ascii.read(path+infile)
+ALLWISE_W1_AB = ALLWISE['w1mpro'] + 2.673
+ALLWISE_W2_AB = ALLWISE['w2mpro'] + 3.313
+
 ## NEOWISE-R
 infile = 'NEOWISER-L1b_J1638+2827.dat'
 NEOWISER = ascii.read(path+infile)
@@ -135,7 +141,6 @@ ax3 = fig.add_subplot(gs[-1, 2])
 ax4 = fig.add_subplot(gs[-1, 3])
 ax5 = fig.add_subplot(gs[-1, -1])
 
-
 ## Adjusting the Whitespace for the plots
 left   = 0.06   # the left side of the subplots of the figure
 right  = 0.97   # the right side of the subplots of the figure
@@ -169,7 +174,7 @@ minorticklength = 6
 ##  T H E    L I G H T     C U R V E S 
 xmin = 53400; xmax = 59000
 #ymin = 21.29; ymax = 17.01
-ymin = 21.20; ymax = 16.70   
+ymin = 21.20; ymax = 16.20   
 ax1.set_xlim([xmin,xmax])
 ax1.set_ylim([ymin, ymax])
 
@@ -200,19 +205,22 @@ ax1.scatter(PS_gband['obsTime'], PS_gPSFmag, color='lime',     alpha=alpha, s=ms
 ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='k',        alpha=alpha, s=ms_big)
 ax1.scatter(PS_rband['obsTime'], PS_rPSFmag, color='deeppink', alpha=alpha, s=ms, label='Pan-STARRS r-band')
 
-
 ## NEOWISER W1/2 (AB)
 ms              = 10.
 ms_big          = ms*6.
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W1_AB, color='k', alpha=alpha, s=ms*1.8)
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W1_AB, color='r', alpha=alpha, s=ms, label='NEOWISE W1')
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W2_AB, color='k', alpha=alpha, s=ms*1.8)
-ax1.scatter(NEOWISER['mjd'],  NEOWISER_W2_AB, color='c', alpha=alpha, s=ms, label='NEOWISE W2')
+ax1.scatter(ALLWISE['w1mjdmean'], ALLWISE_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(ALLWISE['w1mjdmean'], ALLWISE_W1_AB, color='r', alpha=alpha, s=ms_big, label='ALLWISE W1')
+ax1.scatter(ALLWISE['w2mjdmean'], ALLWISE_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(ALLWISE['w2mjdmean'], ALLWISE_W2_AB, color='c', alpha=alpha, s=ms_big, label='ALLWISE W2')
 
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W1_AB, color='r', alpha=alpha, s=ms_big)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
-ax1.scatter(NEOWISER_aver['mean_mjd'],  NEOWISER_aver_W2_AB, color='c', alpha=alpha, s=ms_big)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W1_AB, color='k', alpha=alpha, s=ms*1.8)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W1_AB, color='r', alpha=alpha, s=ms, label='NEOWISE W1')
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W2_AB, color='k', alpha=alpha, s=ms*1.8)
+ax1.scatter(NEOWISER['mjd'],           NEOWISER_W2_AB, color='c', alpha=alpha, s=ms, label='NEOWISE W2')
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W1_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W1_AB, color='r', alpha=alpha, s=ms_big)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W2_AB, color='k', alpha=alpha, s=ms_big*1.8)
+ax1.scatter(NEOWISER_aver['mean_mjd'], NEOWISER_aver_W2_AB, color='c', alpha=alpha, s=ms_big)
 
 
 ##  P L O T T I N G    T H E      S P E C T R A  
@@ -357,7 +365,7 @@ ztg_r  = mlines.Line2D([], [], label=r'ZTF $r$-band', color='tomato',
 
 handles=[neo_w1, neo_w2, crts, ps_g, ps_r, ztf_g, ztg_r]
 leg = ax1.legend(loc='upper left',
-                     fontsize=fontsize/1.5,   ## used to be /1.25
+                     fontsize=fontsize/1.6,   ## used to be /1.25
                      handles=handles,
                  frameon=True, framealpha=1.0, fancybox=True)
 
