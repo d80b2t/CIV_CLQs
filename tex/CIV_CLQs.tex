@@ -169,26 +169,23 @@ indeed \ciii have not to this point been reported.
 
 \begin{table*}
   \centering
-  \begin{tabular}{l l   r ll   r r r l}
+  \begin{tabular}{l l   r ll  r r l}
     \hline 
     \hline 
-    \multirow{3}{*}{Object} & \multirow{3}{*}{Redshift} &                        & \multirow{3}{*}{MJD} &  \multirow{3}{*}{Instrument}  & Exposure      &                   & \multirow{3}{*}{Notes} \\
-                            &                                                     &   {$g$-band}   &                                 &                                              &  Time           &    SDSS             & \\
-                                       &                                          &    (mag)           &                                 &                                              & (seconds)    & Plate-FiberID  & \\
+    \multirow{2}{*}{Object} & \multirow{2}{*}{Redshift} &  $g$-band     & \multirow{2}{*}{MJD} &  \multirow{3}{*}{Instrument}  & Exposure     &   SDSS               & \multirow{2}{*}{Notes} \\
+                            &                                                     &   (mag)           &                                 &                                               &  Time (secs) &   Plate-FiberID  & \\
     \hline  
-%                                         &                                         &                        &                                &                    &                              &                              & \\
-    J120544.7+342252.4   & 2.068                               &   18.27             &  53498                   & SDSS             &  8057                  & 2089-427             & \\
-                                        & 2.071                                &                        &  58538                   & DBSP            &  1800                  &  ---                      &  Average conditions \\
-                                         & 2.071                               &                         &  58693                  & DBSP            &  2400                   &  ---                      &   \\
-                                         &                                       &                          &                                &                          &                     &                               &                              & \\
-    J163852.9+282707.7   & 2.185                            &   19.77               &  54553                   & SDSS           &   4801                    &  2948-614              & \\
-    	                                 &  2.186                            &                          &  55832                  & BOSS            &   3600                   &  5201-178            & \\
-                                         &  2.182                           &                          &  58583                     & LRIS              &  1800                   &  ---                             & \\
-                                        &                                      &                          &                                 &                            &                    &                              &                                & \\
-    J222818.7+220102.9   & 2.217                           & 19.97                &  56189                  &  BOSS             &  2700                 &   6118-720          & \\
-                                          & 2.222                         &                          &  56960                    & BOSS             &  4500                  &   7582-790          & eBOSS reobservation \\ 
-                                         &  2.222                         &                          &  58693                  &  DBSP             & 2400                   &    ---                        &    \\
-  %                                     &                                       &                          &               &                            &                   &                              &                            & \\
+    J120544.7+342252.4   & 2.068                               &   18.27             &  53498                   & SDSS                                    &  8057            & 2089-427             & \\
+                                        & 2.071                                &                        &  58538                   & DBSP                                     &  1800            &  ---                      &  Average conditions \\
+                                         & 2.071                               &                         &  58693                  & DBSP                                     &  2400            &  ---                      &          \\
+                                         &                                       &                          &                               &                                              &                      &                               &                               \\
+    J163852.9+282707.7   & 2.185                            &   19.77               &  54553                   & SDSS                                      &   4801            &  2948-614              & \\
+    	                                 &  2.186                            &                          &  55832                  & BOSS                                      &   3600            &  5201-178            & \\
+                                         &  2.182                           &                          &  58583                     & LRIS                                     &  1800              &  ---                      & \\
+                                        &                                      &                          &                                 &                                              &                      &                              &                                 \\
+    J222818.7+220102.9   & 2.217                           & 19.97                &  56189                  &  BOSS                                       &  2700            &   6118-720          & \\
+                                          & 2.222                         &                          &  56960                    & BOSS                                       &  4500            &   7582-790          & eBOSS reobservation \\ 
+                                         &  2.222                         &                          &  58693                  &  DBSP                                         & 2400             &    ---                        &    \\
     \hline \hline   
   \end{tabular}
   \caption{
@@ -225,7 +222,7 @@ required for doubly-ionised C~III to become triply-ionised \civ.
 64.49 eV (4.74 Ry) is the energy needed to ionize \civ\ itself. This
 energy corresponds to a thermal temperature of $T \gtrsim$
 4$\times10^{5}$, implying a heating energy source of (soft) X-ray
-photons ($k_{B}$ = 8.617$\times 10^{-5}$ eV /K).
+photons. 
 
 \citet{Wilhite2006} examine \civ\ variability in a sample
 of 105 quasars observed at multiple epochs by the Sloan Digital Sky
@@ -304,11 +301,8 @@ $m_{\rm AB} = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for WISE W1
 at 3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively
 \citep{Cutri2011}.
 We adopt a flat $\Lambda$CDM cosmology with $\Omega_{\Lambda} = 0.73$,
-$\Omega_{\rm M} = 0.27$, and $h = 0.71$ in order to be consistent with
-\citet{Hamann2017}. As a guide this cosmology has a $z=2.000$
-comoving radial distance of 5244.3 Mpc, a $\sim$1.25\% difference
-compared to 5179.0 Mpc from $\Omega_{\Lambda} = 0.70$, $\Omega_{\rm M}
-= 0.30$, and $h = 0.70$ that is used in \citet{Shen2011}.
+$\Omega_{\rm M} = 0.27$, and $h = 0.71$.
+% in order to be consistent with \citet{Hamann2017}. As a guide this cosmology has a $z=2.000$ comoving radial distance of 5244.3 Mpc, a $\sim$1.25\% difference compared to 5179.0 Mpc from $\Omega_{\Lambda} = 0.70$, $\Omega_{\rm M} = 0.30$, and $h = 0.70$ that is used in \citet{Shen2011}.
 
 
 
@@ -322,9 +316,10 @@ compared to 5179.0 Mpc from $\Omega_{\Lambda} = 0.70$, $\Omega_{\rm M}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data, CLQ Selection and Line measurements}
-In this section we present the photometric data used to select the CLQs, and then
-give details to the multiwavelength data where we have it, obtained spectroscopy and
-emission lines measurements. 
+In this section we present the photometric data used to select the
+CLQs, and then give details to the multiwavelength data where we have
+it. We then give details of the spectroscopic data including emission
+lines measurements.
 
 \subsection{Photometry}
 \subsubsection{Optical Photometry}
@@ -378,7 +373,7 @@ gap. \\
 
 
 \subsection{CLQ Selection}
-{\bf MJG to finalise this::} \\
+{\bf MJG to finalise this} \\
 Our high-$z$ CLQs were identified as follows.  We selected all 64,774
 SDSS DR15 sources with $z > 0.35$ classified as `QSO', having at least
 two spectra separated by at least 100 days, and with a corresponding
@@ -427,7 +422,7 @@ Keck {\sc I} telescope.  and the Double Spectrograph
 (DBSP) instrument on the 200'' Palomar telescope.
 
 \subsubsection{Spectrophotometry}
-{\bf MJG to finish this::} \\
+{\bf MJG to finish this} \\
 We want all our spectra to have reliable flux calibrations.  SDSS
 spectra ae spectrophotometrically calibrated.  BOSS and eBOSS spectra
 have spectrophotometric corrections applied in the latest data release
@@ -435,6 +430,7 @@ have spectrophotometric corrections applied in the latest data release
 of our objects, \oiii is not available to us to use as a calibrating
 flux line. Instead we use photometric data from the ZTF since all our
 non-SDSS/BOSS/eBOSS data are taken after MJD 57500.
+
 
 
 \subsection{Emission Line and Power-law Slope Measurements}
@@ -521,30 +517,24 @@ more luminous than the initial BOSS spectrum.
   \includegraphics[width=8.7cm, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]
   {figures/Wilhite_2006_Fig2_redux_20190926.png}
    \vspace{-12pt}
-  \caption[]{The Change in \civ\ line width vs. line flux change. 
+   \caption[]{ {\bf NPR to update this}. 
+     The change in \civ\ line width vs. line flux change. 
 We compare our object J1638+2827 with the sample 
 from \citet{Wilhite2006} with a sample of 105 quasars observed at
 multiple epochs by the SDSS. J1638+2827 is a substantial outlier 
 in this parameter space.}
   \label{fig:Wilhite2006_comparison}
 \end{figure}
-\subsection{Emission Line Evolution}
-Emission line measurements from the catalogues of \citet{Shen2011}.
-\citet{Hamann2017}, \citet{Kozlowski2017} or the QSFit routine of
-\citet{Calderone2017} are presented in Table~\ref{tab:LineMeasurements}.
+%\subsection{Emission Line Evolution}
+Emission line measurements from the QSFit routine of
+\citet{Calderone2017} are presented in Table~\ref{tab:LineMeasurements}. 
+and fits for the \civ\ line are given in~\ref{fig:CIV_LineFits}.
 
 From Figure~\ref{fig:Wilhite2006_comparison} there appears to be a
 strong correlation between the change in the line flux and the change
 in the line width.  Figure~\ref{fig:Wilhite2006_comparison} shows the
 epoch-to-epoch flux ratio versus the ratio of line widths.
 
-For the BOSS spectrum of J2228+2201 on MJD 56189, some of the data are
-``masked'' (i.e. they have {\tt and\_mask} != 0) in the FITS file at
-wavelengths $\lesssim$1600\AA\ (rest-frame).  This typically means
-there is some potential problem in using those data. However, visual
-inspection shows strong broad \civ\ emission, so we disable the check on the mask,
-and report the line fits in Table~\ref{tab:LineMeasurements} and show the \civ\ line 
-fits in~\ref{fig:CIV_LineFits}.
 
 \begin{figure}
   \centering
@@ -655,44 +645,27 @@ J2228                & 56960   &  7889$\pm$14     &  -1.73$\pm$0.02   &  4634.1$
 \end{table*}
 
 \subsection{The \civ\ Baldwin Effect}
-The Baldwin Effect (Baldwin 1977) is an empirical %inverse
+The Baldwin Effect \citep[Beff; ][]{Baldwin1977} is an empirical 
 relation between emission-line REWs and continuum luminosity in
-quasars \citep[][]{Shields2007, Hamann2017, Calderone2017}
-%%
+quasars \citep[][]{Shields2007, Hamann2017, Calderone2017}.
+\citet{Hamann2017} and \citet{Calderone2017} present recent
+measurements of the Beff for large quasar samples. 
+
 There is an anti-correlation between the emission-line REWs and
 e.g. 1450\AA\ rest continuum luminosity, so that as the underlying UV
 continuum luminosity increases, the EW decreses, see
-Figure~\ref{fig:CIV_Baldwin} Our Figure~\ref{fig:CIV_Baldwin} is a
-reproduction of Figure~15 from \citet{Calderone2017}.
+Figure~\ref{fig:CIV_Baldwin}. This figure, reproduces that of
+Figure~15 from \citet{Calderone2017}, but where we know
+add the measurements from the 3 \civ\ CLQ quasars at each epoch. 
 
 The plotted values are \verb|CONT1450__LUM| and
 \verb|BR_CIV_1549__EW|.  \verb|CONT1__LUM| is the $\nu L_{\nu}$
 luminosity at wavelength. This selects 20,374 quasars.  The slope
 $\beta$ is $-0.1997$.  Checking with \citet{Kozlowski2017}, using
 their bolometric luminosity gives a slope of $\beta=-0.251$, in line
-with that from \citet{Hamann2017} ($\beta=-0.23$).
-%%
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
-sodales est, vel cursus risus porta non. Vivamus vel pretium
-velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
-ac. Fusce pellentesque condimentum dolor, quis vehicula tortor
-hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
-conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
-eu blandit. Donec in lacinia libero.
+with that from \citet[][ $\beta=-0.23$]{Hamann2017}.
 
-Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu
-at orci egestas convallis. Aenean quam velit, aliquam vitae viverra
-in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras
-nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies
-nulla. Nullam eu augue id purus mollis dignissim sed et
-libero. Phasellus eget justo sed neque pellentesque egestas nec id
-arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse
-vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor
-imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel
-neque id mi ultrices tristique. Integer quam libero, ornare vel
-gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
-cursus, dui nisl egestas augue, non fermentum nisl est nec
-nisi. Vestibulum nec mi justo, eget dapibus velit.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -716,30 +689,59 @@ of \citet{Hamann2017}. %Note the REW logarithmic scaling.
   \label{fig:REWvsFWHM}
 \end{figure}
 \section{Discussion}
-With $t_{\rm dyn} \propto M^{2}$, the variable properties of high-$z$
-quasars, generally with more massive SMBHs, has been less well
-studied.
+\subsection{Continuum and Line Changes}
+\citet{Trakhtenbrot2019} report on the quasar 1ES 1927+654 which was
+initially seenn to lack broad emission lines and line-of-sight
+obscuration, i.e, a ``Type 2'' quasar at redshift $z=0.02$. This
+object is then seen to spectroscopically change with the appearance of
+a blue, featureless continuum, followed by the emergence of broad
+Balmer emission lines.  i.e. this quasar changes into a broad-line
+Type 1 after a raise in the continuum luminosity.  This suggests that
+there is (at least in some cases) a relationship between the continuum
+and broad emission lines in CLQs.  A similar scenario may have occured
+for the 3 high-$z$ quasars presented here, although we lack the
+high-cadence multiwavelength, multi-epoch coverage that
+\citet{Trakhtenbrot2019} present.  The multiwavelength data that
+\citet{Trakhtenbrot2019} have includes a UV spectrum of 1ES 1927+654.
+However, there is no evidence for broad UV emission lines, including
+\civ\ , \ciii\ , or \mgii.  The authors attribute the lack of broad UV
+emission lines to dust within the BLR, noting that to dust in the
+broadline emission region, noting that the continuum emission does not
+show any signs of dust extinction.
 
-%Reasons for this include more massive systems will tend to have longer timescales with e.g. if $t_{\rm dyn} = \sqrt{ R^{3}/GM}$ and $R_{\rm Sch}= 2GM /c^{2}$.
+\citet{MacLeod2019} present a sample of CLQs where the primary
+selection requires large-amplitude ($∣\Delta g∣ > 1 mag, ∣\Delta r∣ >
+0.5 mag$) variability over any of the available time baselines probed
+by the SDSS and Pan-STARRS1 surveys.  For our adopted signal-to-noise
+ratio threshold on variability of broad H$\beta$ emission, they find
+17 new CLQs (which is $\sim20$ of the observerd sample). These
+candidates are at lower Eddington ratio relative to the overall quasar
+population, while the CLQ fraction increases from 10\% to roughly
+half, as the continuum flux ratio between repeat spectra at 3420 \AA\
+(rest-frame) increases from 1.5 to 6.
+
+\citet{Homan2019} investigate the responsiveness of the \mgii broad
+emission line doublet in AGN on timescales of several years.  This
+study is based on a the same extremely variable quasar sample as was
+used for \citet{MacLeod2019}.  By again focussing on quasars that show
+large changes in their optical light-curves, \citet{Homan2019} find
+that \mgii clearly does respond to the continuum.  However, a key
+finding from \citet{Homan2019} is that the degree of responsivity
+varies strikingly from one object to another.  There are cases of
+\mgii changing by as much as the continuum, more than the continuum,
+or very little at all.  In the majority (72\%) of this highly variable
+sample, the behaviour of \mgii corresponds with that of H$\beta$.
+However, there are also examples of \mgii showing variation, but
+H$\beta$ does not, and vice versa.
+
+%Lower redshift $z<0.9$ CLQs have traditionally been identified via large changes in the  H$\beta$ emission line. H$\beta$ emission is associated with a 2.55 eV energy difference.  Thus we can place the high-$z$, HIL \civ\ in context of Balmer H$\beta$ CLQs at lower-$z$.
+
+The \civ\ line is one of the strongest collisionally excited lines in quasar
+spectra \citet[e.g.][]{HamannFerland1999}, and 
+\civ\ emission probes the photoionization environment produced by the innermost
+disk, as indicated by RM time-delay measurements.
 %%
-The Balmer series in hydrogen is due to the recombination cascade
-between different principal quantum numbers $n$, and
-the $n=2$ level \citep[e.g., ][]{Seaton1959a, Seaton1959b}. 
-Lower redshift $z<0.9$ CLQs have traditionally been identified via large changes in the
-H$\beta$ emission line. H$\beta$ emission is associated with a 2.55 eV energy difference. 
-Thus we can place the high-$z$, HIL \civ\ in context of Balmer H$\beta$ CLQs at lower-$z$.
-
-\civ\ is one of the strongest collisionally excited lines in quasar
-spectra \citet[e.g.][]{HamannFerland1999}.  The line is most prominent
-at n H $\approx$10$10$ cm$-3$ and log $U$$\approx$-1.5, which are the
-canonical BELR parameters deduced over from early analysis of the
-\civ\ emission \citep{Davidson_Netzer1979}.  A dimensionless
-ionization parameter $U\equiv \Phi(H) / c n_{H}$, where $c$ is the
-speed of light and $n_{H}$ is the total hydrogen density (H$^{0}$ +
-H$^{+}$).
-
-\civ\ probes the photoionization environment produced by the innermost
-disk, as indicated by RM time-delay measurements. In standard \citet{SS73}
+In standard \citet{SS73}
 thin disk models, large changes in the continuum flux are not
 permitted over short timescales due to the relatively long viscous
 time associated with such disks. Given the observed short timescale
@@ -773,7 +775,7 @@ different emission mechanisms than is usual for high-$z$ quasar...
      the REW measurements are Table~\ref{tab:Baldwin}.}
   \label{fig:CIV_Baldwin}
 \end{figure}
-\subsection{The Baldwin Effect}
+%\subsection{The Baldwin Effect}
 The variable properties of the rest-frame UV quasar emission lines
 have been long studied, with the global (or ensemble) Baldwin Effect
 (the anti-correlation between the EW of the emission line and the
@@ -787,8 +789,7 @@ The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}...
 ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no
 change. These trends suggest a luminosity-independent ``Baldwin
 effect'' in which the physical driver may be the Eddington ratio.
-\citet{Ge2016} Broad emission lines is a prominent property of type I quasi-stellar objects (QSOs). 
-
+\citet{Ge2016} Broad emission lines is a prominent property of Type 1 quasars. 
 
 
 \begin{figure*}
@@ -799,7 +800,7 @@ effect'' in which the physical driver may be the Eddington ratio.
   \caption[]{Eddington Ratios of the three \civ\ CLQs and M87.}
   \label{fig:Eddington_ratios}
 \end{figure*}
-\subsection{Eddington ratios and State Changes} 
+\subsection{Eddington Ratios and State Changes} 
 The broad UV and optical lines in quasars are most sensitive to the
 extreme ultraviolet (EUV) part of the spectral energy distribution
 (SED), with \civ\ (and indeed \heii and \nv) being at the higher
@@ -848,20 +849,6 @@ id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus
 dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis
 euismod. Cras vel auctor neque. Nam quis diam risus.
 
-Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu
-at orci egestas convallis. Aenean quam velit, aliquam vitae viverra
-in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras
-nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies
-nulla. Nullam eu augue id purus mollis dignissim sed et
-libero. Phasellus eget justo sed neque pellentesque egestas nec id
-arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse
-vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor
-imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel
-neque id mi ultrices tristique. Integer quam libero, ornare vel
-gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
-cursus, dui nisl egestas augue, non fermentum nisl est nec
-nisi. Vestibulum nec mi justo, eget dapibus velit.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -881,22 +868,22 @@ time the changing-look behaviour has been seen in a high-ionization
 emission line.
 
 \begin{itemize}
-  \item SDSS J1205+3422, J1638+2827 and J2228+2201 show interesting behaviour
-in their observed optical light curves, and subsequent spectroscopy
-shows significant changes in the \civ\ broad emission line, with both
-line collapse and emergence being displayed in rest-frame timescales
-of $\sim$240-1640 days.
+\item SDSS J1205+3422, J1638+2827 and J2228+2201 show interesting behaviour
+  in their observed optical light curves, and subsequent spectroscopy
+  shows significant changes in the \civ\ broad emission line, with both
+  line collapse and emergence being displayed in rest-frame timescales
+  of $\sim$240-1640 days.
 \item Where observed, the profile of the Ly$\alpha$/\nv emission complex
-also changes, and there is tentative evidence for changes in the \mgii
-line.
+  also changes, and there is tentative evidence for changes in the \mgii
+  line.
 \item Although line measurements from the three quasars show large changes
-in the \civ\ line flux-line width plane, the quasars are not seen to
-be outliers when considered against the full $z>2$ quasar population
-in terms of (rest) Equivalent Width and FWHM properties.
+  in the \civ\ line flux-line width plane, the quasars are not seen to
+  be outliers when considered against the full $z>2$ quasar population
+  in terms of (rest) Equivalent Width and FWHM properties.
 \item 
-We put these observations in context with recent ``state-change''
-models, but note that even in their `low-state', the \civ\ CLQs are
-above $\sim10\%$ in Eddington luminosity.
+  We put these observations in context with recent ``state-change''
+  models, but note that even in their `low-state', the \civ\ CLQs are
+  above $\sim10\%$ in Eddington luminosity.
 \end{itemize}
 
 Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus
