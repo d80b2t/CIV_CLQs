@@ -1,4 +1,4 @@
-#name	   mjd	   ContLum   ContLum_err  LineLum  LineLum_err	FWHM	FWHM_err   REW	 REW_err   LBol	   LBol_err	MBH_MgII  MBH_MgII_err	MBH_CIV	MBH_CIV_err   eta_MgII	eta_CIV	  LineRef   Ref	
+#name	   mjd	   contLum   contLumErr	  lineLum  lineLumErr	FWHM	errFWHM	   REW	 errREW	   L_Bol   errL_Bol	MBH_MgII  errMBH_MgII	MBH_CIV	errMBH_CIV    eta_MgII	eta_CIV	  LineRef   Ref	
 J1205+3422 53498   40040     34		  511	    11		9593	287	   15.9	 0.4	   47.216  0.004        9.55	  0.05		9.49	0.04 	      -0.434    -0.374    QSFit	    Shen11		
 J1205+3422 58538   -999	     -999	  1037	     5		15000	-999	   -999	 -999	   47.216  0.004        9.55	  0.05		9.49	0.04 	      -0.434    -0.374    QSFit	    tbd   	
 J1205+3422 58693   -999	     -999	  52	     0.9	5046	26	   24.0	 0.2       47.216  0.004        9.55	  0.05		9.49	0.04 	      -0.434    -0.374    QSFit	    tbd   	

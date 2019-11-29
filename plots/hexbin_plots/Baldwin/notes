@@ -1,0 +1,17 @@
+
+
+
+## CIV  CLQs Baldwin triptych selection...
+=======================================================================
+
+Using BOSS_Ham17Koz17_DR12Q.fits::
+
+(rew>0.) && (rew <10000) && (bal_flag_vi == 0)  &&  (qflag == 0)                       ## all these take 216,188 to 195,373 (90%)
+(rew>0.) && (rew <10000) && (bal_flag_vi == 0)  &&  (qflag == 0)   && (z_dr12 > 2.0 )  ##                           171,951 (80%)
+
+(rew>0.) && (rew <10000) && (bal_flag_vi == 0)  &&  (qflag == 0)   && (z_dr12 > 2.0 ) && (z_dr12    < 3.4 )  ## 163,450 (76%)
+(rew>0.) && (rew <10000) && (bal_flag_vi == 0)  &&  (qflag == 0)   && (z_dr12 > 2.0 ) && (z_dr12    < 3.4 )  && (Lbol > 0.0 )     ## 163,437
+
+(rew>0.) && (rew <10000) && (bal_flag_vi == 0)  &&  (qflag == 0)   && (z_dr12 > 2.0 ) && (z_dr12    < 3.4 )  && (Lbol > 0.0 )  && (MBH_MgII > 4.0 )   ## and THIS kills it; 
+
+(MBH_MgII > 4.0 ) ## alone is `only' 61,997 (29%)

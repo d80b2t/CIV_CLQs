@@ -15,10 +15,14 @@ from matplotlib import colors as mcolors
 from astropy.io import ascii
 from astropy.io import fits
 
+## Reading in the data
+##     C I V     C  L Q s
+path   = '../../data/CLQ_line_measurements/'
+infile = 'MJD_Eddington.dat'
+CLQs   = ascii.read(path+infile)
 
 ##
-##  S h e n   et al.  (2 0 1 1)
-##  D R 7 Q  
+##  D R 7 Q    S h e n   et al.  (2011)     
 ##
 path       = '../../data/QSO_CIV_catalogs/'
 filename   = 'Shen_dr7_bh_May_2010.fits'
@@ -33,15 +37,14 @@ print('The number of columns is...  ', len(dr7q_table.names), '\n\n')
 ## Making some senible selections and cuts 
 mjd_full    = dr7q_table.field('MJD')
 logtau_full = dr7q_table.field('LOGEDD_RATIO')
-
 dr7q        = dr7q_table[np.where(dr7q_table['LOGEDD_RATIO'] > -9.0)]
 dr7q_mjd    = dr7q['MJD']
 dr7q_logtau = dr7q['LOGEDD_RATIO']
 dr7q_tau    = (10**dr7q['LOGEDD_RATIO'])*100
 
-
-## Kozlowski (2017)  and  Hamann et al. (2017)
-##  D R 1 2 Q 
+##
+##  D R 1 2 Q    Kozlowski (2017)  and  Hamann et al. (2017)
+##
 filename   = 'BOSS_Ham17Koz17_DR12Q.fits'
 dr12q_in    = fits.open(path+filename)
 dr12q_table = dr12q_in[1].data
@@ -57,10 +60,6 @@ dr12q_mjd    = dr12q['MJD_x']
 dr12q_etaEdd = dr12q['nEdd']
 
     
-## The data for our CIV CLQs
-path   = '../../data/CLQ_line_measurements/'
-infile = 'MJD_Eddington.dat'
-CLQs   = ascii.read(path+infile)
 
 
 ## Setting up the plot
@@ -102,7 +101,6 @@ mincnt    = .1
 ##  T H E     D R 7 Q     q u a s a r s 
 ax.hexbin( dr7q_mjd,  dr7q_logtau, bins='log',  gridsize=gridsize, cmap=color_map, mincnt=mincnt)
 ax.hexbin(dr12q_mjd, dr12q_etaEdd, bins='log',  gridsize=gridsize, cmap=color_map, mincnt=mincnt)
-
 
 
 ##  T H E     C I V     C L Q s
@@ -180,15 +178,35 @@ ax.tick_params('x', direction='in', which='minor', bottom='True', top='True', le
 ax.tick_params('y', direction='in', which='both',  bottom='True', top='True', left='True', right='True', labelsize=fontsize)
 ax.minorticks_on() 
 
-## ALLWISE   timespan
+## Eddington  ratio ranges
+text_min = 51800
 NodaDone         = 0.02
-NodaDone_range   = 1.5
+NodaDone_range   = 1.35
 log_NodaDone_min = np.log10(NodaDone / NodaDone_range)
 log_NodaDone_max = np.log10(NodaDone * NodaDone_range)
-
 ax.axhspan(log_NodaDone_min, log_NodaDone_max, alpha=0.6, color='red')
-ax.text( log_NodaDone_min,   0.8, 'Noda-Done',   style='italic',    fontsize=fontsize/1.2, rotation=270)
-ax.text( 51800,   -1.8, 'Noda-Done',   style='italic', weight='bold',   fontsize=fontsize/1.1)
+#ax.text(log_NodaDone_min,   0.8, 'Noda-Done',   style='italic',                   fontsize=fontsize/1.2, rotation=270)
+
+
+## From Ruan (2019a) 
+log_HighSoft   =  -1  
+log_LowHard_one = -1.8
+LowHard_one_range = 0.1
+log_LowHard_min = log_LowHard_one + LowHard_one_range
+log_LowHard_max = log_LowHard_one - LowHard_one_range
+log_LowHard_two = -2
+
+ax.hlines(  log_HighSoft,    xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
+#ax.axhspan(log_LowHard_min, log_LowHard_max, alpha=0.6, color='c')
+ax.hlines(  log_LowHard_two, xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
+
+ax.arrow(51700,   -0.90, 0.0,  0.4, width=15., head_width=80., head_length=0.15, color='c' )
+ax.text(text_min, -0.95, '"High/Soft"', style='italic', weight='bold', fontsize=fontsize/1.1, color='c')
+ax.text(text_min, -1.75, 'Noda-Done',   style='italic', weight='bold', fontsize=fontsize/1.1)
+ax.text(text_min, -2.15, '"Low/Hard"',  style='italic', weight='bold',  fontsize=fontsize/1.1, color='c')
+ax.arrow(51700,   -2.05, 0.0, -0.4, width=20., head_width=80., head_length=0.15, color='c' )
+
+
 
 ax.set_xlabel('MJD',                       fontsize=fontsize)
 ax.set_ylabel(r'log$_{10}$ Eddington Ratio', fontsize=fontsize)

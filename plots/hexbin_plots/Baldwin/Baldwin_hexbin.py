@@ -22,24 +22,22 @@ import matplotlib.lines  as mlines
 cosmo = FlatLambdaCDM(H0=71, Om0=0.27, Tcmb0=2.725)                                                                                                                         
 ## Reading in the data
 path      = '../../../data/CLQ_line_measurements/'
-filename  = 'Baldwin_CIV.dat'
+filename  = 'QSFIT_CIV_line_params.dat'
 CLQs      = ascii.read(path+filename)
 
-
 CLQs_FWHM       = CLQs['FWHM']    / 1000.
-CLQs_errFWHM    = CLQs['errFWHM'] / 1000.
-CLQs_logREW     = np.log10(CLQs['REW'])
-CLQs_logerrREW  = np.log10(CLQs['errREW'])
-CLQs_loglineLum = np.log10(CLQs['lineLum']*1e42)
-CLQs_logContLum = np.log10(CLQs['contLum']*1e42)
+CLQs_FWHMerr    = CLQs['FWHM_err'] / 1000.
+CLQs_logREW     = np.log10(CLQs['EW'])
+CLQs_logREWerr  = np.log10(CLQs['EW_err'])
+CLQs_logContLum = np.log10(CLQs['ContLum']*1e42)
+CLQs_logLineLum = np.log10(CLQs['LineLum_err']*1e42)
+CLQs_logContLum = CLQs_logContLum - 42.   ## To ``normalize'' to 10^42 erg s^-1
+CLQs_logLineLum = CLQs_logLineLum - 42.   ## To ``normalize'' to 10^42 erg s^-1
 
-## To ``normalize'' to 10^42 erg s^-1
-CLQs_loglineLum = CLQs_loglineLum - 42.
-CLQs_logContLum = CLQs_logContLum - 42.
-    
+
 
 ##  Hamann et al. (2017) and Kozłowski (2017) merged BOSS DR12 catalog
-path      = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/QSO_CIV_catalogs/'
+path      = '../../../data/QSO_CIV_catalogs/'
 filename  = 'BOSS_Ham17Koz17_DR12Q.fits'
 infile    = path+filename
 data_full = fits.open(infile)
@@ -185,8 +183,11 @@ print("R-squared       : %f" % r_value**2)
 print("p-value         : %f" % p_value)
 print("Standard errro  : %f" % std_err)
 print()
-plt.plot(x, (slope*x + intercept), 'r')
-#plt.plot(x, (slope*x), color='mediumturquoise', linestyle='--')
+
+#plt.plot(x, (slope*x + intercept), 'r')
+## "Fitting", by eye, the the CLQs points
+#plt.plot(x, ((-.38*x) + (intercept+1.1)), 'r', linestyle=':')
+
 ## for the label...
 slope_str     = str(np.around(slope, decimals=3))
 intercept_str = str(np.around(intercept, decimals=3))
@@ -197,7 +198,7 @@ R_sq          = str(np.around((r_value**2), decimals=3))
 xmin =  2.30   
 xmax =  5.55    ## log_LCont_QSFit.max() ## log_LBol.max()   ## can be e.g. 48.4 for log_LBol
 ymin =  0.4
-ymax =  2.9    ## when in '000 km s^-1;  3.4 when the Legend handles has the # and slope line
+ymax =  2.95    ## when in '000 km s^-1;  3.4 when the Legend handles has the # and slope line
 ax.axis([xmin, xmax, ymin, ymax])
 
 ## AXES LABELS
@@ -216,42 +217,69 @@ ax.tick_params(axis='both', which='minor', labelsize=labelsize)
 ##
 ##
 for ii in range(len(CLQs)):
-    ms         =  16.
-    ms_back    =  45.
+    ms         =  32.  # 16 is decent
+    ms_back    =  72.  # 16:45 is decent
     l_back     =   2
     alpha      =  1.0
     markersize = 6.0
+    mrkedwd    = 1.1 ## markeredgewidth
     
-    if str(CLQs['name'][ii]) == 'J1205+3422':
-        if (CLQs['mjd'][ii] ==  53498):
+    if str(CLQs['Object'][ii]) == 'J1205p3422':
+        if (CLQs['MJD'][ii] ==  53498):
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',      xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='o', linewidth=lw*l_back)
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia',xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='o', linewidth=lw)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='o', s=ms_back)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='o', s=ms)
             J12_53498 = mlines.Line2D([], [], label='J1205+3422 (53498)', color='fuchsia',
-                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=markersize,  linestyle='None')
-
-    if str(CLQs['name'][ii]) == 'J1638+2827':
-        if (CLQs['mjd'][ii] ==  54553):
+                        marker="o", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] ==  58538):
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',      xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='s', linewidth=lw*l_back)
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia',xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='s', linewidth=lw)
+            ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
+            ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='s', s=ms)
+            J12_58538 = mlines.Line2D([], [], label='J1205+3422 (58538)', color='fuchsia',
+                        marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] ==  58693):
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',      xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='D', linewidth=lw*l_back)
+            #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia',xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='D', linewidth=lw)
+            ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
+            ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='D', s=ms)
+            J12_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
+                        marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+            
+    if str(CLQs['Object'][ii]) == 'J1638p2827':
+        if (CLQs['MJD'][ii] == 54553):
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',    alpha=alpha, marker='o', s=ms_back)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='lime', alpha=alpha, marker='o', s=ms)
             J16_54553 = mlines.Line2D([], [], label='J1638+2827 (54553)', color='lime',
-                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=markersize,  linestyle='None')
-        if (CLQs['mjd'][ii] ==  55832):
+                        marker="o", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] == 55832):
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',    alpha=alpha, marker='s', s=ms_back)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='lime', alpha=alpha, marker='s', s=ms)
             J16_55832 = mlines.Line2D([], [], label='J1638+2827 (55832)', color='lime',
-                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=markersize,  linestyle='None')
-        if (CLQs['mjd'][ii] ==  58583): 
+                        marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] == 58583):
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',    alpha=alpha, marker='D', s=ms_back)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='lime', alpha=alpha, marker='D', s=ms)
             J16_58583 = mlines.Line2D([], [], label='J1638+2827 (58583)', color='lime',
-                        marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=markersize,  linestyle='None')
+                        marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
             
-    if str(CLQs['name'][ii]) == 'J2228+2201':
-        if (CLQs['mjd'][ii] ==  56960):
-            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',    alpha=alpha, marker='s', s=ms_back)
+    if str(CLQs['Object'][ii]) == 'J2228p2201':
+        if (CLQs['MJD'][ii] == 56189):
+            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',   alpha=alpha, marker='o', s=ms_back)
+            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='cyan',alpha=alpha, marker='o', s=ms)
+            J22_56189 = mlines.Line2D([], [], label='J2228+2201 (56189)', color='cyan',
+                        marker="o", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] == 56960):
+            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
             ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='cyan', alpha=alpha, marker='s', s=ms)
-            J22_56960 = mlines.Line2D([], [], label='J2228+2201 (56960)', color='cyan',
-                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=markersize,  linestyle='None')
+            J22_56960 = mlines.Line2D([], [], label='J1205+3422 (56960)', color='cyan',
+                        marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
+        if (CLQs['MJD'][ii] == 58693):
+            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
+            ax.scatter(CLQs_logContLum[ii], CLQs_logREW[ii], color='cyan', alpha=alpha, marker='D', s=ms)
+            J22_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='cyan',
+                        marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
 
 ##
 ##    L E G E N D S
@@ -267,17 +295,15 @@ boss = mlines.Line2D([], [], label='SDSS quasars',
 bestfit_line  = mlines.Line2D([], [], label=r'$\beta$ = -0.1997', color='r')
 
 #handles=[boss, bestfit_line,
-handles=[boss, 
-   J12_53498,
-             J16_54553, J16_55832, J16_58583,
-             J22_56960, 
-             bestfit_line]
+handles=[boss, J12_53498, J12_58538, J12_58693, 
+               J16_54553, J16_55832, J16_58583,
+               J22_56189, J22_56960, J22_58693]
+#             bestfit_line]
     
 leg = ax.legend(loc='upper right',
-                fontsize=fontsize/1.65, handles=handles, 
+                fontsize=fontsize/2.00, handles=handles,
+                ncol=2,
                 frameon=True, framealpha=1.0, fancybox=True)
-#                    ncol=2)
-
 
 #ax.text(0.31, 0.91, r'$\beta=%.4f$' % (slope, ), fontsize=14, color='r',
 #            verticalalignment='bottom', horizontalalignment='right',
@@ -285,10 +311,10 @@ leg = ax.legend(loc='upper right',
 #            bbox={'facecolor':'white', 'alpha':0.5, 'pad':10})
 #            bbox={'facecolor':'white', 'alpha':0.5, 'boxstyle':'round'})
 
-
 ## SAVING THE FIGURE
 plt.savefig('CIV_CLQs_Baldwin_temp.png', format='png')
 plt.close()
+
 
 
 

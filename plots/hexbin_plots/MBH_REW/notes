@@ -1,0 +1,11 @@
+
+
+
+  71,261 from qsfit_1.2.4.fits
+
+
+## For TOPCAT::
+
+(BR_CIV_1549__LUM > 0.) &&  (BR_CIV_1549__FWHM > 0.) &&  (BR_CIV_1549__EW > 0.)    ## 20,351 (29%) 
+
+(sqrt(BR_CIV_1549__LUM))*(BR_CIV_1549__FWHM*BR_CIV_1549__FWHM)
