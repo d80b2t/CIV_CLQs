@@ -17,9 +17,12 @@ from astropy.io import fits
 
 ## Reading in the data
 ##     C I V     C  L Q s
-path   = '../../data/CLQ_line_measurements/'
-infile = 'MJD_Eddington.dat'
-CLQs   = ascii.read(path+infile)
+path     = '../../data/CLQ_line_measurements/'
+infile   = 'MJD_Eddington.dat'
+CLQs     = ascii.read(path+infile)
+CLQs_MJD = CLQs['MJD']
+CLQs_MBH = CLQs['MBH']
+CLQs_eta = CLQs['eta']
 
 ##
 ##  D R 7 Q    S h e n   et al.  (2011)     
@@ -107,58 +110,55 @@ ax.hexbin(dr12q_mjd, dr12q_etaEdd, bins='log',  gridsize=gridsize, cmap=color_ma
 for ii in range(len(CLQs)):
     
     if str(CLQs['Object'][ii]) == 'J1205+3422':
-        if (CLQs['MJD'][ii] ==  53498):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',       alpha=alpha, marker='o', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='fuchsia', alpha=alpha, marker='o', s=ms_large)
+        if (CLQs_MJD[ii] ==  53498):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',       alpha=alpha, marker='o', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='fuchsia', alpha=alpha, marker='o', s=ms_large)
             J12_53498  = mlines.Line2D([], [], label='J1205+3422 (53498)', color='fuchsia',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-            
-        if (CLQs['MJD'][ii] ==  58693):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',       alpha=alpha, marker='s', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='fuchsia', alpha=alpha, marker='s', s=ms_large)
-            J12_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
+        if (CLQs_MJD[ii] ==  58538):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',       alpha=alpha, marker='s', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='fuchsia', alpha=alpha, marker='s', s=ms_large)
+            J12_58538  = mlines.Line2D([], [], label='J1205+3422 (58538)', color='fuchsia',
                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+        if (CLQs_MJD[ii] ==  58693):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',       alpha=alpha, marker='D', s=ms_large*1.6, zorder=10)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='fuchsia', alpha=alpha, marker='D', s=ms_large, zorder=10)
+            J12_58693  = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
+                       marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
             
     if str(CLQs['Object'][ii]) == 'J1638+2827':
-        if (CLQs['MJD'][ii] ==  54553):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='o', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='lime', alpha=alpha, marker='o', s=ms_large)
-
+        if (CLQs_MJD[ii] ==  54553):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='o', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='lime', alpha=alpha, marker='o', s=ms_large)
             J16_54553 = mlines.Line2D([], [], label='J1638+2827 (54553)', color='lime',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-        if (CLQs['MJD'][ii] ==  55832): 
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='s', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='lime', alpha=alpha, marker='s', s=ms_large)
+        if (CLQs_MJD[ii] ==  55832): 
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='s', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='lime', alpha=alpha, marker='s', s=ms_large)
             J16_55832 = mlines.Line2D([], [], label='J1638+2827 (55832)', color='lime',
                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-        if (CLQs['MJD'][ii] ==  58583): 
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='D', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='lime', alpha=alpha, marker='D', s=ms_large)
+        if (CLQs_MJD[ii] ==  58583): 
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='D', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='lime', alpha=alpha, marker='D', s=ms_large)
             J16_58583 = mlines.Line2D([], [], label='J1638+2827 (58583)', color='lime',
                        marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
             
     if str(CLQs['Object'][ii]) == 'J2228+2201':
-        if (CLQs['MJD'][ii] ==  56189):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='o', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='cyan', alpha=alpha, marker='o', s=ms_large)
+        if (CLQs_MJD[ii] ==  56189):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='o', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='cyan', alpha=alpha, marker='o', s=ms_large)
             J22_56189  = mlines.Line2D([], [], label='J2228+2201 (56189)', color='cyan',
                         marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-        if (CLQs['MJD'][ii] ==  56960):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='s', s=ms_large*1.6)
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='cyan', alpha=alpha, marker='s', s=ms_large)
+        if (CLQs_MJD[ii] ==  56960):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='s', s=ms_large*1.6)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='cyan', alpha=alpha, marker='s', s=ms_large)
             J22_56960  = mlines.Line2D([], [], label='J2228+2201 (56960)', color='cyan',
                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-        if (CLQs['MJD'][ii] ==  58693):
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',    alpha=alpha, marker='D', s=ms_large*1.6) 
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='cyan', alpha=alpha, marker='D', s=ms_large)
+        if (CLQs_MJD[ii] ==  58693):
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',    alpha=alpha, marker='D', s=ms_large*1.6) 
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='cyan', alpha=alpha, marker='D', s=ms_large)
             J22_58693  = mlines.Line2D([], [], label='J2228+2201 (58693)', color='cyan',
                         marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
-
-    if str(CLQs['Object'][ii]) == 'M87':
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='k',          alpha=alpha, marker='H', s=ms_large*1.6) 
-            ax.scatter(CLQs['MJD'][ii], CLQs['eta_MgII'][ii], color='darkorange', alpha=alpha, marker='H', s=ms_large)
-            M87_leg  = mlines.Line2D([], [], label='M87 (57854)', color='darkorange',
-                        marker="H", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
 
 ## Tidy up the figure
 xmin     = 51400      ## 51100
@@ -184,7 +184,7 @@ NodaDone         = 0.02
 NodaDone_range   = 1.35
 log_NodaDone_min = np.log10(NodaDone / NodaDone_range)
 log_NodaDone_max = np.log10(NodaDone * NodaDone_range)
-ax.axhspan(log_NodaDone_min, log_NodaDone_max, alpha=0.6, color='red')
+ax.axhspan(log_NodaDone_min, log_NodaDone_max, alpha=0.6, color='red', zorder=1)
 #ax.text(log_NodaDone_min,   0.8, 'Noda-Done',   style='italic',                   fontsize=fontsize/1.2, rotation=270)
 
 
@@ -196,17 +196,18 @@ log_LowHard_min = log_LowHard_one + LowHard_one_range
 log_LowHard_max = log_LowHard_one - LowHard_one_range
 log_LowHard_two = -2
 
-ax.hlines(  log_HighSoft,    xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
-#ax.axhspan(log_LowHard_min, log_LowHard_max, alpha=0.6, color='c')
-ax.hlines(  log_LowHard_two, xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
+#ax.hlines(  log_HighSoft,    xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
+##ax.axhspan(log_LowHard_min, log_LowHard_max, alpha=0.6, color='c')
+#ax.hlines(  log_LowHard_two, xmin, xmax, color='c', linestyles='--', linewidth=linewidth/2.6)
+ax.hlines(  log_HighSoft,    xmin, xmax, color='darkturquoise', linestyles='--', linewidth=linewidth/2.6)
+##ax.axhspan(log_LowHard_min, log_LowHard_max, alpha=0.6, color='c')
+ax.hlines(  log_LowHard_two, xmin, xmax, color='darkcyan', linestyles='--', linewidth=linewidth/2.6)
 
-ax.arrow(51700,   -0.90, 0.0,  0.4, width=15., head_width=80., head_length=0.15, color='c' )
-ax.text(text_min, -0.95, '"High/Soft"', style='italic', weight='bold', fontsize=fontsize/1.1, color='c')
-ax.text(text_min, -1.75, 'Noda-Done',   style='italic', weight='bold', fontsize=fontsize/1.1)
-ax.text(text_min, -2.15, '"Low/Hard"',  style='italic', weight='bold',  fontsize=fontsize/1.1, color='c')
-ax.arrow(51700,   -2.05, 0.0, -0.4, width=20., head_width=80., head_length=0.15, color='c' )
-
-
+ax.arrow(51700,   -0.90, 0.0,  0.4, width=15., head_width=80., head_length=0.15, color='darkturquoise' )
+ax.text(text_min, -0.95, '"High/Soft"', style='italic', weight='bold', fontsize=fontsize, color='darkturquoise')
+ax.text(text_min, -1.75, 'Noda-Done',   style='italic', weight='bold', fontsize=fontsize)
+ax.text(text_min, -2.18, '"Low/Hard"',  style='italic', weight='bold', fontsize=fontsize, color='darkcyan')
+ax.arrow(51700,   -2.05, 0.0, -0.4, width=20., head_width=80., head_length=0.15, color='darkcyan' )
 
 ax.set_xlabel('MJD',                       fontsize=fontsize)
 ax.set_ylabel(r'log$_{10}$ Eddington Ratio', fontsize=fontsize)
@@ -219,17 +220,17 @@ boss  = mlines.Line2D([], [], label='SDSS/BOSS quasars', color='grey',
                           marker=".", markeredgecolor='k', markeredgewidth=1.2,
                           markersize=8,  linestyle='None')
 
-handles=[boss, J12_53498, J12_58693,
-               J16_54553, J16_55832, J16_58583, 
-               J22_56189, J22_56960, J22_58693]
-#               M87_leg]
+handles=[J12_53498, J12_58538, J12_58693,
+         J16_54553, J16_55832, J16_58583, 
+         J22_56189, J22_56960, J22_58693]
+
 leg = ax.legend(loc='upper right',
                 fontsize=fontsize/1.6, handles=handles, 
                 frameon=True, framealpha=1.0, fancybox=True, ncol=3)
-
-
-
-
+#handles=[boss]
+#leg = ax.legend(loc='upper left',
+#                fontsize=fontsize/1.6, handles=handles, 
+#                frameon=False, framealpha=1.0, fancybox=True, ncol=1)
 
 ##plt.show()
 plt.savefig('MJD_vs_Eddington_temp.png',format='png')
