@@ -1,17 +1,15 @@
-\documentclass[a4paper,fleqn,usenatbib]{mnras}
+\documentclass[fleqn,usenatbib]{mnras}
 
 \input{format}
 
 \title[High-redshift CLQs]{The first high-redshift Changing Look Quasars}
 
 \author[Ross {\it et al.}]
-{%The RH John~S.~Bercow, MP, {\it et al.} 
-Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},
+{Nicholas~P.~Ross$^{1}$\thanks{E-mail: npross@roe.ac.uk},
  Matthew Graham$^{2}$, K. E. Saavik Ford$^{3,4,5}$,  Barry McKernan$^{3,4,5}$   
 \newauthor Daniel Stern$^{6}$ and Giorgio Calderone$^{7}$
 \\
-% List of institutions
-%$^{1}$Speaker's Chair, The House of Commons, London, SW1A 0AA \\
+%%  List of institutions
 $^{1}$Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom \\
 $^{2}$Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA\\
 $^{3}$Department of Science, BMCC, City University of New York, New York, NY 10007, USA \\
@@ -22,8 +20,6 @@ $^{7}$INAF -- Osservatorio Astronomico di Trieste, Via Tiepolo 11, I-34143 Tries
 }
 
 \date{Accepted XXX. Received YYY; in original form ZZZ}
-
-\hypersetup{draft}
 
 \begin{document}
 \label{firstpage}
@@ -39,13 +35,13 @@ J1205+3422, J1638+2827 and J2228+2201 show interesting behaviour in
 their observed optical light curves, and subsequent spectroscopy shows
 significant changes in the \civ\ broad emission line, with both line
 collapse and emergence being displayed in rest-frame timescales of
-$\sim$240-1640 days.  Where observed, the profile of the
-Ly$\alpha$/\nv emission complex also changes, and there is tentative
-evidence for changes in the \mgii line.  Although line measurements
-from the three quasars show large changes in the \civ\ flux-line width
-plane, the quasars are not seen to be outliers when considered against
-the full $z\sim2$ quasar population in terms of (rest) Equivalent
-Width and FWHM properties.  We put these observations in context with
+$\sim$240-1640 days.  These are very quick changes, especially when
+considering virial black hole mass estimates have all three quasars
+with $M_{\rm BH} > 10^{9} M_{\odot}$.  Continuum and emission line
+measurements from the three quasars show changes in the
+continuum-equivalent width plane with the CLQs seen to be on the edge
+of the full population distribution, and showing indications of an
+intrinsic Baldwin Effect. We put these observations in context with
 recent ``state-change'' models, but note that even in their
 `low-state', the \civ\ CLQs are above $\sim$10\% in Eddington
 luminosity.
@@ -239,25 +235,25 @@ Using the multi-epoch spectra of 362 quasars from the Sloan Digital
 Sky Survey Reverberation Mapping \citep[SDSS-RM; ][]{Shen2015,
 Shen2019} project, \citet{Sun2018} investigate the blueshift of \civ\
 emission relative to \mgii emission, and its dependence on quasar
-properties.  These authors confirm that high-blueshift sources tend to
+properties. These authors confirm that high-blueshift sources tend to
 have low \civ\ EWs, and that the low-EW sources span a range of
 blueshift. Other high-ionization lines, such as \heii, also show
 similar blueshift properties. The ratio of the line width of \civ\ to
-that of \mgii increases with blueshift.  \citet{Sun2018} also find
-that quasar variability might slightly enhance the connection between
-the \civ\ blueshift and EW, though further investigation here is
-warranted.  There is also the finding that the objects with that
+that of \mgii increases with blueshift. \citet{Sun2018} also find that
+quasar variability might slightly enhance the connection between the
+\civ\ blueshift and EW, though further investigation here is
+warranted. There is also the finding that the objects with that
 largest blueshifts are less variable and tend to have higher Eddington
-ratios.  \citet{Sun2018} explain their results these by suggesting
-that quasar SEDs become {\it softer} with {\it increasing Eddington
-ratio} along with the presence of X-ray shielding by the inner
-accretion disk.  However, a high Eddington ratio alone might be an
-insufficient condition for the \civ\ blueshift.
-%%
-Recent investigations also include \citet{Meyer2019} and \citet{Doan2019}. 
-\citet{Dyer2019} provide a detailed analysis of 340 quasars at high-redshift
-($1.62<z<3.30$) from the SDSS-RM project, which we will compare our
-results to.
+ratios. \citet{Sun2018} explain their results these by suggesting that
+quasar SEDs have weaker X-ray emission (or at least a larger UV/optical-to-Xray
+spectral index, $\alpha_{\rm ox}$) and thus become {\it
+softer} with {\it increasing Eddington ratio} along with the presence
+of X-ray shielding by the inner accretion disk. However, a high
+Eddington ratio alone might be an insufficient condition for the \civ\
+blueshift. Recent investigations also include \citet{Meyer2019} and
+\citet{Doan2019}. \citet{Dyer2019} provide a detailed analysis of 340
+quasars at high-redshift ($1.62<z<3.30$) from the SDSS-RM project,
+which we will compare our results to.
 
 %%    P a p e r    O v e r v i e w
 The purpose of this paper is, for the first time, to systematically
@@ -275,7 +271,7 @@ discussion in Section 4. We present our conclusions in Section 5.  We
 report all magnitudes on the AB zero-point system \citep{Oke_Gunn1983,
 Fukugita1996} unless otherwise stated. For the WISE bands, $m_{\rm AB}
 = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for WISE W1 at
-3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively \citep{Cutri2011}. We
+3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively \citep{Cutri2011, Cutri2013}. We
 adopt a flat $\Lambda$CDM cosmology with $\Omega_{\Lambda} = 0.73 $,
 $\Omega_{\rm M} = 0.27$, and $h = 0.71$. All logarithms are to the base 10. 
 
@@ -331,6 +327,27 @@ camera with a 47 deg$^{2}$ field of view, installed on the Samuel
 Oschin 48-inch Schmidt Telescope, can scan more than 3750 deg$^{2}$
 per hour, to a 5$\sigma$ detection limit of 20.7 mag in the $r$-band
 with a 30sec exposure during new moon \citep{Masci2019}.
+\begin{figure*}
+  \centering
+  %% trim=l b r t
+  \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.45cm 0.1cm, clip]
+  {figures/J1205+3422_landscape_20191112.png}
+  \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.40cm 0.1cm, clip]
+  {figures/J1638+2827_landscape_20191112.png}
+  \includegraphics[width=16.7cm, trim=0.3cm 0.0cm  0.35cm 0.1cm, clip]
+  {figures/J2228+2201_landscape_20191112.png}
+  \vspace{-12pt}
+  \caption[]{The three high-$z$ CLQ quasars; 
+    J1205+3422 (top), 
+    J1638+2827 (middle) and  
+    J2228+2201 (bottom). 
+The light curve data is present in the panels on the left hand side, with the 
+spectral epoch observational timings indicated by vertical lines. 
+The spectra are on the right hand side, with zoom-in's on the Ly$\alpha$-\nv 
+complex, the \civ\ line, and the \mgii line. 
+  }
+  \label{fig:civ_clqs}
+\end{figure*}
 
 \subsection{Multi-Wavelength Properties}
 {\bf DS to write something on FIRST non-detections; possibly check the X-rays too?} \\
@@ -359,27 +376,12 @@ J1205+3422), SDSS J163852.93+282707.7 (hereafter J1638+2827) and SDSS
 J222818.76+220102.9 (hereafter J2228+2201), satisfied these selection
 criteria and showed interesting or dramatic emission line behaviour.
 
-\begin{figure*}
-  \centering
-  %% trim=l b r t
-  \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.45cm 0.1cm, clip]
-  {figures/J1205+3422_landscape_20191112.png}
-  \includegraphics[width=16.7cm, trim=0.3cm 0.05cm 0.40cm 0.1cm, clip]
-  {figures/J1638+2827_landscape_20191112.png}
-  \includegraphics[width=16.7cm, trim=0.3cm 0.0cm  0.35cm 0.1cm, clip]
-  {figures/J2228+2201_landscape_20191112.png}
-  \vspace{-12pt}
-  \caption[]{The three high-$z$ CLQ quasars; 
-    J1205+3422 (top), 
-    J1638+2827 (middle) and  
-    J2228+2201 (bottom). 
-The light curve data is present in the panels on the left hand side, with the 
-spectral epoch observational timings indicated by vertical lines. 
-The spectra are on the right hand side, with zoom-in's on the Ly$\alpha$-\nv 
-complex, the \civ\ line, and the \mgii line. 
-  }
-  \label{fig:civ_clqs}
-\end{figure*}
+
+%% From Section 3.1; Place here to help with overall formatting of
+%% the paper
+\input{QSFit-results}
+
+
 \subsection{Spectroscopy}
 An overview of our spectroscopic observations is given in
 Table~\ref{tab:obs_notes}.  The spectra are from the SDSS
@@ -426,40 +428,6 @@ wavelength.
 
 
 
-
-\begin{table*}
-  \small
-  \begin{centering}
-    \begin{tabular}{l  l | c c | c c c c | c}
-      \hline
-      \hline
-              &          &  \multicolumn{2}{c}{Cont. @ 1450\AA }                  &   \multicolumn{4}{c}{CIV 1549\AA}                                                                                & Virial product \\
-Object    & MJD  &      $\nu L_{\nu}$    &         Slope                             &   Luminosity         &     FWHM                 &    V$_{\rm off}$    & EW                                 & log($\nu L_{\nu}^{0.5} \times {\rm FWHM}^2$) \\
- & & $10^{42}$ erg s$^{-1}$ & (F$_\lambda \propto \lambda^\alpha$)  & $10^{42}$ erg s$^{-1}$ &  km s$^{-1}$   &     km s$^{-1}$   &  \AA                              &  $\log(M/M_{\odot})$ \\
-      \hline
-                     & 53498   &  38129  $\pm$ 39  &  -1.57 $\pm$ 0.01 &   898 $\pm$ 15    &   6024 $\pm$  120  &  944 $\pm$  33  & 37.78 $\pm$  0.62  &   9.85 $\pm$ 0.02\\
- J1205+3422 & 58538    &  8550 $\pm$ 11    &  -1.41 $\pm$ 0.01 &  385.2 $\pm$ 3.9 &   7109 $\pm$   91   & 1085 $\pm$  29  &   71.32 $\pm$  0.71  &   9.67 $\pm$ 0.01\\  
-                     & 58693$^*$ & 2725 $\pm$ 40 &  -1.27 $\pm$ 0.05 &  161 $\pm$ 22    &  14997 $\pm$ 2500 &  922 $\pm$ 690  & 91.68 $\pm$ 12.73  &  10.07 $\pm$ 0.13\\  
-                      &              &                               &                               &                              &                                 &                             &                                   &                              \\
-                      & 54553   & 3579 $\pm$ 49    &  -1.16 $\pm$ 0.07  & 293.6  $\pm$ 8.8 &  4630 $\pm$  180   & 183 $\pm$  57   & 127.67 $\pm$  3.80  &    9.11 $\pm$ 0.04\\  
- J1638+2827 & 55832   & 2340 $\pm$ 15    &  -2.17 $\pm$ 0.05  &  84.6  $\pm$ 4.2  &  4733 $\pm$  290   & 172 $\pm$  89   &  59.61 $\pm$  2.98  &    9.04 $\pm$ 0.05\\  
-                      & 58583  & 7793 $\pm$ 19     &  -2.02 $\pm$ 0.01  & 367.5  $\pm$ 4.3 &  4511 $\pm$   71    &  94 $\pm$  24   &  77.89 $\pm$  0.91  &  9.25 $\pm$ 0.01\\  
-                      &             &                               &                                &                              &                                 &                            &                                   &                            \\
-                     & 56189$^*$ & 607 $\pm$ 49  &  -0.00 $\pm$ 0.16 &  72.8  $\pm$ 11.3 & 14993 $\pm$ 2400 &  828 $\pm$ 691   & 162.89 $\pm$ 25.37  &  9.74 $\pm$ 0.14\\  
- J2228+2201 & 56960   & 7842 $\pm$ 25     &  -1.72 $\pm$ 0.02 & 301.0  $\pm$ 7.2  &  7136 $\pm$  210   & -276 $\pm$  64   &  61.99 $\pm$  1.48  &    9.65 $\pm$ 0.03\\ 
-              & 58693   & 2388.4 $\pm$ 6.8 &  -1.22 $\pm$ 0.01 & 145.4  $\pm$ 1.5  &  6084 $\pm$   83    &   168 $\pm$  28   &  94.77 $\pm$  0.99  &    9.26 $\pm$ 0.01\\
-      \hline
-      \hline
-    \end{tabular}
-    \caption{Continuum at 1450\AA\ and \civ\ spectral measurements for the
-      three quasar considered in this work, at all observation epochs, as
-      calculated by QSFit.  The last column shows the virial product
-      calculated as $\nu L_{\nu}^{0.5} \times {\rm FWHM}^2$.  $^{*}$The
-      \civ\ line is very faint (with respect to the continuum), and the
-      associated estimates are likely unreliable.}
-    \label{tab:QSFit-results}
-  \end{centering}
-\end{table*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -481,7 +449,7 @@ For J1205+3422, our spectral observations cover 5195 days observed,
 SDSS in 2005 May, as a bright, $g\approx18.0$, blue-sloped quasar with
 broad \siiv, \civ, \ciii and \mgii. \ciii and \civ\ have large
 blueshifts of $\approx$2600$\pm$150 and $\approx$1150$\pm$100 km
-s$^{-1}$, respectively.  By 2019, however, the opitical brightness
+s$^{-1}$, respectively.  By 2019, however, the optical brightness
 dropped by $\sim$1.5 magnitudes and the spectra are significantly less
 blue.  While \lya and \nv are detectable in both 2019 spectra, \civ\
 has all but disappeared in the 2019 June spectrum.  The broad \ciii
@@ -512,6 +480,16 @@ in the rest-frame, the broadline emission, while still very present,
 reduces in line flux the UV/blue continuum diminishes, though is still
 more luminous than the initial BOSS spectrum.
 
+
+%% trim={<left> <lower> <right> <upper>}
+\begin{figure}
+  \centering
+  \includegraphics[width=8.40cm, trim=0.37cm 0.3cm 0.0cm 0.2cm, clip]{figures/CIVregions.png}
+    \vspace{-18pt}
+  \caption{Observed spectra and best fit model in the region relevant
+    to \civ\ emission line for the quasars considered here.}
+  \label{fig:QSFit-CIV}
+\end{figure}
 \subsection{\civ\ Emission Line Evolution}
 We analyzed the spectra of the three quasars, at all observational
 epochs, using the QSFit spectral fitting package
@@ -519,21 +497,21 @@ epochs, using the QSFit spectral fitting package
 constraints on the slope and luminosity of the broad band continuum of
 the source. The relevant estimated quantities, including continuum
 luminosity and slope at rest-frame 1450\AA, \civ\ line luminosity,
-FWHM and EW are given in Tab.~\ref{tab:QSFit-results}. All fits are
+FWHM and EW are given in Tabl;e~\ref{tab:QSFit-results}. All fits are
 performed with $E(B-V) = 0$ and the best fit model in the region of
 the \civ\ emission line are shown in Figure~\ref{fig:QSFit-CIV}.
 
 All \civ\ lines are fitted with a single, broad, Lorentzian profile.
-This allows us to account for the narrow peak of the \civ\ line. 
-No narrow components are considered for several reasons: in the epochs
-of highest brightness the ``narrow'' component would have FWHM
-$\sim2-3 \times 10^{3}$ km s$^{-1}$, i.e. values exceeding the usual
-widths of genuine narrow lines ($\lesssim 10^3$ km s$^{-1}$); by
-allowing a second component, to have such large widths their
-parameters would become highly degenerate with the ``broad''
-components, and the latter would also have much larger FWHM
-($\sim10^{4}$ km s$^{-1}$); and by neglecting the narrow components we
-have a consistent fit across all epochs.
+This allows us to account for the narrow peak of the \civ\ line.  No
+narrow components are considered for several reasons: in the epochs of
+highest brightness the ``narrow'' component would have FWHM~$\sim2-3
+\times 10^{3}$~km~s$^{-1}$, i.e. values exceeding the usual widths of
+genuine narrow lines ($\lesssim$ $10^3$ km s$^{-1}$); by allowing a
+second component, to have such large widths their parameters would
+become highly degenerate with the ``broad'' components, and the latter
+would also have much larger FWHM ($\sim$$10^{4}$ km s$^{-1}$); and by
+neglecting the narrow components we have a consistent fit across all
+epochs.
 
 The quasar continuum, evaluated at 1450\AA\ , and the \civ\ line
 luminosities follow a similar evolution, with a ratio of $\sim$20-30,
@@ -545,7 +523,7 @@ distinct emerging component is responsible or both the slope and
 luminosity variations.  In J1638+2827 the opposite behaviour is
 observed, especially in the first observation epoch.  However, this
 may be a bias due to the limited wavelength range available which
-extends to $\lambda \sim 1240\AA$ for the first epoch, while it extend
+extends to $\lambda \sim 1240$\AA\ for the first epoch, while it extend
 to shorter wavelengths for the other epochs (respectively 1140\AA\ and
 1010\AA).  The latter suggests that the ``emerging'' component is more
 prominent at UV wavelengths, and a sufficient wavelength coverage is
@@ -556,53 +534,85 @@ the uncertainties large, such that the overall $\chi^{2}$ is only
 marginally affected by the addition of a further component. We
 therefore avoid using a narrow component for this spectrum only, since
 that would be inconsistent with the other analyses.
-
 In all cases where the \civ\ line profile is reliably constrained the
 \civ\ FWHM is approximately constant, with maximum variations
 $\lesssim$~1000 km s$^{-1}$, despite the significantly larger
-variations in the line luminosities.  The FWHM of broad lines is
-likely related to the mass of the supermassive black hole powering the
-quasar phenomenon, which is supposed to be constant on any human
-timescale.  Hence it is instructive to check whether the virial
-product, which is the basic quantity used to calculate the single
-epoch mass estimate, show any variation.  The virial product,
-calculated as $\nu L_{\nu}^{0.5} \times {\rm FWHM}^2$, is reported in
-the last column of Tab.~\ref{tab:QSFit-results}.  The uncertainty
-typically associated to the single epoch mass estimate is $\sim$0.5
-dex, hence the virial product at all epochs are remarkably constant
-and compatible with a single value of black hole mass for each source,
-even in those cases where the \civ\ estimates are possibly
-unreliable. The object showing larger variation is J2228+2201,
-although the extreme values span a range of 0.48 dex.
+variations in the line luminosities.
 
-Finally, also the velocity offsets of the \civ\ line are also
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
+  {figures/CIV_CLQs_MBHvsREW_QSFit20K.png}
+   \vspace{-12pt}
+   \caption[]{The virial black hole masses of $\approx$20,000 $z>1.5$ quasars
+     from QSFit catalogue \citep{Calderone2017} and the \civ\ Equivalent widths.
+     Different quasars are given different colours: J1205+3422 purple; J1638+2827 green; J2228+2201 is blue.
+     Different epochs different symbols: first epoch circles; second epoch squares; third epoch diamonds. 
+   }
+  \label{fig:CIV_MBHvsREW}
+\end{figure}
+\subsection{Virial Black Hole Masses}
+The FWHM of broad lines is likely related to the mass of the
+supermassive black hole powering the quasar phenomenon, which is
+assumed to be constant on any human timescale.  Hence it is
+instructive to check whether the virial product, which is the basic
+quantity used to calculate the single epoch black hole mass estimate,
+show any variation.
+
+Using the estimates for the continuum luminosity and FWHW from the
+single-epoch spectra, one can estimate the central black hole mass
+\citep[e.g.][]{Shen2011, Calderone2017}.  This approach assumes that
+the broad-line region (BLR) is virialized, the continuum luminosity is
+used as a proxy for the BLR radius, and the broad line width (FWHM) is
+used as a proxy for the virial velocity.  This ``virial mass''
+estimate can then be expressed as:
+\begin{equation}
+  \log(M_{\rm BH}) = (\nu L_{\nu})^{\gamma} \times ({\rm FWHM})^{\delta}
+\end{equation}
+where $\gamma=0.5$ and $\delta=2$.  The virial product for the \civ\
+CLQs is reported in the last column of Tab.~\ref{tab:QSFit-results}. 
+The uncertainty typically associated to the single epoch mass estimate
+is $\sim$0.5 dex, hence the virial product at all epochs are
+remarkably constant and compatible with a single value of black hole
+mass for each source, even in those cases where the \civ\ estimates
+are possibly unreliable. The object showing larger variation is
+J2228+2201, although the extreme values span a range of 0.48 dex.
+
+From the virial mass estimates, all our objects have SMBH masses $M >10^{9} M_{\odot}$.
+This is at the upper end of SMBH masses at all epochs, and towards the
+extreme of the mass distribution for $z\sim2$ objects.  
+Figure~\ref{fig:CIV_MBHvsREW} shows the \civ\ Equivalent width and the
+virial black hole masses for a sample of $\approx$20,000 $z>1.5$ SDSS
+quasars from the QSFit catalog as well as the estimates for the three
+\civ\ CLQs.
+
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
+  {figures/CIV_CLQs_REWvsFWHM_20191128.png}
+  \vspace{-12pt}
+  \caption[]{The Rest Equivalent Width (REW) vs. Full Width Half Maximum (FWHM) 
+    of the \civ\ emission line in the BOSS DR12 quasar sample using the catalogue 
+    of \citet{Hamann2017}.
+   Symbols as in Fig.~\ref{fig:CIV_MBHvsREW}.}
+  \label{fig:REWvsFWHM}
+\end{figure}
+\subsection{Quantified Temporal Evolution of \civ\ Emission}
+Figure~\ref{fig:REWvsFWHM} shows the rest Equivalent Width (REW)
+versus the Full Width Half Maximum (FWHM) of the \civ\ emission line
+in the BOSS DR12 quasar sample using the catalogue of
+\citet{Hamann2017}. 
+
+The velocity offsets of the \civ\ line are also
 approximately constant, and compatible with a single value (within
 3$\sigma$).  The exception is J2228+2201, where a significant change
 ($\sim$7$\sigma$) is observed between the second and third observation
 epochs.
 
-The temporal evolution of the velocity offsets, along with the
-1450\AA\ continuum luminosity and slope, the \civ\ line FWHM
-and virial black hole mass are given in Figure~\ref{fig:QSFit-results}.
-
-
-%% trim={<left> <lower> <right> <upper>}
-\begin{figure*}
-  \centering
- \includegraphics[width=\textwidth, trim={0cm 0 0 0},clip]{figures/CIVregions.png}
-%  \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/spec-2089-53498-0427.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/J1205p3422_58538.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/J1205p3422_58693.png}\\
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/spec-2948-54553-0614.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/spec-5201-55832-0178_v5_10_0.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/J1638p2827_58583.png}\\
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/spec-6118-56189-0720.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/spec-7582-56960-0790.png}
- % \includegraphics[width=.3\textwidth, trim={0cm 0 0 0},clip]{figures/J2228p2201_58693.png}
-  \caption{Observed spectra and best fit model in the region relevant
-    to \civ\ emission line for the quasars considered here.}
-  \label{fig:QSFit-CIV}
-\end{figure*}
 
 \begin{figure*}
   \centering
@@ -612,7 +622,9 @@ and virial black hole mass are given in Figure~\ref{fig:QSFit-results}.
     quasar considered in this work.}
   \label{fig:QSFit-results}
 \end{figure*}
-
+The temporal evolution of the velocity offsets, along with the
+1450\AA\ continuum luminosity and slope, the \civ\ line FWHM
+and virial black hole mass are given in Figure~\ref{fig:QSFit-results}.
 
 \begin{table*}
   \begin{tabular}{l l  ll ll cc r}
@@ -635,7 +647,7 @@ and virial black hole mass are given in Figure~\ref{fig:QSFit-results}.
      \hline
     \hline
   \end{tabular}
-  \caption{Physical properties of the \civ\ CLQs and M87.
+  \caption{Physical properties of the \civ\ CLQs. 
      $M_{\rm I}(z=2)$ is the Absolute $i$-band magnitude $K$-corrected to $z = 2$; Bolometric luminosity computed from the
         monochromatic luminosity at 1350\AA\ using the spectral fits and
         bolometric corrections (BC = 3.81) in \citet{Richards2006b}.
@@ -646,16 +658,17 @@ and virial black hole mass are given in Figure~\ref{fig:QSFit-results}.
 \label{tab:Eddington_ratios} 
 \end{table*}
 
-
 \begin{figure}
   \centering
   \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
-  {figures/CIV_CLQs_Baldwin_20191129.png}
+  {figures/CIV_CLQs_Baldwin_20191130.png}
    \vspace{-12pt}
    \caption[]{The \civ\ Equivalent width and the underlying continuum luminosity,
      commonly referred to as The Baldwin Plot.
      The continuum luminosities are  from \citet{Calderone2017},
-     the REW measurements are Table~\ref{tab:Baldwin}.}
+     the REW measurements are Table~\ref{tab:QSFit-results}.
+     Symbols as in Fig.~\ref{fig:CIV_MBHvsREW}.
+     The dashed red line has slope $\beta=-0.38$.}
   \label{fig:CIV_Baldwin}
 \end{figure}
 \subsection{The \civ\ Baldwin Effect}
@@ -667,16 +680,21 @@ measurements of the Beff for large quasar samples.
 
 There is an anti-correlation between the emission-line REWs and
 e.g. 1450\AA\ rest continuum luminosity, so that as the underlying UV
-continuum luminosity increases, the EW decreses, see
-Figure~\ref{fig:CIV_Baldwin}. This figure effectively reproduces Figure~15 from \citet{Calderone2017}, but where we now
-add the measurements from the 3 \civ\ CLQ quasars at each epoch. 
+continuum luminosity increases, the EW decreses. 
+Figure~\ref{fig:CIV_Baldwin} shows this for a sample (from the QSFit catalogue)
+for 20,374 quasars.  The slope (not shown) is $\beta$ is $-0.1997$.
+This is consistent with \citet{Kozlowski2017}, using their bolometric
+luminosity gives a slope of $\beta=-0.251$ and in line with that from
+\citet[][ $\beta=-0.23$]{Hamann2017}.
 
-The plotted values are \verb|CONT1450__LUM| and
-\verb|BR_CIV_1549__EW|.  \verb|CONT1__LUM| is the $\nu L_{\nu}$
-luminosity at wavelength. This selects 20,374 quasars.  The slope
-$\beta$ is $-0.1997$.  Checking with \citet{Kozlowski2017}, using
-their bolometric luminosity gives a slope of $\beta=-0.251$, in line
-with that from \citet[][ $\beta=-0.23$]{Hamann2017}.
+We add the measurements from the three \civ\ CLQ quasars at each epoch
+to Figure~\ref{fig:CIV_Baldwin}. We see first that all three quasars
+at all three epochs lie on the edge of the $\nu L_{\nu}$-EW
+distribution.  Second, with the exception of J1638+2827 on MJD 55832,
+all the measurements show an {\it intrinsic Baldwin Effect}
+\citep[e.g.][]{Goad2004, Rakic2017}.  The slope of the CLQs intrinsic
+BEff is $\approx-0.38$, as shown by the dashed red line in
+Fig.~\ref{fig:CIV_Baldwin}.
 
 
 
@@ -690,19 +708,13 @@ with that from \citet[][ $\beta=-0.23$]{Hamann2017}.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-  \centering
-  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
-  {figures/CIV_CLQs_REWvsFWHM_20191128.png}
-   \vspace{-12pt}
-  \caption[]{The Rest Equivalent Width (REW) vs. Full Width Half Maximum (FWHM) 
-of the \civ\ emission line in the BOSS DR12 quasar sample using the catalogue 
-of \citet{Hamann2017}. %Note the REW logarithmic scaling.
-}
-  \label{fig:REWvsFWHM}
-\end{figure}
 \section{Discussion}
-\subsection{Continuum and Line Changes}
+\subsection{Continuum and Line Changes: Comparisons to recent Observations}
+The top row of Figure~\ref{fig:QSFit-results} demonstrates that
+both the 1450\AA\ continuum and the \civ\ emission lines can
+exhibit large, $>$$\times$10, changes in luminosity, {\it and}
+that these continuum-line changes track each other. 
+
 \citet{Trakhtenbrot2019} report on the quasar 1ES 1927+654 which was
 initially seenn to lack broad emission lines and line-of-sight
 obscuration, i.e, a ``Type 2'' quasar at redshift $z=0.02$. This
@@ -710,14 +722,14 @@ object is then seen to spectroscopically change with the appearance of
 a blue, featureless continuum, followed by the emergence of broad
 Balmer emission lines.  i.e. this quasar changes into a broad-line
 Type 1 after a raise in the continuum luminosity.  This suggests that
-there is (at least in some cases) a relationship between the continuum
+there is (at least in some cases) a direct relationship between the continuum
 and broad emission lines in CLQs.  A similar scenario may have occured
 for the 3 high-$z$ quasars presented here, although we lack the
 high-cadence multiwavelength, multi-epoch coverage that
 \citet{Trakhtenbrot2019} present.  The multiwavelength data that
 \citet{Trakhtenbrot2019} have includes a UV spectrum of 1ES 1927+654.
-However, there is no evidence for broad UV emission lines, including
-\civ\ , \ciii\ , or \mgii.  The authors attribute the lack of broad UV
+Interestingly, however, there is no evidence for broad UV emission lines, including
+\civ, C\,{\sc iii}, or Mg\,{\sc ii}.  The authors attribute the lack of broad UV
 emission lines to dust within the BLR, noting that to dust in the
 broadline emission region, noting that the continuum emission does not
 show any signs of dust extinction.
@@ -725,17 +737,17 @@ show any signs of dust extinction.
 \citet{MacLeod2019} present a sample of CLQs where the primary
 selection requires large-amplitude ($| \Delta g | > 1$ mag, $| \Delta
 r | > 0.5$ mag) variability over any of the available time baselines
-probed by the SDSS and Pan-STARRS1 surveys.  For our adopted
-signal-to-noise ratio threshold on variability of broad H$\beta$
-emission, they find 17 new CLQs (which is $\sim20$ of the observerd
-sample). These candidates are at lower Eddington ratio relative to the
-overall quasar population, while the CLQ fraction increases from 10\%
-to roughly half, as the continuum flux ratio between repeat spectra at
-3420 \AA\ (rest-frame) increases from 1.5 to 6.  \citet{Homan2019}
+probed by the SDSS and Pan-STARRS1 surveys. They find 17 new CLQs
+which is $\sim$20\% of the observerd sample. This CLQ fraction
+increases from 10\% to roughly half, as the continuum flux ratio
+between repeat spectra at 3420 \AA\ (rest-frame) increases from 1.5 to
+6. \citet{MacLeod2019} note that these candidates are at lower Eddington
+ratio relative to the overall quasar population.
+
+Using the same dataset as and extremely variable quasar sample
+as \citet{MacLeod2019}, \citet{Homan2019}
 investigate the responsiveness of the \mgii broad emission line
-doublet in AGN on timescales of several years.  This study is based on
-a the same extremely variable quasar sample as was used for
-\citet{MacLeod2019}.  By again focussing on quasars that show large
+doublet in AGN on timescales of several years.  By again focussing on quasars that show large
 changes in their optical light-curves, \citet{Homan2019} find that
 \mgii clearly does respond to the continuum.  However, a key finding
 from \citet{Homan2019} is that the degree of responsivity varies
@@ -746,57 +758,22 @@ the behaviour of \mgii corresponds with that of H$\beta$.  However,
 there are also examples of \mgii showing variation, but H$\beta$ does
 not, and vice versa.
 
-%Lower redshift $z<0.9$ CLQs have traditionally been identified via large changes in the  H$\beta$ emission line. H$\beta$ emission is associated with a 2.55 eV energy difference.  Thus we can place the high-$z$, HIL \civ\ in context of Balmer H$\beta$ CLQs at lower-$z$.
+\subsection{Continuum and Line Changes: Comparisons to theoretical expectaions}
+{\bf SF and BM to add a little more here}\\
+The \civ\ line is one of the strongest collisionally excited lines in quasar spectra \citep[e.g.][]{HamannFerland1999}, and \civ\ emission probes the photoionization environment produced by the innermost disk, as indicated by RM time-delay measurements. 
 
-The \civ\ line is one of the strongest collisionally excited lines in quasar
-spectra \citep[e.g.][]{HamannFerland1999}, and 
-\civ\ emission probes the photoionization environment produced by the innermost
-disk, as indicated by RM time-delay measurements.
-%%
-In standard \citet{SS73} 
-thin disk models, large changes in the continuum flux are not
-permitted over short timescales due to the relatively long viscous
-time associated with such disks. Given the observed short timescale
-continuum variations, it is not surprising that the \citet{SS73} disk may fail
-on other fronts. The \civ\ variations observed in our sources... 
-%DO/DO NOT (I can't tell!?! we have to determine this!) fit the Baldwin Effect relationship found by previous authors (cite em again).
+In standard \citet{SS73} thin disk models, large changes in the continuum flux are not permitted over short timescales due to the relatively long viscous time associated with such disks. Given the observed short timescale continuum variations, it is not surprising that the \citet{SS73} disk may fail on other fronts. %The \civ\ variations observed in our sources...
 
-%If they DO fit:
-This indicates they may comfortably fit into the sample of CIV
-variable quasars explored by \citet{Dyer2019}, and similar to those
-authors we suggest slim accretion disk models e.g., 
-\citet[][]{Abramowicz1988} or inhomogeneous disk models
-\citep[e.g.,][]{DexterAgol2011} may provide viable explanations for
-our observations. I want to say a bit more here about the generic
-probe of photoionization vs shielding and conditions in the BL region
-but that will take more time.
+This indicates they may comfortably fit into the sample of \civ\ variable quasars explored by \citet{Dyer2019}, and similar to those authors we suggest slim accretion disk models e.g., \citet[][]{Abramowicz1988} or inhomogeneous disk models
+\citep[e.g.,][]{DexterAgol2011} may provide viable explanations for our observations.
+%% I want to say a bit more here about the generic probe of photoionization vs shielding and conditions in the BL region but that will take more time.
 
-%If they DO NOT fit:
-This implies that the variable \civ\ in our sample arises through
-different emission mechanisms than is usual for high-$z$ quasar...
-%% --and I gotta think more/longer about what else to say here.
 
-%\subsection{The Baldwin Effect}
-The variable properties of the rest-frame UV quasar emission lines
-have been long studied, with the global (or ensemble) Baldwin Effect
-(the anti-correlation between the EW of the emission line and the
-underlying continuum luminosity of single-epoch observations of a
-large number of AGN, first noted in \citet{Baldwin1977}.  More
-recently, the intrinsic Baldwin effect, the same anti-correlation but
-in an individual, variable AGN.  
+\subsection{Implications for The Baldwin Effect}
+The variable properties of the rest-frame UV quasar emission lines have been long studied, with the global (or ensemble) Baldwin Effect (the anti-correlation between the EW of the emission line and the underlying continuum luminosity of single-epoch observations of a large number of AGN, first noted in \citet{Baldwin1977}.  More recently, the intrinsic Baldwin effect, the same anti-correlation but in an individual, variable AGN.  
 
 The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... \citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no change. These trends suggest a luminosity-independent ``Baldwin effect'' in which the physical driver may be the Eddington ratio. \citet{Ge2016} Broad emission lines is a prominent property of Type 1 quasars. 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=8.5cm, trim=0.2cm 0.2cm 0.0cm 0.2cm, clip]
-  {figures/CIV_CLQs_MBHvsREW_QSFit20K.png}
-   \vspace{-12pt}
-   \caption[]{The    \civ\ Equivalent width and the virial black hole masses.}
-  \label{fig:CIV_MBHvsREW}
-\end{figure}
-
-Figure~\ref{fig:CIV_MBHvsREW} shows the  \civ\ Equivalent width and the virial black hole masses.
 
 
 \begin{figure*}
@@ -832,12 +809,10 @@ instability.  Crucially \citet{NodaDone2018} make the prediction that
 all changing-look AGNs are similarly associated with the state
 transition at $L / L_{\rm Edd} \sim$a few per cent.
 
-By comparing the observed correlations between the UV-to-X-ray
-spectral index ($\alpha_{\rm OX}$) and Eddington ratio in AGN to those
+By comparing the observed correlations between the UV/optical-to-X-ray
+spectral index ($\alpha_{\rm ox}$) and Eddington ratio in AGN to those
 predicted from observations of X-ray binary outbursts,
-\citet{Ruan2019a} find %that the observed correlations between the
-($\alpha_{\rm OX}$ and Eddington ratio of that AGN display a
-remarkable similarity to accretion state transitions in prototypical
+\citet{Ruan2019a} find a remarkable similarity to accretion state transitions in prototypical
 X-ray binary outbursts, including an inversion of this correlation at
 a critical Eddington ratio of $\sim$10$^{-2}$ (i.e. at the same ratio
 as motivated by \citet{NodaDone2018}).  These results suggest that the
@@ -849,18 +824,7 @@ accretion states. Using \citet{Ruan2019a} as a guide, there are potentially thre
 (1) a ``High/Soft State'' with $\eta_{\rm Edd} \lesssim -2$.
 These are given as shaded regions in Figure~\ref{fig:Eddington_ratios}.
 
-%%
-\citet{JiangYF2014, JiangYF2016, JiangYF2019}.
-\citet{JiangYF2019arXiv} use global three dimensional radiation
-magneto-hydrodynamic simulations to study the properties of inner
-regions of accretion disks around a $5 \times 10^{8}$ M$_{\odot}$
-black hole with mass accretion rates reaching 7\% and 20\% of the
-Eddington value.
-
-%% We investigate this reporting the Eddington ratios of the three quasars in Table~\ref{tab:Eddington_ratios}.
-
-{\bf Must say something about these objects all being $>10^{9}$ but having
-the quick \civ\ line changes.}
+Building on a previous work \citep[e.g.,][]{JiangYF2014, JiangYF2016, JiangYF2019}, \citet{JiangYF2019arXiv} use global three dimensional radiation magneto-hydrodynamic simulations to study the properties of inner regions of accretion disks around a $5 \times 10^{8}$ M$_{\odot}$ black hole with mass accretion rates reaching 7\% and 20\% of the Eddington value.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -915,7 +879,6 @@ NPR acknowledges support from the STFC and the Ernest Rutherford Fellowship sche
 \noindent
 We thank:
 \begin{list}{$\circ$}{}
-  \item  Dr. Giorgio Calderone for discussions to the utility of the QSFit routine and line measurements. 
   \item Andy Lawrence, Mike Hawkins and David Homan for useful discussion.
 \end{list}
 

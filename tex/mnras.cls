@@ -115,9 +115,6 @@
 % Before we do anything else with layout, ensure that the paper is A4
 \usepackage[a4paper]{geometry}
 
-% Fix several errors with LaTeX2e, including 2-column floats out of order
-\usepackage{fixltx2e}
-
 % Include hyperref, so we can have clickable links
 \usepackage{hyperref}	% Hyperlinks
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}

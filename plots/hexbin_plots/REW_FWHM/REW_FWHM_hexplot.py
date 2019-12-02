@@ -124,7 +124,7 @@ for ii in range(len(CLQs)):
             ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='k',       alpha=alpha, marker='D', s=ms*ms_back)
             ax.scatter( CLQ_REW[ii], CLQ_FWHM[ii], color='fuchsia', alpha=alpha, marker='D', s=ms)
             J12_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
-                       marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
+                       marker="D", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
             
             
     if str(CLQs['Object'][ii]) == 'J1638p2827':
@@ -196,7 +196,7 @@ handles=[boss, J12_53498, J12_58538, J12_58693,
                J16_54553, J16_55832, J16_58583, 
                J22_56189, J22_56960, J22_58693]
 leg = ax.legend(loc='upper right',
-                fontsize=fontsize/1.6, handles=handles, 
+                fontsize=fontsize/1.75, handles=handles, 
                 frameon=True, framealpha=1.0, fancybox=True)
 
 
