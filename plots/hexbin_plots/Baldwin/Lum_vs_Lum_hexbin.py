@@ -20,7 +20,7 @@ cosmo = FlatLambdaCDM(H0=71, Om0=0.27, Tcmb0=2.725)
 
 
 ## Reading in the data
-path      = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/CLQ_line_measurements/'
+path      = '../../../data/CLQ_line_measurements/'
 filename  = 'REW_FWHM.dat'
 CLQs      = ascii.read(path+filename)
 
@@ -36,7 +36,7 @@ log_errREW = np.log10(CLQs['errREW'])
 
 
 ##  Hamann et al. (2017) and Kozłowski (2017) merged BOSS DR12 catalog
-path      = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/QSO_CIV_catalogs/'
+path      = '../../../data/QSO_CIV_catalogs/'
 filename  = 'BOSS_Ham17Koz17_DR12Q.fits'
 infile    = path+filename
 data_full = fits.open(infile)

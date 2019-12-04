@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 import matplotlib.mlab   as mlab
 import matplotlib.lines  as mlines
 
-
 ## Setting up the cosmology
 cosmo = FlatLambdaCDM(H0=71, Om0=0.27, Tcmb0=2.725)                                                                                                                          
 ## Reading in the data
@@ -109,12 +108,15 @@ gridsize  = 200
 color_map = plt.cm.Spectral_r
 
 ##
-## Setting things all up... :-)
+## Setting things all up... 
+## Comment in/out which values you’d like
 ##
-#x = logBH_virial
-#y = log_EW_QSFit
-x = log_tMBH
-y = log_tREW
+## 20K objects::
+x = logBH_virial
+y = log_EW_QSFit
+## 200K objects::
+#x = log_tMBH
+#y = log_tREW
 
 ##
 ##  P L O T T I N G    T H E    D A T A
@@ -170,17 +172,17 @@ for ii in range(len(CLQs)):
         if (CLQs['MJD'][ii] ==  53498):
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='o', s=ms_back)
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='o', s=ms)
-            J12_53498 = mlines.Line2D([], [], label='J1205+3422 (53498)', color='fuchsia',
+            J12_53498 = mlines.Line2D([], [], label=r'J1205+3422 (53498)', color='fuchsia',
                         marker="o", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] ==  58538):
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='s', s=ms)
-            J12_58538 = mlines.Line2D([], [], label='J1205+3422 (58538)', color='fuchsia',
+            J12_58538 = mlines.Line2D([], [], label=r'J1205+3422 (58538)', color='fuchsia',
                         marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] ==  58693):
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='D', s=ms)
-            J12_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='fuchsia',
+            J12_58693 = mlines.Line2D([], [], label=r'J1205+3422 (58693)$^{*}$', color='fuchsia',
                         marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
             
     if str(CLQs['Object'][ii]) == 'J1638p2827':
@@ -204,17 +206,17 @@ for ii in range(len(CLQs)):
         if (CLQs['MJD'][ii] == 56189):
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='k',   alpha=alpha, marker='o', s=ms_back)
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='cyan',alpha=alpha, marker='o', s=ms)
-            J22_56189 = mlines.Line2D([], [], label='J2228+2201 (56189)', color='cyan',
+            J22_56189 = mlines.Line2D([], [], label=r'J2228+2201 (56189)$^{*}$', color='cyan',
                         marker="o", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] == 56960):
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='cyan', alpha=alpha, marker='s', s=ms)
-            J22_56960 = mlines.Line2D([], [], label='J1205+3422 (56960)', color='cyan',
+            J22_56960 = mlines.Line2D([], [], label=r'J2228+2201 (56960)', color='cyan',
                         marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] == 58693):
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
             ax.scatter(CLQs_MBH[ii], CLQs_logREW[ii], color='cyan', alpha=alpha, marker='D', s=ms)
-            J22_58693 = mlines.Line2D([], [], label='J1205+3422 (58693)', color='cyan',
+            J22_58693 = mlines.Line2D([], [], label=r'J2228+2201 (58693)', color='cyan',
                         marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
 
 ##
