@@ -1,0 +1,121 @@
+81c81
+< \citep[e.g.,][]{MatthewsSandage1963}.
+---
+> \citep[e.g.,][]{MatthewsSandage1963}. %MacLeod2012}.
+101d100
+< 
+151,152c150,151
+< collisionally excited broad {\it emission} line (BEL) of \civ\ and
+< indeed \ciii have not to this point been reported.
+---
+> collisionally excited broad {\it emission} line of \civ\ --- and
+> indeed \ciii --- have not to this point been reported.
+184,186c183,184
+< changes in their \civ\ and \ciii broad emission line properties as
+< well as in their underlying continuum. These are some of the first
+< examples of ``Changing Look Quasars'' at high ($z>1$)
+---
+> changes in their \civ\ and \ciii broad emission line properties and underlying continuum. These are some of the first
+> examples of CLQs at high ($z>1$)
+189,191c187,188
+< linking the ionizing photons to the energetic inner accretion disk,
+< potentially by inverse Compton scattering of lower energy photons to
+< higher energies.
+---
+> linking the ionizing photons to the energetic inner accretion disk.
+> % potentially by inverse Compton scattering of lower energy photons to higher energies.
+198,199c195,196
+< required for doubly-ionised C~III to become triply-ionised \civ.
+< 64.49 eV (4.74 Ry) is the energy needed to ionize \civ\ itself. This
+---
+> required for doubly-ionised C\,{\sc iii} to become triply-ionised \civ, and
+> 64.49 eV (4.74 Ry) is needed to ionise \civ\ itself. This
+220,221c217,218
+< equivalent widths (EWs) and luminosity (i.e., the Baldwin Effect;
+< BEff) and {\it (ii)} the blueshifting of the peak of \civ\ emission
+---
+> equivalent widths (EWs) and luminosity (i.e., the Baldwin effect)
+> and {\it (ii)} the blueshifting of the peak of \civ\ emission
+226,227c223,224
+< \citet{Richards2011} find the blueshift of the \civ\ emission line, is
+< found to be nearly ubiquitous, with a mean shift of $V_{\rm off}
+---
+> \citet{Richards2011} find a blueshift of the \civ\ emission line is
+> nearly ubiquitous, with a mean shift of $V_{\rm off}
+230,231c227,228
+< also find the BEff is present in both the RQ and RL studied samples.
+< These author conclude that these two \civ\ parameters (EQW and
+---
+> also find the Baldwin effect is present in both the RQ and RL studied samples.
+> These author conclude that these two \civ\ parameters (EW and
+235c232
+< one dominating over the other depending on the shape of the SED.
+---
+> one dominating over the other depending on the shape of the quasar spectral energy distribution (SED).
+237,239c234,235
+< Using the multi-epoch spectra of 362 quasars from the Sloan Digital
+< Sky Survey Reverberation Mapping \citep[SDSS-RM; ][]{Shen2015,
+< Shen2019} project, \citet{Sun2018} investigate the blueshift of \civ\
+---
+> Using the multi-epoch spectra of 362 quasars from the SDSS Reverberation Mapping project \citep[SDSS-RM; ][]{Shen2015,
+> Shen2019}, \citet{Sun2018} investigate the blueshift of \civ\
+248c244
+< warranted. There is also the finding that the objects with that
+---
+> warranted. They also find that quasars with the
+250,254c246,251
+< ratios. \citet{Sun2018} explain their results these by suggesting that
+< quasar SEDs have weaker X-ray emission (or at least a larger UV/optical-to-Xray
+< spectral index, $\alpha_{\rm ox}$) and thus become {\it
+< softer} with {\it increasing Eddington ratio} along with the presence
+< of X-ray shielding by the inner accretion disk. However, a high
+---
+> ratios. 
+> % \citet{Sun2018} explain their results these by suggesting that
+> % quasar SEDs have weaker X-ray emission (or at least a larger UV/optical-to-Xray
+> % spectral index, $\alpha_{\rm ox}$) and thus become {\it
+> % softer} with {\it increasing Eddington ratio} along with the presence
+> % of X-ray shielding by the inner accretion disk. However, a high
+258,259c255,256
+< quasars at high-redshift ($1.62<z<3.30$) from the SDSS-RM project,
+< which we will compare our results to.
+---
+> quasars at high redshift ($1.62<z<3.30$) from the SDSS-RM project,
+> which we  compare our results to in \S~XXX.
+270,273c267,269
+< sample selection, catalogues, and observational data sets.  In Section
+< 3, we show the high-$z$ quasars and report the line properties for the
+< quasars at the observed epochs.  We give a very brief theoretical
+< discussion in Section 4. We present our conclusions in Section 5.  We
+---
+> sample selection, catalogues, and observational data sets.  Section
+> 3 presents the high-redshift quasars and reports their time-variable line properties.  We provide a brief theoretical
+> discussion in Section 4, and Section~5 presents our conclusions.  We
+276,277c272,273
+< = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for WISE W1 at
+< 3.4$\mu$m and WISE W2 at 4.6$\mu$m, respectively \citep{Cutri2011,
+---
+> = m_{\rm Vega} + m$ where $m = (2.699, 3.339)$ for {\it WISE} W1 
+> (3.4$\mu$m) and W2 (4.6$\mu$m), respectively \citep{Cutri2011,
+803,806c799
+< The \civ\ line is one of the strongest collisionally excited lines in quasar spectra \citep[e.g.][]{HamannFerland1999}, and \civ\ emission probes the photoionisation environment produced by the innermost disk, as indicated by RM time-delay measurements. 
+< 
+< 
+< In standard \citet{SS73} thin disk models, large changes in the continuum flux are not permitted over short timescales due to the relatively long viscous time associated with such disks. Given the observed short timescale continuum variations, it is not surprising that the \citet{SS73} disk may fail on other fronts. %The \civ\ variations observed in our sources...
+---
+> The \civ\ line is one of the strongest collisionally excited lines in quasar spectra \citep[e.g.][]{HamannFerland1999}, and \civ\ emission probes the photoionisation environment produced by the innermost disk, as indicated by RM time-delay measurements.
+808,810c801,804
+< This indicates they may comfortably fit into the sample of \civ\ variable quasars explored by \citet{Dyer2019}, and similar to those authors we suggest slim accretion disk models e.g., \citet[][]{Abramowicz1988} or inhomogeneous disk models
+< \citep[e.g.,][]{DexterAgol2011} may provide viable explanations for our observations.
+< %% I want to say a bit more here about the generic probe of photoionisation vs shielding and conditions in the BL region but that will take more time.
+---
+> In standard \citet{SS73} thin disk models, large changes in the continuum flux are not permitted over short timescales due to the relatively long viscous time associated with such disks. Given the observed short timescale continuum variations, we must consider more complex models. We note that two of our sources (J1205+3422 and J2228+2201) have \civ\ REW and continuum luminosity changes which fall comfortably along a line, implying their variation is consistent with an intrinsic Baldwin Effect (see Fig. \ref{fig:CIV_Baldwin}). That is, the excitation of the \civ\ line is driven by the changes in the continuum; however the excited gas cannot reach an equilibrium excitation state as quickly as the continuum changes, thus the slope of the intrinsic Baldwin Effect line is greater than that of the overall (ensemble) slope, which is derived from many single-epoch observations, the majority of which are assumed to be in equilibrium.
+> The presence of an intrinsic Baldwin Effect implies those sources may comfortably fit into the sample of \civ\ variable quasars explored by \citet{Dyer2019}. Similar to those authors, we consider slim accretion disk models e.g., \citet[][]{Abramowicz1988} which may explain the observed variability. In particular, we note the summary timescales for disk variation in \citet{Stern2018}, which are shorter for taller disks, permitting changes similar to those observed if they are caused by heating or cooling fronts propagating on the disk sound crossing time. \citet{Dyer2019} also consider inhomogeneous disk models
+> \citep[e.g.][]{DexterAgol2011} where flux variations are driven by azimuthal inhomogeneities in the temperature of the disk. Such inhomogeneities could arise from disk instabilities \citep[e.g.][]{LightmanEardley1974} or interactions of embedded objects \citep[e.g.][]{McKernanetal2014,McKernanetal2018}. If an inhomogeneous disk is responsible for the continuum variations, which then drive \civ\ variations, it implies that our objects are simply the extreme outliers produced by a process which rarely but occasionally produces very large hot or cool spots. The frequency of such occurrences can be used to constrain the slope and normalization of the power law distribution of spot size.
+> Finally, we must also consider the disk/wind model which has successfully reproduced many features of quasar \civ\ observations, notably the common blueshifted offset \citep[see e.g.,][]{Murrayetal1995}. In this model \civ is very optically thick at low velocities, but optically thin at high velocity, with $\tau \sim 1$ at $\sim 5000{\rm km/s}$. In a disk wind model, the broad line region is very small, implying short-timescales of variability in the lines. Also in this model, there should be associated strong absorption in the soft X-ray band, which can be tested with follow-up observations with Chandra.
+811a806
+> The foregoing discussion directly applies to the two objects which maintain an intrinsic Baldwin Effect relationship between \civ\ REW and continuum luminosity. However, J1638+2827 clearly does not maintain such a relationship--indeed the continuum and \civ\ REW are at least somewhat correlated, rather than anti-correlated in this source. This implies that the illumination of the \civ\ emitting region by a variable ionizing continuum and the corresponding change in the photoionisation state alone cannot explain the collapse and recovery of the line.
+816c811
+< The X-ray Baldwin Effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... \citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no change. These trends suggest a luminosity-independent ``Baldwin effect'' in which the physical driver may be the Eddington ratio. \citet{Ge2016} Broad emission lines is a prominent property of Type 1 quasars. 
+---
+> The X-ray Baldwin effect \citep[e.g., ][]{Iwasawa_Taniguchi1993}... \citet{Bachev2004} find a 10-fold decrease in EW \civ\ with Eddington ratio (decreasing from $\sim$1 to $\sim$0.01), while \nv shows no change. These trends suggest a luminosity-independent ``Baldwin effect'' in which the physical driver may be the Eddington ratio. \citet{Ge2016} Broad emission lines is a prominent property of Type 1 quasars. 
