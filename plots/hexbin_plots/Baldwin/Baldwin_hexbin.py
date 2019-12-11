@@ -237,14 +237,14 @@ for ii in range(len(CLQs)):
             #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia',xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='s', linewidth=lw)
             ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
             ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='s', s=ms)
-            J12_58538 = mlines.Line2D([], [], label=r'J1205+3422 (58538)', color='fuchsia',
+            J12_58538 = mlines.Line2D([], [], label=r'J1205+3422 (58538)$^{*}$', color='fuchsia',
                         marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] ==  58693):
             #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='k',      xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='D', linewidth=lw*l_back)
             #ax.errorbar(CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia',xerr=CLQs_logREWerr[ii], yerr=CLQs_FWHMerr[ii], fmt='D', linewidth=lw)
             ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
             ax.scatter (CLQs_logContLum[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='D', s=ms)
-            J12_58693 = mlines.Line2D([], [], label=r'J1205+3422 (58693)$^{*}$', color='fuchsia',
+            J12_58693 = mlines.Line2D([], [], label=r'J1205+3422 (58693)', color='fuchsia',
                         marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
             
     if str(CLQs['Object'][ii]) == 'J1638p2827':

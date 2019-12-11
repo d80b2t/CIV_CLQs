@@ -116,8 +116,8 @@ for ii in range(len(CLQs)):
             J12_53498  = mlines.Line2D([], [], label='J1205+3422 (53498)', color='fuchsia',
                        marker="o", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
         if (CLQs_MJD[ii] ==  58538):
-            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',       alpha=alpha, marker='s', s=ms_large*1.6)
-            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='fuchsia', alpha=alpha, marker='s', s=ms_large)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='k',       alpha=alpha, marker='s', s=ms_large*1.6, zorder=10)
+            ax.scatter(CLQs_MJD[ii], CLQs_eta[ii], color='fuchsia', alpha=alpha, marker='s', s=ms_large, zorder=10)
             J12_58538  = mlines.Line2D([], [], label='J1205+3422 (58538)', color='fuchsia',
                        marker="s", markeredgecolor='k', markeredgewidth=1.4, markersize=7,  linestyle='None')
         if (CLQs_MJD[ii] ==  58693):

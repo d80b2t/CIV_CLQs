@@ -70,9 +70,9 @@ infile   = 'DBSP_J1205p3422_b_58538.dat'
 DBSP_b1  = ascii.read(path+infile)
 infile   = 'DBSP_J1205p3422_r_58538.dat'
 DBSP_r1  = ascii.read(path+infile)
-infile   = 'DBSP_J1205p3422_b_58693.dat'
+infile   = 'DBSP_J1205p3422_b_58694.dat'
 DBSP_b2  = ascii.read(path+infile)
-infile   = 'DBSP_J1205p3422_r_58693.dat'
+infile   = 'DBSP_J1205p3422_r_58694.dat'
 DBSP_r2  = ascii.read(path+infile)
 
 ## The Blue and Red arms overlap in wavelength; Blue has better SNR than RED
@@ -260,13 +260,17 @@ ax5.set_xlim([xmin_ax5, xmax_ax5])
 ax5.set_ylim([ymin_ax5, ymax_ax5])
 
 
-## The Spectra curves on the RHS
-ax2.plot(   sdss_wavelength/(1+redshift), sdss_flux,           '-b', lw=linewidth/4.0,  label='SDSS MJD 53498')
-ax2.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux,        '-r', lw=linewidth/4.0,  label='DBSP MJD 58538')
-ax2.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux,        '-r', lw=linewidth/4.0)
 ## Smoothing:: https://joseph-long.com/writing/AstroPy-boxcar/
+DBSP_b1_flux_smoothed = convolve(DBSP_b1_flux, Box1DKernel(5))
+DBSP_r1_flux_smoothed = convolve(DBSP_r1_flux, Box1DKernel(5))
 DBSP_b2_flux_smoothed = convolve(DBSP_b2_flux, Box1DKernel(5))
 DBSP_r2_flux_smoothed = convolve(DBSP_r2_flux, Box1DKernel(5))
+
+
+## The Spectra curves on the RHS
+ax2.plot(   sdss_wavelength/(1+redshift), sdss_flux,           '-b', lw=linewidth/4.0,  label='SDSS MJD 53498')
+ax2.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux_smoothed, '-r', lw=linewidth/4.0,  label='DBSP MJD 58538')
+ax2.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux_smoothed, '-r', lw=linewidth/4.0)
 ax2.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux_smoothed, '-k', lw=linewidth/4.0)
 ax2.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux_smoothed, '-k', lw=linewidth/4.0, label='DBSP MJD 58693')
 for ll in range(len(linelist)):
@@ -279,7 +283,9 @@ for ll in range(len(linelist)):
 ## Just plotting the spectra again, the axes limits take care of the "zoom in"
 ax3.plot(   sdss_wavelength/(1+redshift), sdss_flux,    '-b', lw=linewidth/4.0)
 ax3.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux, '-r', lw=linewidth/4.0)
-ax3.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux_smoothed, '-k', lw=linewidth/4.0)
+ax3.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux, '-k', lw=linewidth/4.0)
+#ax3.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux_smoothed, '-r', lw=linewidth/4.0)
+#ax3.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux_smoothed, '-k', lw=linewidth/4.0)
 for ll in range(len(linelist)):
     ax3.axvline(x=linelist['Wavelength'][ll], color='gray', linestyle='--', linewidth=linewidth/3.4)
     label = linelist['LineName'][ll]
@@ -287,6 +293,8 @@ for ll in range(len(linelist)):
     ax3.annotate(label, xy=xylabel, ha='center', va='center', rotation=90, fontsize=fontsize/1.6 )
 
 ax4.plot(   sdss_wavelength/(1+redshift), sdss_flux,    '-b', lw=linewidth/4.0)
+ax4.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux, '-r', lw=linewidth/4.0)
+ax4.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux, '-k', lw=linewidth/4.0)
 ax4.plot(DBSP_b1_wavelength/(1+redshift), DBSP_b1_flux, '-r', lw=linewidth/4.0)
 ax4.plot(DBSP_b2_wavelength/(1+redshift), DBSP_b2_flux_smoothed, '-k', lw=linewidth/4.0)
 #ax4.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux, '-r', lw=linewidth/4.0)
@@ -299,7 +307,9 @@ for ll in range(len(linelist)):
 
 ax5.plot(   sdss_wavelength/(1+redshift),    sdss_flux,    '-b', lw=linewidth/4.0)
 ax5.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux, '-r', lw=linewidth/4.0)
-ax5.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux_smoothed, '-k', lw=linewidth/4.0)
+ax5.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux, '-k', lw=linewidth/4.0)
+#ax5.plot(DBSP_r1_wavelength/(1+redshift), DBSP_r1_flux_smoothed, '-r', lw=linewidth/4.0)
+#ax5.plot(DBSP_r2_wavelength/(1+redshift), DBSP_r2_flux_smoothed, '-k', lw=linewidth/4.0)
 for ll in range(len(linelist)):
     ax5.axvline(x=linelist['Wavelength'][ll], color='gray', linestyle='--', linewidth=linewidth/3.4)
     label = linelist['LineName'][ll]

@@ -12,8 +12,11 @@ tex/other_tex/*.tex
 tex/older_pdfs/
 tex/older_tex/*.pdf
 tex/CIV_CLQs_DS20191110.tex
+## No need to github the arXiv stuff... (it's available anyway!) 
+tex/arXiv
 
-## Just another place to keep the datafiles
+
+## Just another place to keep the datafilesll
 correspondence/
 
 

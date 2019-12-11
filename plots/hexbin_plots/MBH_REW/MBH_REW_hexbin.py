@@ -151,7 +151,7 @@ ymax =  2.95
 ax.axis([xmin, xmax, ymin, ymax])
 
 ## AXES LABELS
-ax.set_xlabel(r"log$_{10}$(M$_{\rm BH}$)",         fontsize=fontsize)
+ax.set_xlabel(r"log$_{10}$(M$_{\rm BH}$/M$_{\odot}$)",         fontsize=fontsize)
 ax.set_ylabel(r"log$_{10}$(REW CIV / {\rm \AA })", fontsize=fontsize)
 ## AXES TICK FORMAT
 ax.tick_params(axis='both', which='major', labelsize=labelsize)
@@ -177,12 +177,12 @@ for ii in range(len(CLQs)):
         if (CLQs['MJD'][ii] ==  58538):
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='s', s=ms_back)
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='s', s=ms)
-            J12_58538 = mlines.Line2D([], [], label=r'J1205+3422 (58538)', color='fuchsia',
+            J12_58538 = mlines.Line2D([], [], label=r'J1205+3422 (58538)$^{*}$', color='fuchsia',
                         marker="s", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
         if (CLQs['MJD'][ii] ==  58693):
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='k',       alpha=alpha, marker='D', s=ms_back)
             ax.scatter (CLQs_MBH[ii], CLQs_logREW[ii], color='fuchsia', alpha=alpha, marker='D', s=ms)
-            J12_58693 = mlines.Line2D([], [], label=r'J1205+3422 (58693)$^{*}$', color='fuchsia',
+            J12_58693 = mlines.Line2D([], [], label=r'J1205+3422 (58693)', color='fuchsia',
                         marker="D", markeredgecolor='k', markeredgewidth=mrkedwd, markersize=markersize,  linestyle='None')
             
     if str(CLQs['Object'][ii]) == 'J1638p2827':
