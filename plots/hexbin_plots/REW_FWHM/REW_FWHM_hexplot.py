@@ -180,7 +180,7 @@ ax.axis([xmin, xmax, ymin, ymax])
 #ax.set_xlabel(r'log$_{10}$(REW)',         fontsize=fontsize)
 #ax.set_xlabel(r'rest EW / ${ \rm \AA }$', fontsize=fontsize)
 ax.set_xlabel(r'Equiv. Width / ${ \rm \AA }$', fontsize=fontsize)
-ax.set_ylabel(r"FWHM / '000 km s$^{-1}$",      fontsize=fontsize)
+ax.set_ylabel(r"FWHM / 10$^3$ km s$^{-1}$",      fontsize=fontsize)
 
 ## AXES TICK FORMAT
 ax.tick_params(axis='both', which='major', labelsize=labelsize)
