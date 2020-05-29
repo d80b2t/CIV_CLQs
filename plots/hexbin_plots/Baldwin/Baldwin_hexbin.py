@@ -186,7 +186,7 @@ print()
 
 #plt.plot(x, (slope*x + intercept), 'r')
 ## "Fitting", by eye, the the CLQs points
-plt.plot(x, ((-.38*x) + (intercept+1.1)), 'r', linestyle=':', zorder=0)
+## plt.plot(x, ((-.38*x) + (intercept+1.1)), 'r', linestyle=':', zorder=0)
 
 ## for the label...
 slope_str     = str(np.around(slope, decimals=3))

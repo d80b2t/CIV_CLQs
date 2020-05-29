@@ -1,5 +1,12 @@
 
 
+To select the CIV CLQs:
+========================================================================================================
+
+((PLATE == 2089) && (FIBER == 427) && (MJD == 53498))  ||  ((PLATE == 2948) && (FIBER == 614) && (MJD == 54553))
+
+
+
 Combination of Hamann et al. (2017) and Kozłowski (2017).
 
     Hamann et al. (2017) has     216188   objects
