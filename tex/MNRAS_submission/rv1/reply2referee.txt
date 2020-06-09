@@ -1,0 +1,175 @@
+
+		We thank the Review and Scientific Editor for their
+		comments and suggestions.  In particular we thank the
+		Reviewer for a deep reading and thoughtful digestion
+		of the manuscript, which has improved the paper. 
+		
+		We have addressed every point in the Reviewer's report
+		and given our replies as indented text below and changes
+		as bold text in the new paper draft. 
+
+
+Scientific Editor's Comments:
+Dear Authors
+Your paper has a high score for plagiarism, contributed largely from
+self plagiarism in subsections of Section 2 of the manuscript
+(particularly from recent Ross et al al and Graham et al MNRAS papers
+in your bibliography).  Please refer to the plagiarism section in the
+'MNRAS instructions to authors' and correct this before re-submission.
+Regards
+Scientific Editor
+
+	   We have changed the Section 2 text. 
+
+
+Reviewer's Comments:
+This manuscript presents a search for high-redshift changing-look quasars (CLQs) and the discovery of three such objects. These examples extend the luminosity range of CLQs substantially and they also illustrate the behavior of the near-UV portion of the spectrum, which was not possible with lower-redshift examples. The data analysis appears to be fine and the level of the discussion is appropriate for this type of "discovery" paper. Because of the new and interesting results, I believe that this manuscript will warrant publication, eventually. However, I cannot recommend publication just yet because (a) the overall presentation of the results can and should be improved and (b) more attention to detail is needed. 
+
+Below I give extensive and detailed comments and recommendations regarding revisions. A relatively small fraction of my comments concern scientific issues that I recommend be clarified in the manuscript. Other comments concern the presentation of the results, the level of detail included in various sections of the manuscript, citations to the literature, the format and quality of the figures, etc. The comments follow the order of the manuscript. 
+
+
+1. Introduction 
+
+(a) In the 2nd paragraph the beginning of the second sentence seems to be cut off.
+
+       	  This has been corrected. 
+    
+
+(b) In the 6th paragraph (starting with "Details of the atomic transitions...") the authors note some of the lines present in the near-UV spectra of quasars and the ionization energies of the corresponding ions. I am concerned that, as written, this paragraph may be misleading to the non-expert reader and may propagate misconceptions. Most of the strong lines in the near-UV spectrum are collisionally excited (e.g., the C IV 1550 doublet; the He II 1640 recombination line is among the exceptions). Therefore the ionization potential of the C IV ion discussed in this paragraph is much less interesting/relevant than the ionization potential of the C III ion (i.e., the photon energy needed to CREATE the C IV ion). Considering the ions producing strong lines in this spectral region, I would argue that the most noteworthy ionization potential is that of the N IV ion, ~78 eV, since it represents the highest photon energy needed to produce the ions that emit the observed emission lines in the spectral range of interest. Therefore, I would strongly recommend that the authors revise this paragraph to explain the physical significance of the ionization potentials in this particular context more clearly and to simplify the argument they make.
+
+       	  We thank the referee for their very thoughtful notes on this
+	  point. We have changed and updated the text with the comments above
+	  taken into account.
+      
+
+(c) Table 1: This table is rather long-winded and includes a lot of atomic data that do not seem to be used anywhere in the paper, save for some of the ionization potentials mentioned in the 6th paragraph of section 1 (see my previous comment). I would recommend that this table be removed and any information from this table that is useful be included in the main text. In my opinion, as I argue above, the ionization energy of the N IV ion is the main number of interest to the discussion.
+
+      	  We agree with this comment and to help the reader, we have
+	  removed the (confusing) ``Ionization Potential'' column,
+	  while adding a column to the table noting the "Production
+	  Mechanism'' of each emission line. We have a (strong)
+	  preference to retain this table, but leave it as a decision
+	  to the Editor whether to do so.
+
+
+2. CLQ Selection and Line Measurements 
+
+(a) In section 2.2, the authors describe how they selected the initial candidates using the CRTS light curves. I would recommend some additional explanations and clarifications of the selection process, as follows.
+
+(i) I recommend expanding on the the sentence "This allowed us to predict the photometric magnitudes at the epochs of the SDSS spectra for each source." I presume that the damped random walk model was used to INTERPOLATE between adjacent points in the light cure. If so, it would be useful to state that explicitly. It would also be useful to note the uncertainty in this interpolation scheme; this uncertainty is important in developing a criterion for what is an outlier, as the authors do. I would recommend elaborating on this matter by explaining why the specific criterion of |DV| > 0.3 was adopted (by the way, what are the units? magnitudes?).
+
+       We have added text here for clarification. 
+
+
+(ii) In the next sentence, what does "looking for at least a 50% change in magnitude between the two epochs" mean? I presume the authors looked for a fractional difference in FLUX, not MAGNITUDE (a 50% difference in magnitude is not a well-defined measure of variability).
+
+     	Fixed. 
+
+
+(iii) Finally, I would suggest noting how many quasars were selected for visual inspection by the automatic algorithm before the three final candidates were identified. 
+
+        Text has been added here for additional explanation.
+      
+
+(b) Figure 1. -- I found this figure to be rather busy, packed with information, and difficult to read. I would recommend breaking it up into two separate figures, one including the light curves and one including the spectra. In the process of doing so, I would recommend that the authors write the names of the quasars in the corresponding panels and make the fonts considerably larger so that the labels are easier to read (especially the fonts in the sub-panels that zoom in on specific emission lines).
+
+	  We have split the light curve and spectral figures up, have
+	  increased the size of the fonts, and have writen the names
+	  of the quasars in the approriate panels.
+
+
+(c) At the very end of section 2.3 the authors note that they use photometric measurements to set the absolute scale of the non-SDSS spectra. It would be useful to note here the resulting uncertainty in flux calibration and whether this uncertainty was propagated into measurements of the continuum and emission lines from these spectra.
+
+           A sentence has been added here. 
+
+
+(d) Table 3. -- This is an important table because it includes a great deal of useful information for the three high-z CLQs but it can be presented much better. I give here detailed recommendations about this table which are connected to and may duplicate comments I make in other parts of this report.
+- I would recommend including in the text (perhaps in section 2.4) a brief discussion of how the uncertainties in the measured quantities were determined. If these uncertainties are estimated by QSfit, it would suffice to explain very briefly how that is done and refer the reader to the paper that described that code.
+
+	 We have added a paragraph at the end of Section 2.4
+      	 detailing how the uncertainties in the spectral line quantities
+    	 are determined.
+
+
+- Most of the measurements included in this table have too many significant figures. An example (albeit somewhat extreme) are the   properties of the C IV line measured from the MJD 56189 spectrum   (72.8+/-11.3, 14993+/-2400, 828+/-691, 162.89+/-25.37). The uncertainties in these numbers include 3-4 significant figures, which does not seem to be warranted. I would strongly recommend that the authors reconsider this issue very carefully, reduce the number of significant figures in the error bars, and truncate the significant figures in the measurements accordingly.
+
+       	  We have rounded to the appropriate number of significant
+       	  figures and decimal places in Table 3.
+
+
+- It is not clear what is included in the the last column, entitled "virial product." According to the title it could be either the log of the luminosity and FWHM combination or the log of the black hole mass (but these are not the same thing). Incidentally, the term in \nu L_\nu should be written as (\nu L_\nu)^{0.5} (with parentheses). I recommend that the authors clarify what is going on and revise the   heading of this column, after reading my comment 3(c), where I elaborate further on this issue. 
+
+        The final column is in arbitrary units (not solar masses as
+        originally written), with the purpose to check if this value
+        varies significantly across epochs.
+	
+
+- The uncertainties in the virial product may have to be reconsidered or, at least, explained better. Please see my comment 3(d).
+
+       We now note in the text that QSFit takes into account, and
+       propagates accordingly, the uncertainties in the spectrum.
+
+
+(e) The fonts in Figure 2 are very small and difficult to read. I recommend just scaling up the figure and making it occupy the full width of the page; the details and labels will be much easier to see and read that way. 
+
+    	      We've increased the font size for this figure. 
+
+
+3. Results 
+
+(a) In the 3rd and 4th paragraphs of section 3.1 I found a couple of sentences that are difficult to understand because they use terms that are either redundant or incompatible with each other. In the 3rd paragraph there is the phrase "... is very similar in shape and line flux intensity." I recommend changing this to "... is very similar in shape and intensity." In the 4th paragraph there is the phrase "...and the standard UV/blue continuum slope increases in flux." I recommend changing it to "...and the standard UV/blue continuum becomes stronger."
+
+       	   These changes have been made. 
+
+
+(b) In the first paragraph of section 3.2 the authors note that they set E(B-V)=0 in the fitting process. Is this the reddening intrinsic to the quasar or does it also include the reddening in the Milky Way? I presume the latter is known and could (and should) be corrected. 
+
+       We have updated the results (Table 3) and figures (Figs 5, 6
+       and 7) obtained by taking the Milky way extinction values for
+       the three objects into account.
+   
+	   
+(c) Equation (1) in section 3.3. -- This equation, as written, appears to be wrong because the LHS is a log while the RHS is not and there should be constants or calibration factors to connect the black hole mass to the luminosity and FWHM combination. Moreover, the exponent of the luminosity is not exactly 0.5 according to empirical determinations. I would very strongly recommend that the authors correct this equation and revise the relevant discussion. Section 3.7 of the paper by Shen et al. (2011, cited just before equation 1) includes a detailed discussion of the calibration of this relation and several references to the original papers that report the calibration factors. I recommend that the authors begin by consulting that paper and then tracking down the most up-to-date calibration of equation (1), which should be the most appropriate calibration to use here (section 4 of Grier et al. 2019, ApJ, 887, 38 would be a good place to start in order to find the most up-to-date calibrations). The revised text should include appropriate references to the original papers reporting the calibration adopted by the authors.
+
+   	We have added key additional text and references here.
+	
+
+(d) Related to the previous point, there is the issue of uncertainties. The authors note that typical uncertainties in the black hole mass are "~0.5 dex." Is this the uncertainty that applies to the virial product in the last column of Table 3?  Or is this the uncertainty in the mass based on the scatter of the M-sigma relation? I recommend that the authors clarify this issue by writing a footnote in Table 3 and giving appropriate references to the literature therein. 
+
+     	We have added the key additional text here.
+	
+
+(e) Table 4. -- The results reported in this table seem to have too many significant figures. Please see my comments related to Table 3 (item 2d, above). 
+
+    	  Fixed. 
+
+
+(f) The label on the y-axis of Figure 4 has a typographical error (apostrophe instead of "1"). 
+
+    	  Fixed.
+    
+
+(g) There are out of place words in a couple of places in section 3.5 "The slope is \beta is −0.20,..." (the second "is" is superfluous) and "...from the three C iv CLQ quasars at each epoch..." (the word "quasars" is superfluous). 
+
+           Fixed and fixed. 
+
+
+4. Discussion 
+
+(a) I would recommend citing some representative papers to support the statement made in the first sentence of section 4.2 about the lag of the C IV line. The most appropriate papers are those dealing with quasars of comparable luminosity (and probably comparable redshift) as the quasars studied here. I am somewhat skeptical of this statement because the papers that I consulted (e.g., Grier et al. 2019 ApJ, 887, 38 and references therein) suggest that the lag between the C IV line and the continuum are of order 1-2 years, which places the C IV emitting region pretty far from the inner accretion disk.
+
+      	    This text has been (significantly) updated.
+
+
+(b) In the 2nd paragraph of section 4.2 the authors note "That is, the excitation of the C iv line is driven by the changes in the continuum; however, the excited gas cannot reach an equilibrium excitation state as quickly as the continuum changes,..." It took me a while to understand what the authors meant here. In the end I THINK they mean that the light-crossing time of the region that produces the C IV line is substantial, which translates into a delay between the variations of the continuum and the C IV line (and a smoothing of the light curve of the latter). I would strongly recommend that the authors expand this paragraph to make their point clear. I would also recommend citing relevant papers to support their statements (for example, Grier et al. 2019, ApJ, 887, 38 is recent, relevant paper but the authors should look for others too). 
+
+      	    This text has also been updated.
+    
+
+(c) In the second paragraph of section 4.3 the authors note that "However, one thing to note is that radiation pressure should be much more important in AGNs than in stellar mass black hole systems, implying that sound speed is much faster than expected from the gas temperature alone." (I presume this refers to the interior of the disk.) It is not obvious (at least not to me) that this statement is true. The importance of radiation pressure would, presumably, depend on the Eddington ratio and the ionization state of the disk. Perhaps at the temperatures of AGN disks a substantial fraction of metals retain their inner shell electrons, which increases the force multiplier because of bound-bound transitions hence the overall radiation pressure. But this consideration does not preclude a high radiation pressure in the disks of stellar-mass black holes because of other opacity sources.
+
+At any rate, I would strongly recommend that the authors reconsider if this statement is essential to their argument. If it is, I would strongly recommend that they elaborate and clarify what they mean (after checking what is going on in the disks). If it is not, perhaps it can be deleted without affecting the argument.
+
+       	     This statement is not required for our argument and
+       	     discussion here, and as such has been deleted.
+    	   
