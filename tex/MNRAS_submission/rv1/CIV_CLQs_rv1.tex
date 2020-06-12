@@ -498,26 +498,26 @@ emission line is typically used to align spectrophotometry since it is
 spatially extended and not expected to change significantly on human
 timescales \citep[e.g.,][]{Barth2011}. However, due to the
 high-redshift of our quasars, \oiii is not available to us to use for
-scaling the spectra.  Instead, we use photometric data from ZTF since
-our Palomar and Keck data were all taken after MJD 57500.  This
+scaling the spectra.  Instead, we use photometric data from the ZTF
+since our Palomar and Keck data were all taken after MJD 57500.  This
 provides broad-band photometry at the time of the spectroscopy, which
 we use to scale the spectra whose initial calibration is based on
-spectrophotometric standards observed on the same nights.
-{\bf We note the resulting uncertainty in flux calibration is 2-5\%.
-  This uncertainty is not propagated into measurements. 
-}
+spectrophotometric standards observed on the same nights.  {\bf We
+note the resulting uncertainty in flux calibration is 2-5\%.  This
+uncertainty is not propagated into measurements.}
 
 
 \subsection{Emission Line and Power-law Slope Measurements}
-We use the measured quasar emission line properties from several catalogues: 
-\citet{Shen2011}, \citet{Hamann2017}, \citet{Kozlowski2017}, and
-\citet{Calderone2017}.
+We use the measured quasar emission line properties from several
+catalogues: \citet{Shen2011}, \citet{Hamann2017},
+\citet{Kozlowski2017}, and \citet{Calderone2017}.
 
 In particular, we use the Quasar Spectral Fitting (QSFit) software
 package presented in \citet{Calderone2017}. This provides luminosity
-estimates as well as width, velocity offset and EW of 20 emission
-lines, including \civ, \ciii, and \mgii.  We process and fit all nine
-spectra using the lastest version (v1.3.0) of the QSFit
+estimates as well as width, velocity offset and EWs of 20 emission
+lines, including \civ, \ciii, and {Mg\,{\sc ii}}. We process and fit
+all nine spectra (3 quasars with 3 epochs) using the lastest version
+(v1.3.0) of the QSFit
 \href{https://qsfit.inaf.it/cat_1.30/onlinefit.php}{online
 calculator}. The host galaxy and blended iron emission at rest-frame
 optical wavelengths components are automatically disabled when they
@@ -526,21 +526,19 @@ our quasars.  Power-law continuum slopes, $\alpha$, where $f_{\lambda}
 \propto \lambda^{\alpha}$, are also reported in these catalogues and
 from QSFit.
 
-{\bf As described in detail in \citet{Calderone2017}, the
-uncertainties in the measured quantities are determined by two
-methods; a Fisher matrix method and a Monte Carlo resampling method.
-Due to correlations among model parameters, e.g. emission-line
-luminosities and widths, the Fisher matrix method likely
-underestimates the errors.  However, upon investigation, the
-parameters of the involved model components (a power-law for the
-continuum, and a single Lorentzian profile for the emission lines)
-show negligible correlations, hence we use the Fisher matrix method
-to estimate the uncertainties on the model parameters.  Section 2.8.3
-and Appendix B4 of \citet{Calderone2017} gives further details and
-compares the Fisher matrix and Monte Carlo resampling uncertainties
-and distributions.}
+{\bf As described in \citet{Calderone2017}, the uncertainties in the
+measured quantities are determined by two methods; a Fisher matrix
+method and a Monte Carlo resampling method.  One might expect
+correlations among model parameters, e.g. emission-line luminosities
+and widths, and thus the Fisher matrix method to underestimates the
+errors.  However, upon investigation, the parameters of the involved
+model components (a power-law for the continuum, and a single
+Lorentzian profile for the emission lines) show negligible
+correlations, hence we use the Fisher matrix method to estimate the
+uncertainties on the model parameters.  Section 2.8.3 and Appendix B4
+of \citet{Calderone2017} gives further details and compares the Fisher
+matrix and Monte Carlo resampling uncertainties and distributions.}
   
-
 
 
 
@@ -556,55 +554,52 @@ and distributions.}
 \section{Results}
 \subsection{Photometric and Overall Spectral Evolution}
 Figure~\ref{fig:civ_clqs_LCs} presents the optical and mid-infrared light
-curves for three high-redshift CLQ quasars.  Figure~\ref{fig:civ_clqs_LCs}
-also indicates the spectra for each epoch with vertical dashed lines
-in the light curves.
+curves for three high-redshift CLQ quasars.
 
-Figure~\ref{fig:civ_clqs_J12_spec} shows the rest-frame spectra for SDSS J1205+3422.
-For J1205+3422, our spectral observations cover 5195 observed days,
-corresponding to 1691 days in the rest-frame. This quasar was
-initially identified in SDSS in 2005 May as a bright, $g \approx
-18.0$, blue-sloped quasar with broad Si\,{\sc iv}/O\,{\sc iv}, \civ,
-C\,{\sc iii}, and Mg\,{\sc ii}. \ciii\ and \civ\ have large
-blueshifts, $\approx$2600$\pm$150 and $\approx$1150$\pm$100 km s$^{-1}$,
-respectively.  By 2019, however, the optical brightness dropped by
-nearly 2 magnitudes and the spectra are significantly less blue.  \lya
-and \nv are detectable in both 2019 spectra, but is just blueward of
-the wavelength range covered by the original SDSS spectrum. The \civ\
-and \ciii\ lines have faded significantly between the SDSS observation
-in 2005 and the Palomar observations in 2019.  Note that \civ\ is
-extremely faint in the 2019 February spectrum, but that night suffered
-from poor conditions.
+Figure~\ref{fig:civ_clqs_J12_spec} shows the rest-frame spectra for
+SDSS J1205+3422.  For J1205+3422, our spectral observations cover 5195
+observed days, corresponding to 1691 days in the rest-frame. This
+quasar was initially identified in SDSS in 2005 May as a bright, $g
+\approx 18.0$, blue-sloped quasar with broad Si\,{\sc iv}/O\,{\sc iv},
+\civ, C\,{\sc iii}, and Mg\,{\sc ii}.  \civ\ has a blueshift of
+$\approx$580$\pm$80 km s$^{-1}$.  By 2019, however, the optical
+brightness dropped by nearly 2 magnitudes and the spectra are
+significantly less blue.  \lya and \nv are detectable in both 2019
+spectra, but is just blueward of the wavelength range covered by the
+original SDSS spectrum. The \civ\ and \ciii\ lines have faded
+significantly between the SDSS observation in 2005 and the Palomar
+observations in 2019.  Note that \civ\ is extremely faint in the 2019
+February spectrum, but that night suffered from poor conditions.
 
-Figure~\ref{fig:civ_clqs_J16_spec} shows the rest-frame spectra for SDSS J1638+2827.
-For J1638+2827, our spectral observations cover 4030 observed days,
-corresponding to 1265 days in the rest-frame. Here, in the initial
-epoch spectrum, \civ\ is broad and bright, as is C\,{\sc
+Figure~\ref{fig:civ_clqs_J16_spec} shows the rest-frame spectra for
+SDSS J1638+2827.  For J1638+2827, our spectral observations cover 4030
+observed days, corresponding to 1265 days in the rest-frame. Here, in
+the initial epoch spectrum, \civ\ is broad and bright, as is C\,{\sc
 iii}. However, $\approx$400 rest-frame days later, the broad \civ\ and
 \ciii\ emission lines have faded, the continuum slope around 1400\AA\
-has changed from $\approx-1.48$ to $\approx-2.25$, but the \lya/\nv
+has changed from $\approx-1.16$ to $\approx-2.17$, but the \lya/\nv
 emission complex is very similar in shape {\bf and intensity}. Around
 870 days in the rest-frame after the second spectral epoch, at the
 time of the third spectral epoch, the source has brightened from
-optical magnitudes of $\sim 20$ mag to $\sim 18.5$ mag. Ly$\alpha$,
+optical magnitudes of $\sim$20 mag to $\sim$18.5 mag. Ly$\alpha$,
 N\,{\sc v}, \civ, \ciii, and \mgii\ are all apparent and broad, with
 \mgii\ being seen for the first time at high signal-to-noise. An
 absorption feature between \lya and \nv is seen in all three spectral
 epochs.
 
-Figure~\ref{fig:civ_clqs_J22_spec} shows the rest-frame spectra for SDSS J2228+2201.
-For J2228+2201, our spectral observations cover 2504 observed days,
-corresponding to 778 days in the rest-frame. Over the course of 240
-rest-frame days, \civ\ and \ciii\ both {\it emerge} as BELs and {\bf the
-standard UV/blue continuum becomes stronger.}  Then, over the
-course of 538 days in the rest-frame, the broad emission, while still
-very present, reduces in line flux the UV/blue continuum diminishes.
-However, the third epoch still corresponds to a source more luminous
-than the initial BOSS spectrum.
+Figure~\ref{fig:civ_clqs_J22_spec} shows the rest-frame spectra for
+SDSS J2228+2201.  For J2228+2201, our spectral observations cover 2504
+observed days, corresponding to 778 days in the rest-frame. Over the
+course of 240 rest-frame days, \civ\ and \ciii\ both {\it emerge} as
+BELs and {\bf the standard UV/blue continuum becomes stronger.}  Then,
+over the course of 538 days in the rest-frame, the broad emission,
+while still very present, reduces in line flux the UV/blue continuum
+diminishes.  However, the third epoch still corresponds to a source
+more luminous than the initial BOSS spectrum.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=8.40cm, trim=0.37cm 0.3cm 0.0cm 0.2cm, clip]{figures/CIVregions.png}
+  \includegraphics[width=18.40cm, trim=0.37cm 0.3cm 0.0cm 0.2cm, clip]{figures/CIVregions.png}
     \vspace{-18pt}
   \caption{Observed spectra and best fit models of the \civ\ spectral region.
     The solid blue line is the Lorentzian profile fit to the \civ\ emission line.
@@ -612,26 +607,22 @@ than the initial BOSS spectrum.
     line giving the overall fit. The short-dashed vertical lines gives the
     rest wavelengths of the \civ\ doublet. }
   \label{fig:QSFit-CIV}
-\end{figure}
+\end{figure*}
 
 \subsection{\civ\ Emission Line Evolution}
-We analyzed the multi-epoch spectra of the three quasars using the
+We analyse the multi-epoch spectra of the three quasars using the
 QSFit spectral fitting package \citep{Calderone2017}.  One advantage
 of using QSFit is that it allows constraints on the slope and
 luminosity of the broad band continuum of the source. The relevant
 estimated quantities, including continuum luminosity and slope at
 rest-frame 1450\AA, \civ\ line luminosity, FWHM, and EW are given in
-Table~\ref{tab:QSFit-results}.
-{\bf 
-All fits are obtained by taking the Milky Way extinction
-\citep{Schlafly2011} into account.  The extinction values are: $E(B-V)
-=0.013$ for J1205+3422; $E(B-V) =0.034$ for J1638+2827 and $E(B-V)
-=0.041$ for J2228+2201.  as taken from NED (e.g. for
-\href{http://ned.ipac.caltech.edu/cgi-bin/objsearch?search_type=Near+Position+Search&in_csys=Equatorial&in_equinox=J2000.0&lon=12%3A05%3A44.7&lat=%2B34%3A22%3A52.4&radius=0.1&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&z_constraint=Unconstrained&z_value1=&z_value2=&z_unit=z&ot_include=ANY&nmp_op=ANY&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=Distance+to+search+center&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES#GalacticExtinction_0}{J1205+3422}).
-}
-The best fit models
-in the region of the \civ\ emission line are shown in
-Figure~\ref{fig:QSFit-CIV}.
+Table~\ref{tab:QSFit-results}.  {\bf All fits are obtained by taking
+the Milky Way extinction \citep{Schlafly2011} into account.  The
+extinction values are: $E(B-V) =0.013$ for J1205+3422; $E(B-V) =0.034$
+for J1638+2827 and $E(B-V) =0.041$ for J2228+2201.  as taken from the
+\href{http://ned.ipac.caltech.edu/}{NASA/IPAC Extragalactic Database} 
+}. The best fit models in the region of the \civ\ emission line are
+shown in Figure~\ref{fig:QSFit-CIV}.
 
 All \civ\ lines are fitted with a single, broad, Lorentzian profile.
 This allows us to account for the central peak of the \civ\ line.  No
@@ -708,7 +699,7 @@ $z>1.3$ quasars that show significant lag measurements,
 and  $\gamma=0.52\pm0.04$ for their ``gold sample'' of 16 of
 their highest-confidence objects. }
 
-The virial product for the \civ\
+The virial product for the \civ\ 
 CLQs is reported in the last column of Table~\ref{tab:QSFit-results}.
 {\bf Here, since our purpose is to check if this measurement varies significantly
 across epochs, we use $\gamma=0.5$ as the power-law slope and
@@ -742,7 +733,18 @@ masses at all epochs, and towards the extreme of the mass distribution
 for $z\sim2$ quasars.  Figure~\ref{fig:CIV_MBHvsREW} compares the
 \civ\ EW versus the virial SMBH masses for our multi-epoch
 observations to a sample of $\approx$20,000 $z>1.5$ SDSS quasars from
-the QSFit catalog \citep{Calderone2017}.
+the QSFit catalog \citep{Calderone2017}. 
+
+{\bf The values in Table~\ref{tab:QSFit-results} are
+$\approx$0.27-0.30 dex higher than the estimates in
+Table~\label{tab:Eddington_ratios}, which is to be expected given the
+difference of calibrations factors. In fact, the virial products are
+all remarkably constant and compatible with a single black hole mass
+estimate, within the standard 0.5 dex uncertainty, across the 3 epochs
+for all the quasars.  This fact gives us confidence in the line
+fitting methods.}
+
+
 
 \begin{figure}
   \centering
@@ -795,26 +797,31 @@ quasars over the redshift range $1.5 \leq z \leq 7.5$
 
 \begin{table}
   \centering
-  \begin{tabular}{l l l r}
+  \begin{tabular}{l l  cc    l     r}
     \hline
     \hline
-    Object       & MJD & $L_{\rm bol}$&  $\eta_{\rm Edd}$  \\
+\multirow{2}{*}{Object} & \multirow{2}{*}{MJD} & $\log (M/M_{\odot})$ &  $\log (M/M_{\odot})$ & log($L_{\rm bol}$) &  \multirow{2}{*}{$\eta_{\rm Edd}$}  \\
+                                    &                                  &    QSFit                     &   Liter. value                &                             &    \\
     \hline
-                     & 53498 & 47.22     &  $-$0.61   \\
- J1205+3422 & 58538 &  46.07    &   $-$1.76  \\   %% L_Edd (J12)  = 47.82637   for log(M) = 9.726
-                     & 58693 &  46.57    &  $-$1.26  \\                    
+                                    & 53498                        &    9.39                      &  9.49$\pm$0.04$^{\dagger}$   &   47.22                  &  $-$0.61   \\
+ J1205+3422               & 58538                         &    9.78                     &   ---                                        &  46.07                  &   $-$1.76 \\  %% L_Edd (J12)  = 47.82637   for log(M) = 9.726
+                                    & 58693                        &    9.39                      &                                                 &  46.57                &  $-$1.26  \\                    
     \hline 
-                     & 54553 & 46.17   & $-$1.03  \\
-J1638+2827  & 55832 & 45.98   & $-$1.21  \\      %% L_Edd (J16)  = 47.191370  for log(M) = 9.091
-                     & 58583 & 46.50   & $-$0.69   \\
+                                    & 54553                        &   8.84                      &  8.74$\pm$0.15$\dagger$                     & 46.17   & $-$1.03  \\
+J1638+2827                 & 55832                       &    8.80                             &    9.13                                         & 45.98   & $-$1.21  \\      %% L_Edd (J16)  = 47.191370  for log(M) = 9.091
+                                    & 58583                        &   9.01                               &                          & 46.50   & $-$0.69   \\
     \hline 
-                     & 56189  & 46.23  &  $-$1.24 \\
-J2228+2201  & 56960 & 47.34  & $-$0.12  \\      %% L_Edd (J22)  = 47.466370  or log(M) = 9.366
-                     & 58693 & 46.83   &  $-$0.64 \\
+                                     & 56189                       & 8.70                                & 8.73                         & 46.23  &  $-$1.24 \\
+J2228+2201                 & 56960                       &   9.39                                &                         & 47.34  & $-$0.12  \\      %% L_Edd (J22)  = 47.466370  or log(M) = 9.366
+                                     & 58693                      &  8.97                                &                         & 46.83   &  $-$0.64 \\
     \hline
     \hline
   \end{tabular}
-  \caption{Bolometric luminosities are given in either \citet{Shen2011} or
+  \caption{Virial Mass estimates, bolometric luminosities and Eddington ratios for the
+    three quasars. 
+    $\dagger$From \citet{Shen2011} SDSS DR7 Quasar catalog.
+    $\dagger$From \citet{Shen2011} SDSS DR7 Quasar catalog.
+    are given in either \citet{Shen2011} or
     \citet{Kozlowski2017} for the three CLQs. We scale these values using
     our measured $\nu L_{\nu}$ continuum luminosity values.  From
     Section~\ref{sec:BH_masses}, we assume: $\log(M_{\rm BH,
