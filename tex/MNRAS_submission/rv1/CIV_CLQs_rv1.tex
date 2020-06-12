@@ -619,7 +619,7 @@ rest-frame 1450\AA, \civ\ line luminosity, FWHM, and EW are given in
 Table~\ref{tab:QSFit-results}.  {\bf All fits are obtained by taking
 the Milky Way extinction \citep{Schlafly2011} into account.  The
 extinction values are: $E(B-V) =0.013$ for J1205+3422; $E(B-V) =0.034$
-for J1638+2827 and $E(B-V) =0.041$ for J2228+2201.  as taken from the
+for J1638+2827 and $E(B-V) =0.041$ for J2228+2201, as taken from the
 \href{http://ned.ipac.caltech.edu/}{NASA/IPAC Extragalactic Database} 
 }. The best fit models in the region of the \civ\ emission line are
 shown in Figure~\ref{fig:QSFit-CIV}.
@@ -633,7 +633,7 @@ exceeding the usual widths of genuine narrow lines ($\lesssim
 1000$~km~s$^{-1}$). Second, allowing a second component to have such
 large widths would make that component highly degenerate with the
 ``broad'' components, causing the latter to have much larger widths,
-$\sim 10,000$~km~s$^{-1}$.  Finally, neglecting such a narrow
+$\sim$10,000~km~s$^{-1}$.  Finally, neglecting such a narrow
 component ensures a consistent model across all epochs.
 
 Both the quasar continuum (evaluated at 1450\AA), and the \civ\ line
@@ -682,36 +682,56 @@ powering the quasar phenomenon, and that mass is assumed to be
 constant on any human timescale.  Hence it is instructive to check
 whether the virial products, which are the basic quantity used to
 calculate single-epoch black hole mass estimates, show any
-variation. This approach assumes that the broad-line region (BLR) is
-virialized \citep[e.g.][]{Shen2011, Calderone2017}. The continuum
+variation.
+
+This approach assumes that the broad-line region (BLR) is
+virialized \citep[e.g.][]{Shen2011, Calderone2017}.
+{\bf However, the \civ\ line in particular for the broad emission lines is
+observed to have
+line asymmetry due to outflows \citep[e.g.,][]{Gaskell1982}, 
+very strong blueshifts \citep[as mentioned in the Introduction, see ][]{Richards2011},
+and a component of the line profile that does not reverberate \citep[][]{Denney2012}
+blurring the picture of the BH mass estimation.
+With these key cavaets in mind, we acknowledge the black hole mass estimates
+will have a large error, likely $\sim$0.5 dex.
+}
+The continuum
 luminosity provides a proxy for the BLR radius, and the broad-line
 width (FWHM) provides a proxy for the virial velocity.  This ``virial
 mass'' estimate is then expressed as:
 {\bf
 \begin{equation}
-    \log(M) = \log \left[c\left(  \frac{\nu L_\nu}{10^{42} {\rm erg\ s^{-1}}} \right)^{\gamma}  \left( \frac{\rm FWHM}{10^3 {\rm km\ s^{-1}}} \right)^2 \right] + {\rm constant}. 
+%  \log(M) = \log \left[c\left(  \frac{\nu L_\nu}{10^{42} {\rm erg\ s^{-1}}} \right)^{\gamma}  \left( \frac{\rm FWHM}{10^3 {\rm km\ s^{-1}}} \right)^2 \right] + {\rm constant}.
+  \log \left( \frac{M_{\rm BH}}{M_{\odot}} \right)  = a + \log  \left[ \; \left(  \frac{L_{1450}} {10^{44} \; {\rm erg \; s^{-1}}}\right)^{\gamma} \, \right] + 2 \log \left( \frac{\rm {FWHM}}{{\rm km\; s^{-1}}} \right)
+  \label{eqn:virial_masses}
 \end{equation}
-\citet{VestergaardPeterson2006} have $\gamma=0.53$ and the offset as 0.660, 
+\citet{VestergaardPeterson2006} have $\gamma=0.53$ and the offset as $a=0.660$, 
 which is widely adopted \citep[e.g.,][]{Chen2019, Yao2019}.
-\citet{Kozlowski2017} calculate $\gamma=0.53$ and the offset as 0.64. 
+\citet{Kozlowski2017} have similar values \citet{VestergaardPeterson2006} , with $(a,\gamma)=(0.64, 0.53)$,
+but note there is a problem with the FWHMs for \civ\ for those quasars that are reported in
+both the DR7 Quasar catalog and DR12 Quasar catalog.
 \citet{Grier2019} measure a slope of $\gamma=0.51\pm0.05$ for their sample of high-redshift
 $z>1.3$ quasars that show significant lag measurements,
 and  $\gamma=0.52\pm0.04$ for their ``gold sample'' of 16 of
 their highest-confidence objects. }
 
-The virial product for the \civ\ 
-CLQs is reported in the last column of Table~\ref{tab:QSFit-results}.
-{\bf Here, since our purpose is to check if this measurement varies significantly
-across epochs, we use $\gamma=0.5$ as the power-law slope and
-are not directly concerned with the offset.
+We report a virial product for the \civ\ CLQs in the last column of
+Table~\ref{tab:QSFit-results}.  {\bf Since our purpose is to check if
+this measurement varies significantly across epochs, here we use
+$\gamma=0.5$ as the power-law slope and are not directly concerned
+with the offset.
 %%
  The quoted uncertainties account only for the propagation of uncertainties in the continuum luminosities and line widths.  However, typical uncertainties associated to single epoch virial mass are $\sim$~0.5 dex, hence} implying that the virial products for our three
 high-redshift CLQs are all remarkably constant and compatible with
 single black hole masses per source, even in those cases where the
 \civ\ estimates were deemed potentially unreliable. The object showing
-the largest variation is J2228+2201, though even that source only
-spans a range of 0.48~dex.
+the largest variation is J2228+2201, with the BH mass estimate spanning a range of 0.66~dex.
 
+{\bf In Table~\ref{tab:Eddington_ratios} we report the \civ\ Virial masses 
+calculated using equation~\ref{eqn:virial_masses}, the measured luminosites
+and FWHM from QSFit and the \citet{VestergaardPeterson2006} calibrations.
+}
+ %%
 \citet{Shen2011} and \citet{Kozlowski2017} report virial black hole
 masses based on \mgii\ and \civ\ for the SDSS/BOSS observations of our
 targets. For J1205+3422, \citet{Shen2011} report $\log (M_{\rm BH,
@@ -800,29 +820,29 @@ quasars over the redshift range $1.5 \leq z \leq 7.5$
   \begin{tabular}{l l  cc    l     r}
     \hline
     \hline
-\multirow{2}{*}{Object} & \multirow{2}{*}{MJD} & $\log (M/M_{\odot})$ &  $\log (M/M_{\odot})$ & log($L_{\rm bol}$) &  \multirow{2}{*}{$\eta_{\rm Edd}$}  \\
-                                    &                                  &    QSFit                     &   Liter. value                &                             &    \\
+\multirow{2}{*}{Object} & \multirow{2}{*}{MJD} & \multicolumn{2}{c}{$\log (M/M_{\odot})$} & log($L_{\rm bol}$) &  \multirow{2}{*}{$\eta_{\rm Edd}$}  \\
+                                    &                                  &    QSFit               &   Liter. value               &                             &    \\
     \hline
-                                    & 53498                        &    9.39                      &  9.49$\pm$0.04$^{\dagger}$   &   47.22                  &  $-$0.61   \\
- J1205+3422               & 58538                         &    9.78                     &   ---                                        &  46.07                  &   $-$1.76 \\  %% L_Edd (J12)  = 47.82637   for log(M) = 9.726
-                                    & 58693                        &    9.39                      &                                                 &  46.57                &  $-$1.26  \\                    
+                                    & 53498                        &    9.39                &  9.49$\pm$0.04$^{\dagger}$   &   47.22                  &  $-$0.61   \\
+ J1205+3422               & 58538                         &    9.78               &   ---                                        &  46.07                  &   $-$1.76 \\  %% L_Edd (J12)  = 47.82637   for log(M) = 9.726
+                                    & 58693                        &    9.38               &   ---                                               &  46.57                &  $-$1.26  \\                    
     \hline 
-                                    & 54553                        &   8.84                      &  8.74$\pm$0.15$\dagger$                     & 46.17   & $-$1.03  \\
-J1638+2827                 & 55832                       &    8.80                             &    9.13                                         & 45.98   & $-$1.21  \\      %% L_Edd (J16)  = 47.191370  for log(M) = 9.091
-                                    & 58583                        &   9.01                               &                          & 46.50   & $-$0.69   \\
+                                    & 54553                        &   8.84                &  8.74$\pm$0.15$\dagger$                     & 46.17   & $-$1.03  \\
+J1638+2827                 & 55832                       &    8.80                &    9.13$^{\ddagger}$                                         & 45.98   & $-$1.21  \\      %% L_Edd (J16)  = 47.191370  for log(M) = 9.091
+                                    & 58583                        &   9.01                &  ---                         & 46.50   & $-$0.69   \\
     \hline 
-                                     & 56189                       & 8.70                                & 8.73                         & 46.23  &  $-$1.24 \\
-J2228+2201                 & 56960                       &   9.39                                &                         & 47.34  & $-$0.12  \\      %% L_Edd (J22)  = 47.466370  or log(M) = 9.366
-                                     & 58693                      &  8.97                                &                         & 46.83   &  $-$0.64 \\
+                                     & 56189                       & 8.70                 & 8.73$^{\ddagger}$                         & 46.23  &  $-$1.24 \\
+J2228+2201                 & 56960                       &  9.39                &   ---                       & 47.34  & $-$0.12  \\      %% L_Edd (J22)  = 47.466370  or log(M) = 9.366
+                                     & 58693                      &  8.97                    &    ---                      & 46.83   &  $-$0.64 \\
     \hline
     \hline
   \end{tabular}
   \caption{Virial Mass estimates, bolometric luminosities and Eddington ratios for the
     three quasars. 
-    $\dagger$From \citet{Shen2011} SDSS DR7 Quasar catalog.
-    $\dagger$From \citet{Shen2011} SDSS DR7 Quasar catalog.
-    are given in either \citet{Shen2011} or
-    \citet{Kozlowski2017} for the three CLQs. We scale these values using
+    $\dagger$From the \citet{Shen2011} SDSS DR7 Quasar catalog.
+    $\ddagger$From the \citet{Kozlowski2017} SDSS-III BOSS DR12 quasar catalog.
+%    are given in either \citet{Shen2011} or    \citet{Kozlowski2017} for the three CLQs.
+    We scale these values using
     our measured $\nu L_{\nu}$ continuum luminosity values.  From
     Section~\ref{sec:BH_masses}, we assume: $\log(M_{\rm BH,
       vir}/M_{\odot}) = 9.726$ for J1205+3422; $\log(M_{\rm BH,
