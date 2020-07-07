@@ -9,6 +9,7 @@
 		as bold text in the new paper draft. 
 
 
+
 Scientific Editor's Comments:
 Dear Authors
 Your paper has a high score for plagiarism, contributed largely from
@@ -19,7 +20,8 @@ in your bibliography).  Please refer to the plagiarism section in the
 Regards
 Scientific Editor
 
-	   We have changed the Section 2 text. 
+	   We have changed and corrected the Section 2 text.
+   
 
 
 Reviewer's Comments:
@@ -37,19 +39,16 @@ Below I give extensive and detailed comments and recommendations regarding revis
 
 (b) In the 6th paragraph (starting with "Details of the atomic transitions...") the authors note some of the lines present in the near-UV spectra of quasars and the ionization energies of the corresponding ions. I am concerned that, as written, this paragraph may be misleading to the non-expert reader and may propagate misconceptions. Most of the strong lines in the near-UV spectrum are collisionally excited (e.g., the C IV 1550 doublet; the He II 1640 recombination line is among the exceptions). Therefore the ionization potential of the C IV ion discussed in this paragraph is much less interesting/relevant than the ionization potential of the C III ion (i.e., the photon energy needed to CREATE the C IV ion). Considering the ions producing strong lines in this spectral region, I would argue that the most noteworthy ionization potential is that of the N IV ion, ~78 eV, since it represents the highest photon energy needed to produce the ions that emit the observed emission lines in the spectral range of interest. Therefore, I would strongly recommend that the authors revise this paragraph to explain the physical significance of the ionization potentials in this particular context more clearly and to simplify the argument they make.
 
-       	  We thank the referee for their very thoughtful notes on this
-	  point. We have changed and updated the text with the comments above
+       	  We thank the referee for their very thoughtful notes on this point.
+	  We have changed and updated the text with the comments above
 	  taken into account.
       
 
 (c) Table 1: This table is rather long-winded and includes a lot of atomic data that do not seem to be used anywhere in the paper, save for some of the ionization potentials mentioned in the 6th paragraph of section 1 (see my previous comment). I would recommend that this table be removed and any information from this table that is useful be included in the main text. In my opinion, as I argue above, the ionization energy of the N IV ion is the main number of interest to the discussion.
 
-      	  We agree with this comment and to help the reader, we have
-	  removed the (confusing) ``Ionization Potential'' column,
-	  while adding a column to the table noting the "Production
-	  Mechanism'' of each emission line. We have a (strong)
-	  preference to retain this table, but leave it as a decision
-	  to the Editor whether to do so.
+      	  We agree with this comment and to help the reader, in Table 1 we have removed the confusing ``Ionization Potential'' column,
+	  while adding a column to the table noting the "Production Mechanism'' of each emission line.
+	  We have a strong preference to retain this table, but leave it as a decision to the Editor as to whether to do so.
 
 
 2. CLQ Selection and Line Measurements 
@@ -73,9 +72,8 @@ Below I give extensive and detailed comments and recommendations regarding revis
 
 (b) Figure 1. -- I found this figure to be rather busy, packed with information, and difficult to read. I would recommend breaking it up into two separate figures, one including the light curves and one including the spectra. In the process of doing so, I would recommend that the authors write the names of the quasars in the corresponding panels and make the fonts considerably larger so that the labels are easier to read (especially the fonts in the sub-panels that zoom in on specific emission lines).
 
-	  We have split the light curve and spectral figures up, have
-	  increased the size of the fonts, and have writen the names
-	  of the quasars in the approriate panels.
+	 As suggested, we have split the light curve and spectral figures up, increased the size of the fonts,
+         and have writen the names of the quasars in the approriate panels.
 
 
 (c) At the very end of section 2.3 the authors note that they use photometric measurements to set the absolute scale of the non-SDSS spectra. It would be useful to note here the resulting uncertainty in flux calibration and whether this uncertainty was propagated into measurements of the continuum and emission lines from these spectra.
@@ -86,9 +84,8 @@ Below I give extensive and detailed comments and recommendations regarding revis
 (d) Table 3. -- This is an important table because it includes a great deal of useful information for the three high-z CLQs but it can be presented much better. I give here detailed recommendations about this table which are connected to and may duplicate comments I make in other parts of this report.
 - I would recommend including in the text (perhaps in section 2.4) a brief discussion of how the uncertainties in the measured quantities were determined. If these uncertainties are estimated by QSfit, it would suffice to explain very briefly how that is done and refer the reader to the paper that described that code.
 
-	 We have added a paragraph at the end of Section 2.4
-      	 detailing how the uncertainties in the spectral line quantities
-    	 are determined.
+	 We have added a paragraph at the end of Section 2.4 detailing how
+	 the uncertainties in the spectral line quantities are determined.
 
 
 - Most of the measurements included in this table have too many significant figures. An example (albeit somewhat extreme) are the   properties of the C IV line measured from the MJD 56189 spectrum   (72.8+/-11.3, 14993+/-2400, 828+/-691, 162.89+/-25.37). The uncertainties in these numbers include 3-4 significant figures, which does not seem to be warranted. I would strongly recommend that the authors reconsider this issue very carefully, reduce the number of significant figures in the error bars, and truncate the significant figures in the measurements accordingly.
@@ -99,7 +96,7 @@ Below I give extensive and detailed comments and recommendations regarding revis
 
 - It is not clear what is included in the the last column, entitled "virial product." According to the title it could be either the log of the luminosity and FWHM combination or the log of the black hole mass (but these are not the same thing). Incidentally, the term in \nu L_\nu should be written as (\nu L_\nu)^{0.5} (with parentheses). I recommend that the authors clarify what is going on and revise the   heading of this column, after reading my comment 3(c), where I elaborate further on this issue. 
 
-        The final column is in arbitrary units (not solar masses as
+        The final column is in arbitrary units (not solar masses as 
         originally written), with the purpose to check if this value
         varies significantly across epochs.
 	
@@ -131,7 +128,8 @@ Below I give extensive and detailed comments and recommendations regarding revis
 	   
 (c) Equation (1) in section 3.3. -- This equation, as written, appears to be wrong because the LHS is a log while the RHS is not and there should be constants or calibration factors to connect the black hole mass to the luminosity and FWHM combination. Moreover, the exponent of the luminosity is not exactly 0.5 according to empirical determinations. I would very strongly recommend that the authors correct this equation and revise the relevant discussion. Section 3.7 of the paper by Shen et al. (2011, cited just before equation 1) includes a detailed discussion of the calibration of this relation and several references to the original papers that report the calibration factors. I recommend that the authors begin by consulting that paper and then tracking down the most up-to-date calibration of equation (1), which should be the most appropriate calibration to use here (section 4 of Grier et al. 2019, ApJ, 887, 38 would be a good place to start in order to find the most up-to-date calibrations). The revised text should include appropriate references to the original papers reporting the calibration adopted by the authors.
 
-   	We have added key additional text and references here.
+   	Yes, this is an excellent point. We have updated and corrected the equation
+	and revised the relevant discussion, adding key text and references here.
 	
 
 (d) Related to the previous point, there is the issue of uncertainties. The authors note that typical uncertainties in the black hole mass are "~0.5 dex." Is this the uncertainty that applies to the virial product in the last column of Table 3?  Or is this the uncertainty in the mass based on the scatter of the M-sigma relation? I recommend that the authors clarify this issue by writing a footnote in Table 3 and giving appropriate references to the literature therein. 
