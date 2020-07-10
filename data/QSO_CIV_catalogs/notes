@@ -38,6 +38,15 @@ C4N5REWs_DR12v11_MNRAS.fits
 ((plate == 2089) && (MJD == 53498) && (FiberID == 427))
 
 
+((plate == 2948) && (MJD == 54553) && (Fiber == 614))
+||
+((plate == 5201) && (MJD == 55832) && (Fiber == 178))
+||
+((plate == 6118) && (MJD == 56189) && (Fiber == 720))
+||
+((plate == 7582) && (MJD == 56960) && (Fiber == 790))
+||
+((plate == 2089) && (MJD == 53498) && (Fiber == 427))
 
 
 ((RAdeg > 181.436) && (RAdeg < 181.437) && (DECLdeg > 34.381) && (DECLdeg < 34.382))

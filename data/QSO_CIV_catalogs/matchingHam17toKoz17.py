@@ -47,13 +47,39 @@ Koz17_table.remove_column('IVAR_PSFFLUX')
 Koz17_table.remove_column('PSFMAG')
 Koz17_table.remove_column('ERR_PSFMAG')
 
+
+## Some nice DataFrame polish/manipulation
 Koz17_df    = DataFrame(np.array(Koz17_table))
 print('len(Koz17_df)', len(Koz17_df))
 
-## COlumns names are case senstive!
+## Columns names are case senstive!
 Koz17_df.rename(columns={'SDSS_NAME':'sdss_name'}, inplace=True)              
 
 ## Testing on a wee bit of the DataFrame...
 mini_merge = pd.merge(Ham17_df[0:100], Koz17_df[0:100], on="sdss_name")
 
 The_DF = pd.merge(Ham17_df, Koz17_df, on="sdss_name")
+
+
+## Just wanting to write a few things out to a simple text file. 
+file1 = open("temp.txt","w+") 
+    
+#for ii in range(len(Koz17)):     # if the full catalog is wanted!  
+for ii in range(100):
+    print(ii)
+
+    name        = Ham17[np.where((Koz17['SDSS_NAME'][ii]  == Ham17['SDSS_NAME']))]['SDSS_NAME']
+    REW         = Ham17[np.where((Koz17['SDSS_NAME'][ii]  == Ham17['SDSS_NAME']))]['rew']
+    bal_flag_vi = Ham17[np.where((Koz17['SDSS_NAME'][ii]  == Ham17['SDSS_NAME']))]['bal_flag_vi']
+    f1450       = Ham17[np.where((Koz17['SDSS_NAME'][ii]  == Ham17['SDSS_NAME']))]['f1450']
+    
+    if (len(name) > 0 and  bal_flag_vi <1) :
+        #print(ii, Koz17['SDSS_NAME'][ii], name, REW, f1450)
+        file1.write(str(ii)+str(Koz17['SDSS_NAME'][ii])+str(we_name)+str(we_rew))
+        file1.write(" {} {} {}  {} {} {}  {} {} {}  \n".format(ii, name, Koz17['RA'][ii], Koz17['DEC'][ii],
+                                                    #bal_flag_vi,
+                                                    REW, f1450, 
+                                                    Koz17['L1350'][ii], Koz17['LBol'][ii], #Koz17['eLBol'][ii],
+                                                    Koz17['nEdd'][ii]))
+file1.close() 
+

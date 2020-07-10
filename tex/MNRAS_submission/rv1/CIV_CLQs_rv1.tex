@@ -730,45 +730,42 @@ in those cases where the \civ\ estimates were deemed potentially
 unreliable. The object showing the largest variation is J2228+2201,
 with the BH mass estimate spanning a range of 0.66~dex.
 
-{\bf In Table~\ref{tab:Eddington_ratios} we report the \civ\ Virial
-masses calculated using equation~\ref{eqn:virial_masses}, the measured
-luminosites and FWHM from QSFit and the
+{\bf In Table~\ref{tab:Eddington_ratios} we report the \civ\ virial
+  masses calculated using the measured
+luminosites and FWHM from QSFit, equation~\ref{eqn:virial_masses} and the
 \citet{VestergaardPeterson2006} calibrations.} \citet{Shen2011} and
 \citet{Kozlowski2017} report virial black hole masses based on \mgii\
 and \civ\ for the SDSS/BOSS observations of our targets. For
 J1205+3422 (and MJD 53498), \citet{Shen2011} report $\log (M_{\rm BH, MgII}/M_{\odot})
 = 9.55 \pm 0.05$ and $\log(M_{\rm BH, CIV}/M_{\odot}) = 9.49 \pm
-0.04$.
-
-
-
-We use the mean of five values --- three from our three epochs
-and two from \citet{Shen2011} --- to calculate an adopted SMBH mass of
-$\log (M_{\rm BH, vir}/M_{\odot}) = 9.73$ for J1205+3422.  J1638+2827
-also has two virial mass measurements from \citet{Shen2011}, as well
-as two measurements from \citet{Kozlowski2017}. The mean mass
-measurement adopted for J1638+2827 is $\log(M_{\rm BH, vir}/M_{\odot}
-= 9.09$. For J2228+2201, there are two \citet{Kozlowski2017}
-measurements, leading to a mean adopted mass of $\log(M_{\rm BH,
-vir}/M_{\odot} = 9.37$. We use these mean SMBH masses when calculating
-the Eddington ratios.
-
-From the virial mass estimates, all our objects have SMBH masses
-$M_{\rm BH} >10^{9} M_{\odot}$.  This is at the upper end of SMBH
-masses at all epochs, and towards the extreme of the mass distribution
-for $z\sim2$ quasars.  Figure~\ref{fig:CIV_MBHvsREW} compares the
-\civ\ EW versus the virial SMBH masses for our multi-epoch
-observations to a sample of $\approx$20,000 $z>1.5$ SDSS quasars from
-the QSFit catalog \citep{Calderone2017}.
+0.04$, while for J1638+2827 (MJD 54553) \citet{Shen2011} report 
+$\log (M_{\rm BH, MgII}/M_{\odot}) = 9.03 \pm 0.37$ and
+$\log(M_{\rm BH, CIV}/M_{\odot}) = 8.74 \pm 0.15$.
 
 {\bf The values in Table~\ref{tab:QSFit-results} are
-$\approx$0.27-0.30 dex higher than the estimates in
-Table~\label{tab:Eddington_ratios}, which is to be expected given the
+$\approx$0.3 dex higher than the estimates in
+Table~\ref{tab:Eddington_ratios}, which is to be expected given the
 difference of calibrations factors. In fact, the virial products are
 all remarkably constant and compatible with a single black hole mass
 estimate, within the standard 0.5 dex uncertainty, across the 3 epochs
 for all the quasars.  This fact gives us confidence in the line
 fitting methods.}
+
+From the virial mass estimates, all our objects have SMBH masses $M_{\rm BH} >10^{9} M_{\odot}$.  This is at the upper end of SMBH masses at all epochs, and towards the extreme of the mass distribution for $z\sim2$ quasars.  Figure~\ref{fig:CIV_MBHvsREW} compares the luminosity \civ\ EW versus the virial SMBH masses for our multi-epoch 
+observations to a sample of $\approx$20,000 $z>1.5$ SDSS quasars from
+the QSFit catalog \citep{Calderone2017}.
+
+{\bf With the black hole masses in hand, we can calculate the Eddington luminosities of 
+the three quasars. To be consistent with 
+For the Bolometric luminosity, $L_{\rm Bol}$, \citet{Shen2011} and 
+\citet{Kozlowski2017} use the bolometric corrections of BC$_{1350}$ = 3.81 
+from the composite spectral energy distribution (SED) in \citet{Richards2006b}.
+
+We report the black hole \civ\ virial masses, the bolometric luminosities
+and the Eddington ratios ($\eta=\log(L_{}/L_{Edd})$ in Table~\ref{tab:Eddington_ratios}. 
+}
+
+%We use the mean of five values --- three from our three epochs and two from \citet{Shen2011} --- to calculate an adopted SMBH mass of $\log (M_{\rm BH, vir}/M_{\odot}) = 9.73$ for J1205+3422.  J1638+2827 also has two virial mass measurements from \citet{Shen2011}, as well as two measurements from \citet{Kozlowski2017}. The mean mass measurement adopted for J1638+2827 is $\log(M_{\rm BH, vir}/M_{\odot} = 9.09$. For J2228+2201, there are two \citet{Kozlowski2017} measurements, leading to a mean adopted mass of $\log(M_{\rm BH, vir}/M_{\odot} = 9.37$. We use these mean SMBH masses when calculating the Eddington ratios.
 
 
 
@@ -820,26 +817,33 @@ quasars over the redshift range $1.5 \leq z \leq 7.5$
   \label{fig:QSFit-results}
 \end{figure*}
 
-
+%%
+%%  These values are generated using the 
+%%
 \begin{table}
   \centering
-  \begin{tabular}{l l  cc    l     r}
+  \begin{tabular}{l l  cc         r}
     \hline
     \hline
-\multirow{2}{*}{Object} & \multirow{2}{*}{MJD} & \multicolumn{2}{c}{$\log (M/M_{\odot})$} & log($L_{\rm bol}$) &  \multirow{2}{*}{$\eta_{\rm Edd}$}  \\
-                                    &                                  &    QSFit               &   Liter. value               &                             &    \\
+                      &                  &                                      &                              & \\
+Object            & MJD           &  $\log (M/M_{\odot})$  & log($L_{\rm bol}$)  &  $\eta_{\rm Edd}$  \\
+                      &                  &                                      &                              & \\
     \hline
-                                    & 53498                        &    9.39                &  9.49$\pm$0.04$^{\dagger}$   &   47.22                  &  $-$0.61   \\
- J1205+3422               & 58538                         &    9.78               &   ---                                        &  46.07                  &   $-$1.76 \\  %% L_Edd (J12)  = 47.82637   for log(M) = 9.726
-                                    & 58693                        &    9.38               &   ---                                               &  46.57                &  $-$1.26  \\                    
-    \hline 
-                                    & 54553                        &   8.84                &  8.74$\pm$0.15$\dagger$                     & 46.17   & $-$1.03  \\
-J1638+2827                 & 55832                       &    8.80                &    9.13$^{\ddagger}$                                         & 45.98   & $-$1.21  \\      %% L_Edd (J16)  = 47.191370  for log(M) = 9.091
-                                    & 58583                        &   9.01                &  ---                         & 46.50   & $-$0.69   \\
-    \hline 
-                                     & 56189                       & 8.70                 & 8.73$^{\ddagger}$                         & 46.23  &  $-$1.24 \\
-J2228+2201                 & 56960                       &  9.39                &   ---                       & 47.34  & $-$0.12  \\      %% L_Edd (J22)  = 47.466370  or log(M) = 9.366
-                                     & 58693                      &  8.97                    &    ---                      & 46.83   &  $-$0.64 \\
+                      & $^{\dagger }$53498  &  9.49              &  47.22                  &  -0.378   \\
+                      & 53498                      &    9.39            &                    &  $-$0.61   \\
+ J1205+3422 & 58538                       &    9.78           &                      &   $-$1.76 \\  
+                     & 58693                         &    9.38          &                   &  $-$1.26  \\                    
+    \hline
+                     & $^{\dagger }$54553    &  8.74            &  46.17   & $-$0.677  \\
+                     & 54553                         &   8.84                 &             & $-$1.03  \\
+J1638+2827  & $^{\ddagger }$55832  &    9.13                  & 45.98   & $-$1.21  \\      
+                      & 55832                        &   8.80                  & 45.98   & $-$1.21  \\     
+                      & 58583                        &   9.01                  & 46.50   & $-$0.69   \\
+    \hline
+                         & $^{\ddagger }$56189   & 8.73                  & 46.23  &  $-$1.24 \\
+                         & 56189                         & 8.70                  & 46.23  &  $-$1.24 \\
+J2228+2201     & 56960                          &  9.39               & 47.34  & $-$0.12  \\      
+                         & 58693                         &  8.97               & 46.83   &  $-$0.64 \\
     \hline
     \hline
   \end{tabular}
