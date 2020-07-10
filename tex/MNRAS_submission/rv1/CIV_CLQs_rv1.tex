@@ -646,13 +646,13 @@ distinct emerging component is responsible for both the slope and
 luminosity variations.  In J1638+2827 the opposite behaviour is
 observed, especially in the first observation epoch.  However, this
 may be a bias due to the limited wavelength range available which
-extends to rest-frame $\lambda \sim 1240$~\AA\ for the first epoch,
+extends to rest-frame $\lambda$$\sim$1240~\AA\ for the first epoch,
 while it extend to shorter wavelengths for the other epochs
-(respectively ~\AA\ and 1010~\AA).  This suggests that the emerging
+(respectively 1100~\AA\ and 1010~\AA).  This suggests that the emerging
 component is more prominent at UV wavelengths, and a sufficient
 wavelength coverage is required to detect it. In all cases where the
 \civ\ line profile is reliably constrained, we find that the \civ\
-FWHM is approximately constant with maximum variations $\lesssim 1000$
+FWHM is approximately constant with maximum variations $\lesssim$1000 
 km s$^{-1}$, despite significantly larger line luminosity variations.
 
 \begin{figure}
@@ -681,25 +681,22 @@ powering the quasar phenomenon, and that mass is assumed to be
 constant on any human timescale.  Hence it is instructive to check
 whether the virial products, which are the basic quantity used to
 calculate single-epoch black hole mass estimates, show any
-variation.
-
-The continuum
-luminosity provides a proxy for the BLR radius, and the broad-line
-width (FWHM) provides a proxy for the virial velocity.  This ``virial
-mass'' estimate is then expressed as:
+variation. The continuum luminosity provides a proxy for the BLR
+radius, and the broad-line width (FWHM) provides a proxy for the
+virial velocity. This approach assumes that the broad-line region
+(BLR) is virialized \citep[e.g.][]{Shen2008b, Shen2011, Calderone2017,
+Mejia-Restrepo2018} and the virial mass estimate is then:
 {\bf
 \begin{equation}
 %  \log(M) = \log \left[c\left(  \frac{\nu L_\nu}{10^{42} {\rm erg\ s^{-1}}} \right)^{\gamma}  \left( \frac{\rm FWHM}{10^3 {\rm km\ s^{-1}}} \right)^2 \right] + {\rm constant}.
   \log \left( \frac{M_{\rm BH}}{M_{\odot}} \right)  = a + \log  \left[ \; \left(  \frac{L_{1450}} {10^{44} \; {\rm erg \; s^{-1}}}\right)^{\gamma} \, \right] + 2 \log \left( \frac{\rm {FWHM}}{{\rm km\; s^{-1}}} \right)
   \label{eqn:virial_masses}
 \end{equation}
-where $L_{1450}$ is the monochromatic (continuum) luminosity at 1450\AA\,
+where $L_{1450}$ is the monochromatic continuum luminosity at 1450\AA\,
 and FWHM is the full width at half-maximum of the broad \civ\ emission line.
 The coefficient $\gamma$ and offset $a$ are generally deteremined empirically. 
 
-This approach assumes that the broad-line region (BLR) is virialized
-\citep[e.g.][]{Shen2008b, Shen2011, Calderone2017,
-Mejia-Restrepo2018}.  {\bf However, the \civ\ line is observed to have
+ {\bf The \civ\ line is observed to have
 line asymmetry due to outflows \citep[e.g.,][]{Gaskell1982}, very
 strong blueshifts \citep[as mentioned in the Introduction, see
 ][]{Richards2011}, and a component of the line profile that does not
@@ -711,7 +708,7 @@ into improving \civ-based single-epoch black hole mass estimates. With
 these cavaets in mind, we acknowledge the BH mass estimates will have
 a large error, likely $\sim$0.5 dex. }
 
-We report a virial product for the \civ\ CLQs in the last column of
+We report the virial product for the \civ\ CLQs in the last column of
 Table~\ref{tab:QSFit-results}.  {\bf Since our purpose is to check if
 this measurement varies significantly across epochs, here we use
 $\gamma=0.5$ as the power-law slope and are not directly concerned
@@ -725,8 +722,9 @@ in those cases where the \civ\ estimates were deemed potentially
 unreliable. The object showing the largest variation is J2228+2201,
 with the BH mass estimate spanning a range of 0.66~dex.
 
-\citet{VestergaardPeterson2006} have $\gamma=0.53$ and the offset as $a=0.660$, 
-which is widely adopted \citep[e.g.,][]{Chen2019, Yao2019}.
+For Equation~\ref{eqn:virial_masses}., \citet{VestergaardPeterson2006}
+measure $\gamma=0.53$ and the offset as $a=0.660$, and these estimates
+are widely adopted \citep[e.g.,][]{Shen2011, Chen2019, Yao2019}.
 \citet{Kozlowski2017} have similar values \citet{VestergaardPeterson2006} , with $(a,\gamma)=(0.64, 0.53)$,
 but note there is a problem with the FWHMs for \civ\ for those quasars that are reported in
 both the DR7 Quasar catalog and DR12 Quasar catalog.
@@ -756,21 +754,20 @@ estimate, within the standard 0.5 dex uncertainty, across the 3 epochs
 for all the quasars.  This fact gives us confidence in the line
 fitting methods.}
 
-From the virial mass estimates, all our objects have SMBH masses $M_{\rm BH} >10^{9} M_{\odot}$.  This is at the upper end of SMBH masses at all epochs, and towards the extreme of the mass distribution for $z\sim2$ quasars.  Figure~\ref{fig:CIV_MBHvsREW} compares the luminosity \civ\ EW versus the virial SMBH masses for our multi-epoch 
+From the virial mass estimates, all our objects have SMBH masses $M_{\rm BH} \approx 500\times10^{8} M_{\odot}$.  This is at the upper end of SMBH masses at all epochs, and towards the extreme of the mass distribution for $z\sim2$ quasars.  Figure~\ref{fig:CIV_MBHvsREW} compares the luminosity \civ\ EW versus the virial SMBH masses for our multi-epoch 
 observations to a sample of $\approx$20,000 $z>1.5$ SDSS quasars from
 the QSFit catalog \citep{Calderone2017}.
 
-{\bf With the black hole masses in hand, we can calculate the Eddington luminosities of 
-the three quasars. To be consistent with 
-For the Bolometric luminosity, $L_{\rm Bol}$, \citet{Shen2011} and 
-\citet{Kozlowski2017} use the bolometric corrections of BC$_{1350}$ = 3.81 
-from the composite spectral energy distribution (SED) in \citet{Richards2006b}.
+{\bf With the black hole masses in hand, we can calculate the
+Eddington luminosities of the three quasars. To be consistent with For
+the Bolometric luminosity, $L_{\rm Bol}$, \citet{Shen2011} and
+\citet{Kozlowski2017} use the bolometric corrections of BC$_{1350}$ =
+3.81 (from the composite spectral energy distribution (SED) in
+\citet{Richards2006b}) and to be consistent with those measurements we
+adopt the same correction.  We report the the bolometric luminosities
+and the Eddington ratios, $\eta=\log(L_{}/L_{Edd})$, in
+Table~\ref{tab:Eddington_ratios}.  }
 
-We report the black hole \civ\ virial masses, the bolometric luminosities
-and the Eddington ratios ($\eta=\log(L_{}/L_{Edd})$ in Table~\ref{tab:Eddington_ratios}. 
-}
-
-%We use the mean of five values --- three from our three epochs and two from \citet{Shen2011} --- to calculate an adopted SMBH mass of $\log (M_{\rm BH, vir}/M_{\odot}) = 9.73$ for J1205+3422.  J1638+2827 also has two virial mass measurements from \citet{Shen2011}, as well as two measurements from \citet{Kozlowski2017}. The mean mass measurement adopted for J1638+2827 is $\log(M_{\rm BH, vir}/M_{\odot} = 9.09$. For J2228+2201, there are two \citet{Kozlowski2017} measurements, leading to a mean adopted mass of $\log(M_{\rm BH, vir}/M_{\odot} = 9.37$. We use these mean SMBH masses when calculating the Eddington ratios.
 
 
 
@@ -827,43 +824,38 @@ quasars over the redshift range $1.5 \leq z \leq 7.5$
 %%
 \begin{table}
   \centering
-  \begin{tabular}{l l  cc         r}
+  \begin{tabular}{l c cc l}
     \hline
     \hline
-                      &                  &                                      &                              & \\
-Object            & MJD           &  $\log (M/M_{\odot})$  & log($L_{\rm bol}$)  &  $\eta_{\rm Edd}$  \\
-                      &                  &                                      &                              & \\
+                      &                 &                                     &                               & \\
+Object            & MJD          &  $\log (M/M_{\odot})$  & log($L_{\rm bol}$)    &  $\eta_{\rm Edd}$  \\
+                      &                 &                                     &                               & \\
     \hline
-                      & $^{\dagger }$53498  &  9.49              &  47.22                  &  -0.378   \\
-                      & 53498                      &    9.39            &                    &  $-$0.61   \\
- J1205+3422 & 58538                       &    9.78           &                      &   $-$1.76 \\  
-                     & 58693                         &    9.38          &                   &  $-$1.26  \\                    
+\multirow{4}{*}{J1205+3422} & 53498          &   9.49$^{\dagger }$   &   47.22$^{\dagger }$  & $-$0.38$^{\dagger }$   \\
+                                             &  53498        &   9.39                       &   47.20                      & $-$0.61   \\
+                                             & $^{*}$58538  &   9.78                       &  46.03                      & $-$1.84 \\  
+                                             & 58693            &  9.38                       &  46.54                      &  $-$0.95  \\                    
     \hline
-                     & $^{\dagger }$54553    &  8.74            &  46.17   & $-$0.677  \\
-                     & 54553                         &   8.84                 &             & $-$1.03  \\
-J1638+2827  & $^{\ddagger }$55832  &    9.13                  & 45.98   & $-$1.21  \\      
-                      & 55832                        &   8.80                  & 45.98   & $-$1.21  \\     
-                      & 58583                        &   9.01                  & 46.50   & $-$0.69   \\
+\multirow{5}{*}{J1638+2827} & 54553            & 8.74$^{\dagger }$     &  46.17$^{\dagger }$   & $-$0.68$^{\dagger }$  \\
+                                              & 54553            & 8.84                        &   46.19    & $-$0.75  \\
+                                             & 55832           & 9.13$^{\ddagger }$  &    46.72    & $-$0.72$^{\ddagger }$  \\      
+                                             & 55832          & 8.80                         &   45.99    & $-$0.91 \\     
+                                             & 58583           & 9.01                        &    46.52    & $-$0.60   \\
     \hline
-                         & $^{\ddagger }$56189   & 8.73                  & 46.23  &  $-$1.24 \\
-                         & 56189                         & 8.70                  & 46.23  &  $-$1.24 \\
-J2228+2201     & 56960                          &  9.39               & 47.34  & $-$0.12  \\      
-                         & 58693                         &  8.97               & 46.83   &  $-$0.64 \\
+\multirow{4}{*}{ J2228+2201} & 56189         & 8.73$^{\ddagger }$ & 46.23$^{\ddagger }$  &  $-$1.32$^{\ddagger }$ \\
+                                              &  56189      & 8.70                       & 45.51                        &  $-$1.29 \\
+                                              & 56960         &  9.39                      &  46.54                        & $-$0.95  \\      
+                                              & 58693          &  8.97                      & 46.03                         &  $-$1.05 \\
     \hline
     \hline
   \end{tabular}
   \caption{The \civ\ virial mass estimates, bolometric luminosities and Eddington ratios for the
     three quasars.
-    The virial masses are calculated using the measured monochromatic luminosites and FWHM
-    $\dagger$From the \citet{Shen2011} SDSS DR7 Quasar catalog.
-    $\ddagger$From the \citet{Kozlowski2017} SDSS-III BOSS DR12 quasar catalog.
-%    are given in either \citet{Shen2011} or    \citet{Kozlowski2017} for the three CLQs.
-    We scale these values using
-    our measured $\nu L_{\nu}$ continuum luminosity values.  From
-    Section~\ref{sec:BH_masses}, we assume: $\log(M_{\rm BH,
-      vir}/M_{\odot}) = 9.726$ for J1205+3422; $\log(M_{\rm BH,
-      vir}/M_{\odot}) = 9.091$ for J1638+2827, and $\log(M_{\rm BH,
-      vir}/M_{\odot}) = 9.366$ for J2228+2201.  The Eddington luminosity
+    The virial masses are calculated using the measured 1450\AA\ monochromatic luminosites and \civ\ FWHM
+    as reported by QSFit, with $^{*}$ designating low SNR line measurements.
+        $\dagger$Values from the \citet{Shen2011} SDSS DR7 Quasar catalog.
+    $\ddagger$Values from the \citet{Kozlowski2017} SDSS-III BOSS DR12 quasar catalog.
+    The Eddington luminosity is 
     $L_{\rm Edd} = 1.26\times10^{38} (M_{\rm BH}/M_{\odot})$ erg s$^{-1}$
     and $\eta_{\rm Edd}$ is the log of the Eddington ratio.}
 \label{tab:Eddington_ratios} 
@@ -980,23 +972,19 @@ propagating through the disk.
 
 \subsection{Continuum and Line Changes: Comparisons to Theoretical Expectations}\label{sec:theory}
 The \civ\ line is one of the strongest collisionally excited lines in
-quasar spectra \citep[e.g.,][]{HamannFerland1999}.
-{\bf Early measurements from e.g., 
-  \citet{PoggePeterson1992} and \citet{Peterson1997book}, 
-  using the well-studied Seyfert galaxy NGC 5548,
-  suggested the location of \civ\ emission was 
-%  probes the photoionisation environment
-  produced by the innermost disk, with the line emission
-  responding to the underlying continuum emission in only
-  a matter of $\sim$ 8 days. 
-as indicated by reverberation mapping time-delay measurements.
-%{\bf (a) I would recommend citing some representative papers to support the statement made in the first sentence of section 4.2 about the lag of the C IV line. The most appropriate papers are those dealing with quasars of comparable luminosity (and probably comparable redshift) as the quasars studied here. I am somewhat skeptical of this statement because the papers that I consulted.}
-However, more recent measurements from e.g. \citet[][and references therein]{Grier2019},
-suggest that the lag between the \civ\ line and the continuum are of order $>100$ observed-frame days. 
-which would place the \civ emitting region far from the inner accretion disk.
-Importantly, many quasars in the \citet{Grier2019} sample are of
-comparable redshift and luminosity to SDSS J1205+3422, J1638+2827, and J2228+2201.}
-
+quasar spectra \citep[e.g.,][]{HamannFerland1999}.  {\bf Early
+measurements from e.g., \citet{PoggePeterson1992} and
+\citet{Peterson1997book}, using the well-studied Seyfert galaxy NGC
+5548, suggested the location of \civ\ emission was produced by the
+innermost disk, with the line emission responding to the underlying
+continuum emission in only a matter of $\sim$8 days.  as indicated by
+reverberation mapping time-delay measurements.  However, more recent
+measurements from e.g. \citet[][and references therein]{Grier2019},
+suggest that the lag between the \civ\ line and the continuum are of
+order $>100$ observed-frame days.  which would place the \civ emitting
+region far from the inner accretion disk.  Importantly, many quasars
+in the \citet{Grier2019} sample are of comparable redshift and
+luminosity to SDSS J1205+3422, J1638+2827, and J2228+2201.}
 
 In standard \citet{SS73} thin disk models, large changes in the
 continuum flux are not permitted over short timescales due to the
@@ -1018,7 +1006,6 @@ This makes the slope of the intrinsic Baldwin effect greater than that
 of the overall ensemble slope, which is derived from many single-epoch
 observations, the majority of which are assumed to be in equilibrium.
 {\bf \citet{Grier2019}, }
-
 
 The presence of an intrinsic Baldwin effect implies those sources may
 comfortably fit into the sample of \civ\ variable quasars explored by
@@ -1091,17 +1078,16 @@ spectral continuum model, and a common feature among Type~1 AGN --
 produces most of the ionizing photons, so its dramatic drop can lead
 to the disappearance of the broad-line region, driving the
 changing-look phenomena. \citet{NodaDone2018} go on to make a
-connection between state changes in Galactic binaries and CLQs.
-%
-In Galactic binaries spectral hardening
-corresponds to the soft-to-hard state transition in black hole
-binaries, which occurs at $L / L_{\rm Edd} \sim 0.02$ (i.e.,
-$\eta_{\rm Edd} \sim -1.7$).  During this state transition, the inner
-disc evaporates into an advection-dominated accretion flow, while the
-overall drop in luminosity appears consistent with the hydrogen
-ionisation disc instability.  \citet{NodaDone2018} predict that
-changing-look AGNs are similarly associated with state transitions at
-$L / L_{\rm Edd}$ of a few percent.
+connection between state changes in Galactic binaries and CLQs.  In
+Galactic binaries spectral hardening corresponds to the soft-to-hard
+state transition in black hole binaries, which occurs at $L / L_{\rm
+Edd} \sim 0.02$ (i.e., $\eta_{\rm Edd} \sim -1.7$).  During this state
+transition, the inner disc evaporates into an advection-dominated
+accretion flow, while the overall drop in luminosity appears
+consistent with the hydrogen ionisation disc instability.
+\citet{NodaDone2018} predict that changing-look AGNs are similarly
+associated with state transitions at $L / L_{\rm Edd}$ of a few
+percent.
 
 Comparing observed correlations between the optical-to-X-ray spectral
 index (i.e., $\alpha_{\rm ox}$) and Eddington ratio in AGN to those

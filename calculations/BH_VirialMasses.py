@@ -72,7 +72,6 @@ log_LBolerr_J12  = 0.004262343930953705
 log_BHmass_J12   = 9.493502740592843      ##   LOGBH_CIV_VP06 from Shen et al. (2011)
 
 log_LEdd_J12     = np.log10(1.26e38)+log_BHmass_J12    ## ``For pure ionized hydrogen''
-
 log_EddRatio_J12 = -0.3782675304606329
 
 ## Values from QSFit
@@ -97,19 +96,19 @@ log_MBH_VP06_CIV_J12   = a_VP06_CIV  + np.log10(( 10**log_L1350_J12 /1e44)**b_VP
 print('\n\n\n')
 print('  J 1 2 0 5  + 3 4 2 2   ')
 print()
-print('log_MBH_MD04_MgII_J12::  ', log_MBH_MD04_MgII_J12, '  vs. ', LOGBH_MGII_MD04_J12_Shen11 ,' in Shen et al. (2011)')
-print('log_MBH_VO09_MgII_J12::  ', log_MBH_VO09_MgII_J12, '  vs. ', LOGBH_MGII_VO09_J12_Shen11 ,' in Shen et al. (2011)')
-print('log_MBH_S10_MgII_J12::   ', log_MBH_S10_MgII_J12,  '  vs. ', LOGBH_MGII_S10_J12_Shen11  ,' in Shen et al. (2011)')
-print('log_MBH_VP06_CIV_J12::   ', log_MBH_VP06_CIV_J12,  '  vs. ', LOGBH_CIV_VP06_J12_Shen11  ,' in Shen et al. (2011)')
+print('log_MBH_MD04_MgII_J12::  ', log_MBH_MD04_MgII_J12, '  vs. ', LOGBH_MGII_MD04_J12_Shen11 ,' in Shen et al. (2011)', '     ', ((10**log_MBH_MD04_MgII_J12)/(10**LOGBH_MGII_MD04_J12_Shen11)*100), 'per cent')
+print('log_MBH_VO09_MgII_J12::  ', log_MBH_VO09_MgII_J12, '  vs. ', LOGBH_MGII_VO09_J12_Shen11 ,' in Shen et al. (2011)', '     ', ((10**log_MBH_VO09_MgII_J12)/(10**LOGBH_MGII_VO09_J12_Shen11)*100), 'per cent')
+print('log_MBH_S10_MgII_J12::   ', log_MBH_S10_MgII_J12,  '  vs. ', LOGBH_MGII_S10_J12_Shen11  ,' in Shen et al. (2011)', '     ', ((10**log_MBH_S10_MgII_J12)/(10**LOGBH_MGII_S10_J12_Shen11)*100), 'per cent')
+print('log_MBH_VP06_CIV_J12::   ', log_MBH_VP06_CIV_J12,  '  vs. ', LOGBH_CIV_VP06_J12_Shen11  ,' in Shen et al. (2011)', '     ', ((10**log_MBH_VP06_CIV_J12)/(10**LOGBH_CIV_VP06_J12_Shen11)*100), 'per cent')
 print()
-print(' From Shen et al. (2011), log(L_CIV)               =', log_LCIV_J12,  '% of L_bol  = ', (10**(log_LCIV_J12  - log_LBol_J12))*100.   )
-print(' From Shen et al. (2011), log(log_L1350)           =', log_L1350_J12, '% of L_bol  = ', (10**(log_L1350_J12 - log_LBol_J12))*100.   )
-print(' From Shen et al. (2011), log(L_bol)               =', log_LBol_J12,  '% of L_bol  = ', (10**(log_LBol_J12  - log_LBol_J12))*100.   )
+print(' From Shen et al. (2011), log(L_CIV)             =', log_LCIV_J12,  'which is ', (10**(log_LCIV_J12  - log_LBol_J12))*100., '% of L_bol ')
+print(' From Shen et al. (2011), log(log_L1350)         =', log_L1350_J12, 'which is ', (10**(log_L1350_J12 - log_LBol_J12))*100., '% of L_bol ')
+print(' From Shen et al. (2011), log(L_bol)             =', log_LBol_J12,  'which is ', (10**(log_LBol_J12  - log_LBol_J12))*100., '% of L_bol ')
 print(' From Shen et al. (2011), ``final'' log(BH_mass)   =', log_BHmass_J12)
 print(' ==> ')
 print(' L_Edd = (4pi.G.M.m_p.c) / sigma_T = 1.26x10^38(M/Msol) erg/s = ', log_LEdd_J12)
 print()
-print(' LEdd / Lbol = ', log_LBol_J12/log_LEdd_J12, ' and log10(L_Edd) = ', np.log10((10**log_LBol_J12)/(10**log_LEdd_J12)), ', vs ', log_EddRatio_J12, 'in Shen et al. (2011)')
+print(' Lbol / LEdd = ', log_LBol_J12/log_LEdd_J12, ' and log10(L_Bol / L_Edd) = ', np.log10((10**log_LBol_J12)/(10**log_LEdd_J12)), ', vs ', log_EddRatio_J12, 'in Shen et al. (2011)')
 print()
 
 log_MBH_QSFit_J12_1st  = a_VP06_CIV  + np.log10(( 10**log_L1450_J12_1st /1e44)**b_VP06_CIV) + (2*np.log10(FWHM_CIV_J12_1st))
@@ -138,7 +137,7 @@ log_LBol_J12_3rd = log_L1450_J12_3rd + 0.5809249756756216
 
 print()
 print('J12 1st epoch ::  log_LBol = ', log_LBol_J12_1st  ,' and LEdd = ', log_LEdd_J12_1st, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J12_1st)/(10**log_LEdd_J12_1st)))	
-print('J12 2nd epoch ::  log_LBol = ', log_LBol_J12_2nd  ,' and LEdd = ', log_LEdd_J12_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J12_2nd)/(10**log_LEdd_J12_1st)))	
+print('J12 2nd epoch ::  log_LBol = ', log_LBol_J12_2nd  ,' and LEdd = ', log_LEdd_J12_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J12_2nd)/(10**log_LEdd_J12_2nd)))	
 print('J12 3rd epoch ::  log_LBol = ', log_LBol_J12_3rd  ,' and LEdd = ', log_LEdd_J12_3rd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J12_3rd)/(10**log_LEdd_J12_3rd)))	
 print()
 print('\n\n\n')
@@ -210,10 +209,10 @@ print()
 print()
 print('   J 1 6 3 8 + 2 8 2 7   ')
 print()
-print('log_MBH_MD04_MgII_J16::  ', log_MBH_MD04_MgII_J16, ' vs. ', LOGBH_MGII_MD04_J16_Shen11 ,' in Shen et al. (2011)')
-print('log_MBH_VO09_MgII_J16::  ', log_MBH_VO09_MgII_J16, ' vs. ', LOGBH_MGII_VO09_J16_Shen11 ,' in Shen et al. (2011)')
-print('log_MBH_S10_MgII_J16 ::  ', log_MBH_S10_MgII_J16,  ' vs. ', LOGBH_MGII_S10_J16_Shen11  ,' in Shen et al. (2011)')
-print('log_MBH_VP06_CIV_J16 ::  ', log_MBH_VP06_CIV_J16,  ' vs. ', LOGBH_CIV_VP06_J16_Shen11  ,' in Shen et al. (2011)')
+print('log_MBH_MD04_MgII_J16::  ', log_MBH_MD04_MgII_J16, '  vs. ', LOGBH_MGII_MD04_J16_Shen11 ,' in Shen et al. (2011)', '     ', ((10**log_MBH_MD04_MgII_J16)/(10**LOGBH_MGII_MD04_J16_Shen11)*100), 'per cent')
+print('log_MBH_VO09_MgII_J16::  ', log_MBH_VO09_MgII_J16, ' vs. ', LOGBH_MGII_VO09_J16_Shen11 ,' in Shen et al. (2011)' , '     ', ((10**log_MBH_VO09_MgII_J16)/(10**LOGBH_MGII_VO09_J16_Shen11)*100), 'per cent')
+print('log_MBH_S10_MgII_J16 ::  ', log_MBH_S10_MgII_J16,  '  vs. ', LOGBH_MGII_S10_J16_Shen11  ,' in Shen et al. (2011)', '     ', ((10**log_MBH_S10_MgII_J16)/(10**LOGBH_MGII_S10_J16_Shen11)*100), 'per cent')
+print('log_MBH_VP06_CIV_J16 ::  ', log_MBH_VP06_CIV_J16,  ' vs. ', LOGBH_CIV_VP06_J16_Shen11  ,' in Shen et al. (2011)' , '     ', ((10**log_MBH_VP06_CIV_J16)/(10**LOGBH_CIV_VP06_J16_Shen11)*100), 'per cent')
 print()
 print(' From Shen et al. (2011), log(L_CIV)       =', log_LCIV_J16,  ' which is ', (10**(log_LCIV_J16 -log_LBol_J16))*100., ' % of L_bol')
 print(' From Shen et al. (2011), log(log_L1350)   =', log_L1350_J16, ' which is ', (10**(log_L1350_J16-log_LBol_J16))*100., ' % of L_bol')
@@ -263,7 +262,7 @@ log_LBol_J16_3rd = log_L1450_J16_3rd + 0.5809249756756216
 
 print()
 print('J16 1st epoch ::  log_LBol = ', log_LBol_J16_1st  ,' and LEdd = ', log_LEdd_J16_1st, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J16_1st)/(10**log_LEdd_J16_1st)))	
-print('J16 2nd epoch ::  log_LBol = ', log_LBol_J16_2nd  ,' and LEdd = ', log_LEdd_J16_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J16_2nd)/(10**log_LEdd_J16_1st)))	
+print('J16 2nd epoch ::  log_LBol = ', log_LBol_J16_2nd  ,' and LEdd = ', log_LEdd_J16_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J16_2nd)/(10**log_LEdd_J16_2nd)))	
 print('J16 3rd epoch ::  log_LBol = ', log_LBol_J16_3rd  ,' and LEdd = ', log_LEdd_J16_3rd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J16_3rd)/(10**log_LEdd_J16_3rd)))	
 print()
 print('\n\n\n')
@@ -285,12 +284,12 @@ log_eta_J22_Koz17      = -1.317	  ##  no error reported
 log_LEdd_J22 = np.log10( 1.26e38) + log_MBH_CIV_J22_Koz17
 
 ## Values from QSFit
-log_L1450_J22_1st = 44.93449845124357
-log_L1450_J22_2nd = 45.961421094066445
-log_L1450_J22_3rd = 45.44870631990508
-FWHM_CIV_J22_1st = 5930.
-FWHM_CIV_J22_2nd = 7000.
-FWHM_CIV_J22_3rd = 5930.
+log_L1450_J22_1st = 44.932980821923195    ## log10((857   *1e42))   
+log_L1450_J22_2nd = 45.96127867908504     ## log10((9147   *1e42))   
+log_L1450_J22_3rd = 45.44861357808562     ## log10((2809.4   *1e42))    
+FWHM_CIV_J22_1st = 5930.     ## \pm  990
+FWHM_CIV_J22_2nd = 7000.     ## \pm  200 
+FWHM_CIV_J22_3rd = 5932.      ## \pm  200 
 
 ### Hmmmm, this is where is gets tricky and
 ### the (CIV) FWHMs seem to differ between
@@ -341,7 +340,7 @@ log_LBol_J22_3rd = log_L1450_J22_3rd + 0.5809249756756216
 
 print()
 print('J22 1st epoch ::  log_LBol = ', log_LBol_J22_1st  ,' and LEdd = ', log_LEdd_J22_1st, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J22_1st)/(10**log_LEdd_J22_1st)))	
-print('J22 2nd epoch ::  log_LBol = ', log_LBol_J22_2nd  ,' and LEdd = ', log_LEdd_J22_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J22_2nd)/(10**log_LEdd_J22_1st)))	
+print('J22 2nd epoch ::  log_LBol = ', log_LBol_J22_2nd  ,' and LEdd = ', log_LEdd_J22_2nd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J22_2nd)/(10**log_LEdd_J22_2nd)))	
 print('J22 3rd epoch ::  log_LBol = ', log_LBol_J22_3rd  ,' and LEdd = ', log_LEdd_J22_3rd, ' and  eta =log10(L_Bol/L_Edd) = ', np.log10((10**log_LBol_J22_3rd)/(10**log_LEdd_J22_3rd)))	
 print()
 
