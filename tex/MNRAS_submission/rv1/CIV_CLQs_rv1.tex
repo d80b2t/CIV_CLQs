@@ -681,7 +681,21 @@ powering the quasar phenomenon, and that mass is assumed to be
 constant on any human timescale.  Hence it is instructive to check
 whether the virial products, which are the basic quantity used to
 calculate single-epoch black hole mass estimates, show any
-variation. 
+variation.
+
+The continuum
+luminosity provides a proxy for the BLR radius, and the broad-line
+width (FWHM) provides a proxy for the virial velocity.  This ``virial
+mass'' estimate is then expressed as:
+{\bf
+\begin{equation}
+%  \log(M) = \log \left[c\left(  \frac{\nu L_\nu}{10^{42} {\rm erg\ s^{-1}}} \right)^{\gamma}  \left( \frac{\rm FWHM}{10^3 {\rm km\ s^{-1}}} \right)^2 \right] + {\rm constant}.
+  \log \left( \frac{M_{\rm BH}}{M_{\odot}} \right)  = a + \log  \left[ \; \left(  \frac{L_{1450}} {10^{44} \; {\rm erg \; s^{-1}}}\right)^{\gamma} \, \right] + 2 \log \left( \frac{\rm {FWHM}}{{\rm km\; s^{-1}}} \right)
+  \label{eqn:virial_masses}
+\end{equation}
+where $L_{1450}$ is the monochromatic (continuum) luminosity at 1450\AA\,
+and FWHM is the full width at half-maximum of the broad \civ\ emission line.
+The coefficient $\gamma$ and offset $a$ are generally deteremined empirically. 
 
 This approach assumes that the broad-line region (BLR) is virialized
 \citep[e.g.][]{Shen2008b, Shen2011, Calderone2017,
@@ -696,25 +710,6 @@ mass estimate uncertain. \citet{Runnoe2013},
 into improving \civ-based single-epoch black hole mass estimates. With
 these cavaets in mind, we acknowledge the BH mass estimates will have
 a large error, likely $\sim$0.5 dex. }
-The continuum
-luminosity provides a proxy for the BLR radius, and the broad-line
-width (FWHM) provides a proxy for the virial velocity.  This ``virial
-mass'' estimate is then expressed as:
-{\bf
-\begin{equation}
-%  \log(M) = \log \left[c\left(  \frac{\nu L_\nu}{10^{42} {\rm erg\ s^{-1}}} \right)^{\gamma}  \left( \frac{\rm FWHM}{10^3 {\rm km\ s^{-1}}} \right)^2 \right] + {\rm constant}.
-  \log \left( \frac{M_{\rm BH}}{M_{\odot}} \right)  = a + \log  \left[ \; \left(  \frac{L_{1450}} {10^{44} \; {\rm erg \; s^{-1}}}\right)^{\gamma} \, \right] + 2 \log \left( \frac{\rm {FWHM}}{{\rm km\; s^{-1}}} \right)
-  \label{eqn:virial_masses}
-\end{equation}
-\citet{VestergaardPeterson2006} have $\gamma=0.53$ and the offset as $a=0.660$, 
-which is widely adopted \citep[e.g.,][]{Chen2019, Yao2019}.
-\citet{Kozlowski2017} have similar values \citet{VestergaardPeterson2006} , with $(a,\gamma)=(0.64, 0.53)$,
-but note there is a problem with the FWHMs for \civ\ for those quasars that are reported in
-both the DR7 Quasar catalog and DR12 Quasar catalog.
-\citet{Grier2019} measure a slope of $\gamma=0.51\pm0.05$ for their sample of high-redshift
-$z>1.3$ quasars that show significant lag measurements,
-and  $\gamma=0.52\pm0.04$ for their ``gold sample'' of 16 of
-their highest-confidence objects. }
 
 We report a virial product for the \civ\ CLQs in the last column of
 Table~\ref{tab:QSFit-results}.  {\bf Since our purpose is to check if
@@ -729,6 +724,16 @@ constant and compatible with single black hole masses per source, even
 in those cases where the \civ\ estimates were deemed potentially
 unreliable. The object showing the largest variation is J2228+2201,
 with the BH mass estimate spanning a range of 0.66~dex.
+
+\citet{VestergaardPeterson2006} have $\gamma=0.53$ and the offset as $a=0.660$, 
+which is widely adopted \citep[e.g.,][]{Chen2019, Yao2019}.
+\citet{Kozlowski2017} have similar values \citet{VestergaardPeterson2006} , with $(a,\gamma)=(0.64, 0.53)$,
+but note there is a problem with the FWHMs for \civ\ for those quasars that are reported in
+both the DR7 Quasar catalog and DR12 Quasar catalog.
+\citet{Grier2019} measure a slope of $\gamma=0.51\pm0.05$ for their sample of high-redshift
+$z>1.3$ quasars that show significant lag measurements,
+and  $\gamma=0.52\pm0.04$ for their ``gold sample'' of 16 of
+their highest-confidence objects. }
 
 {\bf In Table~\ref{tab:Eddington_ratios} we report the \civ\ virial
   masses calculated using the measured
@@ -847,8 +852,9 @@ J2228+2201     & 56960                          &  9.39               & 47.34  &
     \hline
     \hline
   \end{tabular}
-  \caption{Virial Mass estimates, bolometric luminosities and Eddington ratios for the
-    three quasars. 
+  \caption{The \civ\ virial mass estimates, bolometric luminosities and Eddington ratios for the
+    three quasars.
+    The virial masses are calculated using the measured monochromatic luminosites and FWHM
     $\dagger$From the \citet{Shen2011} SDSS DR7 Quasar catalog.
     $\ddagger$From the \citet{Kozlowski2017} SDSS-III BOSS DR12 quasar catalog.
 %    are given in either \citet{Shen2011} or    \citet{Kozlowski2017} for the three CLQs.
