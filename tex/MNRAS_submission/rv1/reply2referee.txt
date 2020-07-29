@@ -1,5 +1,5 @@
 
-		We thank the Review and Scientific Editor for their
+		We thank the Reviewer and Scientific Editor for their
 		comments and suggestions.  In particular we thank the
 		Reviewer for a deep reading and thoughtful digestion
 		of the manuscript, which has improved the paper. 
@@ -20,7 +20,7 @@ in your bibliography).  Please refer to the plagiarism section in the
 Regards
 Scientific Editor
 
-	   We have changed and corrected the Section 2 text.
+	   We have modified the Section 2 text.
    
 
 
@@ -55,7 +55,7 @@ Below I give extensive and detailed comments and recommendations regarding revis
 
 (a) In section 2.2, the authors describe how they selected the initial candidates using the CRTS light curves. I would recommend some additional explanations and clarifications of the selection process, as follows.
 
-(i) I recommend expanding on the the sentence "This allowed us to predict the photometric magnitudes at the epochs of the SDSS spectra for each source." I presume that the damped random walk model was used to INTERPOLATE between adjacent points in the light cure. If so, it would be useful to state that explicitly. It would also be useful to note the uncertainty in this interpolation scheme; this uncertainty is important in developing a criterion for what is an outlier, as the authors do. I would recommend elaborating on this matter by explaining why the specific criterion of |DV| > 0.3 was adopted (by the way, what are the units? magnitudes?).
+(i) I recommend expanding on the the sentence "This allowed us to predict the photometric magnitudes at the epochs of the SDSS spectra for each source." I presume that the damped random walk model was used to INTERPOLATE between adjacent points in the light curve. If so, it would be useful to state that explicitly. It would also be useful to note the uncertainty in this interpolation scheme; this uncertainty is important in developing a criterion for what is an outlier, as the authors do. I would recommend elaborating on this matter by explaining why the specific criterion of |DV| > 0.3 was adopted (by the way, what are the units? magnitudes?).
 
        We have added text here for clarification. 
 
@@ -73,7 +73,7 @@ Below I give extensive and detailed comments and recommendations regarding revis
 (b) Figure 1. -- I found this figure to be rather busy, packed with information, and difficult to read. I would recommend breaking it up into two separate figures, one including the light curves and one including the spectra. In the process of doing so, I would recommend that the authors write the names of the quasars in the corresponding panels and make the fonts considerably larger so that the labels are easier to read (especially the fonts in the sub-panels that zoom in on specific emission lines).
 
 	 As suggested, we have split the light curve and spectral figures up, increased the size of the fonts,
-         and have writen the names of the quasars in the approriate panels.
+         and have written the names of the quasars in the appropriate panels.
 
 
 (c) At the very end of section 2.3 the authors note that they use photometric measurements to set the absolute scale of the non-SDSS spectra. It would be useful to note here the resulting uncertainty in flux calibration and whether this uncertainty was propagated into measurements of the continuum and emission lines from these spectra.
@@ -81,11 +81,10 @@ Below I give extensive and detailed comments and recommendations regarding revis
            A sentence has been added here. 
 
 
-(d) Table 3. -- This is an important table because it includes a great deal of useful information for the three high-z CLQs but it can be presented much better. I give here detailed recommendations about this table which are connected to and may duplicate comments I make in other parts of this report.
-- I would recommend including in the text (perhaps in section 2.4) a brief discussion of how the uncertainties in the measured quantities were determined. If these uncertainties are estimated by QSfit, it would suffice to explain very briefly how that is done and refer the reader to the paper that described that code.
+(d) Table 3. -- This is an important table because it includes a great deal of useful information for the three high-z CLQs but it can be presented much better. I give here detailed recommendations about this table which are connected to and may duplicate comments I make in other parts of this report. - I would recommend including in the text (perhaps in section 2.4) a brief discussion of how the uncertainties in the measured quantities were determined. If these uncertainties are estimated by QSfit, it would suffice to explain very briefly how that is done and refer the reader to the paper that described that code.
 
 	 We have added a paragraph at the end of Section 2.4 detailing how
-	 the uncertainties in the spectral line quantities are determined.
+	 the uncertainties in the spectral line quantities were determined.
 
 
 - Most of the measurements included in this table have too many significant figures. An example (albeit somewhat extreme) are the   properties of the C IV line measured from the MJD 56189 spectrum   (72.8+/-11.3, 14993+/-2400, 828+/-691, 162.89+/-25.37). The uncertainties in these numbers include 3-4 significant figures, which does not seem to be warranted. I would strongly recommend that the authors reconsider this issue very carefully, reduce the number of significant figures in the error bars, and truncate the significant figures in the measurements accordingly.
@@ -130,7 +129,7 @@ Below I give extensive and detailed comments and recommendations regarding revis
 
    	Yes, this is an excellent point.
 	We have (significantly) updated and corrected the equation and
-	revised the relevant discussion, adding key text and
+	revised the relevant discussion, adding key text and recent 
 	references here.
 	
 
