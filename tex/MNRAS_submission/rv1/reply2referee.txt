@@ -128,8 +128,10 @@ Below I give extensive and detailed comments and recommendations regarding revis
 	   
 (c) Equation (1) in section 3.3. -- This equation, as written, appears to be wrong because the LHS is a log while the RHS is not and there should be constants or calibration factors to connect the black hole mass to the luminosity and FWHM combination. Moreover, the exponent of the luminosity is not exactly 0.5 according to empirical determinations. I would very strongly recommend that the authors correct this equation and revise the relevant discussion. Section 3.7 of the paper by Shen et al. (2011, cited just before equation 1) includes a detailed discussion of the calibration of this relation and several references to the original papers that report the calibration factors. I recommend that the authors begin by consulting that paper and then tracking down the most up-to-date calibration of equation (1), which should be the most appropriate calibration to use here (section 4 of Grier et al. 2019, ApJ, 887, 38 would be a good place to start in order to find the most up-to-date calibrations). The revised text should include appropriate references to the original papers reporting the calibration adopted by the authors.
 
-   	Yes, this is an excellent point. We have updated and corrected the equation
-	and revised the relevant discussion, adding key text and references here.
+   	Yes, this is an excellent point.
+	We have (significantly) updated and corrected the equation and
+	revised the relevant discussion, adding key text and
+	references here.
 	
 
 (d) Related to the previous point, there is the issue of uncertainties. The authors note that typical uncertainties in the black hole mass are "~0.5 dex." Is this the uncertainty that applies to the virial product in the last column of Table 3?  Or is this the uncertainty in the mass based on the scatter of the M-sigma relation? I recommend that the authors clarify this issue by writing a footnote in Table 3 and giving appropriate references to the literature therein. 

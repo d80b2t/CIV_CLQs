@@ -70,7 +70,7 @@ log_L1350_Koz17 = data['L1350']
 ## CONT*__LUM::  1450, 2245, 3000, 4210 or 5100:
 ## AGN continuum (Section 2.2) νLν luminosities and their uncertainties, in units of 1042 erg s−1
 ## 
-path        = '/cos_pc19a_npr/programs/quasars/CIV_CLQs/data/QSO_CIV_catalogs/'
+path        = '../../../../../../data/QSFit/'
 filename    = 'qsfit_1.2.4.fits'
 infile      = path+filename
 sdata_full  = fits.open(infile)
@@ -184,6 +184,8 @@ print("p-value         : %f" % p_value)
 print("Standard errro  : %f" % std_err)
 print()
 
+print('No. of objects in regression: ', len(x))
+print()
 #plt.plot(x, (slope*x + intercept), 'r')
 ## "Fitting", by eye, the the CLQs points
 ## plt.plot(x, ((-.38*x) + (intercept+1.1)), 'r', linestyle=':', zorder=0)

@@ -38,7 +38,7 @@ CLQs_MBH        = CLQs['MBH']
 ## CONT*__LUM::  1450, 2245, 3000, 4210 or 5100:
 ## AGN continuum (Section 2.2) νLν luminosities and their uncertainties, in units of 1042 erg s−1
 ## 
-path        = '../../../data/QSO_CIV_catalogs/'
+path        = '../../../../../../data/QSFit/'
 filename    = 'qsfit_1.2.4.fits'
 infile      = path+filename
 sdata_full  = fits.open(infile)
@@ -134,8 +134,9 @@ print("The intercept is: %f" % intercept)
 print("R-squared       : %f" % r_value**2)
 print("p-value         : %f" % p_value)
 print("Standard errro  : %f" % std_err)
-print()
 
+print('No. of objects in regression: ', len(x))
+print()
 #plt.plot(x, (slope*x + intercept), 'r')
 ## for the label...
 slope_str     = str(np.around(slope, decimals=3))
@@ -144,8 +145,8 @@ R_sq          = str(np.around((r_value**2), decimals=3))
         
 
 ## AXES LIMITS 
-xmin =   7.30   ## Log MBH
-xmax =  10.88   ## Log MBH
+xmin =   7.10   ## Log MBH  ##  7.30 for arXiv:1912.05310v1 and other early 2020 versions 
+xmax =  10.22   ## Log MBH  ## 10.88 for arXiv:1912.05310v1 and other early 2020 versions 
 ymin =  0.4
 ymax =  2.95    
 ax.axis([xmin, xmax, ymin, ymax])

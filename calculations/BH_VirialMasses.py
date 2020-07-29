@@ -115,9 +115,9 @@ log_MBH_QSFit_J12_1st  = a_VP06_CIV  + np.log10(( 10**log_L1450_J12_1st /1e44)**
 log_MBH_QSFit_J12_2nd  = a_VP06_CIV  + np.log10(( 10**log_L1450_J12_2nd /1e44)**b_VP06_CIV) + (2*np.log10(FWHM_CIV_J12_2nd))
 log_MBH_QSFit_J12_3rd  = a_VP06_CIV  + np.log10(( 10**log_L1450_J12_3rd /1e44)**b_VP06_CIV) + (2*np.log10(FWHM_CIV_J12_3rd))
 
-print('log_MBH_QSFit_J12 1st epoch (using VP06) ',  log_MBH_QSFit_J12_1st, '   vs.   9.66  currently in Table 3 (',  9.66-log_MBH_QSFit_J12_1st, 'diff)')
-print('log_MBH_QSFit_J12 2nd epoch (using VP06) ',  log_MBH_QSFit_J12_2nd, '   vs   10.08  currently in Table 3 (', 10.08-log_MBH_QSFit_J12_2nd, 'diff)')
-print('log_MBH_QSFit_J12 3rd epoch (using VP06) ',  log_MBH_QSFit_J12_3rd, '   vs.   9.67  currently in Table 3 (',  9.67-log_MBH_QSFit_J12_3rd, 'diff)')
+print('log_MBH_QSFit_J12 1st epoch (using VP06) ',  log_MBH_QSFit_J12_1st, '    vs.   9.66  currently in Table 3 (',  9.66-log_MBH_QSFit_J12_1st, 'diff)')
+print('log_MBH_QSFit_J12 2nd epoch (using VP06) ',  log_MBH_QSFit_J12_2nd, '  vs   10.08  currently in Table 3 (', 10.08-log_MBH_QSFit_J12_2nd, 'diff)')
+print('log_MBH_QSFit_J12 3rd epoch (using VP06) ',  log_MBH_QSFit_J12_3rd, '  vs.   9.67  currently in Table 3 (',  9.67-log_MBH_QSFit_J12_3rd, 'diff)')
 print()
 
 ## Eddington Luminosity. For pure ionized hydrogen, 
